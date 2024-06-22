@@ -20,6 +20,7 @@ export default class WorldController extends BaseScene {
         this.worldTimeZone = 'America/Los_Angeles'
 
         if (window.location.hostname === 'localhost') window.world = this
+        this.loadedAssets = []
     }
 
     create() {
