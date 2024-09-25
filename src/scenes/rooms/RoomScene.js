@@ -221,6 +221,11 @@ export default class RoomScene extends BaseScene {
         for (let t in this.roomTriggers) {
             let trigger = this.addBody(t, 0x00FF00)
 
+            if (!trigger) {
+                console.error(`Trigger ${t} not found in physics`)
+                continue
+            }
+            
             trigger.callback = () => this.checkTrigger(this.roomTriggers[t])
             triggers.push(trigger)
         }

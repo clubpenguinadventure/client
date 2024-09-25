@@ -17,8 +17,6 @@ const game = {
 
     width: 1520,
     height: 960,
-    maxWidth: 1520,
-    maxHeight: 960,
 
     transparent: true,
     roundPixels: true,
@@ -65,7 +63,7 @@ const game = {
 
         widgets: widgets,
 
-        frameColor: 0x2e3440,
+        frameColor: 0x22a4f3,
         iglooIdOffset: 2000
     },
 

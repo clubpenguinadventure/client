@@ -37,6 +37,7 @@ export default class RoomFactory {
 
     createIgloo(args) {
         let config = this.igloos[args.type]
+        if (!config) return console.error(`Igloo type ${args.type} not found`)
 
         if (config.key in this.scene.manager.keys) {
             this.scene.start(config.key, { args: args })
