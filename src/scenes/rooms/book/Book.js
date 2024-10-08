@@ -107,6 +107,8 @@ export default class Book extends RoomScene {
 
         // poster (components)
         const posterButton = new Button(poster);
+        posterButton.spriteName = "poster";
+        posterButton.callback = () => this.onInstructionsClick();
         posterButton.activeFrame = false;
         posterButton.pixelPerfect = true;
 
@@ -122,6 +124,11 @@ export default class Book extends RoomScene {
 
 
     /* START-USER-CODE */
+
+    onInstructionsClick() {
+        this.interface.loadWidget('MancalaHelp')
+    }
+
     /* END-USER-CODE */
 }
 
