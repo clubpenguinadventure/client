@@ -471,6 +471,7 @@ export default class CardJitsu extends GameScene {
             cards[i].tweenToOver(i)
         }
 
+        this.stopMusic()
         this.soundManager.play('end')
 
         this.time.delayedCall(1000, () => this.playGameOver(winSeat, !winCards.length))
