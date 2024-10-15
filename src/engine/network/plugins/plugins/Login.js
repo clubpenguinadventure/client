@@ -19,6 +19,13 @@ export default class Login extends Plugin {
         this.interface.hideLoading()
 
         if (args.success) {
+            let worlds = Object.entries(this.crumbs.worlds).slice(0, 5).filter(world => !world[1].login)
+            if (worlds.length == 1) {
+                this.interface.showLoading(`${this.getString('joining')} ${worlds[0][0]}`)
+                this.network.connectGame(worlds[0][0], args.username, args.key)
+                return
+            }
+
             return this.scene.start('Servers', args)
         }
 
