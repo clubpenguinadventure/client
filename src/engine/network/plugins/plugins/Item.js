@@ -21,6 +21,16 @@ export default class Item extends Plugin {
         }
 
         this.world.room.penguins[args.id].update(args.item, args.slot)
+
+        if (args.id == this.client.id) {
+            this.world.interface.main.playerCard.inventory.slots.forEach(slot => {
+                if (slot.item && Object.values(this.world.client.penguin.items.flat).includes(slot.item.id)) {
+                    slot.setTint(0xfff5b4)
+                } else {
+                    slot.setTint(0xffffff)
+                }
+            });
+        }
     }
 
     addItem(args) {

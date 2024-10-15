@@ -36,7 +36,11 @@ export default class InventoryLoader extends BaseLoader {
                 slot.setFrame('large-box')
                 this.addSpinner(slot)
                 this.loadItem(item)
-
+                if (Object.values(this.scene.world.client.penguin.items.flat).includes(item)) {
+                    slot.setTint(0xfff5b4)
+                } else {
+                    slot.setTint(0xffffff)
+                }
             } else {
                 slot.disableInteractive()
                 slot.setFrame('large-box-empty')
