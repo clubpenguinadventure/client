@@ -1,6 +1,5 @@
 import SimpleButton from './SimpleButton'
 
-
 /* START OF COMPILED CODE */
 
 /* START-USER-IMPORTS */
@@ -13,8 +12,6 @@ export default class Button extends SimpleButton {
 
         /** @type {Phaser.GameObjects.Sprite} */
         this.gameObject;
-        /** @type {string} */
-        this.spriteName = "";
         /** @type {any} */
         this.hoverCallback = null;
         /** @type {any} */
@@ -31,9 +28,6 @@ export default class Button extends SimpleButton {
         gameObject["__Button"] = this;
 
         /* START-USER-CTR-CODE */
-
-        this.lockFrame = false
-
         /* END-USER-CTR-CODE */
     }
 
@@ -45,24 +39,61 @@ export default class Button extends SimpleButton {
 
     /* START-USER-CODE */
 
+    get spriteName() {
+        let currentName = this.gameObject.frame ? this.gameObject.frame.name : this.gameObject.textureFrame
+        if (currentName.includes('-hover')) {
+            return currentName.replace('-hover', '')
+        }
+        if (currentName.includes('-active')) {
+            return currentName.replace('-active', '')
+        }
+        return currentName
+    }
+
+    set spriteName(name) {
+        this.gameObject.setFrame(name)
+    }
+
+    get textureKey() {
+        if (this.gameObject.textureKey && this.gameObject.textureKey != '__DEFAULT') return this.gameObject.textureKey
+        return this.gameObject.texture.key
+    }
+
+    get texture() {
+        if (this.gameObject.texture) return this.gameObject.texture
+        return this.gameObject.scene.shell.textures.get(this.textureKey)
+    }
+
+    get overFrame() {
+        if (this.texture.frames[`${this.spriteName}-hover`]) {
+            return `${this.spriteName}-hover`
+        }
+        return this.outFrame
+    }
+
+    get outFrame() {
+        return this.spriteName
+    }
+
+    get downFrame() {
+        if (this.texture.frames[`${this.spriteName}-active`]) {
+            return `${this.spriteName}-active`
+        }
+        return this.overFrame
+    }
+
     start() {
         super.start()
         this.gameObject.on('pointerdown', (pointer) => this.onDown(pointer))
     }
 
     onOver() {
-        if (!this.lockFrame) {
-            this.gameObject.setFrame(`${this.spriteName}-hover`, false, false)
-        }
-
+        this.gameObject.setTexture(this.textureKey, this.overFrame, false, false)
         super.onOver()
     }
 
     onOut() {
-        if (!this.lockFrame) {
-            this.gameObject.setFrame(this.spriteName, false, false)
-        }
-
+        this.gameObject.setTexture(this.textureKey, this.outFrame, false, false)
         super.onOut()
     }
 
@@ -71,11 +102,7 @@ export default class Button extends SimpleButton {
             return
         }
 
-        if (this.activeFrame) {
-            this.gameObject.setFrame(`${this.spriteName}-active`, false, false)
-        } else {
-            this.gameObject.setFrame(`${this.spriteName}-hover`, false, false)
-        }
+        this.gameObject.setTexture(this.textureKey, this.downFrame, false, false)
     }
 
     onUp(pointer) {
@@ -83,7 +110,7 @@ export default class Button extends SimpleButton {
             return
         }
 
-        this.gameObject.setFrame(`${this.spriteName}-hover`, false, false)
+        this.gameObject.setTexture(this.textureKey, this.overFrame, false, false)
 
         super.onUp(pointer)
     }
