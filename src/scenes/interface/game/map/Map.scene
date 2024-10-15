@@ -17,7 +17,6 @@
             "type": "Container",
             "id": "bfaa02be-42e7-4151-a022-1a38f8f54b3a",
             "label": "container_1",
-            "components": [],
             "x": 760,
             "y": 480,
             "list": [
@@ -45,293 +44,401 @@
                         "key": "map",
                         "frame": "bg"
                     },
-                    "y": -35,
+                    "y": -9,
                     "originY": 0.5007429420505201
-                },
-                {
-                    "type": "Image",
-                    "id": "ac515e14-94e2-4872-845c-ff165b0bb45d",
-                    "label": "dojo",
-                    "components": [
-                        "Button",
-                        "ShowHint"
-                    ],
-                    "Button.spriteName": "dojo",
-                    "Button.callback": "() => this.onRoomClick(321)",
-                    "Button.activeFrame": false,
-                    "ShowHint.text": "dojoext_hint",
-                    "texture": {
-                        "key": "map",
-                        "frame": "dojo"
-                    },
-                    "x": 69,
-                    "y": -310,
-                    "originX": 0.5038759689922481,
-                    "originY": 0.5056179775280899
-                },
-                {
-                    "type": "Image",
-                    "id": "78f24163-a8fc-466e-aef4-9d47733701c5",
-                    "label": "mountains",
-                    "components": [],
-                    "texture": {
-                        "key": "map",
-                        "frame": "mountains"
-                    },
-                    "x": 29,
-                    "y": -276
-                },
-                {
-                    "type": "Image",
-                    "id": "7195e0a7-5c4e-4f00-9419-5a583b6c23e2",
-                    "label": "island",
-                    "components": [],
-                    "texture": {
-                        "key": "map",
-                        "frame": "island"
-                    },
-                    "x": -12,
-                    "y": -30,
-                    "originX": 0.5005417118093174
                 },
                 {
                     "type": "Image",
                     "id": "0641ff28-946b-4d7c-8d9d-368067367dc1",
                     "label": "mtn",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "mtn",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.mtn)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.mtn)",
                     "Button.callback": "() => this.onRoomClick(230)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "mtn_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "mtn"
+                        "frame": "mtnbtn"
                     },
-                    "x": -232,
-                    "y": -256
-                },
-                {
-                    "type": "Image",
-                    "id": "50d7b312-f4fe-47d2-bf65-2e4d25bfeebc",
-                    "label": "village",
-                    "components": [
-                        "Button",
-                        "ShowHint"
-                    ],
-                    "Button.spriteName": "village",
-                    "Button.callback": "() => this.onRoomClick(200)",
-                    "Button.activeFrame": false,
-                    "ShowHint.text": "village_hint",
-                    "texture": {
-                        "key": "map",
-                        "frame": "village"
-                    },
-                    "x": -181,
-                    "y": -179,
-                    "originX": 0.503030303030303,
-                    "originY": 0.5041322314049587
+                    "x": -391,
+                    "y": -112,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "a389ddf6-8668-40bf-8f74-ccddc823e608",
                     "label": "beach",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "beach",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.beach)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.beach)",
                     "Button.callback": "() => this.onRoomClick(400)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "beach_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "beach"
+                        "frame": "lightbtn"
                     },
-                    "x": -390,
-                    "y": -94
+                    "x": -625,
+                    "y": 101,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "df5b5b0b-75a3-4fcf-9d3c-0949e2b203a6",
                     "label": "dock",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "dock",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.dock)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.dock)",
                     "Button.callback": "() => this.onRoomClick(800)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "dock_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "dock"
+                        "frame": "dockbtn"
                     },
-                    "x": -370,
-                    "y": 114,
-                    "originY": 0.5037037037037037
+                    "x": -416,
+                    "y": 274,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "originY": 0.5037037037037037,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "6ebf11b0-353f-4461-b443-5b908e39f478",
                     "label": "town",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "town",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.town)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.town)",
                     "Button.callback": "() => this.onRoomClick(100)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "town_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "town"
+                        "frame": "townbtn"
                     },
-                    "x": -128,
-                    "y": 22
+                    "x": -170,
+                    "y": 75,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "a9575e75-c858-4cb9-8a36-d203a05d6f41",
                     "label": "forts",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "forts",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.forts)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.forts)",
                     "Button.callback": "() => this.onRoomClick(801)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "forts_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "forts"
+                        "frame": "fortsbtn"
                     },
-                    "x": 78,
-                    "y": 30,
+                    "x": 12,
+                    "y": 21,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
                     "originX": 0.5045045045045045,
-                    "originY": 0.5045871559633027
+                    "originY": 0.5045871559633027,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "4cd7313a-df16-45c5-982d-47ef02db8644",
                     "label": "igloo",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "igloo",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.igloo)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.igloo)",
                     "Button.callback": "() => this.iglooMap.show()",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "igloos_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "igloo"
+                        "frame": "igloosbtn"
                     },
-                    "x": 201,
-                    "y": 141
+                    "x": -152,
+                    "y": 209,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "d3b40e62-b025-4aa8-8921-e44f27622978",
                     "label": "plaza",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "plaza",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.plaza)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.plaza)",
                     "Button.callback": "() => this.onRoomClick(300)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "plaza_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "plaza"
+                        "frame": "plazabtn"
                     },
-                    "x": 264,
-                    "y": 22,
-                    "originY": 0.5038167938931297
+                    "x": 218,
+                    "y": 48,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "originY": 0.5038167938931297,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "ad02f0a0-536f-4527-916d-160fbff13923",
                     "label": "rink",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "rink",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.rink)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.rink)",
                     "Button.callback": "() => this.onRoomClick(802)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "rink_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "rink"
+                        "frame": "rinkbtn"
                     },
-                    "x": 52,
-                    "y": -98,
-                    "originX": 0.5023041474654378
+                    "x": -90,
+                    "y": -60,
+                    "originX": 0.5023041474654378,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "49d0d4bf-c5a0-4b1d-8ca8-f81b4bf1e890",
                     "label": "forest",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "forest",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.forest)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.forest)",
                     "Button.callback": "() => this.onRoomClick(809)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "forest_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "forest"
+                        "frame": "forestbtn"
                     },
-                    "x": 291,
-                    "y": -84,
+                    "x": 385,
+                    "y": 130,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
                     "originX": 0.5027027027027027,
-                    "originY": 0.5057471264367817
+                    "originY": 0.5057471264367817,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "b44b0389-8323-44c5-9b76-6930d99d787c",
                     "label": "cove",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "cove",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.cove)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.cove)",
                     "Button.callback": "() => this.onRoomClick(810)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "cove_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "cove"
+                        "frame": "covebtn"
                     },
-                    "x": 334,
-                    "y": -169,
-                    "originY": 0.5058823529411764
+                    "x": 599,
+                    "y": 144,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "originY": 0.5058823529411764,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
                 },
                 {
                     "type": "Image",
                     "id": "a36839c5-3b16-4c3f-b57f-bba9dc74caa9",
                     "label": "mine",
+                    "scope": "CLASS",
                     "components": [
                         "Button",
                         "ShowHint"
                     ],
-                    "Button.spriteName": "mine",
+                    "Button.hoverCallback": "() => this.onRoomOver(this.mine)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.mine)",
                     "Button.callback": "() => this.onRoomClick(807)",
                     "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
                     "ShowHint.text": "shack_hint",
                     "texture": {
                         "key": "map",
-                        "frame": "mine"
+                        "frame": "shackbtn"
                     },
-                    "x": 168,
-                    "y": -214,
-                    "originX": 0.5042016806722689
+                    "x": 387,
+                    "y": -32,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "originX": 0.5042016806722689,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
+                },
+                {
+                    "type": "Image",
+                    "id": "9978fe63-da96-46fa-a711-5391edae0b7e",
+                    "label": "places",
+                    "texture": {
+                        "key": "map",
+                        "frame": "places"
+                    },
+                    "x": 2,
+                    "y": -8,
+                    "originY": 0.5007429420505201
+                },
+                {
+                    "type": "Image",
+                    "id": "3a119579-c93c-465e-9b42-5978bd7e336f",
+                    "label": "tree",
+                    "texture": {
+                        "key": "map",
+                        "frame": "tree"
+                    },
+                    "x": -515.5,
+                    "y": -18.25
+                },
+                {
+                    "type": "Image",
+                    "id": "1e5b4395-6068-4c1e-a5aa-3289d3e4ef11",
+                    "label": "village",
+                    "scope": "CLASS",
+                    "components": [
+                        "Button",
+                        "ShowHint"
+                    ],
+                    "Button.hoverCallback": "() => this.onRoomOver(this.village)",
+                    "Button.hoverOutCallback": "() => this.onRoomOut(this.village)",
+                    "Button.callback": "() => this.onRoomClick(200)",
+                    "Button.activeFrame": false,
+                    "Button.pixelPerfect": true,
+                    "ShowHint.text": "village_hint",
+                    "texture": {
+                        "key": "map",
+                        "frame": "villagebtn"
+                    },
+                    "x": -343,
+                    "y": -26,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "originX": 0.503030303030303,
+                    "originY": 0.5041322314049587,
+                    "alpha": 0.001,
+                    "alphaTopLeft": 0.001,
+                    "alphaTopRight": 0.001,
+                    "alphaBottomLeft": 0.001,
+                    "alphaBottomRight": 0.001
+                },
+                {
+                    "type": "Image",
+                    "id": "50d7b312-f4fe-47d2-bf65-2e4d25bfeebc",
+                    "label": "villageicon",
+                    "texture": {
+                        "key": "map",
+                        "frame": "village"
+                    },
+                    "x": -343,
+                    "y": -26,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947,
+                    "originX": 0.503030303030303,
+                    "originY": 0.5041322314049587
                 },
                 {
                     "type": "Image",
@@ -340,15 +447,16 @@
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "berg",
                     "Button.callback": "() => this.onRoomClick(805)",
                     "Button.activeFrame": false,
                     "texture": {
                         "key": "map",
                         "frame": "berg"
                     },
-                    "x": 402,
-                    "y": -210
+                    "x": 608,
+                    "y": -67,
+                    "scaleX": 0.906578947,
+                    "scaleY": 0.906578947
                 },
                 {
                     "type": "Image",
@@ -361,8 +469,8 @@
                         "key": "map",
                         "frame": "note"
                     },
-                    "x": 419,
-                    "y": 242,
+                    "x": 586,
+                    "y": 364,
                     "originX": 0.5017667844522968
                 },
                 {
@@ -372,26 +480,24 @@
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "grey-button",
                     "Button.callback": "() => { this.visible = false }",
                     "texture": {
                         "key": "main",
                         "frame": "grey-button"
                     },
-                    "x": 483,
-                    "y": -333
+                    "x": 657,
+                    "y": -410
                 },
                 {
                     "type": "Image",
                     "id": "45830b5d-99cb-41f8-8903-65046e08ebfe",
                     "label": "grey_x",
-                    "components": [],
                     "texture": {
                         "key": "main",
                         "frame": "grey-x"
                     },
-                    "x": 483,
-                    "y": -335
+                    "x": 657,
+                    "y": -412
                 },
                 {
                     "prefabId": "9f793ade-93a8-4ab2-bd68-ccd899fb9179",
@@ -403,11 +509,9 @@
                     ],
                     "label": "iglooMap",
                     "scope": "CLASS",
-                    "components": [],
                     "x": 0,
                     "y": 0,
-                    "visible": false,
-                    "nestedPrefabs": []
+                    "visible": false
                 }
             ]
         }
@@ -417,6 +521,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }
