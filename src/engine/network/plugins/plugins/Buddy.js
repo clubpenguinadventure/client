@@ -31,6 +31,7 @@ export default class Buddy extends Plugin {
 
         if (args.online) {
             this.interface.main.showOnlinePopup(buddy.username)
+            if (this.world.room.penguins[buddy.id]) this.world.room.penguins[buddy.id].setBuddyRing()
         }
     }
 
@@ -38,6 +39,7 @@ export default class Buddy extends Plugin {
         // Filter buddy out of list
         this.world.client.buddies = this.world.client.buddies.filter(obj => obj.id != args.id)
         this.interface.updateBuddies()
+        if (this.world.room.penguins[args.id]) this.world.room.penguins[args.id].setBuddyRing()
     }
 
     buddyFind(args) {

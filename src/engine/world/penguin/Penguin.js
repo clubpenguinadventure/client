@@ -46,6 +46,10 @@ export default class Penguin extends BaseContainer {
         this.load()
     }
 
+    get isBuddy() {
+        return this.world.client.buddies.map(buddy => buddy.id).includes(this.id)
+    }
+
     get isTweening() {
         return (this.tween) ? true : false
     }
@@ -102,6 +106,7 @@ export default class Penguin extends BaseContainer {
     load() {
         this.penguinLoader.loadPenguin(this)
         this.clothingLoader.loadItems()
+        this.setBuddyRing()
 
         this.room.add.existing(this)
     }
@@ -137,6 +142,15 @@ export default class Penguin extends BaseContainer {
     setPos(x, y) {
         this.x = x
         this.y = y
+    }
+
+    setBuddyRing() {
+        if (this.isBuddy) {
+            this.buddyRing = this.penguinLoader.addBuddyRing(this)
+        } else if (this.buddyRing) {
+            this.buddyRing.destroy()
+            this.buddyRing = null
+        }
     }
 
     /*========== Animations ==========*/

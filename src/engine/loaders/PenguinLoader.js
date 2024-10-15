@@ -40,6 +40,15 @@ export default class PenguinLoader {
         penguin.addAt(ring, 0)
     }
 
+    addBuddyRing(penguin) {
+        let ring = penguin.room.add.image(0, 0, 'penguin_base', 'ring')
+        ring.tint = 0x00ff00
+
+        penguin.addAt(ring, 0)
+
+        return ring
+    }
+
     addName(penguin) {
         let x = penguin.x
         let y = penguin.y + 40
