@@ -123,16 +123,6 @@
             "gameObjectType": "Phaser.GameObjects.Sprite",
             "properties": [
                 {
-                    "name": "spriteName",
-                    "label": "Sprite Name",
-                    "tooltip": "Sprite Name",
-                    "defValue": "",
-                    "customDefinition": false,
-                    "type": {
-                        "id": "string"
-                    }
-                },
-                {
                     "name": "hoverCallback",
                     "label": "Hover Callback",
                     "tooltip": "Hover Callback",
