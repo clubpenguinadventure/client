@@ -70,6 +70,7 @@ export default class ClientController {
     }
 
     get visible() {
+        if (!this.penguin) return false
         return this.penguin.visible
     }
 
