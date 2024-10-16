@@ -1,0 +1,126 @@
+{
+    "id": "bb033131-5826-4dba-9669-628ed47f8f81",
+    "sceneType": "PREFAB",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "exportClass": true,
+        "superClassName": "BaseContainer",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "913e1896-d74e-4d2a-920c-a61bf7d60f59",
+            "label": "twofa",
+            "visible": false,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "2bf44e3f-7e27-4d85-b6d4-54ffa88f49e1",
+                    "label": "block",
+                    "components": [
+                        "Interactive"
+                    ],
+                    "x": 760,
+                    "y": 480,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.3,
+                    "width": 1520,
+                    "height": 960
+                },
+                {
+                    "type": "NineSlice",
+                    "id": "2aa9b58f-f57b-4200-8a24-8c6cbe940d5c",
+                    "label": "twofa_popup",
+                    "texture": {
+                        "key": "prompt",
+                        "frame": "error"
+                    },
+                    "x": 760,
+                    "y": 480,
+                    "width": 500,
+                    "height": 350,
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
+                },
+                {
+                    "type": "NineSlice",
+                    "id": "89a9a3c8-d400-4786-bc24-1854dc4f5ca4",
+                    "label": "twofa_submit",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.submit2fa()",
+                    "texture": {
+                        "key": "prompt",
+                        "frame": "error-button"
+                    },
+                    "x": 760,
+                    "y": 571,
+                    "originY": 0.5047619047619047,
+                    "width": 250,
+                    "height": 100,
+                    "leftWidth": 35,
+                    "rightWidth": 35,
+                    "topHeight": 35,
+                    "bottomHeight": 35
+                },
+                {
+                    "type": "Text",
+                    "id": "708213b4-d0e8-4274-9b2e-2f2bc786bf5f",
+                    "label": "twofaText",
+                    "x": 760,
+                    "y": 382,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Enter the 6 digit code from your Authenticator app",
+                    "align": "center",
+                    "fontFamily": "Arial Narrow",
+                    "fontSize": "30px",
+                    "color": "#000000ff",
+                    "wordWrapWidth": 300
+                },
+                {
+                    "type": "Image",
+                    "id": "02dd829c-28e0-42d0-9f2c-b505d77f203e",
+                    "label": "twofa_box",
+                    "texture": {
+                        "key": "login",
+                        "frame": "input"
+                    },
+                    "x": 760,
+                    "y": 472
+                },
+                {
+                    "type": "Text",
+                    "id": "06731f82-b2f2-4a31-8ba5-39e31a15056b",
+                    "label": "twofaText_1",
+                    "x": 761,
+                    "y": 569,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Submit",
+                    "align": "center",
+                    "fontFamily": "Arial Narrow",
+                    "fontSize": "40px",
+                    "color": "#000000ff",
+                    "wordWrapWidth": 300
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

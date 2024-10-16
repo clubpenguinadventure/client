@@ -7,6 +7,7 @@ import Checks from '../checks/Checks'
 import PenguinLarge from '../card/PenguinLarge'
 import WaitPrompt from '../prompts/WaitPrompt'
 import SavePrompt from '../prompts/SavePrompt'
+import TwoFA from '../twofa/TwoFA'
 
 /* START OF COMPILED CODE */
 
@@ -23,6 +24,8 @@ export default class PenguinLogin extends BaseScene {
         this.savePrompt;
         /** @type {WaitPrompt} */
         this.waitPrompt;
+        /** @type {TwoFA} */
+        this.twofa;
 
 
         /* START-USER-CTR-CODE */
@@ -107,6 +110,10 @@ export default class PenguinLogin extends BaseScene {
         this.add.existing(waitPrompt);
         waitPrompt.visible = false;
 
+        // twofa
+        const twofa = new TwoFA(this, 0, 0);
+        this.add.existing(twofa);
+
         // backButton (components)
         const backButtonSimpleButton = new SimpleButton(backButton);
         backButtonSimpleButton.callback = () => this.onBackClick();
@@ -135,13 +142,13 @@ export default class PenguinLogin extends BaseScene {
 
         // loginButton (components)
         const loginButtonButton = new Button(loginButton);
-        loginButtonButton.spriteName = "login-button";
         loginButtonButton.callback = () => this.onLoginSubmit();
 
         this.container = container;
         this.checks = checks;
         this.savePrompt = savePrompt;
         this.waitPrompt = waitPrompt;
+        this.twofa = twofa;
 
         this.events.emit("scene-awake");
     }
@@ -178,6 +185,7 @@ export default class PenguinLogin extends BaseScene {
         }
 
         this.passwordInput = new TextInput(this, 973, 250, 'password', style, () => this.onLoginSubmit(), 128, false)
+        this.twoFaInput = new TextInput(this, 760, 472, 'text', style, () => this.submit2fa(), 6, false)
         this.add.existing(this.passwordInput)
 
         // Token
@@ -201,18 +209,15 @@ export default class PenguinLogin extends BaseScene {
         let username = this.penguin.username
         let password = this.passwordInput.text
         let token = this.network.getToken(username)
-        let onConnect
 
         this.interface.showLoading(`Logging in ${username}`)
         this.scene.stop()
 
         if (token && !this.passwordEdited) {
-            onConnect = () => this.network.send('token_login', { username: username, token: token })
+            this.network.tokenLogin(this.checks.username.checked, this.checks.password.checked, username, token)
         } else {
-            onConnect = () => this.network.send('login', { username: username, password: password })
+            this.network.login(this.checks.username.checked, this.checks.password.checked, username, password)
         }
-
-        this.network.connectLogin(this.checks.username.checked, this.checks.password.checked, onConnect)
     }
 
     onForgetClick() {
@@ -229,6 +234,22 @@ export default class PenguinLogin extends BaseScene {
         this.scene.start('PenguinSelect')
     }
 
+    show2FA() {
+        this.twofa.visible = true
+        this.add.existing(this.twoFaInput)
+        this.twoFaInput.setFocus()
+    }
+
+    submit2fa() {
+        this.interface.showLoading(`Logging in ${this.network.username}`)
+        this.scene.stop()
+        let token = this.network.token
+        if (token) {
+            this.network.tokenLoginWith2FA(this.twoFaInput.text)
+        } else {
+            this.network.loginWith2FA(this.twoFaInput.text)
+        }
+    }
     /* END-USER-CODE */
 }
 

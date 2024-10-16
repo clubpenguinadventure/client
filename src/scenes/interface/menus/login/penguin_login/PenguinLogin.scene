@@ -17,7 +17,6 @@
             "type": "Image",
             "id": "385f13f1-fb27-4bc9-8d86-2ea5ae428468",
             "label": "bg",
-            "components": [],
             "texture": {
                 "key": "load",
                 "frame": "bg"
@@ -34,10 +33,8 @@
             ],
             "label": "container",
             "scope": "CLASS",
-            "components": [],
             "x": 475,
-            "y": 430,
-            "nestedPrefabs": []
+            "y": 430
         },
         {
             "type": "Sprite",
@@ -102,7 +99,6 @@
             "type": "Text",
             "id": "78099562-cddb-4cc7-8fc5-29bb4ba6fb42",
             "label": "backText",
-            "components": [],
             "x": 760,
             "y": 876,
             "originX": 0.5,
@@ -119,7 +115,6 @@
             "type": "Text",
             "id": "35ff102a-44af-41b7-b6b0-fba01c4e47ae",
             "label": "forgotText_1",
-            "components": [],
             "x": 929,
             "y": 661,
             "originX": 0.5,
@@ -135,7 +130,6 @@
             "type": "Text",
             "id": "f5278893-baa5-40e6-89e8-ef1e7c0a142c",
             "label": "forgotText",
-            "components": [],
             "x": 929,
             "y": 604,
             "originX": 0.5,
@@ -154,7 +148,6 @@
             "components": [
                 "Button"
             ],
-            "Button.spriteName": "login-button",
             "Button.callback": "() => this.onLoginSubmit()",
             "texture": {
                 "key": "login",
@@ -167,7 +160,6 @@
             "type": "Text",
             "id": "a976a534-7052-4d70-b43d-afa82f6d59a5",
             "label": "loginText",
-            "components": [],
             "x": 935,
             "y": 487,
             "originX": 0.5,
@@ -184,7 +176,6 @@
             "type": "Text",
             "id": "296f7e91-ccad-47b4-8fe7-e836c097a613",
             "label": "passwordText",
-            "components": [],
             "x": 783,
             "y": 194,
             "originY": 0.5,
@@ -199,7 +190,6 @@
             "type": "Image",
             "id": "475b6711-c774-497a-8474-54d19949497c",
             "label": "input",
-            "components": [],
             "texture": {
                 "key": "login",
                 "frame": "input"
@@ -211,7 +201,6 @@
             "type": "Image",
             "id": "fe0fb835-ffd2-4d00-a7f3-f729e0826de1",
             "label": "note",
-            "components": [],
             "texture": {
                 "key": "login",
                 "frame": "note"
@@ -228,10 +217,8 @@
             ],
             "label": "checks",
             "scope": "CLASS",
-            "components": [],
             "x": 806,
-            "y": 330,
-            "nestedPrefabs": []
+            "y": 330
         },
         {
             "prefabId": "4a66782f-1b3a-41da-b0c3-3d9d3c24217c",
@@ -243,11 +230,9 @@
             ],
             "label": "savePrompt",
             "scope": "CLASS",
-            "components": [],
             "x": 760,
             "y": 480,
-            "visible": false,
-            "nestedPrefabs": []
+            "visible": false
         },
         {
             "prefabId": "b1f49bb5-b7f5-4eb9-81d7-21aa125e487f",
@@ -259,11 +244,21 @@
             ],
             "label": "waitPrompt",
             "scope": "CLASS",
-            "components": [],
             "x": 760,
             "y": 480,
-            "visible": false,
-            "nestedPrefabs": []
+            "visible": false
+        },
+        {
+            "prefabId": "bb033131-5826-4dba-9669-628ed47f8f81",
+            "id": "997bbe2d-02a3-498f-90ed-914f8f9fa740",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "twofa",
+            "scope": "CLASS",
+            "x": 0,
+            "y": 0
         }
     ],
     "plainObjects": [],
@@ -271,6 +266,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

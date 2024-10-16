@@ -17,12 +17,10 @@
             "type": "Image",
             "id": "b0ba7909-2225-4c6d-844f-fcab09ff0a6d",
             "label": "bg",
-            "components": [],
             "texture": {
                 "key": "load",
                 "frame": "bg"
             },
-            "y": 1,
             "originX": 0,
             "originY": 0
         },
@@ -89,7 +87,6 @@
             "type": "Image",
             "id": "b92b7009-e006-476e-a579-f883f6ec6feb",
             "label": "note",
-            "components": [],
             "texture": {
                 "key": "login",
                 "frame": "note"
@@ -101,7 +98,6 @@
             "type": "Text",
             "id": "5d9ec495-590b-4df6-80bb-0fffebb15251",
             "label": "backText",
-            "components": [],
             "x": 760,
             "y": 876,
             "originX": 0.5,
@@ -117,7 +113,6 @@
             "type": "Text",
             "id": "6e080082-1f94-49de-93ac-a33f0a579e66",
             "label": "registerText2",
-            "components": [],
             "x": 760,
             "y": 747,
             "originX": 0.5,
@@ -133,7 +128,6 @@
             "type": "Text",
             "id": "d7f0475d-0213-4ab6-bab2-d8be86122e35",
             "label": "registerText",
-            "components": [],
             "x": 760,
             "y": 713,
             "originX": 0.5,
@@ -149,7 +143,6 @@
             "type": "Text",
             "id": "731adc13-a878-47cf-866b-555084400e4c",
             "label": "forgotText",
-            "components": [],
             "x": 760,
             "y": 604,
             "originX": 0.5,
@@ -168,7 +161,6 @@
             "components": [
                 "Button"
             ],
-            "Button.spriteName": "login-button",
             "Button.callback": "() => this.onLoginSubmit()",
             "texture": {
                 "key": "login",
@@ -181,7 +173,6 @@
             "type": "Text",
             "id": "ad2e73b7-d14d-456d-8cb0-7ea3cf7a150b",
             "label": "loginText",
-            "components": [],
             "x": 760,
             "y": 483,
             "originX": 0.5,
@@ -197,7 +188,6 @@
             "type": "Text",
             "id": "6ff586b9-fbe0-49f6-9801-71f273c1df58",
             "label": "passwordText",
-            "components": [],
             "x": 503,
             "y": 258,
             "originY": 0.5,
@@ -212,7 +202,6 @@
             "type": "Text",
             "id": "dfe772c9-e24b-4230-a416-f95f1b14b3b3",
             "label": "usernameText",
-            "components": [],
             "x": 448,
             "y": 200,
             "originY": 0.5,
@@ -227,7 +216,6 @@
             "type": "Image",
             "id": "ffeb45b6-13e0-49b0-ad82-294a535c3ac4",
             "label": "password",
-            "components": [],
             "texture": {
                 "key": "login",
                 "frame": "input"
@@ -239,7 +227,6 @@
             "type": "Image",
             "id": "f3dd63e7-4704-47f4-913d-b0daebe09d24",
             "label": "username",
-            "components": [],
             "texture": {
                 "key": "login",
                 "frame": "input"
@@ -256,10 +243,8 @@
             ],
             "label": "checks",
             "scope": "CLASS",
-            "components": [],
             "x": 568,
-            "y": 328,
-            "nestedPrefabs": []
+            "y": 328
         },
         {
             "prefabId": "b1f49bb5-b7f5-4eb9-81d7-21aa125e487f",
@@ -271,11 +256,9 @@
             ],
             "label": "waitPrompt",
             "scope": "CLASS",
-            "components": [],
             "x": 760,
             "y": 480,
-            "visible": false,
-            "nestedPrefabs": []
+            "visible": false
         },
         {
             "prefabId": "4a66782f-1b3a-41da-b0c3-3d9d3c24217c",
@@ -287,11 +270,23 @@
             ],
             "label": "savePrompt",
             "scope": "CLASS",
-            "components": [],
             "x": 760,
             "y": 480,
-            "visible": false,
-            "nestedPrefabs": []
+            "visible": false
+        },
+        {
+            "prefabId": "bb033131-5826-4dba-9669-628ed47f8f81",
+            "id": "216fefe7-dad2-4075-ad9d-d78760f3506f",
+            "unlock": [
+                "x",
+                "y",
+                "visible"
+            ],
+            "label": "twofa",
+            "scope": "CLASS",
+            "x": 0,
+            "y": 0,
+            "visible": false
         }
     ],
     "plainObjects": [],
@@ -299,6 +294,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

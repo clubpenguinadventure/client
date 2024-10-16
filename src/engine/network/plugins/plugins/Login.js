@@ -35,7 +35,12 @@ export default class Login extends Plugin {
 
         let scene = this.scene.getScene(this.network.lastLoginScene)
 
-        scene.events.once('create', () => this.onLoginError(args.message))
+        if (args.message == "Invalid two-factor authentication code") {
+            scene.events.once('create', () => scene.show2FA())
+        } else {
+            scene.events.once('create', () => this.onLoginError(args.message))
+        }
+
         this.scene.start(this.network.lastLoginScene)
     }
 

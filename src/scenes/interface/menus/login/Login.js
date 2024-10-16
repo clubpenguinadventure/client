@@ -6,6 +6,7 @@ import TextInput from '@engine/interface/text/TextInput'
 import Checks from './checks/Checks'
 import WaitPrompt from './prompts/WaitPrompt'
 import SavePrompt from './prompts/SavePrompt'
+import TwoFA from './twofa/TwoFA'
 
 
 /* START OF COMPILED CODE */
@@ -21,6 +22,8 @@ export default class Login extends BaseScene {
         this.waitPrompt;
         /** @type {SavePrompt} */
         this.savePrompt;
+        /** @type {TwoFA} */
+        this.twofa;
 
 
         /* START-USER-CTR-CODE */
@@ -31,7 +34,7 @@ export default class Login extends BaseScene {
     _create() {
 
         // bg
-        const bg = this.add.image(0, 1, "load", "bg");
+        const bg = this.add.image(0, 0, "load", "bg");
         bg.setOrigin(0, 0);
 
         // backButton
@@ -118,6 +121,11 @@ export default class Login extends BaseScene {
         this.add.existing(savePrompt);
         savePrompt.visible = false;
 
+        // twofa
+        const twofa = new TwoFA(this, 0, 0);
+        this.add.existing(twofa);
+        twofa.visible = false;
+
         // backButton (components)
         const backButtonSimpleButton = new SimpleButton(backButton);
         backButtonSimpleButton.callback = () => this.onBackClick();
@@ -146,12 +154,12 @@ export default class Login extends BaseScene {
 
         // loginButton (components)
         const loginButtonButton = new Button(loginButton);
-        loginButtonButton.spriteName = "login-button";
         loginButtonButton.callback = () => this.onLoginSubmit();
 
         this.checks = checks;
         this.waitPrompt = waitPrompt;
         this.savePrompt = savePrompt;
+        this.twofa = twofa;
 
         this.events.emit("scene-awake");
     }
@@ -186,6 +194,7 @@ export default class Login extends BaseScene {
 
         this.usernameInput = new TextInput(this, 815, 200, 'text', style, () => this.onLoginSubmit(), 12, false)
         this.passwordInput = new TextInput(this, 815, 259, 'password', passwordStyle, () => this.onLoginSubmit(), 128, false)
+        this.twoFaInput = new TextInput(this, 760, 472, 'text', style, () => this.submit2fa(), 6, false)
 
         this.add.existing(this.usernameInput)
         this.add.existing(this.passwordInput)
@@ -201,9 +210,7 @@ export default class Login extends BaseScene {
         this.interface.showLoading(`Logging in ${username}`)
         this.scene.stop()
 
-        this.network.connectLogin(this.checks.username.checked, this.checks.password.checked, () => {
-            this.network.send('login', { username: username, password: password })
-        })
+        this.network.login(this.checks.username.checked, this.checks.password.checked, username, password)
     }
 
     onCreateClick() {
@@ -213,6 +220,18 @@ export default class Login extends BaseScene {
     onBackClick() {
         this.network.disconnect()
         this.scene.start('Start')
+    }
+
+    show2FA() {
+        this.twofa.visible = true
+        this.add.existing(this.twoFaInput)
+        this.twoFaInput.setFocus()
+    }
+
+    submit2fa() {
+        this.interface.showLoading(`Logging in ${this.network.username}`)
+        this.scene.stop()
+        this.network.loginWith2FA(this.twoFaInput.text)
     }
 
     /* END-USER-CODE */

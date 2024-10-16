@@ -1,7 +1,7 @@
 import DataHandler from './DataHandler'
 
 import io from 'socket.io-client'
-
+const HUB_URL = 'http://localhost:3000'
 
 export default class Network {
 
@@ -23,18 +23,84 @@ export default class Network {
         this.worldName
     }
 
-    connectLogin(saveUsername, savePassword, onConnect) {
+    async login(saveUsername, savePassword, username, password) {
         this.saveUsername = saveUsername
         this.savePassword = savePassword
+        this.username = username
+        this.password = password
 
-        this.connect('Login', () => {
-            onConnect()
-        }, () => {
-            this.disconnect()
+        const response = await fetch(HUB_URL + '/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password
+            })
+        });
+        let data = await response.json()
+
+        this.handler.handle({ action: 'login', args: data })
+    }
+
+    async loginWith2FA(code) {
+        const response = await fetch(HUB_URL + '/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: this.username,
+                password: this.password,
+                twoFactorCode: code
+            })
         })
+        let data = await response.json()
+
+        this.handler.handle({ action: 'login', args: data })
+    }
+
+    async tokenLogin(saveUsername, savePassword, username, token) {
+        this.saveUsername = saveUsername
+        this.savePassword = savePassword
+        this.username = username
+        this.token = token
+
+        const response = await fetch(HUB_URL + '/token_login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: username,
+                token: token
+            })
+        })
+        let data = await response.json()
+
+        this.handler.handle({ action: 'login', args: data })
+    }
+
+    async tokenLoginWith2FA(code) {
+        const response = await fetch(HUB_URL + '/token_login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: this.username,
+                token: this.token,
+                twoFactorCode: code
+            })
+        })
+        let data = await response.json()
+
+        this.handler.handle({ action: 'login', args: data })
     }
 
     connectGame(world, username, key) {
+        this.password = null
         // Only create token if save password is checked and space is available
         let createToken = this.savePassword && Object.keys(this.savedPenguins).length <= 6
         let response = { username: username, key: key, createToken: createToken }
