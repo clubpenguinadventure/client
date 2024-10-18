@@ -84,7 +84,6 @@ export default class Server extends BaseContainer {
 
         // server (components)
         const serverButton = new Button(server);
-        serverButton.spriteName = "server";
         serverButton.activeFrame = false;
 
         this.server = server;

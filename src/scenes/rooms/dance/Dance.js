@@ -300,7 +300,6 @@ export default class Dance extends RoomScene {
 
         // stairs (components)
         const stairsButton = new Button(stairs);
-        stairsButton.spriteName = "stairs";
         stairsButton.activeFrame = false;
         const stairsMoveTo = new MoveTo(stairs);
         stairsMoveTo.x = 1324;
@@ -313,7 +312,6 @@ export default class Dance extends RoomScene {
 
         // boiler_door (components)
         const boiler_doorButton = new Button(boiler_door);
-        boiler_doorButton.spriteName = "boiler";
         boiler_doorButton.activeFrame = false;
         const boiler_doorMoveTo = new MoveTo(boiler_door);
         boiler_doorMoveTo.x = 960;

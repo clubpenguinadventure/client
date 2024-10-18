@@ -379,66 +379,56 @@ export default class AdoptCatalog extends BookContainer {
 
         // pageLeft1 (components)
         const pageLeft1Button = new Button(pageLeft1);
-        pageLeft1Button.spriteName = "page_left";
         pageLeft1Button.callback = () => this.prevPage();
         pageLeft1Button.activeFrame = false;
         pageLeft1Button.pixelPerfect = true;
 
         // closeLeft (components)
         const closeLeftButton = new Button(closeLeft);
-        closeLeftButton.spriteName = "close_left";
         closeLeftButton.callback = () => this.close();
         closeLeftButton.pixelPerfect = true;
 
         // bathButton (components)
         const bathButtonButton = new Button(bathButton);
-        bathButtonButton.spriteName = "large-box";
         bathButtonButton.hoverCallback = () => this.onHintOver(11);
         bathButtonButton.hoverOutCallback = () => this.onHintOut();
         bathButtonButton.activeFrame = false;
 
         // foodButton (components)
         const foodButtonButton = new Button(foodButton);
-        foodButtonButton.spriteName = "large-box";
         foodButtonButton.hoverCallback = () => this.onHintOver(10);
         foodButtonButton.hoverOutCallback = () => this.onHintOut();
         foodButtonButton.activeFrame = false;
 
         // cookieButton (components)
         const cookieButtonButton = new Button(cookieButton);
-        cookieButtonButton.spriteName = "large-box";
         cookieButtonButton.hoverCallback = () => this.onHintOver(9);
         cookieButtonButton.hoverOutCallback = () => this.onHintOut();
         cookieButtonButton.activeFrame = false;
 
         // gumButton (components)
         const gumButtonButton = new Button(gumButton);
-        gumButtonButton.spriteName = "large-box";
         gumButtonButton.hoverCallback = () => this.onHintOver(8);
         gumButtonButton.hoverOutCallback = () => this.onHintOut();
         gumButtonButton.activeFrame = false;
 
         // walkButton (components)
         const walkButtonButton = new Button(walkButton);
-        walkButtonButton.spriteName = "blue-button";
         walkButtonButton.hoverCallback = () => this.onHintOver(7);
         walkButtonButton.hoverOutCallback = () => this.onHintOut();
 
         // feedButton (components)
         const feedButtonButton = new Button(feedButton);
-        feedButtonButton.spriteName = "blue-button";
         feedButtonButton.hoverCallback = () => this.onHintOver(6);
         feedButtonButton.hoverOutCallback = () => this.onHintOut();
 
         // restButton (components)
         const restButtonButton = new Button(restButton);
-        restButtonButton.spriteName = "blue-button";
         restButtonButton.hoverCallback = () => this.onHintOver(5);
         restButtonButton.hoverOutCallback = () => this.onHintOut();
 
         // playButton (components)
         const playButtonButton = new Button(playButton);
-        playButtonButton.spriteName = "blue-button";
         playButtonButton.hoverCallback = () => this.onHintOver(4);
         playButtonButton.hoverOutCallback = () => this.onHintOut();
 
@@ -459,55 +449,46 @@ export default class AdoptCatalog extends BookContainer {
 
         // adopt8 (components)
         const adopt8Button = new Button(adopt8);
-        adopt8Button.spriteName = "adopt";
         adopt8Button.callback = () => this.onAdoptClick(8);
         adopt8Button.pixelPerfect = true;
 
         // adopt7 (components)
         const adopt7Button = new Button(adopt7);
-        adopt7Button.spriteName = "adopt";
         adopt7Button.callback = () => this.onAdoptClick(7);
         adopt7Button.pixelPerfect = true;
 
         // adopt6 (components)
         const adopt6Button = new Button(adopt6);
-        adopt6Button.spriteName = "adopt";
         adopt6Button.callback = () => this.onAdoptClick(4);
         adopt6Button.pixelPerfect = true;
 
         // adopt5 (components)
         const adopt5Button = new Button(adopt5);
-        adopt5Button.spriteName = "adopt";
         adopt5Button.callback = () => this.onAdoptClick(6);
         adopt5Button.pixelPerfect = true;
 
         // adopt4 (components)
         const adopt4Button = new Button(adopt4);
-        adopt4Button.spriteName = "adopt";
         adopt4Button.callback = () => this.onAdoptClick(3);
         adopt4Button.pixelPerfect = true;
 
         // adopt3 (components)
         const adopt3Button = new Button(adopt3);
-        adopt3Button.spriteName = "adopt";
         adopt3Button.callback = () => this.onAdoptClick(2);
         adopt3Button.pixelPerfect = true;
 
         // adopt2 (components)
         const adopt2Button = new Button(adopt2);
-        adopt2Button.spriteName = "adopt";
         adopt2Button.callback = () => this.onAdoptClick(1);
         adopt2Button.pixelPerfect = true;
 
         // adopt1 (components)
         const adopt1Button = new Button(adopt1);
-        adopt1Button.spriteName = "adopt";
         adopt1Button.callback = () => this.onAdoptClick(5);
         adopt1Button.pixelPerfect = true;
 
         // adopt (components)
         const adoptButton = new Button(adopt);
-        adoptButton.spriteName = "adopt";
         adoptButton.callback = () => this.onAdoptClick(0);
         adoptButton.pixelPerfect = true;
 
@@ -525,32 +506,27 @@ export default class AdoptCatalog extends BookContainer {
 
         // pageFront (components)
         const pageFrontButton = new Button(pageFront);
-        pageFrontButton.spriteName = "page_front";
         pageFrontButton.callback = () => this.nextPage();
         pageFrontButton.activeFrame = false;
 
         // closeRight1 (components)
         const closeRight1Button = new Button(closeRight1);
-        closeRight1Button.spriteName = "close_right";
         closeRight1Button.callback = () => this.close();
         closeRight1Button.pixelPerfect = true;
 
         // closeRight (components)
         const closeRightButton = new Button(closeRight);
-        closeRightButton.spriteName = "close_right";
         closeRightButton.callback = () => this.close();
         closeRightButton.pixelPerfect = true;
 
         // pageRight (components)
         const pageRightButton = new Button(pageRight);
-        pageRightButton.spriteName = "page_right";
         pageRightButton.callback = () => this.nextPage();
         pageRightButton.activeFrame = false;
         pageRightButton.pixelPerfect = true;
 
         // pageLeft (components)
         const pageLeftButton = new Button(pageLeft);
-        pageLeftButton.spriteName = "page_left";
         pageLeftButton.callback = () => this.prevPage();
         pageLeftButton.activeFrame = false;
         pageLeftButton.pixelPerfect = true;

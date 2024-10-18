@@ -49,8 +49,7 @@ export default class DragonsLair extends IglooScene {
         door.setOrigin(0.48402590063732504, 1.006368509208996);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

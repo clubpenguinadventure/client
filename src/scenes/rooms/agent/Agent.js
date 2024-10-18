@@ -305,14 +305,12 @@ export default class Agent extends RoomScene {
 
         // fish (components)
         const fishButton = new Button(fish);
-        fishButton.spriteName = "fish";
         fishButton.callback = () => this.onFishClick();
         fishButton.activeFrame = false;
         fishButton.pixelPerfect = true;
 
         // missions (components)
         const missionsButton = new Button(missions);
-        missionsButton.spriteName = "missions";
         missionsButton.callback = () => this.onMissionsClick();
         missionsButton.activeFrame = false;
         missionsButton.pixelPerfect = true;

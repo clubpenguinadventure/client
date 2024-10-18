@@ -151,37 +151,31 @@ export default class GiveTour extends BookContainer {
 
         // backCloseButton (components)
         const backCloseButtonButton = new Button(backCloseButton);
-        backCloseButtonButton.spriteName = "close_button";
         backCloseButtonButton.callback = () => this.close();
         backCloseButtonButton.pixelPerfect = true;
 
         // button5 (components)
         const button5Button = new Button(button5);
-        button5Button.spriteName = "button";
         button5Button.activeFrame = false;
         button5Button.pixelPerfect = true;
 
         // button4 (components)
         const button4Button = new Button(button4);
-        button4Button.spriteName = "button";
         button4Button.activeFrame = false;
         button4Button.pixelPerfect = true;
 
         // button3 (components)
         const button3Button = new Button(button3);
-        button3Button.spriteName = "button";
         button3Button.activeFrame = false;
         button3Button.pixelPerfect = true;
 
         // button2 (components)
         const button2Button = new Button(button2);
-        button2Button.spriteName = "button";
         button2Button.activeFrame = false;
         button2Button.pixelPerfect = true;
 
         // button1 (components)
         const button1Button = new Button(button1);
-        button1Button.spriteName = "button";
         button1Button.activeFrame = false;
         button1Button.pixelPerfect = true;
 
@@ -192,13 +186,11 @@ export default class GiveTour extends BookContainer {
 
         // frontCloseButton (components)
         const frontCloseButtonButton = new Button(frontCloseButton);
-        frontCloseButtonButton.spriteName = "close_button";
         frontCloseButtonButton.callback = () => this.close();
         frontCloseButtonButton.pixelPerfect = true;
 
         // closeButton (components)
         const closeButtonButton = new Button(closeButton);
-        closeButtonButton.spriteName = "close_button";
         closeButtonButton.callback = () => this.close();
         closeButtonButton.pixelPerfect = true;
 

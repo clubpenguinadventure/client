@@ -71,7 +71,6 @@ export default class DojoExt extends RoomScene {
 
         // dojo_door (components)
         const dojo_doorButton = new Button(dojo_door);
-        dojo_doorButton.spriteName = "dojo_door";
         dojo_doorButton.activeFrame = false;
         const dojo_doorMoveTo = new MoveTo(dojo_door);
         dojo_doorMoveTo.x = 780;

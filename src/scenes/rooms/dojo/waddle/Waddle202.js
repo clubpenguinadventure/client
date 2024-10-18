@@ -53,7 +53,6 @@ export default class Waddle202 extends BaseContainer {
 
         // mat (components)
         const matButton = new Button(mat);
-        matButton.spriteName = "mat/mat_1";
         matButton.activeFrame = false;
         matButton.pixelPerfect = true;
         const matShowHint = new ShowHint(mat);

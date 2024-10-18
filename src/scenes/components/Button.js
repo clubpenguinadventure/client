@@ -66,18 +66,18 @@ export default class Button extends SimpleButton {
 
     get overFrame() {
         if (this.texture.frames[`${this.spriteName}-hover`]) {
-            return `${this.spriteName}-hover`
+            return this.texture.frames[`${this.spriteName}-hover`]
         }
         return this.outFrame
     }
 
     get outFrame() {
-        return this.spriteName
+        return this.texture.frames[this.spriteName]
     }
 
     get downFrame() {
         if (this.texture.frames[`${this.spriteName}-active`]) {
-            return `${this.spriteName}-active`
+            return this.texture.frames[`${this.spriteName}-active`]
         }
         return this.overFrame
     }
@@ -88,12 +88,12 @@ export default class Button extends SimpleButton {
     }
 
     onOver() {
-        this.gameObject.setTexture(this.textureKey, this.overFrame, false, false)
+        this.gameObject.setFrame(this.overFrame, false, false)
         super.onOver()
     }
 
     onOut() {
-        this.gameObject.setTexture(this.textureKey, this.outFrame, false, false)
+        this.gameObject.setFrame(this.outFrame, false, false)
         super.onOut()
     }
 
@@ -102,7 +102,7 @@ export default class Button extends SimpleButton {
             return
         }
 
-        this.gameObject.setTexture(this.textureKey, this.downFrame, false, false)
+        this.gameObject.setFrame(this.downFrame, false, false)
     }
 
     onUp(pointer) {
@@ -110,7 +110,7 @@ export default class Button extends SimpleButton {
             return
         }
 
-        this.gameObject.setTexture(this.textureKey, this.overFrame, false, false)
+        this.gameObject.setFrame(this.overFrame, false, false)
 
         super.onUp(pointer)
     }

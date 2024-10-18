@@ -108,7 +108,6 @@ export default class Lounge extends RoomScene {
 
         // astro (components)
         const astroButton = new Button(astro);
-        astroButton.spriteName = "astro";
         astroButton.activeFrame = false;
         astroButton.pixelPerfect = true;
         const astroMoveTo = new MoveTo(astro);
@@ -119,7 +118,6 @@ export default class Lounge extends RoomScene {
 
         // ice (components)
         const iceButton = new Button(ice);
-        iceButton.spriteName = "ice";
         iceButton.activeFrame = false;
         iceButton.pixelPerfect = true;
         const iceMoveTo = new MoveTo(ice);

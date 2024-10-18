@@ -92,7 +92,6 @@ export default class Shop extends RoomScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         doorButton.pixelPerfect = true;
         const doorMoveTo = new MoveTo(door);
@@ -138,7 +137,6 @@ export default class Shop extends RoomScene {
 
         // catalog (components)
         const catalogButton = new Button(catalog);
-        catalogButton.spriteName = "catalog";
         catalogButton.callback = () => this.interface.loadWidget('ClothingCatalog');
         catalogButton.activeFrame = false;
         catalogButton.pixelPerfect = true;

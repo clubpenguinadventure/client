@@ -17,7 +17,6 @@ export default class FloorButton extends BaseImage {
 
         // this (components)
         const thisButton = new Button(this);
-        thisButton.spriteName = "buy";
         thisButton.callback = () => this.interface.prompt.showFloor(this.floor);
 
         /* START-USER-CTR-CODE */

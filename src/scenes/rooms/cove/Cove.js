@@ -162,7 +162,6 @@ export default class Cove extends RoomScene {
 
         // hut (components)
         const hutButton = new Button(hut);
-        hutButton.spriteName = "hut";
         hutButton.activeFrame = false;
         const hutMoveTo = new MoveTo(hut);
         hutMoveTo.x = 1250;

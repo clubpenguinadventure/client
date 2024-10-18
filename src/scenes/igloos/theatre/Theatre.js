@@ -43,8 +43,7 @@ export default class Theatre extends IglooScene {
         door.setOrigin(0.5700189907853581, 0.6648899182937672);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

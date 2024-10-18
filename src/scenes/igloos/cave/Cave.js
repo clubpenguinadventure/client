@@ -46,8 +46,7 @@ export default class Cave extends IglooScene {
         door.setOrigin(0.584305317139221, 0.8826479200251047);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

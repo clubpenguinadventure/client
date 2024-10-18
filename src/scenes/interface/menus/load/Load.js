@@ -12,10 +12,10 @@ export default class Load extends BaseScene {
 
         /** @type {Phaser.GameObjects.Text} */
         this.text;
-        /** @type {Phaser.GameObjects.Container} */
-        this.bar;
         /** @type {Phaser.GameObjects.Rectangle} */
         this.progress;
+        /** @type {Phaser.GameObjects.Container} */
+        this.bar;
         /** @type {Phaser.GameObjects.Image} */
         this.spinner;
 
@@ -66,8 +66,8 @@ export default class Load extends BaseScene {
         new Interactive(bg);
 
         this.text = text;
-        this.bar = bar;
         this.progress = progress;
+        this.bar = bar;
         this.spinner = spinner;
 
         this.events.emit("scene-awake");

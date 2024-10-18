@@ -119,7 +119,6 @@ export default class Shack extends RoomScene {
 
         // plant_doors (components)
         const plant_doorsButton = new Button(plant_doors);
-        plant_doorsButton.spriteName = "plant_doors";
         plant_doorsButton.activeFrame = false;
         const plant_doorsMoveTo = new MoveTo(plant_doors);
         plant_doorsMoveTo.x = 70;

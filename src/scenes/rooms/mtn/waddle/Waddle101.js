@@ -35,7 +35,7 @@ export default class Waddle101 extends BaseContainer {
 
         // barrier1
         const barrier1 = scene.add.image(23, 36, "mtn", "barrier_1");
-        barrier1.angle = -14.999999999999998;
+        barrier1.angle = -15;
         barrier1.setOrigin(0.5, 0.45901639344262296);
         this.add(barrier1);
 

@@ -32,7 +32,6 @@ export default class MailbookUserItem extends BaseContainer {
 
         // item (components)
         const itemButton = new Button(item);
-        itemButton.spriteName = "list/item";
         itemButton.callback = () => this.onClick();
         itemButton.activeFrame = false;
 

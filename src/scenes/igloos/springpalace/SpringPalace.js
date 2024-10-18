@@ -53,7 +53,6 @@ export default class SpringPalace extends IglooScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         new MoveTo(door);
 

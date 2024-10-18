@@ -43,8 +43,7 @@ export default class CozyCottage extends IglooScene {
         door.setOrigin(0.5335068898097584, 0.9320638809646956);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

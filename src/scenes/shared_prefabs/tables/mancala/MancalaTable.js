@@ -46,7 +46,6 @@ export default class MancalaTable extends Phaser.GameObjects.Container {
 
         // game (components)
         const gameButton = new Button(game);
-        gameButton.spriteName = "table/game";
         gameButton.activeFrame = false;
         const gameMoveTo = new MoveTo(game);
         gameMoveTo.x = this.x;

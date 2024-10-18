@@ -18,7 +18,6 @@ export default class BuyButton extends BaseImage {
 
         // this (components)
         const thisButton = new Button(this);
-        thisButton.spriteName = "buy";
         thisButton.callback = () => this.interface.prompt.showFurniture(this.item);
 
         /* START-USER-CTR-CODE */

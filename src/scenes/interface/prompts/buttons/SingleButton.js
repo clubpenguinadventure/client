@@ -28,7 +28,6 @@ export default class SingleButton extends BaseContainer {
 
         // button (components)
         const buttonButton = new Button(button);
-        buttonButton.spriteName = "window-button";
         buttonButton.callback = () => this.onClick();
 
         this.text = text;

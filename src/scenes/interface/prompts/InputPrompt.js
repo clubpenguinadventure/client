@@ -81,7 +81,6 @@ export default class InputPrompt extends BaseContainer {
 
         // xButton (components)
         const xButtonButton = new Button(xButton);
-        xButtonButton.spriteName = "blue-button";
         xButtonButton.callback = () => this.close();
 
         this.bg = bg;

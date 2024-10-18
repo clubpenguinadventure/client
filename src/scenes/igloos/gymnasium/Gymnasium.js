@@ -50,8 +50,7 @@ export default class Gymnasium extends IglooScene {
         const sort = [fg];
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.sort = sort;

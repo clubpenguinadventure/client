@@ -61,7 +61,6 @@ export default class Sensei extends GameScene {
 
         // xButton (components)
         const xButtonButton = new Button(xButton);
-        xButtonButton.spriteName = "grey-button";
         xButtonButton.callback = () => this.world.client.sendJoinLastRoom();
 
         this.widget = widget;

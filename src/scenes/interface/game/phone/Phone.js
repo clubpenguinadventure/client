@@ -107,17 +107,14 @@ export default class Phone extends BaseContainer {
 
         // hq (components)
         const hqButton = new Button(hq);
-        hqButton.spriteName = "phone/button";
         hqButton.callback = () => this.onHqClick();
 
         // teleport (components)
         const teleportButton = new Button(teleport);
-        teleportButton.spriteName = "phone/button";
         teleportButton.callback = () => this.onTeleportClick();
 
         // closeButton (components)
         const closeButtonButton = new Button(closeButton);
-        closeButtonButton.spriteName = "phone/close_button";
         closeButtonButton.callback = () => this.close();
 
         // light (components)
@@ -127,13 +124,11 @@ export default class Phone extends BaseContainer {
 
         // scrollDown (components)
         const scrollDownButton = new Button(scrollDown);
-        scrollDownButton.spriteName = "phone/scroll_button";
         scrollDownButton.callback = () => this.onScrollDownClick();
         scrollDownButton.activeFrame = false;
 
         // scrollUp (components)
         const scrollUpButton = new Button(scrollUp);
-        scrollUpButton.spriteName = "phone/scroll_button";
         scrollUpButton.callback = () => this.onScrollUpClick();
         scrollUpButton.activeFrame = false;
 

@@ -71,17 +71,14 @@ export default class GridView extends BaseContainer {
 
         // grey_button (components)
         const grey_buttonButton = new Button(grey_button);
-        grey_buttonButton.spriteName = "grey-button";
         grey_buttonButton.callback = () => this.visible = false;
 
         // down_button (components)
         const down_buttonButton = new Button(down_button);
-        down_buttonButton.spriteName = "grey-button";
         down_buttonButton.callback = () => this.nextPage();
 
         // up_button (components)
         const up_buttonButton = new Button(up_button);
-        up_buttonButton.spriteName = "grey-button";
         up_buttonButton.callback = () => this.prevPage();
 
         this.container = container;

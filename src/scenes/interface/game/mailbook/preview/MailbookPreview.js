@@ -88,17 +88,14 @@ export default class MailbookPreview extends BaseContainer {
 
         // no (components)
         const noButton = new Button(no);
-        noButton.spriteName = "button";
         noButton.callback = () => this.close();
 
         // yes (components)
         const yesButton = new Button(yes);
-        yesButton.spriteName = "button";
         yesButton.callback = () => this.onYesClick();
 
         // closeButton (components)
         const closeButtonButton = new Button(closeButton);
-        closeButtonButton.spriteName = "grey-button";
         closeButtonButton.callback = () => this.close();
 
         this.sendText = sendText;

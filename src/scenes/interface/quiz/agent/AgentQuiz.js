@@ -249,7 +249,6 @@ export default class AgentQuiz extends BaseContainer {
 
         // blueButton (components)
         const blueButtonButton = new Button(blueButton);
-        blueButtonButton.spriteName = "blue-button";
         blueButtonButton.callback = () => this.close();
 
         this.option3 = option3;

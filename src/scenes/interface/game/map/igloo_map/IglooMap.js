@@ -15,16 +15,16 @@ export default class IglooMap extends BaseContainer {
 
         /** @type {Phaser.GameObjects.Image} */
         this.spinner;
-        /** @type {Phaser.GameObjects.Container} */
-        this.panel;
-        /** @type {Phaser.GameObjects.Container} */
-        this.down;
         /** @type {Phaser.GameObjects.Image} */
         this.downButton;
         /** @type {Phaser.GameObjects.Container} */
-        this.up;
+        this.down;
         /** @type {Phaser.GameObjects.Image} */
         this.upButton;
+        /** @type {Phaser.GameObjects.Container} */
+        this.up;
+        /** @type {Phaser.GameObjects.Container} */
+        this.panel;
         /** @type {IglooButton[]} */
         this.iglooSprites;
         /** @type {IglooItem[]} */
@@ -401,31 +401,27 @@ export default class IglooMap extends BaseContainer {
 
         // grey_button (components)
         const grey_buttonButton = new Button(grey_button);
-        grey_buttonButton.spriteName = "grey-button";
         grey_buttonButton.callback = () => this.visible = false;
 
         // igloo_item_large (components)
         const igloo_item_largeButton = new Button(igloo_item_large);
-        igloo_item_largeButton.spriteName = "igloo/item_large";
         igloo_item_largeButton.callback = () => this.onIglooClick();
         igloo_item_largeButton.activeFrame = false;
 
         // downButton (components)
         const downButtonButton = new Button(downButton);
-        downButtonButton.spriteName = "grey-button";
         downButtonButton.callback = () => this.nextPage();
 
         // upButton (components)
         const upButtonButton = new Button(upButton);
-        upButtonButton.spriteName = "grey-button";
         upButtonButton.callback = () => this.prevPage();
 
         this.spinner = spinner;
-        this.panel = panel;
-        this.down = down;
         this.downButton = downButton;
-        this.up = up;
+        this.down = down;
         this.upButton = upButton;
+        this.up = up;
+        this.panel = panel;
         this.iglooSprites = iglooSprites;
         this.items = items;
 

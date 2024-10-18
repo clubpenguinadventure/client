@@ -46,7 +46,6 @@ export default class PenguinLarge extends BaseContainer {
 
         // penguinLarge (components)
         const penguinLargeButton = new Button(penguinLarge);
-        penguinLargeButton.spriteName = "player_large";
         penguinLargeButton.activeFrame = false;
 
         // paperDoll (prefab fields)

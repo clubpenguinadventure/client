@@ -57,7 +57,6 @@ export default class TakeTour extends BaseContainer {
 
         // greyBbutton (components)
         const greyBbuttonButton = new Button(greyBbutton);
-        greyBbuttonButton.spriteName = "grey-button";
         greyBbuttonButton.callback = () => this.close();
 
         /* START-USER-CTR-CODE */

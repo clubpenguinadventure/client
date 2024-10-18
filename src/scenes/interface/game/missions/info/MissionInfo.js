@@ -53,7 +53,6 @@ export default class MissionInfo extends BaseContainer {
 
         // launchButton (components)
         const launchButtonButton = new Button(launchButton);
-        launchButtonButton.spriteName = "launch_button";
         launchButtonButton.callback = () => this.onLaunchClick();
 
         this.description = description;

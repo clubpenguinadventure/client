@@ -21,20 +21,20 @@ export default class PlayerCard extends BaseContainer {
         this.paperDoll;
         /** @type {Buttons} */
         this.buttons;
-        /** @type {Phaser.GameObjects.Container} */
-        this.stats;
         /** @type {Phaser.GameObjects.Text} */
         this.coins;
+        /** @type {Phaser.GameObjects.Container} */
+        this.stats;
         /** @type {Phaser.GameObjects.Text} */
         this.username;
         /** @type {InventorySort} */
         this.inventorySort;
         /** @type {Inventory} */
         this.inventory;
-        /** @type {Phaser.GameObjects.Container} */
-        this.badge;
         /** @type {Phaser.GameObjects.Image} */
         this.stripes;
+        /** @type {Phaser.GameObjects.Container} */
+        this.badge;
 
 
         // card_photo
@@ -134,7 +134,6 @@ export default class PlayerCard extends BaseContainer {
 
         // x_button (components)
         const x_buttonButton = new Button(x_button);
-        x_buttonButton.spriteName = "blue-button";
         x_buttonButton.callback = () => { this.visible = false };
 
         // badge_lines_lines (components)
@@ -145,13 +144,13 @@ export default class PlayerCard extends BaseContainer {
         this.photo = photo;
         this.paperDoll = paperDoll;
         this.buttons = buttons;
-        this.stats = stats;
         this.coins = coins;
+        this.stats = stats;
         this.username = username;
         this.inventorySort = inventorySort;
         this.inventory = inventory;
-        this.badge = badge;
         this.stripes = stripes;
+        this.badge = badge;
 
         /* START-USER-CTR-CODE */
 

@@ -129,7 +129,7 @@ export default class Forts extends RoomScene {
         // clockText
         const clockText = this.add.text(1159, 75, "", {});
         clockText.scaleX = 0.76;
-        clockText.angle = -3.33;
+        clockText.angle = -3.330000000000041;
         clockText.setOrigin(0.5, 0.5);
         clockText.text = "CLUB PENGUIN\nTIME ZONE";
         clockText.setStyle({ "align": "center", "color": "#000", "fixedWidth":250,"fontFamily": "CCComiccrazy", "fontSize": "24px" });
@@ -147,7 +147,6 @@ export default class Forts extends RoomScene {
 
         // sign (components)
         const signButton = new Button(sign);
-        signButton.spriteName = "sign";
         signButton.activeFrame = false;
 
         // blue_flag (components)

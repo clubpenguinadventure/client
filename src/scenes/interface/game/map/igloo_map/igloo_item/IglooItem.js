@@ -32,7 +32,6 @@ export default class IglooItem extends BaseContainer {
 
         // buddy_item (components)
         const buddy_itemButton = new Button(buddy_item);
-        buddy_itemButton.spriteName = "igloo/item_small";
         buddy_itemButton.callback = () => this.onClick();
         buddy_itemButton.activeFrame = false;
 

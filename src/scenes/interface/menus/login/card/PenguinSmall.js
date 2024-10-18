@@ -49,7 +49,6 @@ export default class PenguinSmall extends BaseContainer {
 
         // penguinSmall (components)
         const penguinSmallButton = new Button(penguinSmall);
-        penguinSmallButton.spriteName = "player_small";
         penguinSmallButton.activeFrame = false;
 
         // paperDoll (prefab fields)

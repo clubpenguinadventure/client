@@ -125,7 +125,6 @@ export default class Town extends RoomScene {
 
         // coffee_door (components)
         const coffee_doorButton = new Button(coffee_door);
-        coffee_doorButton.spriteName = "coffee_door";
         coffee_doorButton.activeFrame = false;
         coffee_doorButton.pixelPerfect = true;
         const coffee_doorMoveTo = new MoveTo(coffee_door);
@@ -134,7 +133,6 @@ export default class Town extends RoomScene {
 
         // gift_door (components)
         const gift_doorButton = new Button(gift_door);
-        gift_doorButton.spriteName = "gift_door";
         gift_doorButton.activeFrame = false;
         gift_doorButton.pixelPerfect = true;
         const gift_doorMoveTo = new MoveTo(gift_door);

@@ -108,7 +108,6 @@ export default class FindFour extends BaseContainer {
 
         // x_button (components)
         const x_buttonButton = new Button(x_button);
-        x_buttonButton.spriteName = "blue-button";
         x_buttonButton.callback = () => this.close();
 
         this.shadow = shadow;

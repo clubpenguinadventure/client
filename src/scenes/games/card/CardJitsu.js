@@ -115,7 +115,6 @@ export default class CardJitsu extends GameScene {
 
         // closeButton (components)
         const closeButtonButton = new Button(closeButton);
-        closeButtonButton.spriteName = "close";
         closeButtonButton.callback = () => this.onCloseClick();
 
         this.bg = bg;

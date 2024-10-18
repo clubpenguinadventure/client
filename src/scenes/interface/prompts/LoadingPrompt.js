@@ -14,10 +14,10 @@ export default class LoadingPrompt extends BaseContainer {
 
         /** @type {Phaser.GameObjects.Rectangle} */
         this.bg;
-        /** @type {Phaser.GameObjects.Container} */
-        this.bar;
         /** @type {Phaser.GameObjects.Rectangle} */
         this.progress;
+        /** @type {Phaser.GameObjects.Container} */
+        this.bar;
         /** @type {Phaser.GameObjects.Text} */
         this.text;
         /** @type {Phaser.GameObjects.Image} */
@@ -84,12 +84,11 @@ export default class LoadingPrompt extends BaseContainer {
 
         // blueButton (components)
         const blueButtonButton = new Button(blueButton);
-        blueButtonButton.spriteName = "blue-button";
         blueButtonButton.callback = () => this.close();
 
         this.bg = bg;
-        this.bar = bar;
         this.progress = progress;
+        this.bar = bar;
         this.text = text;
         this.spinner = spinner;
 

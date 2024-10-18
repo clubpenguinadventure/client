@@ -43,8 +43,7 @@ export default class Backyard extends IglooScene {
         door.setOrigin(0.39645371736436524, 0.8507561659638476);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

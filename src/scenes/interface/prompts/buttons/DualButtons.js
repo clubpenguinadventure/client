@@ -36,12 +36,10 @@ export default class DualButtons extends BaseContainer {
 
         // no_button (components)
         const no_buttonButton = new Button(no_button);
-        no_buttonButton.spriteName = "window-button-small";
         no_buttonButton.callback = () => this.onNoClick();
 
         // yes_button (components)
         const yes_buttonButton = new Button(yes_button);
-        yes_buttonButton.spriteName = "window-button-small";
         yes_buttonButton.callback = () => this.onYesClick();
 
         /* START-USER-CTR-CODE */

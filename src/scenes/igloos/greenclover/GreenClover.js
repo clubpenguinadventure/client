@@ -43,8 +43,7 @@ export default class GreenClover extends IglooScene {
         door.setOrigin(0.43425859398167804, 0.8752657551378683);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

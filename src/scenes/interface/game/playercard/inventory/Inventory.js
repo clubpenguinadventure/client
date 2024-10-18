@@ -15,12 +15,12 @@ export default class Inventory extends BaseContainer {
     constructor(scene, x, y) {
         super(scene, x ?? 760, y ?? 460);
 
-        /** @type {Phaser.GameObjects.Container} */
-        this.container;
         /** @type {Phaser.GameObjects.Image} */
         this.inventory_bg;
         /** @type {Phaser.GameObjects.Text} */
         this.active_text;
+        /** @type {Phaser.GameObjects.Container} */
+        this.container;
         /** @type {Phaser.GameObjects.Image} */
         this.arrow;
         /** @type {Phaser.GameObjects.Image[]} */
@@ -135,89 +135,74 @@ export default class Inventory extends BaseContainer {
 
         // down_button (components)
         const down_buttonButton = new Button(down_button);
-        down_buttonButton.spriteName = "grey-button";
         down_buttonButton.callback = () => { this.nextPage() };
 
         // up_button (components)
         const up_buttonButton = new Button(up_button);
-        up_buttonButton.spriteName = "grey-button";
         up_buttonButton.callback = () => { this.prevPage() };
 
         // slot_12 (components)
         const slot_12Button = new Button(slot_12);
-        slot_12Button.spriteName = "large-box";
         slot_12Button.callback = () => { this.onSlotClick(11) };
         slot_12Button.activeFrame = false;
 
         // slot_11 (components)
         const slot_11Button = new Button(slot_11);
-        slot_11Button.spriteName = "large-box";
         slot_11Button.callback = () => { this.onSlotClick(10) };
         slot_11Button.activeFrame = false;
 
         // slot_10 (components)
         const slot_10Button = new Button(slot_10);
-        slot_10Button.spriteName = "large-box";
         slot_10Button.callback = () => { this.onSlotClick(9) };
         slot_10Button.activeFrame = false;
 
         // slot_9 (components)
         const slot_9Button = new Button(slot_9);
-        slot_9Button.spriteName = "large-box";
         slot_9Button.callback = () => { this.onSlotClick(8) };
         slot_9Button.activeFrame = false;
 
         // slot_8 (components)
         const slot_8Button = new Button(slot_8);
-        slot_8Button.spriteName = "large-box";
         slot_8Button.callback = () => { this.onSlotClick(7) };
         slot_8Button.activeFrame = false;
 
         // slot_7 (components)
         const slot_7Button = new Button(slot_7);
-        slot_7Button.spriteName = "large-box";
         slot_7Button.callback = () => { this.onSlotClick(6) };
         slot_7Button.activeFrame = false;
 
         // slot_6 (components)
         const slot_6Button = new Button(slot_6);
-        slot_6Button.spriteName = "large-box";
         slot_6Button.callback = () => { this.onSlotClick(5) };
         slot_6Button.activeFrame = false;
 
         // slot_5 (components)
         const slot_5Button = new Button(slot_5);
-        slot_5Button.spriteName = "large-box";
         slot_5Button.callback = () => { this.onSlotClick(4) };
         slot_5Button.activeFrame = false;
 
         // slot_4 (components)
         const slot_4Button = new Button(slot_4);
-        slot_4Button.spriteName = "large-box";
         slot_4Button.callback = () => { this.onSlotClick(3) };
         slot_4Button.activeFrame = false;
 
         // slot_3 (components)
         const slot_3Button = new Button(slot_3);
-        slot_3Button.spriteName = "large-box";
         slot_3Button.callback = () => { this.onSlotClick(2) };
         slot_3Button.activeFrame = false;
 
         // slot_2 (components)
         const slot_2Button = new Button(slot_2);
-        slot_2Button.spriteName = "large-box";
         slot_2Button.callback = () => { this.onSlotClick(1) };
         slot_2Button.activeFrame = false;
 
         // slot_1 (components)
         const slot_1Button = new Button(slot_1);
-        slot_1Button.spriteName = "large-box";
         slot_1Button.callback = () => { this.onSlotClick(0) };
         slot_1Button.activeFrame = false;
 
         // inventory_sort_button (components)
         const inventory_sort_buttonButton = new Button(inventory_sort_button);
-        inventory_sort_buttonButton.spriteName = "inventory/sort-button";
         inventory_sort_buttonButton.callback = () => this.parentContainer.inventorySort.showMenu();
         inventory_sort_buttonButton.activeFrame = false;
 
@@ -225,9 +210,9 @@ export default class Inventory extends BaseContainer {
         const tab_handleSimpleButton = new SimpleButton(tab_handle);
         tab_handleSimpleButton.callback = () => { this.onTabClick() };
 
-        this.container = container;
         this.inventory_bg = inventory_bg;
         this.active_text = active_text;
+        this.container = container;
         this.arrow = arrow;
         this.slots = slots;
 

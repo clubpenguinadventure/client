@@ -76,25 +76,21 @@ export default class SavePrompt extends BaseContainer {
 
         // save_button (components)
         const save_buttonButton = new Button(save_button);
-        save_buttonButton.spriteName = "save-button";
         save_buttonButton.callback = () => this.onSaveClick();
         save_buttonButton.activeFrame = false;
 
         // no_save_button (components)
         const no_save_buttonButton = new Button(no_save_button);
-        no_save_buttonButton.spriteName = "save-button";
         no_save_buttonButton.callback = () => this.close();
         no_save_buttonButton.activeFrame = false;
 
         // learn_button (components)
         const learn_buttonButton = new Button(learn_button);
-        learn_buttonButton.spriteName = "learn-button";
         learn_buttonButton.callback = () => this.close();
         learn_buttonButton.activeFrame = false;
 
         // blue_button (components)
         const blue_buttonButton = new Button(blue_button);
-        blue_buttonButton.spriteName = "blue-button";
         blue_buttonButton.callback = () => this.close();
 
         this.illustration = illustration;

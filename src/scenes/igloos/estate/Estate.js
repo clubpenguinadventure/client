@@ -43,8 +43,7 @@ export default class Estate extends IglooScene {
         door.setOrigin(0.4940445101703603, 0.7867669762241104);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

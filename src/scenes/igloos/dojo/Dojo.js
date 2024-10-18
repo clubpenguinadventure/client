@@ -43,8 +43,7 @@ export default class Dojo extends IglooScene {
         door.setOrigin(0.48974231971909804, 0.8447979348966812);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

@@ -46,8 +46,7 @@ export default class PinkIcePalace extends IglooScene {
         door.setOrigin(0.5368421052631579, 0.9769230769230769);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

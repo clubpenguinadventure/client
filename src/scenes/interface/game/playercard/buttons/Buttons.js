@@ -86,42 +86,36 @@ export default class Buttons extends BaseContainer {
 
         // report_button (components)
         const report_buttonButton = new Button(report_button);
-        report_buttonButton.spriteName = "blue-button";
         report_buttonButton.callback = () => this.onReportClick();
         const report_buttonShowHint = new ShowHint(report_button);
         report_buttonShowHint.text = "report_player_hint";
 
         // ignore_button (components)
         const ignore_buttonButton = new Button(ignore_button);
-        ignore_buttonButton.spriteName = "blue-button";
         ignore_buttonButton.callback = () => this.onIgnoreClick();
         const ignore_buttonShowHint = new ShowHint(ignore_button);
         ignore_buttonShowHint.text = "add_ignore_hint";
 
         // mail_button (components)
         const mail_buttonButton = new Button(mail_button);
-        mail_buttonButton.spriteName = "blue-button";
         mail_buttonButton.callback = () => this.onMailClick();
         const mail_buttonShowHint = new ShowHint(mail_button);
         mail_buttonShowHint.text = "send_mail_hint";
 
         // igloo_button (components)
         const igloo_buttonButton = new Button(igloo_button);
-        igloo_buttonButton.spriteName = "blue-button";
         igloo_buttonButton.callback = () => this.onIglooClick();
         const igloo_buttonShowHint = new ShowHint(igloo_button);
         igloo_buttonShowHint.text = "visit_home_hint";
 
         // profile_button (components)
         const profile_buttonButton = new Button(profile_button);
-        profile_buttonButton.spriteName = "blue-button";
         profile_buttonButton.callback = () => this.onFindClick();
         const profile_buttonShowHint = new ShowHint(profile_button);
         profile_buttonShowHint.text = "profile_hint";
 
         // buddy_button (components)
         const buddy_buttonButton = new Button(buddy_button);
-        buddy_buttonButton.spriteName = "blue-button";
         buddy_buttonButton.callback = () => this.onBuddyClick();
         const buddy_buttonShowHint = new ShowHint(buddy_button);
         buddy_buttonShowHint.text = "add_buddy_hint";

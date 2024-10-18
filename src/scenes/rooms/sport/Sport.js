@@ -135,14 +135,12 @@ export default class Sport extends RoomScene {
 
         // catalog (components)
         const catalogButton = new Button(catalog);
-        catalogButton.spriteName = "catalog";
         catalogButton.callback = () => this.onCatalogClick();
         catalogButton.activeFrame = false;
         catalogButton.pixelPerfect = true;
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         doorButton.pixelPerfect = true;
         const doorMoveTo = new MoveTo(door);
@@ -151,7 +149,6 @@ export default class Sport extends RoomScene {
 
         // curtain (components)
         const curtainButton = new Button(curtain);
-        curtainButton.spriteName = "curtain";
         curtainButton.activeFrame = false;
         const curtainMoveTo = new MoveTo(curtain);
         curtainMoveTo.x = 460;

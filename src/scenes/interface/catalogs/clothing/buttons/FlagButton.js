@@ -16,7 +16,6 @@ export default class FlagButton extends BaseImage {
 
         // this (components)
         const thisButton = new Button(this);
-        thisButton.spriteName = "flag";
         thisButton.callback = () => this.interface.prompt.showItem(this.item);
         thisButton.activeFrame = false;
 

@@ -131,7 +131,6 @@ export default class Dojo extends RoomScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         doorButton.pixelPerfect = true;
         const doorMoveTo = new MoveTo(door);
@@ -140,13 +139,11 @@ export default class Dojo extends RoomScene {
 
         // instructionsPoster (components)
         const instructionsPosterButton = new Button(instructionsPoster);
-        instructionsPosterButton.spriteName = "instructions_poster";
         instructionsPosterButton.callback = () => this.interface.loadWidget('NinjaInstructions');
         instructionsPosterButton.activeFrame = false;
 
         // legendPoster (components)
         const legendPosterButton = new Button(legendPoster);
-        legendPosterButton.spriteName = "legend_poster";
         legendPosterButton.callback = () => this.interface.loadWidget('NinjaBelts');
         legendPosterButton.activeFrame = false;
 
@@ -176,7 +173,6 @@ export default class Dojo extends RoomScene {
 
         // cards (components)
         const cardsButton = new Button(cards);
-        cardsButton.spriteName = "cards";
         cardsButton.callback = () => this.interface.loadWidget('NinjaProgress');
         cardsButton.activeFrame = false;
         cardsButton.pixelPerfect = true;

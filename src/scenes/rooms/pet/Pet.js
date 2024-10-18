@@ -204,7 +204,6 @@ export default class Pet extends RoomScene {
 
         // employees (components)
         const employeesButton = new Button(employees);
-        employeesButton.spriteName = "employees";
         employeesButton.activeFrame = false;
         const employeesMoveTo = new MoveTo(employees);
         employeesMoveTo.x = 1328;
@@ -214,7 +213,6 @@ export default class Pet extends RoomScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         const doorMoveTo = new MoveTo(door);
         doorMoveTo.x = 808;
@@ -305,14 +303,12 @@ export default class Pet extends RoomScene {
 
         // adoptCatalog (components)
         const adoptCatalogButton = new Button(adoptCatalog);
-        adoptCatalogButton.spriteName = "adopt_catalog";
         adoptCatalogButton.callback = () => this.onAdoptCatalogClick();
         adoptCatalogButton.activeFrame = false;
         adoptCatalogButton.pixelPerfect = true;
 
         // petCatalog (components)
         const petCatalogButton = new Button(petCatalog);
-        petCatalogButton.spriteName = "pets_catalog";
         petCatalogButton.callback = () => this.onPetCatalogClick();
         petCatalogButton.activeFrame = false;
         petCatalogButton.pixelPerfect = true;

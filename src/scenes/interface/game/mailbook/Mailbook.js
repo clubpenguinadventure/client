@@ -213,19 +213,16 @@ export default class Mailbook extends BaseContainer {
 
         // pageRight (components)
         const pageRightButton = new Button(pageRight);
-        pageRightButton.spriteName = "page_right";
         pageRightButton.callback = () => this.nextPage();
         pageRightButton.activeFrame = false;
 
         // pageLeft (components)
         const pageLeftButton = new Button(pageLeft);
-        pageLeftButton.spriteName = "page_left";
         pageLeftButton.callback = () => this.prevPage();
         pageLeftButton.activeFrame = false;
 
         // close (components)
         const closeButton = new Button(close);
-        closeButton.spriteName = "close";
         closeButton.callback = () => this.close();
         closeButton.pixelPerfect = true;
 

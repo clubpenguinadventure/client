@@ -26,7 +26,6 @@ export default class MailButton extends BaseContainer {
 
         // button (components)
         const buttonButton = new Button(button);
-        buttonButton.spriteName = "mail-button";
         buttonButton.callback = () => scene.mail.show();
         buttonButton.activeFrame = false;
 

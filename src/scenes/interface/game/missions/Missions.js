@@ -117,7 +117,6 @@ export default class Missions extends BaseContainer {
 
         // closeButton (components)
         const closeButtonButton = new Button(closeButton);
-        closeButtonButton.spriteName = "close_button";
         closeButtonButton.callback = () => this.close();
 
         this.info = info;

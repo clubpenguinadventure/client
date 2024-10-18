@@ -73,7 +73,6 @@ export default class NinjaProgress extends BaseContainer {
 
         // xButton (components)
         const xButtonButton = new Button(xButton);
-        xButtonButton.spriteName = "close";
         xButtonButton.callback = () => this.close();
 
         this.cardsViewRect = cardsViewRect;

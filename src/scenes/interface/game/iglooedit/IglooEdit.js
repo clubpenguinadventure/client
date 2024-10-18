@@ -13,14 +13,14 @@ export default class IglooEdit extends BaseScene {
     constructor() {
         super("IglooEdit");
 
-        /** @type {Phaser.GameObjects.Container} */
-        this.defaultControls;
         /** @type {Phaser.GameObjects.Image} */
         this.button_lock;
         /** @type {Phaser.GameObjects.Container} */
-        this.controls;
+        this.defaultControls;
         /** @type {Phaser.GameObjects.Image} */
         this.button_furniture;
+        /** @type {Phaser.GameObjects.Container} */
+        this.controls;
         /** @type {Phaser.GameObjects.Container} */
         this.furniture;
         /** @type {IglooMusic} */
@@ -158,7 +158,6 @@ export default class IglooEdit extends BaseScene {
 
         // button_edit (components)
         const button_editButton = new Button(button_edit);
-        button_editButton.spriteName = "button/edit";
         button_editButton.callback = () => this.onEditClick();
         button_editButton.activeFrame = false;
         const button_editShowHint = new ShowHint(button_edit);
@@ -166,7 +165,6 @@ export default class IglooEdit extends BaseScene {
 
         // button_lock (components)
         const button_lockButton = new Button(button_lock);
-        button_lockButton.spriteName = "button/lock";
         button_lockButton.hoverOutCallback = () => this.onLockOut();
         button_lockButton.callback = () => this.onLockClick();
         button_lockButton.activeFrame = false;
@@ -187,7 +185,6 @@ export default class IglooEdit extends BaseScene {
 
         // button_furniture_catalog (components)
         const button_furniture_catalogButton = new Button(button_furniture_catalog);
-        button_furniture_catalogButton.spriteName = "button/furniture_catalog";
         button_furniture_catalogButton.callback = () => this.interface.loadWidget('FurnitureCatalog');
         button_furniture_catalogButton.activeFrame = false;
         const button_furniture_catalogShowHint = new ShowHint(button_furniture_catalog);
@@ -195,7 +192,6 @@ export default class IglooEdit extends BaseScene {
 
         // button_furniture (components)
         const button_furnitureButton = new Button(button_furniture);
-        button_furnitureButton.spriteName = "button/furniture";
         button_furnitureButton.callback = () => this.onFurnitureClick();
         button_furnitureButton.activeFrame = false;
         const button_furnitureShowHint = new ShowHint(button_furniture);
@@ -203,7 +199,6 @@ export default class IglooEdit extends BaseScene {
 
         // button_music (components)
         const button_musicButton = new Button(button_music);
-        button_musicButton.spriteName = "button/music";
         button_musicButton.callback = () => iglooMusic.visible = true;
         button_musicButton.activeFrame = false;
         const button_musicShowHint = new ShowHint(button_music);
@@ -214,44 +209,38 @@ export default class IglooEdit extends BaseScene {
 
         // iglooButton (components)
         const iglooButtonButton = new Button(iglooButton);
-        iglooButtonButton.spriteName = "button/small";
         iglooButtonButton.callback = () => this.showGridView('igloo');
         iglooButtonButton.activeFrame = false;
 
         // puffleButton (components)
         const puffleButtonButton = new Button(puffleButton);
-        puffleButtonButton.spriteName = "button/small";
         puffleButtonButton.callback = () => this.showGridView(4);
         puffleButtonButton.activeFrame = false;
 
         // wallButton (components)
         const wallButtonButton = new Button(wallButton);
-        wallButtonButton.spriteName = "button/small";
         wallButtonButton.callback = () => this.showGridView(2);
         wallButtonButton.activeFrame = false;
 
         // roomButton (components)
         const roomButtonButton = new Button(roomButton);
-        roomButtonButton.spriteName = "button/small";
         roomButtonButton.callback = () => this.showGridView(1);
         roomButtonButton.activeFrame = false;
 
         // floorButton (components)
         const floorButtonButton = new Button(floorButton);
-        floorButtonButton.spriteName = "button/small";
         floorButtonButton.callback = () => this.showGridView(3);
         floorButtonButton.activeFrame = false;
 
         // allButton (components)
         const allButtonButton = new Button(allButton);
-        allButtonButton.spriteName = "button/large";
         allButtonButton.callback = () => this.showGridView();
         allButtonButton.activeFrame = false;
 
-        this.defaultControls = defaultControls;
         this.button_lock = button_lock;
-        this.controls = controls;
+        this.defaultControls = defaultControls;
         this.button_furniture = button_furniture;
+        this.controls = controls;
         this.furniture = furniture;
         this.iglooMusic = iglooMusic;
         this.gridView = gridView;

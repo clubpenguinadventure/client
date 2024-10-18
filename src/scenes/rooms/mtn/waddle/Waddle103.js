@@ -52,7 +52,7 @@ export default class Waddle103 extends BaseContainer {
 
         // zone
         const zone = scene.add.rectangle(64, 34, 160, 95);
-        zone.angle = -35;
+        zone.angle = -35.00000000000006;
         zone.visible = false;
         zone.alpha = 0.5;
         zone.isFilled = true;

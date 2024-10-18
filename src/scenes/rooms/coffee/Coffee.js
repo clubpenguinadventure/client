@@ -123,7 +123,6 @@ export default class Coffee extends RoomScene {
 
         // beans (components)
         const beansButton = new Button(beans);
-        beansButton.spriteName = "beans";
         beansButton.activeFrame = false;
         beansButton.pixelPerfect = true;
         new MoveTo(beans);
@@ -132,7 +131,6 @@ export default class Coffee extends RoomScene {
 
         // stairs (components)
         const stairsButton = new Button(stairs);
-        stairsButton.spriteName = "stairs";
         stairsButton.activeFrame = false;
         const stairsMoveTo = new MoveTo(stairs);
         stairsMoveTo.x = 1255;
@@ -140,7 +138,6 @@ export default class Coffee extends RoomScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         doorButton.pixelPerfect = true;
         const doorMoveTo = new MoveTo(door);

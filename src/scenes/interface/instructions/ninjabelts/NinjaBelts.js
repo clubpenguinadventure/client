@@ -37,7 +37,6 @@ export default class NinjaBelts extends BaseContainer {
 
         // close (components)
         const closeButton = new Button(close);
-        closeButton.spriteName = "close";
         closeButton.callback = () => this.close();
 
         /* START-USER-CTR-CODE */

@@ -60,18 +60,15 @@ export default class Start extends BaseScene {
 
         // createButton (components)
         const createButtonButton = new Button(createButton);
-        createButtonButton.spriteName = "create-button";
         createButtonButton.callback = () => this.onCreateClick();
         createButtonButton.activeFrame = false;
 
         // memberButton (components)
         const memberButtonButton = new Button(memberButton);
-        memberButtonButton.spriteName = "member-button";
         memberButtonButton.activeFrame = false;
 
         // startButton (components)
         const startButtonButton = new Button(startButton);
-        startButtonButton.spriteName = "start-button";
         startButtonButton.callback = () => this.onStartClick();
 
         this.events.emit("scene-awake");

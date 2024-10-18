@@ -18,7 +18,6 @@ export default class Tag2 extends BaseImage {
 
         // this (components)
         const thisButton = new Button(this);
-        thisButton.spriteName = "buy2";
         thisButton.callback = () => this.interface.prompt.showItem(this.item);
 
         /* START-USER-CTR-CODE */

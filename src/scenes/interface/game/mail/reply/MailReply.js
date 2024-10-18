@@ -19,7 +19,7 @@ export default class MailReply extends BaseContainer {
         this.arrow;
 
 
-        this.angle = 24.000000000000004;
+        this.angle = 24;
 
         // shadow
         const shadow = scene.add.image(-223, 396, "mail", "reply/shadow");
@@ -33,7 +33,7 @@ export default class MailReply extends BaseContainer {
 
         // arrow
         const arrow = scene.add.sprite(-396, 603, "mail", "reply/arrow0001");
-        arrow.angle = -24.000000000000004;
+        arrow.angle = -24;
         arrow.setOrigin(0.5, 0.5028248587570622);
         arrow.visible = false;
         this.add(arrow);

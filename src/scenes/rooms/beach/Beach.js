@@ -98,7 +98,6 @@ export default class Beach extends RoomScene {
 
         // lighthouse_door (components)
         const lighthouse_doorButton = new Button(lighthouse_door);
-        lighthouse_doorButton.spriteName = "lighthouse_door";
         lighthouse_doorButton.activeFrame = false;
         const lighthouse_doorMoveTo = new MoveTo(lighthouse_door);
         lighthouse_doorMoveTo.x = 480;

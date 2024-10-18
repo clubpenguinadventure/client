@@ -204,127 +204,106 @@ export default class EmotesMenu extends FloatingMenu {
 
         // emote_21 (components)
         const emote_21Button = new Button(emote_21);
-        emote_21Button.spriteName = "small-box";
         emote_21Button.callback = () => { this.onEmoteClick(16) };
         emote_21Button.activeFrame = false;
 
         // emote_20 (components)
         const emote_20Button = new Button(emote_20);
-        emote_20Button.spriteName = "small-box";
         emote_20Button.callback = () => { this.onEmoteClick(12) };
         emote_20Button.activeFrame = false;
 
         // emote_19 (components)
         const emote_19Button = new Button(emote_19);
-        emote_19Button.spriteName = "small-box";
         emote_19Button.callback = () => { this.onEmoteClick(30) };
         emote_19Button.activeFrame = false;
 
         // emote_18 (components)
         const emote_18Button = new Button(emote_18);
-        emote_18Button.spriteName = "small-box";
         emote_18Button.callback = () => { this.onEmoteClick(17) };
         emote_18Button.activeFrame = false;
 
         // emote_17 (components)
         const emote_17Button = new Button(emote_17);
-        emote_17Button.spriteName = "small-box";
         emote_17Button.callback = () => { this.onEmoteClick(28) };
         emote_17Button.activeFrame = false;
 
         // emote_16 (components)
         const emote_16Button = new Button(emote_16);
-        emote_16Button.spriteName = "small-box";
         emote_16Button.callback = () => { this.onEmoteClick(11) };
         emote_16Button.activeFrame = false;
 
         // emote_15 (components)
         const emote_15Button = new Button(emote_15);
-        emote_15Button.spriteName = "small-box";
         emote_15Button.callback = () => { this.onEmoteClick(26) };
         emote_15Button.activeFrame = false;
 
         // emote_14 (components)
         const emote_14Button = new Button(emote_14);
-        emote_14Button.spriteName = "small-box";
         emote_14Button.callback = () => { this.onEmoteClick(10) };
         emote_14Button.activeFrame = false;
 
         // emote_13 (components)
         const emote_13Button = new Button(emote_13);
-        emote_13Button.spriteName = "small-box";
         emote_13Button.callback = () => { this.onEmoteClick(9) };
         emote_13Button.activeFrame = false;
 
         // emote_12 (components)
         const emote_12Button = new Button(emote_12);
-        emote_12Button.spriteName = "small-box";
         emote_12Button.callback = () => { this.onEmoteClick(24) };
         emote_12Button.activeFrame = false;
 
         // emote_11 (components)
         const emote_11Button = new Button(emote_11);
-        emote_11Button.spriteName = "small-box";
         emote_11Button.callback = () => { this.onEmoteClick(8) };
         emote_11Button.activeFrame = false;
 
         // emote_10 (components)
         const emote_10Button = new Button(emote_10);
-        emote_10Button.spriteName = "small-box";
         emote_10Button.callback = () => { this.onEmoteClick(7) };
         emote_10Button.activeFrame = false;
 
         // emote_9 (components)
         const emote_9Button = new Button(emote_9);
-        emote_9Button.spriteName = "small-box";
         emote_9Button.callback = () => { this.onEmoteClick(29) };
         emote_9Button.activeFrame = false;
 
         // emote_8 (components)
         const emote_8Button = new Button(emote_8);
-        emote_8Button.spriteName = "small-box";
         emote_8Button.callback = () => { this.onEmoteClick(6) };
         emote_8Button.activeFrame = false;
 
         // emote_7 (components)
         const emote_7Button = new Button(emote_7);
-        emote_7Button.spriteName = "small-box";
         emote_7Button.callback = () => { this.onEmoteClick(5) };
         emote_7Button.activeFrame = false;
 
         // emote_6 (components)
         const emote_6Button = new Button(emote_6);
-        emote_6Button.spriteName = "small-box";
         emote_6Button.callback = () => { this.onEmoteClick(18) };
         emote_6Button.activeFrame = false;
 
         // emote_5 (components)
         const emote_5Button = new Button(emote_5);
-        emote_5Button.spriteName = "small-box";
         emote_5Button.callback = () => { this.onEmoteClick(4) };
         emote_5Button.activeFrame = false;
 
         // emote_4 (components)
         const emote_4Button = new Button(emote_4);
-        emote_4Button.spriteName = "small-box";
         emote_4Button.callback = () => { this.onEmoteClick(3) };
         emote_4Button.activeFrame = false;
 
         // emote_3 (components)
         const emote_3Button = new Button(emote_3);
-        emote_3Button.spriteName = "small-box";
         emote_3Button.callback = () => { this.onEmoteClick(13) };
         emote_3Button.activeFrame = false;
 
         // emote_2 (components)
         const emote_2Button = new Button(emote_2);
-        emote_2Button.spriteName = "small-box";
         emote_2Button.callback = () => { this.onEmoteClick(2) };
         emote_2Button.activeFrame = false;
 
         // emote_1 (components)
         const emote_1Button = new Button(emote_1);
-        emote_1Button.spriteName = "small-box";
         emote_1Button.callback = () => { this.onEmoteClick(1) };
         emote_1Button.activeFrame = false;
 

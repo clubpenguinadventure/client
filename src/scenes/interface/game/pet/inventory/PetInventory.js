@@ -92,45 +92,37 @@ export default class PetInventory extends BaseContainer {
 
         // slot8 (components)
         const slot8Button = new Button(slot8);
-        slot8Button.spriteName = "large-box";
         slot8Button.activeFrame = false;
 
         // slot7 (components)
         const slot7Button = new Button(slot7);
-        slot7Button.spriteName = "large-box";
         slot7Button.activeFrame = false;
 
         // slot6 (components)
         const slot6Button = new Button(slot6);
-        slot6Button.spriteName = "large-box";
         slot6Button.activeFrame = false;
 
         // slot5 (components)
         const slot5Button = new Button(slot5);
-        slot5Button.spriteName = "large-box";
         slot5Button.activeFrame = false;
 
         // bathButton (components)
         const bathButtonButton = new Button(bathButton);
-        bathButtonButton.spriteName = "large-box";
         bathButtonButton.callback = () => this.onBathClick();
         bathButtonButton.activeFrame = false;
 
         // foodButton (components)
         const foodButtonButton = new Button(foodButton);
-        foodButtonButton.spriteName = "large-box";
         foodButtonButton.callback = () => this.onFoodClick();
         foodButtonButton.activeFrame = false;
 
         // cookieButton (components)
         const cookieButtonButton = new Button(cookieButton);
-        cookieButtonButton.spriteName = "large-box";
         cookieButtonButton.callback = () => this.onCookieClick();
         cookieButtonButton.activeFrame = false;
 
         // gumButton (components)
         const gumButtonButton = new Button(gumButton);
-        gumButtonButton.spriteName = "large-box";
         gumButtonButton.callback = () => this.onGumClick();
         gumButtonButton.activeFrame = false;
 

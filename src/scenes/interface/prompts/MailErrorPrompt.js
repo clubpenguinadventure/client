@@ -48,7 +48,6 @@ export default class MailErrorPrompt extends BaseContainer {
 
         // button (components)
         const buttonButton = new Button(button);
-        buttonButton.spriteName = "error-button";
         buttonButton.callback = () => this.close();
 
         this.message = message;

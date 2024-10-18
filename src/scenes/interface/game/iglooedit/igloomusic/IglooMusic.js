@@ -103,7 +103,6 @@ export default class IglooMusic extends BaseContainer {
 
         // blueButton (components)
         const blueButtonButton = new Button(blueButton);
-        blueButtonButton.spriteName = "blue-button";
         blueButtonButton.callback = () => this.visible = false;
 
         // musicItem (prefab fields)

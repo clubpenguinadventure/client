@@ -32,7 +32,6 @@ export default class MusicItem extends BaseContainer {
 
         // item (components)
         const itemButton = new Button(item);
-        itemButton.spriteName = "buddy/item";
         itemButton.callback = () => this.onClick();
         itemButton.activeFrame = false;
 

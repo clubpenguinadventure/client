@@ -46,8 +46,7 @@ export default class SplitLevelSnow extends IglooScene {
         door.setOrigin(0.5223338174820206, 0.8140467215513906);
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

@@ -35,7 +35,6 @@ export default class QuizButton extends BaseContainer {
 
         // button (components)
         const buttonButton = new Button(button);
-        buttonButton.spriteName = "window-button";
         buttonButton.callback = () => this.onClick();
 
         this.button = button;

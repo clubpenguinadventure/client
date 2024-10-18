@@ -153,7 +153,6 @@ export default class Cave extends RoomScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         const doorMoveTo = new MoveTo(door);
         doorMoveTo.x = 190;

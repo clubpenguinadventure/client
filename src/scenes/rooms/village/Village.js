@@ -141,7 +141,6 @@ export default class Village extends RoomScene {
 
         // lodgeDoor (components)
         const lodgeDoorButton = new Button(lodgeDoor);
-        lodgeDoorButton.spriteName = "lodge_door";
         lodgeDoorButton.activeFrame = false;
         const lodgeDoorMoveTo = new MoveTo(lodgeDoor);
         lodgeDoorMoveTo.x = 1000;
@@ -149,7 +148,6 @@ export default class Village extends RoomScene {
 
         // sportDoor (components)
         const sportDoorButton = new Button(sportDoor);
-        sportDoorButton.spriteName = "sport_door";
         sportDoorButton.activeFrame = false;
         const sportDoorMoveTo = new MoveTo(sportDoor);
         sportDoorMoveTo.x = 1340;
@@ -157,7 +155,6 @@ export default class Village extends RoomScene {
 
         // tours (components)
         const toursButton = new Button(tours);
-        toursButton.spriteName = "tours";
         toursButton.hoverCallback = () => this.onToursOver();
         toursButton.hoverOutCallback = () => this.onToursOut();
         toursButton.callback = () => this.onToursClick();

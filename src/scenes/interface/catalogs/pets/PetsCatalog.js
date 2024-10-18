@@ -252,160 +252,130 @@ export default class PetsCatalog extends BookContainer {
 
         // closeLeft (components)
         const closeLeftButton = new Button(closeLeft);
-        closeLeftButton.spriteName = "close_left";
         closeLeftButton.callback = () => this.close();
         closeLeftButton.pixelPerfect = true;
 
         // pageLeft1 (components)
         const pageLeft1Button = new Button(pageLeft1);
-        pageLeft1Button.spriteName = "page_left";
         pageLeft1Button.callback = () => this.prevPage();
         pageLeft1Button.activeFrame = false;
         pageLeft1Button.pixelPerfect = true;
 
         // buy22 (components)
         const buy22Button = new Button(buy22);
-        buy22Button.spriteName = "buy";
         buy22Button.callback = () => this.onBuyClick(214);
 
         // buy21 (components)
         const buy21Button = new Button(buy21);
-        buy21Button.spriteName = "buy";
         buy21Button.callback = () => this.onBuyClick(225);
 
         // buy20 (components)
         const buy20Button = new Button(buy20);
-        buy20Button.spriteName = "buy";
         buy20Button.callback = () => this.onBuyClick(212);
 
         // buy19 (components)
         const buy19Button = new Button(buy19);
-        buy19Button.spriteName = "buy";
         buy19Button.callback = () => this.onBuyClick(203);
 
         // buy18 (components)
         const buy18Button = new Button(buy18);
-        buy18Button.spriteName = "buy";
         buy18Button.callback = () => this.onBuyClick(221);
 
         // buy17 (components)
         const buy17Button = new Button(buy17);
-        buy17Button.spriteName = "buy";
         buy17Button.callback = () => this.onBuyClick(227);
 
         // buy16 (components)
         const buy16Button = new Button(buy16);
-        buy16Button.spriteName = "buy";
         buy16Button.callback = () => this.onBuyClick(202);
 
         // buy15 (components)
         const buy15Button = new Button(buy15);
-        buy15Button.spriteName = "buy";
         buy15Button.callback = () => this.onBuyClick(200);
 
         // buy14 (components)
         const buy14Button = new Button(buy14);
-        buy14Button.spriteName = "buy";
         buy14Button.callback = () => this.onBuyClick(232);
 
         // buy13 (components)
         const buy13Button = new Button(buy13);
-        buy13Button.spriteName = "buy";
         buy13Button.callback = () => this.onBuyClick(201);
 
         // buy12 (components)
         const buy12Button = new Button(buy12);
-        buy12Button.spriteName = "buy";
         buy12Button.callback = () => this.onBuyClick(222);
 
         // buy11 (components)
         const buy11Button = new Button(buy11);
-        buy11Button.spriteName = "buy";
         buy11Button.callback = () => this.onBuyClick(206);
 
         // buy10 (components)
         const buy10Button = new Button(buy10);
-        buy10Button.spriteName = "buy";
         buy10Button.callback = () => this.onBuyClick(207);
 
         // buy9 (components)
         const buy9Button = new Button(buy9);
-        buy9Button.spriteName = "buy";
         buy9Button.callback = () => this.onBuyClick(233);
 
         // buy8 (components)
         const buy8Button = new Button(buy8);
-        buy8Button.spriteName = "buy";
         buy8Button.callback = () => this.onBuyClick(228);
 
         // buy7 (components)
         const buy7Button = new Button(buy7);
-        buy7Button.spriteName = "buy";
         buy7Button.callback = () => this.onBuyClick(209);
 
         // buy6 (components)
         const buy6Button = new Button(buy6);
-        buy6Button.spriteName = "buy";
         buy6Button.callback = () => this.onBuyClick(208);
 
         // buy5 (components)
         const buy5Button = new Button(buy5);
-        buy5Button.spriteName = "buy";
         buy5Button.callback = () => this.onBuyClick(223);
 
         // buy4 (components)
         const buy4Button = new Button(buy4);
-        buy4Button.spriteName = "buy";
         buy4Button.callback = () => this.onBuyClick(220);
 
         // buy3 (components)
         const buy3Button = new Button(buy3);
-        buy3Button.spriteName = "buy";
         buy3Button.callback = () => this.onBuyClick(218);
 
         // buy2 (components)
         const buy2Button = new Button(buy2);
-        buy2Button.spriteName = "buy";
         buy2Button.callback = () => this.onBuyClick(224);
 
         // buy1 (components)
         const buy1Button = new Button(buy1);
-        buy1Button.spriteName = "buy";
         buy1Button.callback = () => this.onBuyClick(210);
 
         // buy (components)
         const buyButton = new Button(buy);
-        buyButton.spriteName = "buy";
         buyButton.callback = () => this.onBuyClick(211);
 
         // pageFront (components)
         const pageFrontButton = new Button(pageFront);
-        pageFrontButton.spriteName = "page_front";
         pageFrontButton.callback = () => this.nextPage();
         pageFrontButton.activeFrame = false;
 
         // closeRight1 (components)
         const closeRight1Button = new Button(closeRight1);
-        closeRight1Button.spriteName = "close_right";
         closeRight1Button.callback = () => this.close();
         closeRight1Button.pixelPerfect = true;
 
         // closeRight (components)
         const closeRightButton = new Button(closeRight);
-        closeRightButton.spriteName = "close_right";
         closeRightButton.callback = () => this.close();
         closeRightButton.pixelPerfect = true;
 
         // pageRight (components)
         const pageRightButton = new Button(pageRight);
-        pageRightButton.spriteName = "page_right";
         pageRightButton.callback = () => this.nextPage();
         pageRightButton.activeFrame = false;
         pageRightButton.pixelPerfect = true;
 
         // pageLeft (components)
         const pageLeftButton = new Button(pageLeft);
-        pageLeftButton.spriteName = "page_left";
         pageLeftButton.callback = () => this.prevPage();
         pageLeftButton.activeFrame = false;
         pageLeftButton.pixelPerfect = true;

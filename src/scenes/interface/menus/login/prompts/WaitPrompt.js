@@ -61,13 +61,11 @@ export default class WaitPrompt extends BaseContainer {
 
 		// yes_button (components)
 		const yes_buttonButton = new Button(yes_button);
-		yes_buttonButton.spriteName = "wait-button";
 		yes_buttonButton.callback = () => this.onYesClick();
 		yes_buttonButton.activeFrame = false;
 
 		// no_button (components)
 		const no_buttonButton = new Button(no_button);
-		no_buttonButton.spriteName = "wait-button";
 		no_buttonButton.callback = () => this.onYesClick();
 		no_buttonButton.activeFrame = false;
 

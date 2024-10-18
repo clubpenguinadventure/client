@@ -102,12 +102,10 @@ export default class MailbookUserList extends BaseContainer {
 
         // downButton (components)
         const downButtonButton = new Button(downButton);
-        downButtonButton.spriteName = "blue-button";
         downButtonButton.callback = () => this.nextPage();
 
         // upButton (components)
         const upButtonButton = new Button(upButton);
-        upButtonButton.spriteName = "blue-button";
         upButtonButton.callback = () => this.prevPage();
 
         this.items = items;

@@ -79,12 +79,10 @@ export default class Moderator extends BaseContainer {
 
         // button (components)
         const buttonButton = new Button(button);
-        buttonButton.spriteName = "window-button";
         buttonButton.callback = () => this.onClick();
 
         // blueButton (components)
         const blueButtonButton = new Button(blueButton);
-        blueButtonButton.spriteName = "blue-button";
         blueButtonButton.callback = () => this.close();
 
         this.button = button;

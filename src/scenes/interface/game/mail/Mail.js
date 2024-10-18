@@ -114,13 +114,11 @@ export default class Mail extends BaseContainer {
 
         // nextButton (components)
         const nextButtonButton = new Button(nextButton);
-        nextButtonButton.spriteName = "next_button";
         nextButtonButton.callback = () => this.onNextClick();
         nextButtonButton.pixelPerfect = true;
 
         // prevButton (components)
         const prevButtonButton = new Button(prevButton);
-        prevButtonButton.spriteName = "prev_button";
         prevButtonButton.callback = () => this.onPrevClick();
         prevButtonButton.pixelPerfect = true;
 

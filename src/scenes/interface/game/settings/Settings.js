@@ -98,8 +98,7 @@ export default class Settings extends BaseContainer {
         rectangleNineSlice.corner = 50;
 
         // button (components)
-        const buttonButton = new Button(button);
-        buttonButton.spriteName = "help-button";
+        new Button(button);
 
         // checkbox (components)
         const checkboxSimpleButton = new SimpleButton(checkbox);
@@ -107,7 +106,6 @@ export default class Settings extends BaseContainer {
 
         // x_button (components)
         const x_buttonButton = new Button(x_button);
-        x_buttonButton.spriteName = "blue-button";
         x_buttonButton.callback = () => { this.visible = false };
 
         this.checkbox = checkbox;

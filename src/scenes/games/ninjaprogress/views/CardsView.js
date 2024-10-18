@@ -46,12 +46,10 @@ export default class CardsView extends BaseContainer {
 
         // down (components)
         const downButton = new Button(down);
-        downButton.spriteName = "scroll/down";
         downButton.callback = () => this.nextPage();
 
         // up (components)
         const upButton = new Button(up);
-        upButton.spriteName = "scroll/up";
         upButton.callback = () => this.prevPage();
 
         this.bg = bg;

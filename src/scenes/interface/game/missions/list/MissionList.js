@@ -53,13 +53,11 @@ export default class MissionList extends BaseContainer {
 
         // downButton (components)
         const downButtonButton = new Button(downButton);
-        downButtonButton.spriteName = "menu_button";
         downButtonButton.callback = () => this.onDownClick();
         downButtonButton.activeFrame = false;
 
         // upButton (components)
         const upButtonButton = new Button(upButton);
-        upButtonButton.spriteName = "menu_button";
         upButtonButton.callback = () => this.onUpClick();
         upButtonButton.activeFrame = false;
 

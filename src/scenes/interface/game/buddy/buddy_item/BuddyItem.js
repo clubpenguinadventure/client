@@ -32,7 +32,6 @@ export default class BuddyItem extends BaseContainer {
 
         // buddy_item (components)
         const buddy_itemButton = new Button(buddy_item);
-        buddy_itemButton.spriteName = "buddy/item";
         buddy_itemButton.callback = () => this.onClick();
         buddy_itemButton.activeFrame = false;
 

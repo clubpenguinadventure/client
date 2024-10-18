@@ -57,13 +57,11 @@ export default class CPAirliner extends IglooScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         new MoveTo(door);
 
         // door_1 (components)
         const door_1Button = new Button(door_1);
-        door_1Button.spriteName = "door2";
         door_1Button.activeFrame = false;
         new MoveTo(door_1);
 

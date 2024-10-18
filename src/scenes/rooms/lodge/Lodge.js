@@ -134,7 +134,6 @@ export default class Lodge extends RoomScene {
 
         // door (components)
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
         const doorMoveTo = new MoveTo(door);
         doorMoveTo.x = 184;
@@ -147,7 +146,6 @@ export default class Lodge extends RoomScene {
 
         // fishing_door (components)
         const fishing_doorButton = new Button(fishing_door);
-        fishing_doorButton.spriteName = "fishing_door";
         fishing_doorButton.hoverCallback = () => this.onFishOver();
         fishing_doorButton.hoverOutCallback = () => this.onFishOut();
         fishing_doorButton.activeFrame = false;
@@ -159,7 +157,6 @@ export default class Lodge extends RoomScene {
 
         // bait (components)
         const baitButton = new Button(bait);
-        baitButton.spriteName = "bait";
         baitButton.activeFrame = false;
 
         // catalog_small (components)

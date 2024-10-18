@@ -58,7 +58,6 @@ export default class LogCabin extends IglooScene {
         // door (components)
         new MoveTo(door);
         const doorButton = new Button(door);
-        doorButton.spriteName = "door";
         doorButton.activeFrame = false;
 
         this.floor = floor;

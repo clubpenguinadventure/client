@@ -35,7 +35,6 @@ export default class SenseiMenuItem extends BaseContainer {
 
         // item (components)
         const itemButton = new Button(item);
-        itemButton.spriteName = "menu/item";
         itemButton.hoverCallback = () => this.onOver();
         itemButton.hoverOutCallback = () => this.onOut();
         itemButton.callback = () => this.onUp();

@@ -131,7 +131,6 @@ export default class ProgressView extends BaseContainer {
 
         // cardsButton (components)
         const cardsButtonButton = new Button(cardsButton);
-        cardsButtonButton.spriteName = "button";
         cardsButtonButton.callback = () => this.onButtonClick();
 
         this.cardsNum = cardsNum;

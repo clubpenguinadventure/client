@@ -48,7 +48,6 @@ export default class MailSuccessPrompt extends BaseContainer {
 
         // button (components)
         const buttonButton = new Button(button);
-        buttonButton.spriteName = "window-button";
         buttonButton.callback = () => this.close();
 
         this.message = message;

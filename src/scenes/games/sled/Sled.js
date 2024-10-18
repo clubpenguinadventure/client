@@ -102,7 +102,6 @@ export default class Sled extends GameScene {
 
         // closeButton (components)
         const closeButtonButton = new Button(closeButton);
-        closeButtonButton.spriteName = "grey-button";
         closeButtonButton.callback = () => this.onCloseClick();
 
         this.bg = bg;

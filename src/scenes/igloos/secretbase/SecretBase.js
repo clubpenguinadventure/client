@@ -52,8 +52,7 @@ export default class SecretBase extends IglooScene {
         const sort = [fg];
 
         // door (components)
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";;
+        new Button(door);
         new MoveTo(door);
 
         this.floor = floor;

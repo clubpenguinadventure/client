@@ -103,12 +103,10 @@ export default class Book extends RoomScene {
 
         // books (components)
         const booksButton = new Button(books);
-        booksButton.spriteName = "books";
         booksButton.activeFrame = false;
 
         // poster (components)
         const posterButton = new Button(poster);
-        posterButton.spriteName = "poster";
         posterButton.activeFrame = false;
         posterButton.pixelPerfect = true;
 

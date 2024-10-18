@@ -18,10 +18,10 @@ export default class FurnitureCatalog extends BookContainer {
     constructor(scene, x, y) {
         super(scene, x ?? 0, y ?? 0);
 
-        /** @type {Phaser.GameObjects.Container} */
-        this.buttons;
         /** @type {Phaser.GameObjects.Text} */
         this.coins;
+        /** @type {Phaser.GameObjects.Container} */
+        this.buttons;
         /** @type {Phaser.GameObjects.Container[]} */
         this.pages;
 
@@ -307,14 +307,12 @@ export default class FurnitureCatalog extends BookContainer {
 
         // pageLeft_1 (components)
         const pageLeft_1Button = new Button(pageLeft_1);
-        pageLeft_1Button.spriteName = "page_left";
         pageLeft_1Button.callback = () => this.prevPage();
         pageLeft_1Button.activeFrame = false;
         pageLeft_1Button.pixelPerfect = true;
 
         // closeLeft (components)
         const closeLeftButton = new Button(closeLeft);
-        closeLeftButton.spriteName = "close_left";
         closeLeftButton.callback = () => this.close();
         closeLeftButton.pixelPerfect = true;
 
@@ -425,38 +423,33 @@ export default class FurnitureCatalog extends BookContainer {
 
         // pageFront (components)
         const pageFrontButton = new Button(pageFront);
-        pageFrontButton.spriteName = "page_front";
         pageFrontButton.callback = () => this.nextPage();
         pageFrontButton.activeFrame = false;
 
         // closeRight_1 (components)
         const closeRight_1Button = new Button(closeRight_1);
-        closeRight_1Button.spriteName = "close_right";
         closeRight_1Button.callback = () => this.close();
         closeRight_1Button.pixelPerfect = true;
 
         // closeRight (components)
         const closeRightButton = new Button(closeRight);
-        closeRightButton.spriteName = "close_right";
         closeRightButton.callback = () => this.close();
         closeRightButton.pixelPerfect = true;
 
         // pageRight (components)
         const pageRightButton = new Button(pageRight);
-        pageRightButton.spriteName = "page_right";
         pageRightButton.callback = () => this.nextPage();
         pageRightButton.activeFrame = false;
         pageRightButton.pixelPerfect = true;
 
         // pageLeft (components)
         const pageLeftButton = new Button(pageLeft);
-        pageLeftButton.spriteName = "page_left";
         pageLeftButton.callback = () => this.prevPage();
         pageLeftButton.activeFrame = false;
         pageLeftButton.pixelPerfect = true;
 
-        this.buttons = buttons;
         this.coins = coins;
+        this.buttons = buttons;
         this.pages = pages;
 
         /* START-USER-CTR-CODE */

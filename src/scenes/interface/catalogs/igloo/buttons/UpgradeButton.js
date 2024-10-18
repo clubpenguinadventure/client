@@ -18,7 +18,6 @@ export default class UpgradeButton extends BaseImage {
 
         // this (components)
         const thisButton = new Button(this);
-        thisButton.spriteName = "upgrade";
         thisButton.callback = () => this.interface.prompt.showIgloo(this.igloo);
 
         /* START-USER-CTR-CODE */

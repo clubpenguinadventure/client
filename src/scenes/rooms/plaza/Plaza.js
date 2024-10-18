@@ -93,7 +93,6 @@ export default class Plaza extends RoomScene {
 
         // pet_door (components)
         const pet_doorButton = new Button(pet_door);
-        pet_doorButton.spriteName = "pet_door";
         pet_doorButton.activeFrame = false;
         pet_doorButton.pixelPerfect = true;
         const pet_doorMoveTo = new MoveTo(pet_door);
@@ -102,7 +101,6 @@ export default class Plaza extends RoomScene {
 
         // cave_door (components)
         const cave_doorButton = new Button(cave_door);
-        cave_doorButton.spriteName = "cave_door";
         cave_doorButton.activeFrame = false;
         cave_doorButton.pixelPerfect = true;
         const cave_doorMoveTo = new MoveTo(cave_door);
@@ -111,7 +109,6 @@ export default class Plaza extends RoomScene {
 
         // pizza_door (components)
         const pizza_doorButton = new Button(pizza_door);
-        pizza_doorButton.spriteName = "pizza_door";
         pizza_doorButton.activeFrame = false;
         pizza_doorButton.pixelPerfect = true;
         const pizza_doorMoveTo = new MoveTo(pizza_door);
@@ -130,7 +127,6 @@ export default class Plaza extends RoomScene {
 
         // stage_door_1 (components)
         const stage_door_1Button = new Button(stage_door_1);
-        stage_door_1Button.spriteName = "stage_door_1";
         stage_door_1Button.activeFrame = false;
         const stage_door_1MoveTo = new MoveTo(stage_door_1);
         stage_door_1MoveTo.x = 730;
@@ -138,7 +134,6 @@ export default class Plaza extends RoomScene {
 
         // stage_door_2 (components)
         const stage_door_2Button = new Button(stage_door_2);
-        stage_door_2Button.spriteName = "stage_door_2";
         stage_door_2Button.activeFrame = false;
         const stage_door_2MoveTo = new MoveTo(stage_door_2);
         stage_door_2MoveTo.x = 960;

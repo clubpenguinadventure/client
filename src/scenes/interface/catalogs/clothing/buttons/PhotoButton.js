@@ -16,7 +16,6 @@ export default class PhotoButton extends BaseImage {
 
         // this (components)
         const thisButton = new Button(this);
-        thisButton.spriteName = "photo_button";
         thisButton.callback = () => this.interface.prompt.showItem(this.item);
         thisButton.activeFrame = false;
 

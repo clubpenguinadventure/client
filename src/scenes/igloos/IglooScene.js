@@ -14,6 +14,8 @@ export default class IglooScene extends RoomScene {
     constructor(key) {
         super(`${key}-igloo`)
 
+        this.iglooKey = `${key}-igloo`
+        this.baseKey = key
         this.isIgloo = true
         this.editBg
         this.roomCrate
@@ -278,10 +280,10 @@ export default class IglooScene extends RoomScene {
 
     get roomPhysics() {
         let key = this.key.toLowerCase()
-        let baseKey = this.crumbs.scenes.igloos[this.id].key.toLowerCase()
+        let baseKey = this.baseKey.toLowerCase()
 
         return this.cache.json.get(`${key}-physics`) || this.cache.json.get(`${baseKey}-physics`)
-    }
+    }   
 
     addPhysics() {
         super.addPhysics()

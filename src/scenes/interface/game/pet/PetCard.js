@@ -163,35 +163,30 @@ export default class PetCard extends BaseContainer {
 
         // walkButton (components)
         const walkButtonButton = new Button(walkButton);
-        walkButtonButton.spriteName = "blue-button";
         walkButtonButton.callback = () => this.onWalkClick();
         const walkButtonShowHint = new ShowHint(walkButton);
         walkButtonShowHint.text = "walk_pet_hint";
 
         // feedButton (components)
         const feedButtonButton = new Button(feedButton);
-        feedButtonButton.spriteName = "blue-button";
         feedButtonButton.callback = () => this.onFeedClick();
         const feedButtonShowHint = new ShowHint(feedButton);
         feedButtonShowHint.text = "feed_pet_hint";
 
         // restButton (components)
         const restButtonButton = new Button(restButton);
-        restButtonButton.spriteName = "blue-button";
         restButtonButton.callback = () => this.onRestClick();
         const restButtonShowHint = new ShowHint(restButton);
         restButtonShowHint.text = "rest_pet_hint";
 
         // playButton (components)
         const playButtonButton = new Button(playButton);
-        playButtonButton.spriteName = "blue-button";
         playButtonButton.callback = () => this.onPlayClick();
         const playButtonShowHint = new ShowHint(playButton);
         playButtonShowHint.text = "play_pet_hint";
 
         // xButton (components)
         const xButtonButton = new Button(xButton);
-        xButtonButton.spriteName = "blue-button";
         xButtonButton.callback = () => this.close();
 
         // tabHandle (components)

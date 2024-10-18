@@ -56,8 +56,7 @@ export default class FreshBakedGingerbreadHouse extends IglooScene {
 
         // door (components)
         new MoveTo(door);
-        const doorButton = new Button(door);
-        doorButton.spriteName = "door";
+        new Button(door);
 
         this.floor = floor;
         this.sort = sort;
