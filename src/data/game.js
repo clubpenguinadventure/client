@@ -5,18 +5,11 @@ import widgets from './widgets'
 
 import SoundFileFactory from '@engine/sound/SoundFileFactory'
 
-
-if (!localStorage.getItem('webgl')) {
-    localStorage.setItem('webgl', 'true')
-}
-
 const width = 1520
 const height = 960
 
 const game = {
-    type: (localStorage.getItem('webgl') == 'true')
-        ? Phaser.WEBGL
-        : Phaser.CANVAS,
+    type: Phaser.WEBGL,
 
     width: 1520,
     height: 960,
