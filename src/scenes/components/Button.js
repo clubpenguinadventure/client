@@ -61,7 +61,7 @@ export default class Button extends SimpleButton {
 
     get texture() {
         if (this.gameObject.texture) return this.gameObject.texture
-        return this.gameObject.scene.shell.textures.get(this.textureKey)
+        return this.gameObject.scene.world.textures.get(this.textureKey)
     }
 
     get overFrame() {
