@@ -17,21 +17,28 @@ export default class Item extends Plugin {
 
     updatePlayer(args) {
         if (!this.world.room.isReady) {
-            return this.world.room.updateWaiting(args.id, { [args.slot]: args.item })
+            return this.world.room.updateWaiting(args.id, { [args.slot]: args.item });
         }
-
-        this.world.room.penguins[args.id].update(args.item, args.slot)
-
+    
+        this.world.room.penguins[args.id].update(args.item, args.slot);
+    
         if (args.id == this.client.id) {
+            // Loop through each inventory slot and change the frame for worn items
             this.world.interface.main.playerCard.inventory.slots.forEach(slot => {
+                // Check if the slot has an item and it belongs to the player's inventory
                 if (slot.item && Object.values(this.world.client.penguin.items.flat).includes(slot.item.id)) {
-                    slot.setTint(0xfff5b4)
+                    // Set the frame to 'large-box-worn' for items in the player's inventory
+                    slot.setTexture('main', 'large-box-worn');
+                    // Optionally, set tint or other visual effects
                 } else {
-                    slot.setTint(0xffffff)
+                    // Reset the frame to 'large-box' if it's not the worn item
+                    slot.setTexture('main', 'large-box');
+                    // Reset tint
                 }
             });
         }
     }
+    
 
     addItem(args) {
         const item = parseInt(args.item)

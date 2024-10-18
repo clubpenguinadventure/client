@@ -1,6 +1,5 @@
 import BaseLoader from './BaseLoader'
 
-
 export default class InventoryLoader extends BaseLoader {
 
     constructor(scene, inventory) {
@@ -11,7 +10,7 @@ export default class InventoryLoader extends BaseLoader {
         this.slots = inventory.slots
 
         this.page
-        this.validSlots = ['large-box', 'large-box-hover']
+        this.validSlots = ['large-box', 'large-box-worn', 'large-box-hover']
 
         this.baseURL = '/assets/media/clothing/icon/120/'
         this.keyPrefix = 'clothing/icon/120/'
@@ -33,17 +32,21 @@ export default class InventoryLoader extends BaseLoader {
 
             if (item) {
                 slot.setInteractive()
-                slot.setFrame('large-box')
+                
+                // Set the frame based on whether the item is worn or not
+                if (Object.values(this.scene.world.client.penguin.items.flat).includes(item)) {
+                    slot.setFrame('large-box-worn')  // Set the frame to "large-box-worn" for worn items
+                } else {
+                    slot.setFrame('large-box')       // Default to "large-box" for non-worn items
+                }
+
+                // Add the spinner while loading the item
                 this.addSpinner(slot)
                 this.loadItem(item)
-                if (Object.values(this.scene.world.client.penguin.items.flat).includes(item)) {
-                    slot.setTint(0xfff5b4)
-                } else {
-                    slot.setTint(0xffffff)
-                }
             } else {
+                // If no item, disable interaction and set frame to "large-box-empty"
                 slot.disableInteractive()
-                slot.setFrame('large-box-empty')
+                slot.setFrame('large-box-empty')  // Empty slot
             }
         }
 
@@ -115,5 +118,4 @@ export default class InventoryLoader extends BaseLoader {
         icon.id = item
         slot.item = icon
     }
-
 }
