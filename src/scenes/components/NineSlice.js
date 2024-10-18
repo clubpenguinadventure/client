@@ -37,16 +37,18 @@ export default class NineSlice extends EventComponent {
     start() {
         if (this.gameObject.visible == false) return
 
-        const sliced = this.scene.add.ninePatchContainer(
+        const sliced = this.scene.add.nineslice(
             this.gameObject.x,
             this.gameObject.y,
+            this.texture.key,
+            this.texture.frame,
             this.gameObject.width,
             this.gameObject.height,
-            this.texture.key,
-            this.texture.frame
+            this.corner,
+            this.corner,
+            this.corner,
+            this.corner
         )
-
-        sliced.setMargin(this.corner)
 
         // Set correct position inside container
         if (this.gameObject.parentContainer) {

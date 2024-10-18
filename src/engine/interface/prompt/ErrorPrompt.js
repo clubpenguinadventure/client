@@ -29,7 +29,7 @@ class ErrorPrompt extends Prompt {
 
     resize() {
         // Resize prompt background to fit all content, + total padding, + extra padding
-        this.bg.resize(708, this.text.height + this.button.height + 100 + 25)
+        this.bg.setSize(708, this.text.height + this.button.height + 100 + 25)
 
         // Reposition contents using new background and text height
         this.text.y = -(this.bg.height / 2) + (this.text.height / 2) + 50

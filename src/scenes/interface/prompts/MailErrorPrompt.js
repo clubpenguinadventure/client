@@ -17,11 +17,7 @@ export default class MailErrorPrompt extends BaseContainer {
         this.visible = false;
 
         // bg
-        const bg = scene.add.ninePatchContainer(0, 0, 706, 504, "prompt", "error");
-        bg.marginLeft = 50;
-        bg.marginTop = 50;
-        bg.marginRight = 50;
-        bg.marginBottom = 50;
+        const bg = scene.add.nineslice(0, 0, "prompt", "error", 706, 504, 50, 50, 50, 50);
         this.add(bg);
 
         // button

@@ -20,14 +20,13 @@
             "label": "container_2",
             "list": [
                 {
-                    "type": "NinePatchContainer",
+                    "type": "NineSlice",
                     "id": "a00fa210-d134-457d-9140-c3e953a12433",
                     "label": "button",
                     "scope": "CLASS",
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "window-button",
                     "Button.callback": "() => this.onClick()",
                     "texture": {
                         "key": "prompt",
@@ -35,10 +34,10 @@
                     },
                     "width": 558,
                     "height": 105,
-                    "marginLeft": 50,
-                    "marginRight": 50,
-                    "marginTop": 50,
-                    "marginBottom": 50
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
                 },
                 {
                     "type": "Text",

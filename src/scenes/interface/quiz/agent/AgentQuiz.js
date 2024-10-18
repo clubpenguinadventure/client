@@ -73,11 +73,7 @@ export default class AgentQuiz extends BaseContainer {
         this.add(agent);
 
         // bg
-        const bg = scene.add.ninePatchContainer(760, 440, 704, 576, "prompt", "window");
-        bg.marginLeft = 50;
-        bg.marginTop = 50;
-        bg.marginRight = 50;
-        bg.marginBottom = 50;
+        const bg = scene.add.nineslice(760, 440, "prompt", "window", 704, 576, 50, 50, 50, 50);
         this.add(bg);
 
         // option3

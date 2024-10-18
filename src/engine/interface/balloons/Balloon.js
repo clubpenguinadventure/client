@@ -48,10 +48,8 @@ export default class Balloon extends BaseContainer {
         if (width < minWidth) width = minWidth
         if (height < minHeight) height = minHeight
 
-        this.balloon = this.scene.add.ninePatchContainer(0, 0, width, height, 'main', 'balloon')
-
-        this.balloon.setMargin(15)
-        this.balloon.setNinePatchContainerOrigin(0.5, 1)
+        this.balloon = this.scene.add.nineslice(0, 0, 'main', 'balloon', width, height, 15, 15, 15, 15)
+        this.balloon.setOrigin(0.5, 1)
 
         this.add(this.balloon)
     }
@@ -59,20 +57,14 @@ export default class Balloon extends BaseContainer {
     addPointer(width, frame) {
         if (width < minWidth) width = minWidth
 
-        const pointer = this.scene.add.ninePatchContainer(0, 0, width, 40, 'main', frame)
-
-        pointer.marginTop = 0
-        pointer.marginRight = 110
-        pointer.marginBottom = 0
-        pointer.marginLeft = 15
-
-        pointer.setNinePatchContainerOrigin(0.5, 0)
+        const pointer = this.scene.add.nineslice(0, 0, 'main', frame, width, 40, 15, 110, 0, 0)
+        pointer.setOrigin(0.5, 0)
 
         this.add(pointer)
     }
 
     resizeBalloon(width, height) {
-        this.balloon.resize(width, height)
+        this.balloon.setSize(width, height)
     }
 
     updatePosition() {

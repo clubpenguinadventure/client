@@ -10,7 +10,7 @@ export default class QuizButton extends BaseContainer {
     constructor(scene, x, y) {
         super(scene, x ?? 0, y ?? 0);
 
-        /** @type {NinePatchContainer} */
+        /** @type {Phaser.GameObjects.NineSlice} */
         this.button;
         /** @type {Phaser.GameObjects.Text} */
         this.buttonText;
@@ -19,11 +19,7 @@ export default class QuizButton extends BaseContainer {
 
 
         // button
-        const button = scene.add.ninePatchContainer(0, 0, 558, 105, "prompt", "window-button");
-        button.marginLeft = 50;
-        button.marginTop = 50;
-        button.marginRight = 50;
-        button.marginBottom = 50;
+        const button = scene.add.nineslice(0, 0, "prompt", "window-button", 558, 105, 50, 50, 50, 50);
         this.add(button);
 
         // buttonText

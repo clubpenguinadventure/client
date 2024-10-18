@@ -8,18 +8,14 @@ export default class Hint extends BaseContainer {
     constructor(scene, x, y) {
         super(scene, x ?? 760, y ?? 480);
 
-        /** @type {NinePatchContainer} */
+        /** @type {Phaser.GameObjects.NineSlice} */
         this.hint;
         /** @type {Phaser.GameObjects.Text} */
         this.text;
 
 
         // hint
-        const hint = scene.add.ninePatchContainer(0, 0, 176, 44, "main", "hint");
-        hint.marginLeft = 10;
-        hint.marginTop = 10;
-        hint.marginRight = 10;
-        hint.marginBottom = 10;
+        const hint = scene.add.nineslice(0, 0, "main", "hint", 176, 44, 10, 10, 10, 10);
         this.add(hint);
 
         // text
@@ -56,7 +52,7 @@ export default class Hint extends BaseContainer {
 
         // Calculate and set new width
         let width = (this.text.width > 144) ? this.text.width + 32 : 176
-        this.hint.resize(width, this.hint.height)
+        this.hint.setSize(width, this.hint.height)
 
         this.visible = true
 

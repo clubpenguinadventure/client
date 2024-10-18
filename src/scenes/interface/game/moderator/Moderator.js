@@ -11,7 +11,7 @@ export default class Moderator extends BaseContainer {
     constructor(scene, x, y) {
         super(scene, x ?? 760, y ?? 480);
 
-        /** @type {NinePatchContainer} */
+        /** @type {Phaser.GameObjects.NineSlice} */
         this.button;
         /** @type {Phaser.GameObjects.Text} */
         this.buttonText;
@@ -25,19 +25,11 @@ export default class Moderator extends BaseContainer {
         this.add(block);
 
         // bg
-        const bg = scene.add.ninePatchContainer(0, -40, 708, 584, "prompt", "window");
-        bg.marginLeft = 50;
-        bg.marginTop = 50;
-        bg.marginRight = 50;
-        bg.marginBottom = 50;
+        const bg = scene.add.nineslice(0, -40, "prompt", "window", 708, 584, 50, 50, 50, 50);
         this.add(bg);
 
         // button
-        const button = scene.add.ninePatchContainer(0, 127, 558, 105, "prompt", "window-button");
-        button.marginLeft = 50;
-        button.marginTop = 50;
-        button.marginRight = 50;
-        button.marginBottom = 50;
+        const button = scene.add.nineslice(0, 127, "prompt", "window-button", 558, 105, 50, 50, 50, 50);
         this.add(button);
 
         // buttonText

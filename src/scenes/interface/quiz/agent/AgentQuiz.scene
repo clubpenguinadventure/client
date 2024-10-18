@@ -48,7 +48,7 @@
                     "originY": 0.5008319467554077
                 },
                 {
-                    "type": "NinePatchContainer",
+                    "type": "NineSlice",
                     "id": "0e7f1f42-7ab4-4032-a106-52f6007ef339",
                     "label": "bg",
                     "texture": {
@@ -59,10 +59,10 @@
                     "y": 440,
                     "width": 704,
                     "height": 576,
-                    "marginLeft": 50,
-                    "marginRight": 50,
-                    "marginTop": 50,
-                    "marginBottom": 50
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
                 },
                 {
                     "prefabId": "363faf5f-b011-471d-beb7-4b16de5cafdc",
@@ -398,7 +398,6 @@
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "blue-button",
                     "Button.callback": "() => this.close()",
                     "texture": {
                         "key": "main",

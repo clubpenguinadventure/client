@@ -35,7 +35,7 @@
                     "height": 960
                 },
                 {
-                    "type": "NinePatchContainer",
+                    "type": "NineSlice",
                     "id": "28db3512-1861-4cf6-8d55-45704bc7af69",
                     "label": "bg",
                     "texture": {
@@ -46,10 +46,10 @@
                     "y": 484,
                     "width": 708,
                     "height": 664,
-                    "marginLeft": 50,
-                    "marginRight": 50,
-                    "marginTop": 50,
-                    "marginBottom": 50
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
                 },
                 {
                     "type": "Container",

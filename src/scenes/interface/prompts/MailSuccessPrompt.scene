@@ -23,7 +23,7 @@
             "visible": false,
             "list": [
                 {
-                    "type": "NinePatchContainer",
+                    "type": "NineSlice",
                     "id": "58b38c3b-b731-4912-8bae-df2f9802d197",
                     "label": "bg",
                     "texture": {
@@ -32,10 +32,10 @@
                     },
                     "width": 706,
                     "height": 504,
-                    "marginLeft": 50,
-                    "marginRight": 50,
-                    "marginTop": 50,
-                    "marginBottom": 50
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
                 },
                 {
                     "type": "Image",
@@ -44,7 +44,6 @@
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "window-button",
                     "Button.callback": "() => this.close()",
                     "texture": {
                         "key": "prompt",

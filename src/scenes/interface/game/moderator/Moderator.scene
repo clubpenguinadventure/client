@@ -35,7 +35,7 @@
                     "height": 960
                 },
                 {
-                    "type": "NinePatchContainer",
+                    "type": "NineSlice",
                     "id": "f9229e1c-d5c7-4cf7-8d3f-f7460b47757c",
                     "label": "bg",
                     "texture": {
@@ -45,20 +45,19 @@
                     "y": -40,
                     "width": 708,
                     "height": 584,
-                    "marginLeft": 50,
-                    "marginRight": 50,
-                    "marginTop": 50,
-                    "marginBottom": 50
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
                 },
                 {
-                    "type": "NinePatchContainer",
+                    "type": "NineSlice",
                     "id": "1496d353-12ee-467f-b7b6-63f2c6e336f0",
                     "label": "button",
                     "scope": "CLASS",
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "window-button",
                     "Button.callback": "() => this.onClick()",
                     "texture": {
                         "key": "prompt",
@@ -67,10 +66,10 @@
                     "y": 127,
                     "width": 558,
                     "height": 105,
-                    "marginLeft": 50,
-                    "marginRight": 50,
-                    "marginTop": 50,
-                    "marginBottom": 50
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
                 },
                 {
                     "type": "Text",
@@ -139,7 +138,6 @@
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "blue-button",
                     "Button.callback": "() => this.close()",
                     "texture": {
                         "key": "main",

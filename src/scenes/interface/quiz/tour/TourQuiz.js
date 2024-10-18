@@ -49,11 +49,7 @@ export default class TourQuiz extends BaseContainer {
         this.add(block);
 
         // bg
-        const bg = scene.add.ninePatchContainer(760, 484, 708, 664, "prompt", "window");
-        bg.marginLeft = 50;
-        bg.marginTop = 50;
-        bg.marginRight = 50;
-        bg.marginBottom = 50;
+        const bg = scene.add.nineslice(760, 484, "prompt", "window", 708, 664, 50, 50, 50, 50);
         this.add(bg);
 
         // question

@@ -13,19 +13,15 @@ export default class SenseiMenu extends BaseContainer {
     constructor(scene, x, y) {
         super(scene, x ?? 0, y ?? 0);
 
-        /** @type {NinePatchContainer} */
+        /** @type {Phaser.GameObjects.NineSlice} */
         this.bg;
         /** @type {SenseiMenuItem[]} */
         this.items;
 
 
         // bg
-        const bg = scene.add.ninePatchContainer(0, -162, 848, 323, "sensei", "menu/bg");
-        bg.marginLeft = 60;
-        bg.marginTop = 40;
-        bg.marginRight = 60;
-        bg.marginBottom = 45;
-        bg.ninePatchContainerOriginY = 0;
+        const bg = scene.add.nineslice(0, -162, "sensei", "menu/bg", 848, 323, 60, 60, 40, 45);
+        bg.setOrigin(0.5, 0);
         this.add(bg);
 
         // senseiMenuItem4
@@ -107,7 +103,7 @@ export default class SenseiMenu extends BaseContainer {
     }
 
     resizeMenu() {
-        this.bg.resize(this.bg.width, (this.currentItems.length * 61) + 78)
+        this.bg.setSize(this.bg.width, (this.currentItems.length * 61) + 78)
     }
 
     startSequence(sequence) {
