@@ -20,10 +20,6 @@ const game = {
     scale: {
         width: width,
         height: height,
-        max: {
-            width: width,
-            height: height
-        },
         parent: 'game',
         mode: Phaser.Scale.FIT,
         autoRound: true,
@@ -61,7 +57,6 @@ const game = {
 
         widgets: widgets,
 
-        frameColor: 0xffffff, //don't know how to make it account for dark mode, chatgpt is fucking stupid
         iglooIdOffset: 2000
     },
 

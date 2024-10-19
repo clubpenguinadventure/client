@@ -23,12 +23,10 @@ export default class InterfaceController extends BaseScene {
         // Dynamically loaded widgets
         this.loadedWidgets = {}
 
-        // Draw frame
-        const graphics = this.add.graphics()
-
-        graphics.lineStyle(16, this.crumbs.frameColor, 1)
-        graphics.strokeRoundedRect(0, 0, 1520, 960, 15)
-        graphics.depth = 100
+        this.border = this.createBorder()
+        document.body.addEventListener('themeChanged', () => {
+            this.border = this.createBorder()
+        })
 
         // Last scene interacted with
         this.lastScene
@@ -270,6 +268,32 @@ export default class InterfaceController extends BaseScene {
         this.lastScene.input._over[0] = []
 
         this.lastScene = scene
+    }
+
+    createBorder() {
+        function rgbToHex(rgb) {
+            let rgbValues = rgb.match(/\d+/g);
+            let hexValue = "0x";
+            for (let i = 0; i < 3; i++) {
+                let hex = parseInt(rgbValues[i]).toString(16);
+                hex = hex.padStart(2, '0');
+                hexValue += hex;
+            }
+            return hexValue;
+        }
+        
+        if (this.border) {
+            this.border.destroy()
+        }
+
+        // Draw frame
+        const graphics = this.add.graphics()
+
+        graphics.lineStyle(16, rgbToHex(window.getComputedStyle(document.body).backgroundColor), 1)
+        graphics.strokeRoundedRect(0, 0, 1520, 960, 15)
+        graphics.depth = 100
+
+        return graphics
     }
 
 }
