@@ -30,10 +30,12 @@ export default class Item extends Plugin {
                     // Set the frame to 'large-box-worn' for items in the player's inventory
                     slot.setTexture('main', 'large-box-worn');
                     // Optionally, set tint or other visual effects
-                } else {
+                } else if (slot.item) {
                     // Reset the frame to 'large-box' if it's not the worn item
                     slot.setTexture('main', 'large-box');
-                    // Reset tint
+                } else {
+                    // Set the frame to 'large-box-empty' for empty slots
+                    slot.setTexture('main', 'large-box-empty');
                 }
             });
         }
