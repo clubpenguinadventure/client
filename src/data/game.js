@@ -61,7 +61,7 @@ const game = {
 
         widgets: widgets,
 
-        frameColor: 0x22a4f3,
+        frameColor: 0xffffff, //don't know how to make it account for dark mode, chatgpt is fucking stupid
         iglooIdOffset: 2000
     },
 

@@ -24,6 +24,49 @@
     </head>
 
     <body>
+		<div class="header">
+			<div class="header-content">
+				<div class="links">
+					<a href="https://cpchat.net">Website Home</a>
+					<a href="https://community.cpchat.net">Community</a>
+					<a href="https://cpchat.net/support">Support</a>
+					<a href="https://cpchat.net/legal">Legal</a>
+					<a href="https://wiki.cpchat.net">Wiki</a>
+				</div>
+				<div class="buttons">
+					<button>Full Screen</button>
+					<button id="toggleDarkMode">Toggle Dark Mode</button>
+				</div>
+				<div class="links">
+					<a href="#">Log Out</a>
+				</div>
+			</div>
+		</div>
+		  <script>
+			const toggleButton = document.getElementById('toggleDarkMode');
+			const body = document.body;
+			
+			toggleButton.addEventListener('click', () => {
+			// Toggle the dark-mode class
+			body.classList.toggle('dark-mode');
+			
+			// Optionally store the user's preference in localStorage
+			if (body.classList.contains('dark-mode')) {
+				localStorage.setItem('theme', 'dark');
+			} else {
+				localStorage.setItem('theme', 'light');
+			}
+			});
+			
+			// Check if a theme preference is saved in localStorage and apply it
+			const savedTheme = localStorage.getItem('theme');
+			if (savedTheme === 'dark') {
+			body.classList.add('dark-mode');
+			}
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			body.classList.add('dark-mode');
+			}
+		</script>
         <div id="game" class="game"></div>
     </body>
 

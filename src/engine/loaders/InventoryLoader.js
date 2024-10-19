@@ -10,7 +10,7 @@ export default class InventoryLoader extends BaseLoader {
         this.slots = inventory.slots
 
         this.page
-        this.validSlots = ['large-box', 'large-box-worn', 'large-box-hover']
+        this.validSlots = ['large-box', 'large-box-worn', 'large-box-empty', 'large-box-hover']
 
         this.baseURL = '/assets/media/clothing/icon/120/'
         this.keyPrefix = 'clothing/icon/120/'
