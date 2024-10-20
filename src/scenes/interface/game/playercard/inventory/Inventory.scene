@@ -19,7 +19,6 @@
             "type": "Container",
             "id": "756cf99e-60b7-437d-b065-1538e6f59923",
             "label": "container_1",
-            "components": [],
             "x": 760,
             "y": 460,
             "list": [
@@ -28,7 +27,6 @@
                     "id": "eae4d995-d616-4c16-8c52-98e843ce92a3",
                     "label": "container",
                     "scope": "CLASS",
-                    "components": [],
                     "x": -56,
                     "y": -272,
                     "visible": false,
@@ -38,7 +36,6 @@
                             "id": "f20da11a-78aa-4baf-ac70-37e03e3cd66c",
                             "label": "inventory_bg",
                             "scope": "CLASS",
-                            "components": [],
                             "texture": {
                                 "key": "main",
                                 "frame": "inventory/bg"
@@ -50,7 +47,6 @@
                             "type": "Image",
                             "id": "d4dec657-fcbd-4344-a016-ccc04f1a99d9",
                             "label": "inventory_scroll",
-                            "components": [],
                             "texture": {
                                 "key": "main",
                                 "frame": "inventory/scroll"
@@ -65,7 +61,6 @@
                             "components": [
                                 "Button"
                             ],
-                            "Button.spriteName": "grey-button",
                             "Button.callback": "() => { this.nextPage() }",
                             "texture": {
                                 "key": "main",
@@ -78,7 +73,6 @@
                             "type": "Image",
                             "id": "bf4588bb-b113-44cd-9dc1-06f94cb2d3bc",
                             "label": "grey_arrow_1",
-                            "components": [],
                             "texture": {
                                 "key": "main",
                                 "frame": "grey-arrow"
@@ -94,7 +88,6 @@
                             "components": [
                                 "Button"
                             ],
-                            "Button.spriteName": "grey-button",
                             "Button.callback": "() => { this.prevPage() }",
                             "texture": {
                                 "key": "main",
@@ -107,7 +100,6 @@
                             "type": "Image",
                             "id": "d6e0be58-df01-418e-a4ca-3f1654bbdfd8",
                             "label": "grey_arrow",
-                            "components": [],
                             "texture": {
                                 "key": "main",
                                 "frame": "grey-arrow"
@@ -119,9 +111,9 @@
                             "id": "d6a6ceec-2733-4ce8-b3db-fc8512d511db",
                             "label": "slot_12",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(11) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -136,9 +128,9 @@
                             "id": "5885b455-3d59-4919-bf64-e62dec45af64",
                             "label": "slot_11",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(10) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -153,9 +145,9 @@
                             "id": "85944064-4368-4806-88aa-b2a320d17fff",
                             "label": "slot_10",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(9) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -169,9 +161,9 @@
                             "id": "4323d409-9184-4bcd-8c61-b38c941db82a",
                             "label": "slot_9",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(8) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -186,9 +178,9 @@
                             "id": "64c4bf79-5c82-472a-8bb7-cabaa01e0b3e",
                             "label": "slot_8",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(7) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -203,9 +195,9 @@
                             "id": "152034c5-0c63-47ed-ae32-19f02652cad2",
                             "label": "slot_7",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(6) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -219,9 +211,9 @@
                             "id": "472324e9-cdfe-489e-8b1b-a14b99e13fa2",
                             "label": "slot_6",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(5) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -236,9 +228,9 @@
                             "id": "3c18b24c-1337-4d99-b860-5d1af3d4fd73",
                             "label": "slot_5",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(4) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -253,9 +245,9 @@
                             "id": "6229f89d-065c-41b8-8f5b-8964235e8415",
                             "label": "slot_4",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(3) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -269,9 +261,9 @@
                             "id": "b6b3a7a4-dfd5-439b-98b4-e712b5f7dec3",
                             "label": "slot_3",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(2) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -286,9 +278,9 @@
                             "id": "87abf07a-43fc-4a55-8133-8a6bf2c0fed6",
                             "label": "slot_2",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(1) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -303,9 +295,9 @@
                             "id": "c7acf20a-882e-4e6f-8b47-8eb584288565",
                             "label": "slot_1",
                             "components": [
-                                "Button"
+                                "Button",
+                                "ShowHint"
                             ],
-                            "Button.spriteName": "large-box",
                             "Button.callback": "() => { this.onSlotClick(0) }",
                             "Button.activeFrame": false,
                             "texture": {
@@ -321,7 +313,6 @@
                             "components": [
                                 "Button"
                             ],
-                            "Button.spriteName": "inventory/sort-button",
                             "Button.callback": "() => this.parentContainer.inventorySort.showMenu()",
                             "Button.activeFrame": false,
                             "texture": {
@@ -336,7 +327,6 @@
                             "id": "4b101eea-f513-4768-87a2-2fc527df43e5",
                             "label": "active_text",
                             "scope": "CLASS",
-                            "components": [],
                             "x": 130,
                             "y": 553,
                             "originX": 0.5,
@@ -354,7 +344,6 @@
                     "type": "Container",
                     "id": "e8832f40-f7c5-4dcc-a31d-a8c8c5488162",
                     "label": "tab",
-                    "components": [],
                     "x": 369,
                     "y": -156,
                     "list": [
@@ -379,7 +368,6 @@
                             "id": "52c457ab-fc2c-4c34-8c62-d5a976701bdd",
                             "label": "arrow",
                             "scope": "CLASS",
-                            "components": [],
                             "texture": {
                                 "key": "main",
                                 "frame": "tab-arrow"
@@ -396,7 +384,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "lists": [
         {

@@ -1,6 +1,6 @@
 import BaseContainer from '@scenes/base/BaseContainer'
 
-import { Button, SimpleButton } from '@components/components'
+import { Button, SimpleButton, ShowHint } from '@components/components'
 
 import InventoryLoader from '@engine/loaders/InventoryLoader'
 
@@ -145,61 +145,73 @@ export default class Inventory extends BaseContainer {
         const slot_12Button = new Button(slot_12);
         slot_12Button.callback = () => { this.onSlotClick(11) };
         slot_12Button.activeFrame = false;
+        new ShowHint(slot_12);
 
         // slot_11 (components)
         const slot_11Button = new Button(slot_11);
         slot_11Button.callback = () => { this.onSlotClick(10) };
         slot_11Button.activeFrame = false;
+        new ShowHint(slot_11);
 
         // slot_10 (components)
         const slot_10Button = new Button(slot_10);
         slot_10Button.callback = () => { this.onSlotClick(9) };
         slot_10Button.activeFrame = false;
+        new ShowHint(slot_10);
 
         // slot_9 (components)
         const slot_9Button = new Button(slot_9);
         slot_9Button.callback = () => { this.onSlotClick(8) };
         slot_9Button.activeFrame = false;
+        new ShowHint(slot_9);
 
         // slot_8 (components)
         const slot_8Button = new Button(slot_8);
         slot_8Button.callback = () => { this.onSlotClick(7) };
         slot_8Button.activeFrame = false;
+        new ShowHint(slot_8);
 
         // slot_7 (components)
         const slot_7Button = new Button(slot_7);
         slot_7Button.callback = () => { this.onSlotClick(6) };
         slot_7Button.activeFrame = false;
+        new ShowHint(slot_7);
 
         // slot_6 (components)
         const slot_6Button = new Button(slot_6);
         slot_6Button.callback = () => { this.onSlotClick(5) };
         slot_6Button.activeFrame = false;
+        new ShowHint(slot_6);
 
         // slot_5 (components)
         const slot_5Button = new Button(slot_5);
         slot_5Button.callback = () => { this.onSlotClick(4) };
         slot_5Button.activeFrame = false;
+        new ShowHint(slot_5);
 
         // slot_4 (components)
         const slot_4Button = new Button(slot_4);
         slot_4Button.callback = () => { this.onSlotClick(3) };
         slot_4Button.activeFrame = false;
+        new ShowHint(slot_4);
 
         // slot_3 (components)
         const slot_3Button = new Button(slot_3);
         slot_3Button.callback = () => { this.onSlotClick(2) };
         slot_3Button.activeFrame = false;
+        new ShowHint(slot_3);
 
         // slot_2 (components)
         const slot_2Button = new Button(slot_2);
         slot_2Button.callback = () => { this.onSlotClick(1) };
         slot_2Button.activeFrame = false;
+        new ShowHint(slot_2);
 
         // slot_1 (components)
         const slot_1Button = new Button(slot_1);
         slot_1Button.callback = () => { this.onSlotClick(0) };
         slot_1Button.activeFrame = false;
+        new ShowHint(slot_1);
 
         // inventory_sort_button (components)
         const inventory_sort_buttonButton = new Button(inventory_sort_button);

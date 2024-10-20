@@ -24,15 +24,15 @@ export default class InventoryLoader extends BaseLoader {
                 slot.item.destroy()
             }
 
+            slot.disableInteractive()
+
             if (slot.spinner) {
                 slot.spinner.destroy()
             }
 
             let item = page[index]
 
-            if (item) {
-                slot.setInteractive()
-                
+            if (item) {                
                 // Set the frame based on whether the item is worn or not
                 if (Object.values(this.scene.world.client.penguin.items.flat).includes(item)) {
                     slot.setFrame('large-box-worn')  // Set the frame to "large-box-worn" for worn items
@@ -45,7 +45,6 @@ export default class InventoryLoader extends BaseLoader {
                 this.loadItem(item)
             } else {
                 // If no item, disable interaction and set frame to "large-box-empty"
-                slot.disableInteractive()
                 slot.setFrame('large-box-empty')  // Empty slot
             }
         }
@@ -104,6 +103,8 @@ export default class InventoryLoader extends BaseLoader {
             return
         }
 
+        slot.setInteractive()
+
         if (slot.item) {
             slot.item.destroy()
         }
@@ -117,5 +118,6 @@ export default class InventoryLoader extends BaseLoader {
 
         icon.id = item
         slot.item = icon
+        slot.__ShowHint.text = this.crumbs.items[item].name
     }
 }
