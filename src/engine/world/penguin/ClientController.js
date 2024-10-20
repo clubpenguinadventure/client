@@ -15,6 +15,10 @@ export default class ClientController {
         // Assign user attributes
         let { user, ...attributes } = args
         Object.assign(this, attributes)
+        const furniture = Object.entries(this.furniture).filter(furn => furn[0] in this.crumbs.furniture)
+        this.furniture = Object.fromEntries(furniture)
+        this.inventory = this.inventory.filter(item => item in this.crumbs.items)
+        this.igloos = this.igloos.filter(igloo => igloo in this.crumbs.igloos)
 
         this.id = user.id
         this.joinTime = user.joinTime

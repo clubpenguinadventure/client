@@ -54,6 +54,12 @@ export default class PaperDollLoader extends BaseLoader {
             return this.removeItem(slot)
         }
 
+        
+        if (!this.crumbs.items[item]) {
+            return
+        }
+
+
         if (this.paperDoll.items[slot].sprite) {
             this.removeItem(slot)
         }

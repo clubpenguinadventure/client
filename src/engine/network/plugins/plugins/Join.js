@@ -54,16 +54,18 @@ export default class Join extends Plugin {
     savePlayer(args) {
         let savedPenguins = this.network.savedPenguins
 
-        if (Object.keys(savedPenguins).length > 6 && !(args.user.username in savedPenguins)) return
+        if (Object.keys(savedPenguins).length > 6 && !(args.user.realname in savedPenguins)) return
 
         let { photo, flag, x, y, frame, coins, id, ...penguin } = args.user
 
         // Set auth token
         if (this.network.token) {
             penguin.token = this.network.token
+            penguin.username = penguin.realname
+            delete penguin.realname
         }
 
-        savedPenguins[args.user.username.toLowerCase()] = penguin
+        savedPenguins[args.user.realname.toLowerCase()] = penguin
         localStorage.setItem('saved_penguins', JSON.stringify(savedPenguins))
     }
 
@@ -71,8 +73,8 @@ export default class Join extends Plugin {
     unsavePlayer(args) {
         let savedPenguins = this.network.savedPenguins
 
-        if (args.user.username.toLowerCase() in savedPenguins) {
-            delete savedPenguins[args.user.username.toLowerCase()]
+        if (args.user.realname.toLowerCase() in savedPenguins) {
+            delete savedPenguins[args.user.realname.toLowerCase()]
             localStorage.setItem('saved_penguins', JSON.stringify(savedPenguins))
         }
     }
