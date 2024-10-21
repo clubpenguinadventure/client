@@ -34,46 +34,91 @@
 					<a href="https://wiki.cpchat.net">Wiki</a>
 				</div>
 				<div class="buttons">
+					<button id="largescreen">Large Screen</button>
 					<button id="fullscreen">Full Screen</button>
-					<button id="toggleDarkMode">Toggle Dark Mode</button>
+					<button id="toggleDarkMode">Toggle Color</button>
 				</div>
 				<div class="links">
 					<a href="#">Log Out</a>
 				</div>
 			</div>
 		</div>
-		  <script>
-			const toggleButton = document.getElementById('toggleDarkMode');
-			const body = document.body;
-
-			toggleButton.addEventListener('click', () => {
-				body.classList.toggle('dark-mode');
-				body.classList.toggle('light-mode');
-				body.dispatchEvent(new Event('themeChanged'));
-			});
-
-			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				body.classList.add('dark-mode');
-			} else {
-				body.classList.add('light-mode');
-			}
-
-			const fullscreenButton = document.getElementById('fullscreen');
-			fullscreenButton.addEventListener('click', () => {
-				document.getElementById('header').style.display = 'none';
-				document.getElementById('game').style.maxWidth = '100%';
-				document.getElementById('game').style.maxHeight = '100%';
-				document.getElementById('game').style.height = '100%';
-				document.documentElement.requestFullscreen();
-			});
-
-			document.addEventListener('fullscreenchange', () => {
-				if (!document.fullscreenElement) {
-					document.getElementById('header').style.display = 'flex'
-					document.getElementById('game').style.maxWidth = '1520px';
-				}
-			});
-		</script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const toggleButton = document.getElementById('toggleDarkMode');
+					const fullscreenButton = document.getElementById('fullscreen');
+					const largescreenButton = document.getElementById('largescreen');
+					const body = document.body;
+					let mode = 'light'; // Start with light mode by default
+					let isLargeScreen = false; // Track large screen state
+			
+					// Apply initial mode based on system preference
+					if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						body.classList.add('dark-mode');
+						mode = 'dark';
+					} else {
+						body.classList.add('light-mode');
+						mode = 'light';
+					}
+			
+					// Toggle between light, dark, and blue modes
+					toggleButton.addEventListener('click', () => {
+						if (mode === 'light') {
+							body.classList.remove('light-mode');
+							body.classList.add('dark-mode');
+							mode = 'dark';
+						} else if (mode === 'dark') {
+							body.classList.remove('dark-mode');
+							body.classList.add('blue-mode');
+							mode = 'blue';
+						} else if (mode === 'blue') {
+							body.classList.remove('blue-mode');
+							body.classList.add('light-mode');
+							mode = 'light';
+						}
+			
+						body.dispatchEvent(new Event('themeChanged'));
+					});
+			
+					// Fullscreen button functionality (using original code to avoid Phaser error)
+					fullscreenButton.addEventListener('click', () => {
+						document.getElementById('header').style.display = 'none';
+						const gameElement = document.getElementById('game');
+						gameElement.style.maxWidth = '100%';
+						gameElement.style.maxHeight = '100%';
+						gameElement.style.height = '100%';
+						document.documentElement.requestFullscreen(); // Fullscreen the entire document
+					});
+			
+					// Exit fullscreen changes when fullscreen is exited
+					document.addEventListener('fullscreenchange', () => {
+						if (!document.fullscreenElement) {
+							document.getElementById('header').style.display = 'flex';
+							const gameElement = document.getElementById('game');
+							gameElement.style.maxWidth = '1520px';
+							gameElement.style.height = 'calc(100vh - 35px)'; // Adjust height based on header
+						}
+					});
+			
+					// Large Screen button functionality
+					largescreenButton.addEventListener('click', () => {
+						const gameElement = document.getElementById('game');
+						if (!isLargeScreen) {
+							gameElement.style.maxWidth = '90vw';
+							gameElement.style.width = '90vw';
+							gameElement.style.height = 'calc(90vh - 35px)'; // Adjust height based on header
+							gameElement.style.margin = '0 auto'; // Center the game element
+							isLargeScreen = true;
+						} else {
+							gameElement.style.maxWidth = '1520px';
+							gameElement.style.width = '';
+							gameElement.style.height = 'calc(100vh - 35px)';
+							gameElement.style.margin = '0 auto';
+							isLargeScreen = false;
+						}
+					});
+				});
+			</script>
         <div id="game" class="game"></div>
     </body>
 
