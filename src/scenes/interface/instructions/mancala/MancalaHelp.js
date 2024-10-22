@@ -62,7 +62,7 @@ export default class MancalaHelp extends BookContainer {
         const page1_text2 = scene.add.text(0, -70, "", {});
         page1_text2.setOrigin(0.5, 0.5);
         page1_text2.text = "Each player attempts to collect as many stones as\npossible before one of the players\nclears his or her side of stones.";
-        page1_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Arial", "fontSize": "32px" });
+        page1_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page1.add(page1_text2);
 
         // page1_text3
@@ -76,7 +76,7 @@ export default class MancalaHelp extends BookContainer {
         const page1_text4 = scene.add.text(0, 113, "", {});
         page1_text4.setOrigin(0.5, 0.5);
         page1_text4.text = "Each player has a side of the board. (top and\nbottom) The six holes nearest each player belong\nto him or her and their large holes or\nmancala is to the right.";
-        page1_text4.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Arial", "fontSize": "32px" });
+        page1_text4.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page1.add(page1_text4);
 
         // page2
@@ -99,28 +99,28 @@ export default class MancalaHelp extends BookContainer {
         const page2_text2 = scene.add.text(-35, -78, "", {});
         page2_text2.setOrigin(0.5, 0.5);
         page2_text2.text = "Player 2 Side";
-        page2_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":200,"fontFamily": "Arial", "fontSize": "32px" });
+        page2_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":200,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page2.add(page2_text2);
 
         // page2_text3
         const page2_text3 = scene.add.text(38, 142, "", {});
         page2_text3.setOrigin(0.5, 0.5);
         page2_text3.text = "Player 1 Side";
-        page2_text3.setStyle({ "align": "center", "color": "#000000", "fixedWidth":200,"fontFamily": "Arial", "fontSize": "32px" });
+        page2_text3.setStyle({ "align": "center", "color": "#000000", "fixedWidth":200,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page2.add(page2_text3);
 
         // page2_text4
         const page2_text4 = scene.add.text(-335, 27, "", {});
         page2_text4.setOrigin(0.5, 0.5);
         page2_text4.text = "Player 2\nMancala";
-        page2_text4.setStyle({ "align": "right", "color": "#000000", "fixedWidth":150,"fontFamily": "Arial", "fontSize": "24px" });
+        page2_text4.setStyle({ "align": "right", "color": "#000000", "fixedWidth":150,"fontFamily": "Proxima Nova", "fontSize": "24px" });
         page2.add(page2_text4);
 
         // page2_text5
         const page2_text5 = scene.add.text(336, 27, "", {});
         page2_text5.setOrigin(0.5, 0.5);
         page2_text5.text = "Player 1\nMancala";
-        page2_text5.setStyle({ "color": "#000000", "fixedWidth":150,"fontFamily": "Arial", "fontSize": "24px" });
+        page2_text5.setStyle({ "color": "#000000", "fixedWidth":150,"fontFamily": "Proxima Nova", "fontSize": "24px" });
         page2.add(page2_text5);
 
         // page3
@@ -139,7 +139,7 @@ export default class MancalaHelp extends BookContainer {
         const page3_text2 = scene.add.text(0, 27, "", {});
         page3_text2.setOrigin(0.5, 0.5);
         page3_text2.text = "Players alternate turns. In his or her turn each\nplayer selects a group of stones from one hole on\nhis or her side of the board. Each stone is dropped\none by one in the holes around the board, including\nhis mancala but not the opponents mancala.";
-        page3_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Arial", "fontSize": "32px" });
+        page3_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page3.add(page3_text2);
 
         // page4
@@ -158,7 +158,7 @@ export default class MancalaHelp extends BookContainer {
         const page4_text2 = scene.add.text(0, -88, "", {});
         page4_text2.setOrigin(0.5, 0.5);
         page4_text2.text = "If the last stone lands in the players own mancala,\nthat player goes again.";
-        page4_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Arial", "fontSize": "32px" });
+        page4_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page4.add(page4_text2);
 
         // page4_text3
@@ -172,7 +172,7 @@ export default class MancalaHelp extends BookContainer {
         const page4_text4 = scene.add.text(0, 92, "", {});
         page4_text4.setOrigin(0.5, 0.5);
         page4_text4.text = "If the last stone is dropped in an empty hole on the\nplayers own side, he captures all the stones from\nthe opponents hole directly opposite that hole,\nincluding his stone.";
-        page4_text4.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Arial", "fontSize": "32px" });
+        page4_text4.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page4.add(page4_text4);
 
         // page5
@@ -191,7 +191,7 @@ export default class MancalaHelp extends BookContainer {
         const page5_text2 = scene.add.text(0, 26, "", {});
         page5_text2.setOrigin(0.5, 0.5);
         page5_text2.text = "The game is over when a player has no more\nstones on his side of the board. The winner is the\nplayer with the greatest total of stones in his or her\nmancala and any remaining stones on his or her\nside of the board.";
-        page5_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Arial", "fontSize": "32px" });
+        page5_text2.setStyle({ "align": "center", "color": "#000000", "fixedWidth":750,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         page5.add(page5_text2);
 
         // tab1
@@ -243,7 +243,7 @@ export default class MancalaHelp extends BookContainer {
         pageText.alphaBottomLeft = 0.5;
         pageText.alphaBottomRight = 0.5;
         pageText.text = "Page 1 of 5";
-        pageText.setStyle({ "align": "center", "color": "#ffffff", "fixedWidth":150,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        pageText.setStyle({ "align": "center", "color": "#ffffff", "fixedWidth":150,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         pageText.setLineSpacing(1);
         this.add(pageText);
 

@@ -335,7 +335,7 @@
                     "originY": 0.5,
                     "fixedWidth": 380,
                     "align": "center",
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "24px",
                     "color": "#000000"
                 }

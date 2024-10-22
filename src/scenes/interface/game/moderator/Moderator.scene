@@ -80,7 +80,7 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Become a Secret Agent",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "40px",
                     "fontStyle": "bold"
                 },
@@ -96,7 +96,7 @@
                     "fixedWidth": 400,
                     "fixedHeight": 80,
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "32px",
                     "color": "#000"
                 },

@@ -23,7 +23,7 @@ export default class SingleButton extends BaseContainer {
         const text = scene.add.text(0, 0, "", {});
         text.setOrigin(0.5, 0.5);
         text.text = "Ok";
-        text.setStyle({ "align": "center", "fixedWidth":280,"fontFamily": "Arial Narrow", "fontSize": "40px", "fontStyle": "bold" });
+        text.setStyle({ "align": "center", "fixedWidth":280,"fontFamily": "Proxima Nova", "fontSize": "40px", "fontStyle": "bold" });
         this.add(text);
 
         // button (components)

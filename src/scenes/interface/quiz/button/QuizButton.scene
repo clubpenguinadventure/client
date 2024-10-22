@@ -47,7 +47,7 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Text",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "40px",
                     "fontStyle": "bold"
                 }

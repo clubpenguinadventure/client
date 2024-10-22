@@ -145,7 +145,7 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "fixedWidth": 350,
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "50px"
                 },
                 {

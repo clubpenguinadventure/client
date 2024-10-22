@@ -28,13 +28,13 @@ export default class MailSuccessPrompt extends BaseContainer {
         const buttonText = scene.add.text(0, 154, "", {});
         buttonText.setOrigin(0.5, 0.5);
         buttonText.text = "Ok";
-        buttonText.setStyle({ "align": "center", "fixedWidth":280,"fontFamily": "Arial Narrow", "fontSize": "40px", "fontStyle": "bold" });
+        buttonText.setStyle({ "align": "center", "fixedWidth":280,"fontFamily": "Proxima Nova", "fontSize": "40px", "fontStyle": "bold" });
         this.add(buttonText);
 
         // message
         const message = scene.add.text(0, 27, "", {});
         message.setOrigin(0.5, 0.5);
-        message.setStyle({ "align": "center", "color": "#000", "fixedWidth":658,"fontFamily": "Arial", "fontSize": "32px" });
+        message.setStyle({ "align": "center", "color": "#000", "fixedWidth":658,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         message.setWordWrapWidth(658);
         this.add(message);
 

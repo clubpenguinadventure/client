@@ -26,7 +26,7 @@ export default class QuizButton extends BaseContainer {
         const buttonText = scene.add.text(0, 0, "", {});
         buttonText.setOrigin(0.5, 0.5);
         buttonText.text = "Text";
-        buttonText.setStyle({ "fontFamily": "Arial Narrow", "fontSize": "40px", "fontStyle": "bold" });
+        buttonText.setStyle({ "fontFamily": "Proxima Nova", "fontSize": "40px", "fontStyle": "bold" });
         this.add(buttonText);
 
         // button (components)

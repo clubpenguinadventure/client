@@ -48,7 +48,7 @@ export default class SledPlayer extends BaseContainer {
         const username = scene.add.text(0, -91, "", {});
         username.setOrigin(0.5, 0);
         username.text = "Username";
-        username.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":200,"fontFamily": "Arial", "fontSize": "24px" });
+        username.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":200,"fontFamily": "Proxima Nova", "fontSize": "24px" });
         character.add(username);
 
         this.shadow = shadow;

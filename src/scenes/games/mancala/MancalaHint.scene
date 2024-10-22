@@ -46,7 +46,7 @@
                     "text": "99",
                     "fixedWidth": 64,
                     "align": "center",
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "32px",
                     "color": "#000"
                 }

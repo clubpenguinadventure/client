@@ -334,7 +334,7 @@
                             "text": "All Items",
                             "fixedWidth": 268,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "24px",
                             "color": "#000000ff"
                         }

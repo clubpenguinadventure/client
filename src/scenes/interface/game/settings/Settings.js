@@ -31,7 +31,7 @@ export default class Settings extends BaseContainer {
         const buddies = scene.add.text(69, 173, "", {});
         buddies.setOrigin(0.5, 0.5);
         buddies.text = "88/100 Buddies";
-        buddies.setStyle({ "color": "#000000ff", "fixedWidth":300,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        buddies.setStyle({ "color": "#000000ff", "fixedWidth":300,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(buddies);
 
         // icon
@@ -46,28 +46,28 @@ export default class Settings extends BaseContainer {
         const account = scene.add.text(21, 66, "", {});
         account.setOrigin(0.5, 0.5);
         account.text = "Manage Account";
-        account.setStyle({ "align": "center", "color": "#ffffffff", "fixedWidth":562,"fontFamily": "Arial Narrow", "fontSize": "40px", "fontStyle": "bold" });
+        account.setStyle({ "align": "center", "color": "#ffffffff", "fixedWidth":562,"fontFamily": "Proxima Nova", "fontSize": "40px", "fontStyle": "bold" });
         this.add(account);
 
         // music
         const music = scene.add.text(131, -37, "", {});
         music.setOrigin(0.5, 0.5);
         music.text = "Mute Music";
-        music.setStyle({ "color": "#000000ff", "fixedWidth":348,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        music.setStyle({ "color": "#000000ff", "fixedWidth":348,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(music);
 
         // age
         const age = scene.add.text(0, -108, "", {});
         age.setOrigin(0.5, 0.5);
         age.text = "Your penguin is 0 days old";
-        age.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":600,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        age.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(age);
 
         // server
         const server = scene.add.text(0, -156, "", {});
         server.setOrigin(0.5, 0.5);
         server.text = "You're on Server Name";
-        server.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":600,"fontFamily": "Arial Narrow", "fontSize": "30px" });
+        server.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "30px" });
         this.add(server);
 
         // settings

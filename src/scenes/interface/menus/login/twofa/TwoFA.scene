@@ -82,7 +82,7 @@
                     "originY": 0.5,
                     "text": "Enter the 6 digit code from your Authenticator app",
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "30px",
                     "color": "#000000ff",
                     "wordWrapWidth": 300
@@ -108,7 +108,7 @@
                     "originY": 0.5,
                     "text": "Submit",
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "40px",
                     "color": "#000000ff",
                     "wordWrapWidth": 300

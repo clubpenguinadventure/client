@@ -45,7 +45,7 @@
                     "text": "Ok",
                     "fixedWidth": 280,
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "40px",
                     "fontStyle": "bold"
                 }

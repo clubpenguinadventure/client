@@ -7,7 +7,7 @@ export default class PenguinLoader {
         this.world = world
 
         this.nameStyle = {
-            fontFamily: 'Arial',
+            fontFamily: 'Proxima Nova',
             fontSize: 24,
             color: '#000000',
             align: 'center',

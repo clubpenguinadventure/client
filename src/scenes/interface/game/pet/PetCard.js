@@ -101,7 +101,7 @@ export default class PetCard extends BaseContainer {
         // name
         const name = scene.add.text(0, -237, "", {});
         name.setOrigin(0.5, 0.5);
-        name.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":360,"fontFamily": "Arial", "fontSize": "32px", "fontStyle": "bold" });
+        name.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":360,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold" });
         this.add(name);
 
         // xButton

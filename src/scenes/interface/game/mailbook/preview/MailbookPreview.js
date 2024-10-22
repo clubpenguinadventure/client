@@ -48,20 +48,20 @@ export default class MailbookPreview extends BaseContainer {
         const noText = scene.add.text(165, 380, "", {});
         noText.setOrigin(0.5, 0.5);
         noText.text = "No";
-        noText.setStyle({ "align": "center", "color": "#333333", "fixedWidth":200,"fontFamily": "Arial", "fontSize": "38px" });
+        noText.setStyle({ "align": "center", "color": "#333333", "fixedWidth":200,"fontFamily": "Proxima Nova", "fontSize": "38px" });
         this.add(noText);
 
         // yesText
         const yesText = scene.add.text(-165, 380, "", {});
         yesText.setOrigin(0.5, 0.5);
         yesText.text = "Yes";
-        yesText.setStyle({ "align": "center", "color": "#333333", "fixedWidth":200,"fontFamily": "Arial", "fontSize": "38px" });
+        yesText.setStyle({ "align": "center", "color": "#333333", "fixedWidth":200,"fontFamily": "Proxima Nova", "fontSize": "38px" });
         this.add(yesText);
 
         // sendText
         const sendText = scene.add.text(0, 312, "", {});
         sendText.setOrigin(0.5, 0.5);
-        sendText.setStyle({ "align": "center", "color": "#333333", "fixedWidth":1000,"fontFamily": "Arial", "fontSize": "32px" });
+        sendText.setStyle({ "align": "center", "color": "#333333", "fixedWidth":1000,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(sendText);
 
         // error

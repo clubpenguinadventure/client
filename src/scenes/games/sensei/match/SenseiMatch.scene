@@ -71,7 +71,7 @@
                     "text": "Waiting for more players",
                     "fixedWidth": 460,
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "32px"
                 },
                 {
@@ -85,7 +85,7 @@
                     "text": "10",
                     "fixedWidth": 60,
                     "align": "center",
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "32px",
                     "fontStyle": "bold"
                 },

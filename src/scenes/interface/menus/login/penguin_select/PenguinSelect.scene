@@ -93,7 +93,7 @@
             "fixedWidth": 400,
             "lineSpacing": 25,
             "align": "center",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "30px",
             "color": "#ffffffff"
         },

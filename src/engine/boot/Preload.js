@@ -18,8 +18,6 @@ export default class Preload extends BaseScene {
 
         this.load.on('progress', this.onProgress, this)
 
-        WebFont.load(this.crumbs.fonts)
-
         this.load.pack('preload', 'assets/media/preload/preload-pack.json')
 
         this.scene.add('Start', Start)

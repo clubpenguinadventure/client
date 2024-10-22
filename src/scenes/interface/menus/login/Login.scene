@@ -105,7 +105,7 @@
             "text": "Back",
             "lineSpacing": 25,
             "align": "right",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "30px",
             "color": "#ffffffff"
         },
@@ -120,7 +120,7 @@
             "text": "Create a free account now",
             "lineSpacing": 25,
             "align": "right",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "35px",
             "color": "#ffffffff"
         },
@@ -135,7 +135,7 @@
             "text": "Don't have a penguin?",
             "lineSpacing": 25,
             "align": "right",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "30px",
             "color": "#000000ff"
         },
@@ -150,7 +150,7 @@
             "text": "Forgot your password?",
             "lineSpacing": 25,
             "align": "right",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "30px",
             "color": "#ffffffff"
         },
@@ -180,7 +180,7 @@
             "text": "Login",
             "lineSpacing": 25,
             "align": "right",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "38px",
             "color": "#ffffffff"
         },
@@ -194,7 +194,7 @@
             "text": "Password:",
             "lineSpacing": 25,
             "align": "right",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "30px",
             "color": "#000000ff"
         },
@@ -208,7 +208,7 @@
             "text": "Penguin Name:",
             "lineSpacing": 25,
             "align": "right",
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "30px",
             "color": "#000000ff"
         },

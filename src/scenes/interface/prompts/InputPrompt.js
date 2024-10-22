@@ -46,7 +46,7 @@ export default class InputPrompt extends BaseContainer {
         const text = scene.add.text(0, 0, "", {});
         text.setOrigin(0.5, 0.5);
         text.text = "Message goes here";
-        text.setStyle({ "align": "center", "color": "#000000", "fixedWidth":628,"fixedHeight":136,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        text.setStyle({ "align": "center", "color": "#000000", "fixedWidth":628,"fixedHeight":136,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(text);
 
         // button
@@ -93,7 +93,7 @@ export default class InputPrompt extends BaseContainer {
         const style = {
             width: 446,
             height: 54,
-            fontFamily: 'Arial Narrow',
+            fontFamily: 'Proxima Nova',
             fontSize: 40,
             color: '#000',
             textAlign: 'center'

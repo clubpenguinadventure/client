@@ -21,7 +21,7 @@ export default class MancalaHint extends Phaser.GameObjects.Container {
         text.setOrigin(0.5, 0.5);
         text.visible = false;
         text.text = "99";
-        text.setStyle({ "align": "center", "color": "#000", "fixedWidth":64,"fontFamily": "Arial", "fontSize": "32px" });
+        text.setStyle({ "align": "center", "color": "#000", "fixedWidth":64,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(text);
 
         this.hint = hint;

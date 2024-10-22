@@ -53,28 +53,28 @@ export default class Login extends BaseScene {
         const backText = this.add.text(760, 876, "", {});
         backText.setOrigin(0.5, 0.5);
         backText.text = "Back";
-        backText.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Arial Narrow", "fontSize": "30px" });
+        backText.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         backText.setLineSpacing(25);
 
         // registerText2
         const registerText2 = this.add.text(760, 747, "", {});
         registerText2.setOrigin(0.5, 0.5);
         registerText2.text = "Create a free account now";
-        registerText2.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Arial Narrow", "fontSize": "35px" });
+        registerText2.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Proxima Nova", "fontSize": "35px" });
         registerText2.setLineSpacing(25);
 
         // registerText
         const registerText = this.add.text(760, 713, "", {});
         registerText.setOrigin(0.5, 0.5);
         registerText.text = "Don't have a penguin?";
-        registerText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Arial Narrow", "fontSize": "30px" });
+        registerText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         registerText.setLineSpacing(25);
 
         // forgotText
         const forgotText = this.add.text(760, 604, "", {});
         forgotText.setOrigin(0.5, 0.5);
         forgotText.text = "Forgot your password?";
-        forgotText.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Arial Narrow", "fontSize": "30px" });
+        forgotText.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         forgotText.setLineSpacing(25);
 
         // loginButton
@@ -84,21 +84,21 @@ export default class Login extends BaseScene {
         const loginText = this.add.text(760, 483, "", {});
         loginText.setOrigin(0.5, 0.5);
         loginText.text = "Login";
-        loginText.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Arial Narrow", "fontSize": "38px" });
+        loginText.setStyle({ "align": "right", "color": "#ffffffff", "fontFamily": "Proxima Nova", "fontSize": "38px" });
         loginText.setLineSpacing(25);
 
         // passwordText
         const passwordText = this.add.text(503, 258, "", {});
         passwordText.setOrigin(0, 0.5);
         passwordText.text = "Password:";
-        passwordText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Arial Narrow", "fontSize": "30px" });
+        passwordText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         passwordText.setLineSpacing(25);
 
         // usernameText
         const usernameText = this.add.text(448, 200, "", {});
         usernameText.setOrigin(0, 0.5);
         usernameText.text = "Penguin Name:";
-        usernameText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Arial Narrow", "fontSize": "30px" });
+        usernameText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         usernameText.setLineSpacing(25);
 
         // password
@@ -182,7 +182,7 @@ export default class Login extends BaseScene {
             height: 53,
             padding: '0 6px 0 6px',
             filter: 'none',
-            fontFamily: 'Arial',
+            fontFamily: 'Proxima Nova',
             fontSize: 35,
             color: '#000'
         }

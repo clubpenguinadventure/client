@@ -101,7 +101,7 @@
                     "text": "Visit HQ",
                     "fixedWidth": 160,
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "28px",
                     "fontStyle": "bold"
                 },
@@ -115,7 +115,7 @@
                     "text": "Teleport",
                     "fixedWidth": 160,
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "28px",
                     "fontStyle": "bold"
                 },

@@ -40,7 +40,7 @@
                     "y": -14,
                     "fixedHeight": 30,
                     "align": "center",
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "24px",
                     "color": "#000000"
                 }

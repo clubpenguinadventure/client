@@ -47,14 +47,14 @@ export default class Phone extends BaseContainer {
         const hqText = scene.add.text(0, 125, "", {});
         hqText.setOrigin(0.5, 0.5);
         hqText.text = "Visit HQ";
-        hqText.setStyle({ "align": "center", "fixedWidth":160,"fontFamily": "Arial Narrow", "fontSize": "28px", "fontStyle": "bold" });
+        hqText.setStyle({ "align": "center", "fixedWidth":160,"fontFamily": "Proxima Nova", "fontSize": "28px", "fontStyle": "bold" });
         this.add(hqText);
 
         // teleportText
         const teleportText = scene.add.text(0, 41, "", {});
         teleportText.setOrigin(0.5, 0.5);
         teleportText.text = "Teleport";
-        teleportText.setStyle({ "align": "center", "fixedWidth":160,"fontFamily": "Arial Narrow", "fontSize": "28px", "fontStyle": "bold" });
+        teleportText.setStyle({ "align": "center", "fixedWidth":160,"fontFamily": "Proxima Nova", "fontSize": "28px", "fontStyle": "bold" });
         this.add(teleportText);
 
         // closeButton

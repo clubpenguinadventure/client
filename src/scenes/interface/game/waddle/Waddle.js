@@ -45,7 +45,7 @@ export default class Waddle extends BaseContainer {
         // text
         const text = scene.add.text(0, -122, "", {});
         text.setOrigin(0.5, 0.5);
-        text.setStyle({ "align": "center", "color": "#000000", "fixedWidth":420,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        text.setStyle({ "align": "center", "color": "#000000", "fixedWidth":420,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(text);
 
         // x_button

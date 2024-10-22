@@ -35,7 +35,7 @@
             "originY": 0.5,
             "text": "Ultimate safe chat",
             "fixedWidth": 200,
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "28px"
         },
         {
@@ -61,7 +61,7 @@
             "originY": 0.5,
             "text": "Amount of penguins online",
             "fixedWidth": 300,
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "28px"
         },
         {
@@ -86,7 +86,7 @@
             "originY": 0.5,
             "text": "Buddies online",
             "fixedWidth": 200,
-            "fontFamily": "Arial Narrow",
+            "fontFamily": "Proxima Nova",
             "fontSize": "28px"
         },
         {

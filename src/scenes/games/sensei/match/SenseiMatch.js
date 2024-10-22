@@ -40,14 +40,14 @@ export default class SenseiMatch extends BaseContainer {
         const message = scene.add.text(0, -20, "", {});
         message.setOrigin(0.5, 0.5);
         message.text = "Waiting for more players";
-        message.setStyle({ "align": "center", "fixedWidth":460,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        message.setStyle({ "align": "center", "fixedWidth":460,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(message);
 
         // time
         const time = scene.add.text(0, -100, "", {});
         time.setOrigin(0.5, 0.5);
         time.text = "10";
-        time.setStyle({ "align": "center", "fixedWidth":60,"fontFamily": "Arial", "fontSize": "32px", "fontStyle": "bold" });
+        time.setStyle({ "align": "center", "fixedWidth":60,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold" });
         this.add(time);
 
         // spinner

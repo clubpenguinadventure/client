@@ -41,7 +41,7 @@
             "fixedWidth": 800,
             "fixedHeight": 40,
             "align": "center",
-            "fontFamily": "Arial",
+            "fontFamily": "Proxima Nova",
             "fontSize": "32px"
         },
         {

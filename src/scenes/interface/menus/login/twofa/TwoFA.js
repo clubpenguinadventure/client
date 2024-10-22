@@ -31,7 +31,7 @@ export default class TwoFA extends BaseContainer {
         const twofaText = scene.add.text(760, 382, "", {});
         twofaText.setOrigin(0.5, 0.5);
         twofaText.text = "Enter the 6 digit code from your Authenticator app";
-        twofaText.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "Arial Narrow", "fontSize": "30px" });
+        twofaText.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         twofaText.setWordWrapWidth(300);
         this.add(twofaText);
 
@@ -43,7 +43,7 @@ export default class TwoFA extends BaseContainer {
         const twofaText_1 = scene.add.text(761, 569, "", {});
         twofaText_1.setOrigin(0.5, 0.5);
         twofaText_1.text = "Submit";
-        twofaText_1.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "Arial Narrow", "fontSize": "40px" });
+        twofaText_1.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "Proxima Nova", "fontSize": "40px" });
         twofaText_1.setWordWrapWidth(300);
         this.add(twofaText_1);
 

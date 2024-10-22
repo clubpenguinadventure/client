@@ -14,7 +14,7 @@ export default class GridViewSlot extends Phaser.GameObjects.Sprite {
         this.filter
 
         this.textStyle = {
-            fontFamily: 'Arial',
+            fontFamily: 'Proxima Nova',
             fontSize: 70,
             fontStyle: 'bold',
             color: '#333333',

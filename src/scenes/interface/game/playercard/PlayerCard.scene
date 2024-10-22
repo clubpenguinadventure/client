@@ -121,7 +121,7 @@
                             "text": "Your Coins: 000000",
                             "fixedWidth": 300,
                             "align": "right",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "24px",
                             "color": "#000000ff"
                         }
@@ -139,7 +139,7 @@
                     "text": "Username",
                     "fixedWidth": 360,
                     "align": "center",
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "32px",
                     "fontStyle": "bold",
                     "color": "#000000ff"

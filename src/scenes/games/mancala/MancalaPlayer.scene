@@ -40,7 +40,7 @@
                     "x": 52,
                     "originY": 0.5,
                     "text": "Waiting for Player",
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "24px"
                 },
                 {
@@ -73,7 +73,7 @@
                     "visible": false,
                     "text": "Score: 0",
                     "align": "right",
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "24px",
                     "color": "#000"
                 }

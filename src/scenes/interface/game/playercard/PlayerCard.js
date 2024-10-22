@@ -71,14 +71,14 @@ export default class PlayerCard extends BaseContainer {
         const coins = scene.add.text(0, 0, "", {});
         coins.setOrigin(0.5, 0.5);
         coins.text = "Your Coins: 000000";
-        coins.setStyle({ "align": "right", "color": "#000000ff", "fixedWidth":300,"fontFamily": "Arial", "fontSize": "24px" });
+        coins.setStyle({ "align": "right", "color": "#000000ff", "fixedWidth":300,"fontFamily": "Proxima Nova", "fontSize": "24px" });
         stats.add(coins);
 
         // username
         const username = scene.add.text(0, -238, "", {});
         username.setOrigin(0.5, 0.5);
         username.text = "Username";
-        username.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":360,"fontFamily": "Arial", "fontSize": "32px", "fontStyle": "bold" });
+        username.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":360,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold" });
         this.add(username);
 
         // x_button

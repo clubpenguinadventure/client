@@ -20,7 +20,7 @@ export default class Hint extends BaseContainer {
 
         // text
         const text = scene.add.text(0, -14, "", {});
-        text.setStyle({ "align": "center", "color": "#000000", "fixedHeight":30,"fontFamily": "Arial", "fontSize": "24px" });
+        text.setStyle({ "align": "center", "color": "#000000", "fixedHeight":30,"fontFamily": "Proxima Nova", "fontSize": "24px" });
         this.add(text);
 
         this.hint = hint;

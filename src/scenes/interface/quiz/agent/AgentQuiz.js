@@ -99,14 +99,14 @@ export default class AgentQuiz extends BaseContainer {
         // reward2
         const reward2 = scene.add.text(-184, 159, "", {});
         reward2.text = "Text";
-        reward2.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Arial Narrow", "fontSize": "28px" });
+        reward2.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "28px" });
         reward2.setWordWrapWidth(500, true);
         rewards.add(reward2);
 
         // reward1
         const reward1 = scene.add.text(-184, 79, "", {});
         reward1.text = "Text";
-        reward1.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Arial Narrow", "fontSize": "28px" });
+        reward1.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "28px" });
         reward1.setWordWrapWidth(500, true);
         rewards.add(reward1);
 
@@ -123,7 +123,7 @@ export default class AgentQuiz extends BaseContainer {
         const rewardsText = scene.add.text(0, 0, "", {});
         rewardsText.setOrigin(0.5, 0);
         rewardsText.text = "Text";
-        rewardsText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        rewardsText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         rewardsText.setWordWrapWidth(590, true);
         rewards.add(rewardsText);
 
@@ -135,21 +135,21 @@ export default class AgentQuiz extends BaseContainer {
         // mission3
         const mission3 = scene.add.text(-203, 210, "", {});
         mission3.text = "Text";
-        mission3.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Arial Narrow", "fontSize": "28px" });
+        mission3.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "28px" });
         mission3.setWordWrapWidth(500, true);
         mission.add(mission3);
 
         // mission2
         const mission2 = scene.add.text(-203, 134, "", {});
         mission2.text = "Text";
-        mission2.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Arial Narrow", "fontSize": "28px" });
+        mission2.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "28px" });
         mission2.setWordWrapWidth(500, true);
         mission.add(mission2);
 
         // mission1
         const mission1 = scene.add.text(-203, 58, "", {});
         mission1.text = "Text";
-        mission1.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Arial Narrow", "fontSize": "28px" });
+        mission1.setStyle({ "color": "#000", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "28px" });
         mission1.setWordWrapWidth(500, true);
         mission.add(mission1);
 
@@ -181,7 +181,7 @@ export default class AgentQuiz extends BaseContainer {
         const missionText = scene.add.text(0, 0, "", {});
         missionText.setOrigin(0.5, 0);
         missionText.text = "Text";
-        missionText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        missionText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         missionText.setWordWrapWidth(590, true);
         mission.add(missionText);
 
@@ -190,7 +190,7 @@ export default class AgentQuiz extends BaseContainer {
         doneText.setOrigin(0.5, 0);
         doneText.visible = false;
         doneText.text = "Text";
-        doneText.setStyle({ "align": "center", "color": "#000", "fixedWidth":600,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        doneText.setStyle({ "align": "center", "color": "#000", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         doneText.setWordWrapWidth(600, true);
         this.add(doneText);
 
@@ -199,7 +199,7 @@ export default class AgentQuiz extends BaseContainer {
         questionText.setOrigin(0.5, 0);
         questionText.visible = false;
         questionText.text = "Text";
-        questionText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        questionText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         questionText.setWordWrapWidth(590, true);
         this.add(questionText);
 
@@ -208,7 +208,7 @@ export default class AgentQuiz extends BaseContainer {
         infoText.setOrigin(0.5, 0);
         infoText.visible = false;
         infoText.text = "Text";
-        infoText.setStyle({ "align": "center", "color": "#000", "fixedWidth":600,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        infoText.setStyle({ "align": "center", "color": "#000", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         infoText.setWordWrapWidth(600, true);
         this.add(infoText);
 

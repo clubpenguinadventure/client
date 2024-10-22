@@ -51,7 +51,7 @@
                     "originY": 0.5,
                     "text": "Empty",
                     "fixedWidth": 270,
-                    "fontFamily": "Arial",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "24px"
                 }
             ]

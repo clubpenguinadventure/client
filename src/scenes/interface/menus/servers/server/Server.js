@@ -70,7 +70,7 @@ export default class Server extends BaseContainer {
         // name
         const name = scene.add.text(-125, 0, "", {});
         name.setOrigin(0.5, 0.5);
-        name.setStyle({ "fixedWidth":350,"fontFamily": "Arial", "fontSize": "50px" });
+        name.setStyle({ "fixedWidth":350,"fontFamily": "Proxima Nova", "fontSize": "50px" });
         this.add(name);
 
         // full

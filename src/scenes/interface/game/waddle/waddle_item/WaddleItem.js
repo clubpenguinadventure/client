@@ -27,7 +27,7 @@ export default class WaddleItem extends BaseContainer {
         const username = scene.add.text(25, 0, "", {});
         username.setOrigin(0.5, 0.5);
         username.text = "Empty";
-        username.setStyle({ "fixedWidth":270,"fontFamily": "Arial", "fontSize": "24px" });
+        username.setStyle({ "fixedWidth":270,"fontFamily": "Proxima Nova", "fontSize": "24px" });
         this.add(username);
 
         this.icon = icon;

@@ -36,14 +36,14 @@ export default class Moderator extends BaseContainer {
         const buttonText = scene.add.text(0, 127, "", {});
         buttonText.setOrigin(0.5, 0.5);
         buttonText.text = "Become a Secret Agent";
-        buttonText.setStyle({ "fontFamily": "Arial Narrow", "fontSize": "40px", "fontStyle": "bold" });
+        buttonText.setStyle({ "fontFamily": "Proxima Nova", "fontSize": "40px", "fontStyle": "bold" });
         this.add(buttonText);
 
         // text
         const text = scene.add.text(-2, -13, "", {});
         text.setOrigin(0.5, 0.5);
         text.text = "Please click a player to Ignore or\nReport the player to a moderator.";
-        text.setStyle({ "align": "center", "color": "#000", "fixedWidth":400,"fixedHeight":80,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        text.setStyle({ "align": "center", "color": "#000", "fixedWidth":400,"fixedHeight":80,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         this.add(text);
 
         // title

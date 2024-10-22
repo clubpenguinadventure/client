@@ -77,7 +77,7 @@ export default class TourQuiz extends BaseContainer {
         const questionText = scene.add.text(0, 79, "", {});
         questionText.setOrigin(0.5, 0.5);
         questionText.text = "Text";
-        questionText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        questionText.setStyle({ "align": "center", "color": "#000", "fixedWidth":590,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         questionText.setWordWrapWidth(590, true);
         question.add(questionText);
 
@@ -100,7 +100,7 @@ export default class TourQuiz extends BaseContainer {
         const infoText = scene.add.text(0, 59, "", {});
         infoText.setOrigin(0.5, 0);
         infoText.text = "Text";
-        infoText.setStyle({ "align": "center", "color": "#000", "fixedWidth":600,"fontFamily": "Arial Narrow", "fontSize": "32px" });
+        infoText.setStyle({ "align": "center", "color": "#000", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "32px" });
         infoText.setWordWrapWidth(600);
         info.add(infoText);
 

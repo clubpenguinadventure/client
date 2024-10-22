@@ -95,7 +95,7 @@
                             "text": "Each player attempts to collect as many stones as\npossible before one of the players\nclears his or her side of stones.",
                             "fixedWidth": 750,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         },
@@ -124,7 +124,7 @@
                             "text": "Each player has a side of the board. (top and\nbottom) The six holes nearest each player belong\nto him or her and their large holes or\nmancala is to the right.",
                             "fixedWidth": 750,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         }
@@ -172,7 +172,7 @@
                             "text": "Player 2 Side",
                             "fixedWidth": 200,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         },
@@ -187,7 +187,7 @@
                             "text": "Player 1 Side",
                             "fixedWidth": 200,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         },
@@ -202,7 +202,7 @@
                             "text": "Player 2\nMancala",
                             "fixedWidth": 150,
                             "align": "right",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "24px",
                             "color": "#000000"
                         },
@@ -216,7 +216,7 @@
                             "originY": 0.5,
                             "text": "Player 1\nMancala",
                             "fixedWidth": 150,
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "24px",
                             "color": "#000000"
                         }
@@ -253,7 +253,7 @@
                             "text": "Players alternate turns. In his or her turn each\nplayer selects a group of stones from one hole on\nhis or her side of the board. Each stone is dropped\none by one in the holes around the board, including\nhis mancala but not the opponents mancala.",
                             "fixedWidth": 750,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         }
@@ -290,7 +290,7 @@
                             "text": "If the last stone lands in the players own mancala,\nthat player goes again.",
                             "fixedWidth": 750,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         },
@@ -319,7 +319,7 @@
                             "text": "If the last stone is dropped in an empty hole on the\nplayers own side, he captures all the stones from\nthe opponents hole directly opposite that hole,\nincluding his stone.",
                             "fixedWidth": 750,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         }
@@ -356,7 +356,7 @@
                             "text": "The game is over when a player has no more\nstones on his side of the board. The winner is the\nplayer with the greatest total of stones in his or her\nmancala and any remaining stones on his or her\nside of the board.",
                             "fixedWidth": 750,
                             "align": "center",
-                            "fontFamily": "Arial",
+                            "fontFamily": "Proxima Nova",
                             "fontSize": "32px",
                             "color": "#000000"
                         }
@@ -455,7 +455,7 @@
                     "fixedWidth": 150,
                     "lineSpacing": 1,
                     "align": "center",
-                    "fontFamily": "Arial Narrow",
+                    "fontFamily": "Proxima Nova",
                     "fontSize": "32px",
                     "color": "#ffffff"
                 },
