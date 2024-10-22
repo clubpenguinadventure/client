@@ -46,6 +46,10 @@ export default class Penguin extends BaseContainer {
         this.load()
     }
 
+    get isAltClicking() {
+        return this.penguinLoader.altKey.isDown
+    }
+
     get isBuddy() {
         return this.world.client.buddies.map(buddy => buddy.id).includes(this.id)
     }

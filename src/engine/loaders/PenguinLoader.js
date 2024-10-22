@@ -13,6 +13,8 @@ export default class PenguinLoader {
             align: 'center',
             fixedWidth: 250
         }
+        
+        this.altKey = this.world.input.keyboard.addKey("ALT")
     }
 
     loadPenguin(penguin) {
@@ -73,6 +75,9 @@ export default class PenguinLoader {
     }
 
     onPenguinClick(id) {
+        if (this.altKey.isDown) {
+            return
+        }
         this.world.interface.showCard(id)
     }
 

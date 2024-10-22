@@ -160,7 +160,7 @@ export default class ClientController {
         }
 
         // Block movement when clicking a button
-        if (target[0] && target[0].isButton) {
+        if (target[0] && target[0].isButton && !target[0].isAltClicking) {
             return
         }
 
