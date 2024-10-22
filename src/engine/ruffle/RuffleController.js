@@ -36,7 +36,7 @@ export default class RuffleController extends BaseScene {
             },
 
             getFrameColor: () => {
-                return this.crumbs.frameColor
+                return this.interface.borderColor
             },
 
             getPath: () => {

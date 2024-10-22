@@ -288,8 +288,9 @@ export default class InterfaceController extends BaseScene {
 
         // Draw frame
         const graphics = this.add.graphics()
+        this.borderColor = rgbToHex(window.getComputedStyle(document.body).backgroundColor)
 
-        graphics.lineStyle(16, rgbToHex(window.getComputedStyle(document.body).backgroundColor), 1)
+        graphics.lineStyle(16, this.borderColor, 1)
         graphics.strokeRoundedRect(0, 0, 1520, 960, 15)
         graphics.depth = 100
 

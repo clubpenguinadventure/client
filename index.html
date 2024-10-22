@@ -49,36 +49,40 @@
 					const fullscreenButton = document.getElementById('fullscreen');
 					const largescreenButton = document.getElementById('largescreen');
 					const body = document.body;
-					let mode = 'light'; // Start with light mode by default
+					let mode;
+					setMode(localStorage.getItem('theme') || 'blue');
 					let isLargeScreen = false; // Track large screen state
-			
-					// Apply initial mode based on system preference
-					if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-						body.classList.add('dark-mode');
-						mode = 'dark';
-					} else {
-						body.classList.add('light-mode');
-						mode = 'light';
-					}
 			
 					// Toggle between light, dark, and blue modes
 					toggleButton.addEventListener('click', () => {
-						if (mode === 'light') {
-							body.classList.remove('light-mode');
-							body.classList.add('dark-mode');
-							mode = 'dark';
-						} else if (mode === 'dark') {
-							body.classList.remove('dark-mode');
-							body.classList.add('blue-mode');
-							mode = 'blue';
-						} else if (mode === 'blue') {
-							body.classList.remove('blue-mode');
-							body.classList.add('light-mode');
-							mode = 'light';
+						switch(mode){
+							case 'light':
+								setMode('dark');
+								break;
+							case 'dark':
+								setMode('blue');
+								break;
+							case 'blue':
+								setMode('light');
+								break;
 						}
-			
+
 						body.dispatchEvent(new Event('themeChanged'));
 					});
+
+					function setMode(targetMode){
+						let modes = ['light', 'dark', 'blue'];
+						modes.forEach(m => {
+							if(m === targetMode){
+								body.classList.add(`${m}-mode`);
+							}else{
+								body.classList.remove(`${m}-mode`);
+							}
+						});
+						localStorage.setItem('theme', targetMode);
+						body.dispatchEvent(new Event('themeChanged'));
+						mode = targetMode;
+					}
 			
 					// Fullscreen button functionality (using original code to avoid Phaser error)
 					fullscreenButton.addEventListener('click', () => {
@@ -104,18 +108,12 @@
 					largescreenButton.addEventListener('click', () => {
 						const gameElement = document.getElementById('game');
 						if (!isLargeScreen) {
-							gameElement.style.maxWidth = '90vw';
-							gameElement.style.width = '90vw';
-							gameElement.style.height = 'calc(90vh - 35px)'; // Adjust height based on header
-							gameElement.style.margin = '0 auto'; // Center the game element
-							isLargeScreen = true;
+							gameElement.style.maxWidth = '100%';
+							gameElement.style.maxHeight = '100%';
 						} else {
 							gameElement.style.maxWidth = '1520px';
-							gameElement.style.width = '';
-							gameElement.style.height = 'calc(100vh - 35px)';
-							gameElement.style.margin = '0 auto';
-							isLargeScreen = false;
 						}
+						isLargeScreen = !isLargeScreen;
 					});
 				});
 			</script>
