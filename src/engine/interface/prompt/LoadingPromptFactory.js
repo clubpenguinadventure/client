@@ -24,7 +24,6 @@ export default class LoadingPromptFactory {
         if (unload) {
             prompt.packFileLoader.on('filecomplete', (key, type, data) => {
                 this.world.loadedAssets.push({id: key, type})
-                console.log(key)
             })
         }
 

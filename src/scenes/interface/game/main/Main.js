@@ -422,6 +422,9 @@ export default class Main extends BaseScene {
 
         this.chatInput = new TextInput(this, 745, 923, 'text', style, () => this.onChatSend(), 48)
         this.add.existing(this.chatInput)
+		
+		// Arrow pointer
+		this.arrowPointers = []
 
         // Input
 
@@ -454,6 +457,8 @@ export default class Main extends BaseScene {
                 widget.close()
             }
         }
+
+        this.removeArrows()
     }
 
     onWake() {
@@ -625,6 +630,17 @@ export default class Main extends BaseScene {
 
     onMapClick() {
         this.interface.loadWidget('Map')
+    }
+	
+    showArrowPointer(x, y) {
+        let arrowPointer = this.add.sprite(x, y - 80, "arrow", "arrow0001")
+        arrowPointer.play("arrow")
+        this.arrowPointers.push(arrowPointer)
+    }
+    
+    removeArrows() {
+        this.arrowPointers.forEach(pointer => pointer.destroy())
+        this.arrowPointers = []
     }
 
     /* END-USER-CODE */

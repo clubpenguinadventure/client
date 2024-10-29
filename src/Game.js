@@ -27,8 +27,8 @@ export default class Game extends Phaser.Game {
 
     logBanner() {
         // Please leave this line here for credit purposes
-        console.log('%cYukon Client\nhttps://github.com/wizguin/yukon', 'font-size: 25px;')
-        console.log(`Version ${VERSION}`)
+        console.info('%cYukon Client\nhttps://github.com/wizguin/yukon', 'font-size: 25px;')
+        console.info(`Version ${VERSION}`)
     }
 
 }

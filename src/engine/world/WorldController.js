@@ -19,8 +19,10 @@ export default class WorldController extends BaseScene {
 
         this.worldTimeZone = 'America/Los_Angeles'
 
-        if (window.location.hostname === 'localhost') window.world = this
         this.loadedAssets = []
+        this.arrows = []
+
+        if (window.location.hostname === 'localhost') window.world = this
     }
 
     create() {
@@ -48,8 +50,18 @@ export default class WorldController extends BaseScene {
             this.lastRoom = this.room.id
 
             this.room.waiting = args.users
-            this.room.events.once('create', () => this.addPenguins())
+            this.room.events.once('create', () => {
+                this.addPenguins()
+                this.showArrows()
+            })
         }
+    }
+
+    showArrows() {
+        this.arrows.forEach(arrow => {
+            this.interface.main.showArrowPointer(arrow.x, arrow.y)
+        });
+        this.arrows = []
     }
 
     addPenguins() {

@@ -12,7 +12,7 @@ export default class DataHandler {
     handle(message) {
         try {
             if (localStorage.logging == 'true') {
-                console.log('Message received:', message.action, message.args)
+                console.info('Message received:', message.action, message.args)
             }
 
             this.network.events.emit(message.action, message.args)

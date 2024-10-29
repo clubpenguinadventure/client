@@ -147,7 +147,7 @@ export default class Network {
         }
 
         if (localStorage.logging == 'true') {
-            console.log('Message sending:', action, args)
+            console.info('Message sending:', action, args)
         }
 
         this.client.emit('message', { action: action, args: args })
