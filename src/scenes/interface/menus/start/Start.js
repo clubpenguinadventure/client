@@ -1,6 +1,6 @@
 import BaseScene from '@scenes/base/BaseScene'
 
-import { Button, SimpleButton } from '@components/components'
+import { SimpleButton } from '@components/components'
 
 
 /* START OF COMPILED CODE */
@@ -10,74 +10,103 @@ export default class Start extends BaseScene {
     constructor() {
         super("Start");
 
+        /** @type {Phaser.GameObjects.Sprite} */
+        this.billboard;
+        /** @type {Phaser.GameObjects.Image} */
+        this.create_penguin;
+        /** @type {Phaser.GameObjects.Image} */
+        this.login_penguin;
+
+
         /* START-USER-CTR-CODE */
         /* END-USER-CTR-CODE */
     }
 
     /** @returns {void} */
-    create() {
+    _create() {
 
         // bg
         const bg = this.add.image(0, 0, "load", "bg");
         bg.setOrigin(0, 0);
 
-        // startscreen
-        this.add.image(760, 420, "start", "startscreen");
+        // shadow
+        this.add.image(760, 387, "start", "shadow");
+
+        // billboard
+        const billboard = this.add.sprite(760, 387, "friends", "friends0001");
+        billboard.setOrigin(0.500402900886382, 0.5);
 
         // bottom
         this.add.image(760, 766, "start", "bottom");
 
-        // blog-text
-        this.add.image(364, 884, "start", "blog-text");
-
-        // blogButton
-        const blogButton = this.add.image(364, 812, "start", "blog");
-
-        // createButton
-        const createButton = this.add.image(1115, 777, "start", "create-button");
-
-        // memberButton
-        const memberButton = this.add.image(1115, 861, "start", "member-button");
-
-        // penguin_1
-        this.add.image(1281, 771, "start", "penguin-1");
-
-        // penguin_2
-        this.add.image(1274, 855, "start", "penguin-2");
-
-        // startButton
-        const startButton = this.add.sprite(760, 826, "start", "start-button");
-
-        // startText
-        this.add.image(760, 826, "start", "start-text");
+        // create_penguin
+        const create_penguin = this.add.image(464, 833, "start", "create-button");
+        create_penguin.setOrigin(0.5008849557522124, 0.5);
 
         // logo
-        this.add.image(760, 682, "start", "logo");
+        this.add.image(760, 675, "start", "logo-placeholder");
 
-        // blogButton (components)
-        const blogButtonSimpleButton = new SimpleButton(blogButton);
-        blogButtonSimpleButton.callback = () => this.onBlogClick();
+        // create_button
+        const create_button = this.add.image(535, 846, "start", "button");
+        create_button.setOrigin(0.5014164305949008, 0.5);
 
-        // createButton (components)
-        const createButtonButton = new Button(createButton);
-        createButtonButton.callback = () => this.onCreateClick();
-        createButtonButton.activeFrame = false;
+        // login_button
+        const login_button = this.add.image(985, 846, "start", "button");
+        login_button.setOrigin(0.5014164305949008, 0.5);
 
-        // memberButton (components)
-        const memberButtonButton = new Button(memberButton);
-        memberButtonButton.activeFrame = false;
+        // login_penguin
+        const login_penguin = this.add.image(1208, 827, "start", "login-penguin");
 
-        // startButton (components)
-        const startButtonButton = new Button(startButton);
-        startButtonButton.callback = () => this.onStartClick();
+        // loginText
+        const loginText = this.add.text(984, 853, "", {});
+        loginText.setOrigin(0.5, 0.5);
+        loginText.text = "Login";
+        loginText.setStyle({ "align": "center", "color": "#ffffffff", "fixedWidth":400,"fixedHeight":50,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold", "shadow.offsetX":2,"shadow.offsetY":2,"shadow.blur":3,"shadow.fill":true});
+        loginText.setLineSpacing(25);
+
+        // createText
+        const createText = this.add.text(535, 853, "", {});
+        createText.setOrigin(0.5, 0.5);
+        createText.text = "Create a Penguin";
+        createText.setStyle({ "align": "center", "color": "#ffffffff", "fixedWidth":400,"fixedHeight":50,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold", "shadow.offsetX":2,"shadow.offsetY":2,"shadow.blur":3,"shadow.fill":true});
+        createText.setLineSpacing(25);
+
+        // create_button (components)
+        const create_buttonSimpleButton = new SimpleButton(create_button);
+        create_buttonSimpleButton.hoverCallback = () => this.onCreateOver();
+        create_buttonSimpleButton.hoverOutCallback = () => this.onCreateOut();
+        create_buttonSimpleButton.callback = () => this.onCreateClick();
+
+        // login_button (components)
+        const login_buttonSimpleButton = new SimpleButton(login_button);
+        login_buttonSimpleButton.hoverCallback = () => this.onStartOver();
+        login_buttonSimpleButton.hoverOutCallback = () => this.onStartOut();
+        login_buttonSimpleButton.callback = () => this.onStartClick();
+
+        this.billboard = billboard;
+        this.create_penguin = create_penguin;
+        this.login_penguin = login_penguin;
 
         this.events.emit("scene-awake");
     }
 
+
     /* START-USER-CODE */
 
-    onBlogClick() {
+    onStartOver() {
+        this.login_penguin.setFrame("login-penguin-hover")
+    }
 
+    onStartOut() {
+        this.login_penguin.setFrame("login-penguin")
+    }
+
+    onCreateOver() {
+        this.create_penguin.setFrame("create-button-hover")
+    }
+
+    onCreateOut() {
+        this.create_penguin.setFrame("create-button")
     }
 
     onStartClick() {
@@ -88,6 +117,11 @@ export default class Start extends BaseScene {
 
     onCreateClick() {
         window.location.href = '/create'
+    }
+
+    create() {
+        super.create();
+        this.billboard.play('billboard');
     }
 
     /* END-USER-CODE */
