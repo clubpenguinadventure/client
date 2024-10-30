@@ -80,7 +80,7 @@ export default class Load extends BaseScene {
         this.events.on('sleep', this.onSleep, this)
         this.events.on('wake', this.onWake, this)
 
-        this._create()
+        super.create()
 
         this.setContent(data.text, data.showBar)
 

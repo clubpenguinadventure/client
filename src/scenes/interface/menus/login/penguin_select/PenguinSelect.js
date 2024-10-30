@@ -86,7 +86,7 @@ export default class PenguinSelect extends BaseScene {
     /* START-USER-CODE */
 
     create() {
-        this._create()
+        super.create()
 
         this.container.depth = 1
         this.smallBg.depth = 2

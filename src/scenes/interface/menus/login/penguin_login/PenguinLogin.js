@@ -1,7 +1,6 @@
 import BaseScene from '@scenes/base/BaseScene'
 
-import { Animation, Button, SimpleButton } from '@components/components'
-import TextInput from '@engine/interface/text/TextInput'
+import { Animation, Button, SimpleButton, InputText } from '@components/components'
 
 import Checks from '../checks/Checks'
 import PenguinLarge from '../card/PenguinLarge'
@@ -26,6 +25,8 @@ export default class PenguinLogin extends BaseScene {
         this.waitPrompt;
         /** @type {TwoFA} */
         this.twofa;
+        /** @type {Phaser.GameObjects.Text} */
+        this.passwordInput;
 
 
         /* START-USER-CTR-CODE */
@@ -114,6 +115,12 @@ export default class PenguinLogin extends BaseScene {
         const twofa = new TwoFA(this, 0, 0);
         this.add.existing(twofa);
 
+        // passwordInput
+        const passwordInput = this.add.text(973, 249, "", {});
+        passwordInput.setOrigin(0.5, 0.5);
+        passwordInput.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":378,"fontFamily": "Asterisk", "fontSize": "30px" });
+        passwordInput.setLineSpacing(25);
+
         // backButton (components)
         const backButtonSimpleButton = new SimpleButton(backButton);
         backButtonSimpleButton.callback = () => this.onBackClick();
@@ -144,11 +151,18 @@ export default class PenguinLogin extends BaseScene {
         const loginButtonButton = new Button(loginButton);
         loginButtonButton.callback = () => this.onLoginSubmit();
 
+        // passwordInput (components)
+        const passwordInputInputText = new InputText(passwordInput);
+        passwordInputInputText.ispassword = true;
+        passwordInputInputText.entercallback = () => this.onLoginSubmit();
+        passwordInputInputText.extends = false;
+
         this.container = container;
         this.checks = checks;
         this.savePrompt = savePrompt;
         this.waitPrompt = waitPrompt;
         this.twofa = twofa;
+        this.passwordInput = passwordInput;
 
         this.events.emit("scene-awake");
     }
@@ -157,7 +171,7 @@ export default class PenguinLogin extends BaseScene {
     /* START-USER-CODE */
 
     create(data) {
-        this._create()
+        super.create()
 
         this.network.lastLoginScene = 'PenguinLogin'
 
@@ -173,47 +187,22 @@ export default class PenguinLogin extends BaseScene {
         this.container.username.text = this.penguin.username.toUpperCase()
         this.container.button.callback = () => this.onBackClick(this.penguin)
 
-        // Login form
-        let style = {
-            width: 380,
-            height: 53,
-            padding: '0 6px 0 6px',
-            filter: 'none',
-            fontFamily: 'Asterisk',
-            fontSize: 35,
-            color: '#000'
-        }
-
-        this.passwordInput = new TextInput(this, 973, 250, 'password', style, () => this.onLoginSubmit(), 128, false)
-        this.twoFaInput = new TextInput(this, 760, 472, 'text', style, () => this.submit2fa(), 6, false)
-        this.add.existing(this.passwordInput)
-
-        // Token
-        let token = this.network.getToken(this.penguin.username)
-        this.passwordEdited = false
-
-        if (token) {
-            this.passwordInput.setText('password')
-            // Update password edited on password input
-            this.passwordInput.node.addEventListener('keydown', () => this.passwordEdited = true, { once: true })
-
+        if (this.network.getToken(this.penguin.username)) {
             this.checks.enable(this.checks.password)
+            this.passwordInput.setText('********')
         }
-
-        // Input
-        this.input.keyboard.on('keydown-ENTER', () => this.onLoginSubmit())
     }
 
 
     onLoginSubmit() {
         let username = this.penguin.username
-        let password = this.passwordInput.text
+        let password = this.passwordInput.textContent
         let token = this.network.getToken(username)
 
         this.interface.showLoading(`Logging in ${username}`)
         this.scene.stop()
 
-        if (token && !this.passwordEdited) {
+        if (token && !this.passwordInput.__InputText.isChanged) {
             this.network.tokenLogin(this.checks.username.checked, this.checks.password.checked, username, token)
         } else {
             this.network.login(this.checks.username.checked, this.checks.password.checked, username, password)
@@ -236,8 +225,6 @@ export default class PenguinLogin extends BaseScene {
 
     show2FA() {
         this.twofa.visible = true
-        this.add.existing(this.twoFaInput)
-        this.twoFaInput.setFocus()
     }
 
     submit2fa() {
@@ -245,9 +232,9 @@ export default class PenguinLogin extends BaseScene {
         this.scene.stop()
         let token = this.network.token
         if (token) {
-            this.network.tokenLoginWith2FA(this.twoFaInput.text)
+            this.network.tokenLoginWith2FA(this.twofa.twoFAInput.textContent)
         } else {
-            this.network.loginWith2FA(this.twoFaInput.text)
+            this.network.loginWith2FA(this.twofa.twoFAInput.textContent)
         }
     }
     /* END-USER-CODE */

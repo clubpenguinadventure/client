@@ -1,7 +1,6 @@
 import BaseScene from '@scenes/base/BaseScene'
 
-import { Animation, Button, SimpleButton } from '@components/components'
-import TextInput from '@engine/interface/text/TextInput'
+import { Animation, Button, SimpleButton, InputText } from '@components/components'
 
 import Checks from './checks/Checks'
 import WaitPrompt from './prompts/WaitPrompt'
@@ -24,6 +23,10 @@ export default class Login extends BaseScene {
         this.savePrompt;
         /** @type {TwoFA} */
         this.twofa;
+        /** @type {Phaser.GameObjects.Text} */
+        this.usernameInput;
+        /** @type {Phaser.GameObjects.Text} */
+        this.passwordInput;
 
 
         /* START-USER-CTR-CODE */
@@ -88,15 +91,15 @@ export default class Login extends BaseScene {
         loginText.setLineSpacing(25);
 
         // passwordText
-        const passwordText = this.add.text(503, 258, "", {});
-        passwordText.setOrigin(0, 0.5);
+        const passwordText = this.add.text(620, 258, "", {});
+        passwordText.setOrigin(1, 0.5);
         passwordText.text = "Password:";
         passwordText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         passwordText.setLineSpacing(25);
 
         // usernameText
-        const usernameText = this.add.text(448, 200, "", {});
-        usernameText.setOrigin(0, 0.5);
+        const usernameText = this.add.text(620, 200, "", {});
+        usernameText.setOrigin(1, 0.5);
         usernameText.text = "Penguin Name:";
         usernameText.setStyle({ "align": "right", "color": "#000000ff", "fontFamily": "Proxima Nova", "fontSize": "30px" });
         usernameText.setLineSpacing(25);
@@ -125,6 +128,18 @@ export default class Login extends BaseScene {
         const twofa = new TwoFA(this, 0, 0);
         this.add.existing(twofa);
         twofa.visible = false;
+
+        // usernameInput
+        const usernameInput = this.add.text(815, 200, "", {});
+        usernameInput.setOrigin(0.5, 0.5);
+        usernameInput.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":378,"fontFamily": "Proxima Nova", "fontSize": "30px" });
+        usernameInput.setLineSpacing(25);
+
+        // passwordInput
+        const passwordInput = this.add.text(815, 258, "", {});
+        passwordInput.setOrigin(0.5, 0.5);
+        passwordInput.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":378,"fontFamily": "Asterisk", "fontSize": "30px" });
+        passwordInput.setLineSpacing(25);
 
         // backButton (components)
         const backButtonSimpleButton = new SimpleButton(backButton);
@@ -156,10 +171,25 @@ export default class Login extends BaseScene {
         const loginButtonButton = new Button(loginButton);
         loginButtonButton.callback = () => this.onLoginSubmit();
 
+        // usernameInput (components)
+        const usernameInputInputText = new InputText(usernameInput);
+        usernameInputInputText.charlimit = 16;
+        usernameInputInputText.inputfilter = /[a-zA-Z0-9 ]+/;
+        usernameInputInputText.entercallback = () => this.onLoginSubmit();
+        usernameInputInputText.extends = false;
+
+        // passwordInput (components)
+        const passwordInputInputText = new InputText(passwordInput);
+        passwordInputInputText.ispassword = true;
+        passwordInputInputText.entercallback = () => this.onLoginSubmit();
+        passwordInputInputText.extends = false;
+
         this.checks = checks;
         this.waitPrompt = waitPrompt;
         this.savePrompt = savePrompt;
         this.twofa = twofa;
+        this.usernameInput = usernameInput;
+        this.passwordInput = passwordInput;
 
         this.events.emit("scene-awake");
     }
@@ -168,44 +198,18 @@ export default class Login extends BaseScene {
     /* START-USER-CODE */
 
     create() {
-        this._create()
+        super.create()
 
         this.network.lastLoginScene = 'Login'
 
         // Todo: change to depth component
         this.waitPrompt.depth = 1
         this.savePrompt.depth = 1
-
-        // Login form
-        let style = {
-            width: 380,
-            height: 53,
-            padding: '0 6px 0 6px',
-            filter: 'none',
-            fontFamily: 'Proxima Nova',
-            fontSize: 35,
-            color: '#000'
-        }
-
-        let passwordStyle = {
-            ...style,
-            fontFamily: 'Asterisk'
-        }
-
-        this.usernameInput = new TextInput(this, 815, 200, 'text', style, () => this.onLoginSubmit(), 12, false)
-        this.passwordInput = new TextInput(this, 815, 259, 'password', passwordStyle, () => this.onLoginSubmit(), 128, false)
-        this.twoFaInput = new TextInput(this, 760, 472, 'text', style, () => this.submit2fa(), 6, false)
-
-        this.add.existing(this.usernameInput)
-        this.add.existing(this.passwordInput)
-
-        // Input
-        this.input.keyboard.on('keydown-ENTER', () => this.onLoginSubmit())
     }
 
     onLoginSubmit() {
-        let username = this.usernameInput.text
-        let password = this.passwordInput.text
+        let username = this.usernameInput.textContent
+        let password = this.passwordInput.textContent
 
         this.interface.showLoading(`Logging in ${username}`)
         this.scene.stop()
@@ -224,14 +228,12 @@ export default class Login extends BaseScene {
 
     show2FA() {
         this.twofa.visible = true
-        this.add.existing(this.twoFaInput)
-        this.twoFaInput.setFocus()
     }
 
     submit2fa() {
         this.interface.showLoading(`Logging in ${this.network.username}`)
         this.scene.stop()
-        this.network.loginWith2FA(this.twoFaInput.text)
+        this.network.loginWith2FA(this.twofa.twoFAInput.textContent)
     }
 
     /* END-USER-CODE */

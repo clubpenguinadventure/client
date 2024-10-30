@@ -252,7 +252,7 @@ export default class IglooEdit extends BaseScene {
     /* START-USER-CODE */
 
     create() {
-        this._create()
+        super.create()
 
         this.events.on('sleep', () => this.onSleep())
 

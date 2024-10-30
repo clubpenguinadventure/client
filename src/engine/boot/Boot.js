@@ -11,13 +11,14 @@ import Preload from '@engine/boot/Preload'
 
 export default class Boot extends BaseScene {
 
-    
-
     async create() {
         let fontLoader = new FontLoader(this.crumbs)
         fontLoader.events.once('fontsLoaded', () => {
             this._create()
         })
+
+        window.updateScaling = this.updateScaling.bind(this)
+        window.updateGameScale = this.updateGameScale.bind(this)
     }
 
     _create() {
@@ -33,6 +34,25 @@ export default class Boot extends BaseScene {
 
     onLoadCreate() {
         this.scene.add('Preload', Preload, true)
+    }
+
+    updateScaling() {
+        for (let scene of this.game.scene.scenes) {
+            if (!scene.cameras.main) {
+                continue
+            }
+            scene.cameras.main.setZoom(this.game.scale.zoom * (scene.cameras.trueScale || 1))
+            scene.cameras.main.setOrigin(0, 0)
+        }
+    }
+
+    updateGameScale(scale) {
+        if (![1, 2, 4].includes(scale)) {
+            return
+        }
+        localStorage.setItem('scale', scale)
+
+        document.location.reload()
     }
 
 }

@@ -7,7 +7,7 @@ import IglooMap from './igloo_map/IglooMap'
 
 export const preload = {
     key: 'map-pack',
-    url: 'assets/media/interface/game/map/map-pack.json',
+    url: `assets/media/interface/game/map/@${localStorage.getItem('scale')}x/map-pack.json`,
     loadString: ['loading', 'map'],
     unload: false
 }
@@ -806,6 +806,8 @@ export default class Map extends BaseContainer {
             this.world.arrows = arrows
         }
     }
+
+    
 
     /* END-USER-CODE */
 }

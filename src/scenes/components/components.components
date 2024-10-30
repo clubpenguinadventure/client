@@ -2,6 +2,8 @@
     "components": [
         {
             "name": "Animation",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "EventComponent",
             "gameObjectType": "Phaser.GameObjects.Sprite",
             "properties": [
@@ -119,6 +121,8 @@
         },
         {
             "name": "Button",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "SimpleButton",
             "gameObjectType": "Phaser.GameObjects.Sprite",
             "properties": [
@@ -179,6 +183,8 @@
         },
         {
             "name": "SimpleButton",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "EventComponent",
             "gameObjectType": "Phaser.GameObjects.Sprite",
             "properties": [
@@ -239,18 +245,24 @@
         },
         {
             "name": "Interactive",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "",
             "gameObjectType": "Phaser.GameObjects.Image",
             "properties": []
         },
         {
             "name": "Draggable",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "EventComponent",
             "gameObjectType": "Phaser.GameObjects.GameObject",
             "properties": []
         },
         {
             "name": "DraggableContainer",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "EventComponent",
             "gameObjectType": "Phaser.GameObjects.Container",
             "properties": [
@@ -269,6 +281,8 @@
         },
         {
             "name": "ShowHint",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "EventComponent",
             "gameObjectType": "Phaser.GameObjects.GameObject",
             "properties": [
@@ -286,6 +300,8 @@
         },
         {
             "name": "NineSlice",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "EventComponent",
             "gameObjectType": "Phaser.GameObjects.GameObject",
             "properties": [
@@ -313,6 +329,8 @@
         },
         {
             "name": "MoveTo",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "EventComponent",
             "gameObjectType": "Phaser.GameObjects.GameObject",
             "properties": [
@@ -342,6 +360,8 @@
         },
         {
             "name": "Zone",
+            "displayName": "",
+            "objectDisplayFormat": "",
             "baseClass": "SimpleButton",
             "gameObjectType": "Phaser.GameObjects.Rectangle",
             "properties": [
@@ -382,6 +402,86 @@
                     "name": "handCursor",
                     "label": "Hand Cursor",
                     "tooltip": "Hand Cursor",
+                    "defValue": true,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "InputText",
+            "baseClass": "EventComponent",
+            "gameObjectType": "Phaser.GameObjects.Text",
+            "properties": [
+                {
+                    "name": "multiline",
+                    "label": "Multi Line",
+                    "tooltip": "Allow multiple lines",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "ispassword",
+                    "label": "Is Password Field",
+                    "tooltip": "Make entered characters show as asterisks",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "charlimit",
+                    "label": "Character Limit",
+                    "tooltip": "The maximum number of characters that can be entered",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "inputfilter",
+                    "label": "Input Filter",
+                    "tooltip": "Regular expression to filter input with",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "expression",
+                        "expressionType": "regex"
+                    }
+                },
+                {
+                    "name": "entercallback",
+                    "label": "Enter Callback",
+                    "tooltip": "The function that is ran on enter",
+                    "defValue": "() => {}",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "expression",
+                        "expressionType": "any"
+                    }
+                },
+                {
+                    "name": "userdefinedonclickfunction",
+                    "label": "On Click",
+                    "tooltip": "The function that is ran when the text is clicked",
+                    "defValue": "() => {}",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "expression",
+                        "expressionType": "any"
+                    }
+                },
+                {
+                    "name": "extends",
+                    "label": "Extends",
+                    "tooltip": "Does the text extend past the limit of the size of the text box?",
                     "defValue": true,
                     "customDefinition": false,
                     "type": {

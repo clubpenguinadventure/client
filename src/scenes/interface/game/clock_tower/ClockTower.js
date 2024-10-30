@@ -19,11 +19,7 @@ export default class ClockTower extends BaseContainer {
         this.add(block);
 
         // bg
-        const bg = scene.add.ninePatchContainer(0, -38, 685, 560, "prompt", "window");
-        bg.marginLeft = 50;
-        bg.marginTop = 50;
-        bg.marginRight = 50;
-        bg.marginBottom = 50;
+        const bg = scene.add.nineslice(0, -38, "prompt", "window", 685, 560, 50, 50, 50, 50);
         this.add(bg);
 
         // title
@@ -54,7 +50,6 @@ export default class ClockTower extends BaseContainer {
 
         // x_button (components)
         const x_buttonButton = new Button(x_button);
-        x_buttonButton.spriteName = "blue-button";
         x_buttonButton.callback = () => this.close();
 
         /* START-USER-CTR-CODE */

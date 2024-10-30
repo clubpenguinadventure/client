@@ -19,9 +19,8 @@ import Moderator from "../moderator/Moderator";
 import Settings from "../settings/Settings";
 import Mail from "../mail/Mail";
 import Mailbook from "../mailbook/Mailbook";
+import InputText from "../../../components/InputText";
 /* START-USER-IMPORTS */
-
-import TextInput from '@engine/interface/text/TextInput'
 
 import BalloonFactory from '@engine/interface/balloons/BalloonFactory'
 import SnowballFactory from '@engine/interface/snowball/SnowballFactory'
@@ -77,6 +76,8 @@ export default class Main extends BaseScene {
         this.mail;
         /** @type {Mailbook} */
         this.mailbook;
+        /** @type {Phaser.GameObjects.Text} */
+        this.chatInput;
         /** @type {Array<Settings|Moderator|PlayerCard|PetCard|Buddy|Waddle|Phone>} */
         this.hideOnSleep;
 
@@ -257,6 +258,11 @@ export default class Main extends BaseScene {
         this.add.existing(mailbook);
         mailbook.visible = false;
 
+        // chatInput
+        const chatInput = this.add.text(495, 923, "", {});
+        chatInput.setOrigin(0, 0.5);
+        chatInput.setStyle({ "color": "#ffffffff", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "24px" });
+
         // lists
         const hideOnSleep = [settings, moderator, playerCard, petCard, buddy, waddle, phone];
 
@@ -349,6 +355,11 @@ export default class Main extends BaseScene {
         mod_buttonSimpleButton.hoverOutCallback = () => this.onModOut();
         mod_buttonSimpleButton.callback = () => this.onModClick();
 
+        // chatInput (components)
+        const chatInputInputText = new InputText(chatInput);
+        chatInputInputText.inputfilter = /[a-zA-Z0-9 ]+/;
+        chatInputInputText.entercallback = () => this.onChatSend();
+
         this.popup = popup;
         this.popupText = popupText;
         this.onlinePopup = onlinePopup;
@@ -371,6 +382,7 @@ export default class Main extends BaseScene {
         this.settings = settings;
         this.mail = mail;
         this.mailbook = mailbook;
+        this.chatInput = chatInput;
         this.hideOnSleep = hideOnSleep;
 
         this.events.emit("scene-awake");
@@ -380,7 +392,7 @@ export default class Main extends BaseScene {
     /* START-USER-CODE */
 
     create() {
-        this._create()
+        super.create()
 
         this.events.on('sleep', this.onSleep, this)
         this.events.on('wake', this.onWake, this)
@@ -410,21 +422,8 @@ export default class Main extends BaseScene {
 
         this.showPhone()
 
-        // Chat input
-
-        let style = {
-            width: 510,
-            height: 50,
-            fontFamily: 'Burbank Small',
-            fontSize: 24,
-            color: '#fff'
-        }
-
-        this.chatInput = new TextInput(this, 745, 923, 'text', style, () => this.onChatSend(), 48)
-        this.add.existing(this.chatInput)
-		
-		// Arrow pointer
-		this.arrowPointers = []
+        // Arrow pointer
+        this.arrowPointers = []
 
         // Input
 
@@ -434,7 +433,7 @@ export default class Main extends BaseScene {
 
     onSleep(sys, data) {
         if (data.clearChat) {
-            this.chatInput.clearText()
+            this.chatInput.__InputText.clearText()
             this.chatLog.clearMessages()
         }
 
@@ -516,9 +515,9 @@ export default class Main extends BaseScene {
     }
 
     onChatSend() {
-        let text = this.chatInput.text
+        let text = this.chatInput.textContent
 
-        this.chatInput.clearText()
+        this.chatInput.__InputText.clearText()
 
         this.interface.showTextBalloon(this.world.client.id, text)
         this.network.send('send_message', { message: text })
@@ -631,13 +630,13 @@ export default class Main extends BaseScene {
     onMapClick() {
         this.interface.loadWidget('Map')
     }
-	
+
     showArrowPointer(x, y) {
         let arrowPointer = this.add.sprite(x, y - 80, "arrow", "arrow0001")
         arrowPointer.play("arrow")
         this.arrowPointers.push(arrowPointer)
     }
-    
+
     removeArrows() {
         this.arrowPointers.forEach(pointer => pointer.destroy())
         this.arrowPointers = []

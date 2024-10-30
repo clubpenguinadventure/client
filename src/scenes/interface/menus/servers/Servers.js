@@ -66,7 +66,7 @@ export default class Servers extends BaseScene {
     /* START-USER-CODE */
 
     create(data) {
-        this._create()
+        super.create()
 
         this.createServers(data)
     }

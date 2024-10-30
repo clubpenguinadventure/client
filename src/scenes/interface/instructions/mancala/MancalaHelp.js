@@ -33,11 +33,7 @@ export default class MancalaHelp extends BookContainer {
         this.add(block);
 
         // bg
-        const bg = scene.add.ninePatchContainer(0, 0, 1136, 664, "prompt", "window");
-        bg.marginLeft = 50;
-        bg.marginTop = 50;
-        bg.marginRight = 50;
-        bg.marginBottom = 50;
+        const bg = scene.add.nineslice(0, 0, "prompt", "window", 1136, 664, 50, 50, 50, 50);
         this.add(bg);
 
         // title
@@ -285,17 +281,14 @@ export default class MancalaHelp extends BookContainer {
 
         // right_button (components)
         const right_buttonButton = new Button(right_button);
-        right_buttonButton.spriteName = "blue-button";
         right_buttonButton.callback = () => this.nextPage();
 
         // left_button (components)
         const left_buttonButton = new Button(left_button);
-        left_buttonButton.spriteName = "blue-button";
         left_buttonButton.callback = () => this.prevPage();
 
         // x_button (components)
         const x_buttonButton = new Button(x_button);
-        x_buttonButton.spriteName = "blue-button";
         x_buttonButton.callback = () => this.close();
 
         this.pageText = pageText;

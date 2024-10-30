@@ -99,7 +99,7 @@
 						if (!document.fullscreenElement) {
 							document.getElementById('header').style.display = 'flex';
 							const gameElement = document.getElementById('game');
-							gameElement.style.maxWidth = '1520px';
+							gameElement.style.maxWidth = localStorage.getItem("scale") ? localStorage.getItem("scale") * 760 + 'px' : '1520px';
 							gameElement.style.height = 'calc(100vh - 35px)'; // Adjust height based on header
 						}
 					});
@@ -111,13 +111,46 @@
 							gameElement.style.maxWidth = '100%';
 							gameElement.style.maxHeight = '100%';
 						} else {
-							gameElement.style.maxWidth = '1520px';
+							gameElement.style.maxWidth = localStorage.getItem("scale") ? localStorage.getItem("scale") * 760 + 'px' : '1520px';
 						}
 						isLargeScreen = !isLargeScreen;
 					});
+
+					
+					document.getElementById('game').style.maxWidth = localStorage.getItem("scale") ? parseInt(localStorage.getItem("scale")) * 760 + 'px' : '1520px';
 				});
 			</script>
-        <div id="game" class="game"></div>
+        <div id="game" class="game">
+			<input type="text" id='dummyForMobileKeyboard'
+				style='position: absolute; top: -100px; left: -100px; width: 1px; height: 1px; opacity: 0;' />
+		</div>
+		<script>
+				var dummyBox = document.getElementById('dummyForMobileKeyboard');
+				dummyBox.onkeyup = () => {
+					processKey()
+				}
+
+				function processKey() {
+					dummyBox = document.getElementById('dummyForMobileKeyboard');
+					var e = new KeyboardEvent('keydown', {
+						bubbles: true,
+						cancelable: true,
+						keyCode: dummyBox.value.charCodeAt(dummyBox.value.length - 1),
+						key: dummyBox.value.substring(dummyBox.value.length - 1),
+					});
+					document.onkeydown(e);
+					dummyBox.remove()
+					var newDummy = document.createElement('input')
+					newDummy.type = 'text'
+					newDummy.id = 'dummyForMobileKeyboard'
+					newDummy.style = 'position: absolute; top: -100px; left: -100px; width: 1px; height: 1px; opacity: 0;'
+					document.body.appendChild(newDummy)
+					newDummy.focus()
+					newDummy.onkeyup = () => {
+						processKey()
+					}
+				}
+		</script>
     </body>
 
 </html>

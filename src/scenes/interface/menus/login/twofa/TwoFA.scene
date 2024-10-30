@@ -112,6 +112,28 @@
                     "fontSize": "40px",
                     "color": "#000000ff",
                     "wordWrapWidth": 300
+                },
+                {
+                    "type": "Text",
+                    "id": "936c9863-5706-4f4d-92e1-b0b6b580040a",
+                    "label": "twoFAInput",
+                    "scope": "CLASS",
+                    "components": [
+                        "InputText"
+                    ],
+                    "InputText.entercallback": "() => this.submit2fa()",
+                    "x": 760,
+                    "y": 472,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "fixedWidth": 378,
+                    "paddingTop": 5,
+                    "paddingBottom": 5,
+                    "lineSpacing": 25,
+                    "align": "center",
+                    "fontFamily": "Proxima Nova",
+                    "fontSize": "30px",
+                    "color": "#000000ff"
                 }
             ]
         }

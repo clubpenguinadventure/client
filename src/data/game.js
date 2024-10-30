@@ -5,14 +5,22 @@ import widgets from './widgets'
 
 import SoundFileFactory from '@engine/sound/SoundFileFactory'
 
-const width = 1520
-const height = 960
+let scale;
+if (localStorage.getItem('scale')) {
+    scale = parseInt(localStorage.getItem('scale'))
+} else {
+    scale = 2
+    localStorage.setItem('scale', scale)
+}
+
+const width = 760 * scale
+const height = 480 * scale
 
 const game = {
     type: Phaser.WEBGL,
 
-    width: 1520,
-    height: 960,
+    width: width,
+    height: height,
 
     transparent: true,
     roundPixels: true,
@@ -23,7 +31,8 @@ const game = {
         parent: 'game',
         mode: Phaser.Scale.FIT,
         autoRound: true,
-        autoCenter: Phaser.Scale.CENTER_BOTH
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        zoom: scale / 2,
     },
 
     dom: {

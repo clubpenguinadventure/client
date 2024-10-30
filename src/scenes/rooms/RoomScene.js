@@ -37,7 +37,7 @@ export default class RoomScene extends BaseScene {
     }
 
     create() {
-        this._create()
+        super.create()
         this.sortChildren()
 
         if (this.roomPhysics) this.addPhysics()

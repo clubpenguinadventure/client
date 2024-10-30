@@ -1,5 +1,10 @@
 export default class BaseScene extends Phaser.Scene {
 
+    create() {
+        if (this._create) this._create()
+        if (window.updateScaling) window.updateScaling()
+    }
+
     init() {
         this.input.on('pointerover', () => this.interface.resetCursor(this))
     }

@@ -24,7 +24,7 @@ export default class GameScene extends BaseScene {
     }
 
     create() {
-        this._create()
+        super.create()
 
         this.setMusic()
 

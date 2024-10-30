@@ -29,7 +29,7 @@ export default class Preload extends BaseScene {
         this.scene.add('IglooEdit', IglooEdit)
     }
 
-    create() {
+    _create() {
         // Set crumbs
         let crumbs = this.cache.json.get('crumbs')
 

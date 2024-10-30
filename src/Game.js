@@ -23,6 +23,24 @@ export default class Game extends Phaser.Game {
         this.soundManager = new SoundManager(this)
 
         this.scene.add('Boot', Boot, true)
+
+        document.onkeydown = (event) => {
+            if (this.interface.isInputActive) {
+                event.preventDefault()
+                this.interface.input.keyboard.emit('keydown', event)
+            }
+        }
+
+        document.onkeyup = (event) => {
+            if (this.interface.isInputActive) {
+                event.preventDefault()
+                this.interface.input.keyboard.emit('keyup', event)
+            }
+        }
+    }
+
+    get interface() {
+        return this.scene.getScene('InterfaceController')
     }
 
     logBanner() {

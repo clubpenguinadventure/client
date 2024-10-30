@@ -259,6 +259,28 @@
             "scope": "CLASS",
             "x": 0,
             "y": 0
+        },
+        {
+            "type": "Text",
+            "id": "44bb7601-f7b0-4746-9148-e3b6376ae170",
+            "label": "passwordInput",
+            "scope": "CLASS",
+            "components": [
+                "InputText"
+            ],
+            "InputText.ispassword": true,
+            "InputText.entercallback": "() => this.onLoginSubmit()",
+            "InputText.extends": false,
+            "x": 973,
+            "y": 249,
+            "originX": 0.5,
+            "originY": 0.5,
+            "fixedWidth": 378,
+            "lineSpacing": 25,
+            "align": "center",
+            "fontFamily": "Asterisk",
+            "fontSize": "30px",
+            "color": "#000000ff"
         }
     ],
     "plainObjects": [],

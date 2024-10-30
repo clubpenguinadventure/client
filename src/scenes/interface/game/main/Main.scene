@@ -52,7 +52,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.safe.visible = true",
             "ShowHint.text": "safe_hint",
             "texture": {
@@ -81,7 +80,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.emotesMenu.visible = true",
             "ShowHint.text": "emote_hint",
             "texture": {
@@ -110,7 +108,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.actionsMenu.visible = true",
             "ShowHint.text": "action_hint",
             "texture": {
@@ -139,7 +136,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.onSnowballClick()",
             "ShowHint.text": "throw_hint",
             "texture": {
@@ -168,7 +164,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.onChatSend()",
             "ShowHint.text": "send_hint",
             "texture": {
@@ -197,7 +192,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.onPlayerClick()",
             "ShowHint.text": "player_hint",
             "texture": {
@@ -226,7 +220,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.onBuddyClick()",
             "ShowHint.text": "buddy_hint",
             "texture": {
@@ -255,7 +248,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.onIglooClick()",
             "ShowHint.text": "home_hint",
             "texture": {
@@ -284,7 +276,6 @@
                 "Button",
                 "ShowHint"
             ],
-            "Button.spriteName": "blue-button",
             "Button.callback": "() => this.settings.visible = true",
             "ShowHint.text": "help_hint",
             "texture": {
@@ -376,7 +367,6 @@
             "components": [
                 "Button"
             ],
-            "Button.spriteName": "map-button",
             "Button.callback": "() => this.onMapClick()",
             "Button.activeFrame": false,
             "texture": {
@@ -394,7 +384,6 @@
             "components": [
                 "Button"
             ],
-            "Button.spriteName": "phone-button",
             "Button.callback": "() => this.onPhoneClick()",
             "Button.activeFrame": false,
             "texture": {
@@ -413,7 +402,6 @@
             "components": [
                 "Button"
             ],
-            "Button.spriteName": "buddy-button",
             "Button.callback": "() => this.onRequestClick()",
             "Button.activeFrame": false,
             "texture": {
@@ -443,7 +431,6 @@
             "components": [
                 "Button"
             ],
-            "Button.spriteName": "news-button",
             "Button.activeFrame": false,
             "texture": {
                 "key": "main",
@@ -648,6 +635,24 @@
             "label": "mailbook",
             "scope": "CLASS",
             "visible": false
+        },
+        {
+            "type": "Text",
+            "id": "e6cfe75b-84e2-44fa-9ec0-70488cf675c7",
+            "label": "chatInput",
+            "scope": "CLASS",
+            "components": [
+                "InputText"
+            ],
+            "InputText.inputfilter": "/[a-zA-Z0-9 ]+/",
+            "InputText.entercallback": "() => this.onChatSend()",
+            "x": 495,
+            "y": 923,
+            "originY": 0.5,
+            "fixedWidth": 500,
+            "fontFamily": "Proxima Nova",
+            "fontSize": "24px",
+            "color": "#ffffffff"
         }
     ],
     "plainObjects": [],

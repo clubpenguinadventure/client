@@ -1,6 +1,6 @@
 import BaseContainer from '@scenes/base/BaseContainer'
 
-import { Button, Interactive } from '@components/components'
+import { Button, Interactive, InputText } from '@components/components'
 
 /* START OF COMPILED CODE */
 
@@ -47,6 +47,14 @@ export default class TwoFA extends BaseContainer {
         twofaText_1.setWordWrapWidth(300);
         this.add(twofaText_1);
 
+        // twoFAInput
+        const twoFAInput = scene.add.text(760, 472, "", {});
+        twoFAInput.setOrigin(0.5, 0.5);
+        twoFAInput.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":378,"fontFamily": "Proxima Nova", "fontSize": "30px" });
+        twoFAInput.setPadding({"top":5,"bottom":5});
+        twoFAInput.setLineSpacing(25);
+        this.add(twoFAInput);
+
         // block (components)
         new Interactive(block);
 
@@ -54,10 +62,19 @@ export default class TwoFA extends BaseContainer {
         const twofa_submitButton = new Button(twofa_submit);
         twofa_submitButton.callback = () => this.submit2fa();
 
+        // twoFAInput (components)
+        const twoFAInputInputText = new InputText(twoFAInput);
+        twoFAInputInputText.entercallback = () => this.submit2fa();
+
+        this.twoFAInput = twoFAInput;
+
         /* START-USER-CTR-CODE */
         // Write your code here.
         /* END-USER-CTR-CODE */
     }
+
+    /** @type {Phaser.GameObjects.Text} */
+    twoFAInput;
 
     /* START-USER-CODE */
 
