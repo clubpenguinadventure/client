@@ -130,15 +130,15 @@ export default class Login extends BaseScene {
         twofa.visible = false;
 
         // usernameInput
-        const usernameInput = this.add.text(815, 200, "", {});
-        usernameInput.setOrigin(0.5, 0.5);
-        usernameInput.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":378,"fontFamily": "Proxima Nova", "fontSize": "30px" });
+        const usernameInput = this.add.text(632, 200, "", {});
+        usernameInput.setOrigin(0, 0.5);
+        usernameInput.setStyle({ "color": "#000000ff", "fixedWidth":366,"fontFamily": "Proxima Nova", "fontSize": "30px" });
         usernameInput.setLineSpacing(25);
 
         // passwordInput
-        const passwordInput = this.add.text(815, 258, "", {});
-        passwordInput.setOrigin(0.5, 0.5);
-        passwordInput.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":378,"fontFamily": "Asterisk", "fontSize": "30px" });
+        const passwordInput = this.add.text(632, 258, "", {});
+        passwordInput.setOrigin(0, 0.5);
+        passwordInput.setStyle({ "color": "#000000ff", "fixedWidth":366,"fontFamily": "Asterisk", "fontSize": "30px" });
         passwordInput.setLineSpacing(25);
 
         // backButton (components)

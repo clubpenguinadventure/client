@@ -116,9 +116,9 @@ export default class PenguinLogin extends BaseScene {
         this.add.existing(twofa);
 
         // passwordInput
-        const passwordInput = this.add.text(973, 249, "", {});
-        passwordInput.setOrigin(0.5, 0.5);
-        passwordInput.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":378,"fontFamily": "Asterisk", "fontSize": "30px" });
+        const passwordInput = this.add.text(790, 249, "", {});
+        passwordInput.setOrigin(0, 0.5);
+        passwordInput.setStyle({ "color": "#000000ff", "fixedWidth":366,"fontFamily": "Asterisk", "fontSize": "30px" });
         passwordInput.setLineSpacing(25);
 
         // backButton (components)
