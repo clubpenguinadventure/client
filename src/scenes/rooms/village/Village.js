@@ -30,7 +30,7 @@ export default class Village extends RoomScene {
             'dock': () => this.triggerRoom(800, 436, 280),
             'beach': () => this.triggerRoom(400, 920, 360),
             'mtn': () => this.triggerRoom(230, 840, 320),
-            'sport': () => this.triggerRoom(210, 1000, 560)
+            'sport': () => this.triggerRoom(212, 1000, 560)
         }
 
         /* END-USER-CTR-CODE */

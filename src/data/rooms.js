@@ -47,6 +47,12 @@ const rooms = {
         x: 1000,
         y: 560
     },
+    212: {
+        key: 'AgentLobbyMulti',
+        scene: require('@rooms/agentlobbymulti/AgentLobbyMulti').default,
+        x: 336,
+        y: 624
+    },
     220: {
         key: 'Lodge',
         scene: require('@rooms/lodge/Lodge').default,

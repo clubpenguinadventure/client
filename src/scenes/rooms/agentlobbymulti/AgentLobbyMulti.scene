@@ -1,0 +1,549 @@
+{
+    "id": "b7a352ec-7cb7-4faa-a857-41441bdb1da0",
+    "sceneType": "SCENE",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "javaScriptInitFieldsInConstructor": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "RoomScene",
+        "preloadPackFiles": [
+            "yukon/assets/media/rooms/agentlobbymulti/agentlobbymulti-pack.json"
+        ],
+        "createMethodName": "_create",
+        "sceneKey": "AgentLobbyMulti",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "a758b63e-2412-4409-b28e-638b167602ae",
+            "label": "background_cntr",
+            "x": 242.15298461914062,
+            "y": 89,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "915ad79a-a9b8-4152-8bdd-9fbded1c29d0",
+                    "label": "target",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/target/reveal0001"
+                    },
+                    "x": 735.8470153808594,
+                    "y": 53,
+                    "originX": 0.5056179775280899,
+                    "originY": 0.5028248587570622
+                },
+                {
+                    "type": "Image",
+                    "id": "abc05100-c8ce-4c5c-91bd-8930bbac1ce4",
+                    "label": "bg",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/bg"
+                    },
+                    "x": 517.8470153808594,
+                    "y": 391
+                },
+                {
+                    "type": "Image",
+                    "id": "6a448e7d-30cb-4d0e-8872-052bff3a93cf",
+                    "label": "cagelight",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/cagelight"
+                    },
+                    "x": 149.84701538085938,
+                    "y": 242,
+                    "visible": false
+                },
+                {
+                    "type": "Image",
+                    "id": "f8ea6b9b-82bd-4d0d-9147-3b9709088a62",
+                    "label": "fuselight",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/fuselight"
+                    },
+                    "x": 1076.8470153808594,
+                    "y": 415,
+                    "originX": 0.5042735042735043,
+                    "visible": false
+                },
+                {
+                    "type": "Sprite",
+                    "id": "979de684-66bd-400a-9cf8-525cafdcab96",
+                    "label": "fan",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/fan/fan0001"
+                    },
+                    "x": 520,
+                    "y": 640,
+                    "originX": 0.5036780246754435,
+                    "originY": 0.46794319720807814,
+                    "animationPlayMethod": 1,
+                    "animationKey": "agentlobbymulti-background_mc/fan/fan"
+                },
+                {
+                    "type": "Sprite",
+                    "id": "c7163cc6-be63-48c7-a453-fa9fd7fb9527",
+                    "label": "phonebox",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/phone/clicked0001"
+                    },
+                    "x": 517.8470153808594,
+                    "y": 239
+                },
+                {
+                    "type": "Container",
+                    "id": "99d4a14c-31c3-4230-b144-8ae0be8da29d",
+                    "label": "back_left_pillar_cntr",
+                    "x": 131.84701538085938,
+                    "list": [
+                        {
+                            "type": "Sprite",
+                            "id": "62fff7f4-2e2c-47f8-aba8-488991a8fd72",
+                            "label": "back_left_pillar_button",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "agentlobbymulti",
+                                "frame": "background_mc/pillar-left/button0001"
+                            },
+                            "x": 41,
+                            "y": 359,
+                            "originX": 0.5047619047619047,
+                            "originY": 0.5185185185185185
+                        },
+                        {
+                            "type": "Image",
+                            "id": "742b8cae-6493-4ee5-bb4c-f77a5f717cb9",
+                            "label": "back_left_pillar_base",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "agentlobbymulti",
+                                "frame": "background_mc/pillar-left/bottom"
+                            },
+                            "x": 45,
+                            "y": 389,
+                            "originY": 0.5035971223021583
+                        },
+                        {
+                            "type": "Sprite",
+                            "id": "609a0371-19d0-43f4-9509-67c01a10f733",
+                            "label": "back_left_pillar_column",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "agentlobbymulti",
+                                "frame": "background_mc/pillar-left/reveal0001"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "Sprite",
+                    "id": "fecfaa43-4dd7-4724-9ed0-b5bdeb9e2ebf",
+                    "label": "camera",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/camera/trackingpositions0001"
+                    },
+                    "x": 281.8470153808594,
+                    "y": 44,
+                    "originY": 0.5051546391752577
+                },
+                {
+                    "type": "Image",
+                    "id": "ddea9af4-7658-4646-8520-c91f1ebcb562",
+                    "label": "door",
+                    "scope": "CLASS",
+                    "components": [
+                        "Button",
+                        "MoveTo"
+                    ],
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "background_mc/door"
+                    },
+                    "y": 488.66058349609375,
+                    "originX": 0.7386736006318385,
+                    "originY": 0.8101327240865188
+                },
+                {
+                    "type": "Container",
+                    "id": "80be01fb-593a-4c72-895d-4f5d87a6b76e",
+                    "label": "back_right_pillar_cntr",
+                    "x": 836.8470153808594,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "7d1265a8-a33b-4ac7-af54-688b85a00dc4",
+                            "label": "back_right_pillar_base",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "agentlobbymulti",
+                                "frame": "background_mc/pillar-right/bottom0001"
+                            },
+                            "y": 407,
+                            "originX": 0.5014749262536873
+                        },
+                        {
+                            "type": "Sprite",
+                            "id": "5605b731-165a-4b03-bb12-49ded51d17af",
+                            "label": "back_right_pillar_column",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "agentlobbymulti",
+                                "frame": "background_mc/pillar-right/openepf0001"
+                            },
+                            "x": 59,
+                            "originX": 0.5021459227467812
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "2711563b-b55a-41bd-b5b9-ff6029ae9f47",
+            "label": "front_right_pillar_cntr",
+            "x": 1387.28759765625,
+            "y": 773.3442211051122,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "99e8d003-4b48-46dc-a0d3-4f98d01e5f84",
+                    "label": "front_right_pillar_btn",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "right-pillar-fg/button0001"
+                    },
+                    "x": -17.287655210134517,
+                    "y": 58.65578542517585
+                },
+                {
+                    "type": "Image",
+                    "id": "55cc09d7-9c46-40d4-a11d-36117077432c",
+                    "label": "front_right_pillar_base",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "right-pillar-fg/openontrigger0001"
+                    },
+                    "x": -17.287655210134517,
+                    "y": 151.65578542517585,
+                    "originX": 0.5014492753623189
+                },
+                {
+                    "type": "Image",
+                    "id": "e4ead607-3b46-40c9-a15c-8614da8694c5",
+                    "label": "front_right_pillar_column",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "right-pillar-fg/lifts0001"
+                    },
+                    "x": 49.71234478986548,
+                    "y": -505.34421457482415
+                },
+                {
+                    "type": "Image",
+                    "id": "6550f158-d485-4e12-a586-398246be0ea7",
+                    "label": "front_right_pillar_fusebox",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "right-pillar-fg/electricbox-off"
+                    },
+                    "x": -11.287655210134517,
+                    "y": -246.34421457482415,
+                    "originX": 0.5039370078740157
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "18485bb4-1b4d-4160-a7ae-00abd275acd9",
+            "label": "front_left_pillar_cntr",
+            "x": 122.44390737483766,
+            "y": 784.3256800914368,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "0336113f-ba07-46f7-8aba-a5330cc94731",
+                    "label": "front_left_pillar_button",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "left-pillar-fg/button0001"
+                    },
+                    "x": 10.556092625162336,
+                    "y": 59.674319908563234,
+                    "scaleX": 1.1,
+                    "scaleY": 1.1,
+                    "originY": 0.5079365079365079
+                },
+                {
+                    "type": "Image",
+                    "id": "df17c855-a797-4100-8cb0-5c1fd9e2253d",
+                    "label": "front_left_pillar_bottom",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "left-pillar-fg/bottom"
+                    },
+                    "x": 27.556092625162336,
+                    "y": 153.67431990856323
+                },
+                {
+                    "type": "Image",
+                    "id": "81974bdb-4980-40a9-be95-7ebd7ed6ce24",
+                    "label": "front_left_pillar_column",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "left-pillar-fg/lift0001"
+                    },
+                    "x": 44.4342852247855,
+                    "y": -22.502496979465718,
+                    "originX": 0.7896021088954561,
+                    "originY": 0.9000991014577402
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "ad2a9e7f-50ed-4bb3-8b9a-db2090b848cc",
+            "label": "aimer_search_cntr",
+            "scope": "CLASS",
+            "x": -1627,
+            "y": 97.1226990964952,
+            "list": [
+                {
+                    "type": "Ellipse",
+                    "id": "09256e21-7c06-48fd-9668-1229629ef0c5",
+                    "label": "aimer_search_frame_25",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "23f25f76-e509-4455-972e-46d8b4c306ca",
+                    "label": "aimer_search_frame_24",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 368,
+                    "height": 368
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "c0d3e719-3447-44d4-845f-0a326562020e",
+                    "label": "aimer_search_frame_23",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 608,
+                    "height": 608
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "98986c87-0522-4008-87d0-b24ac639fcee",
+                    "label": "aimer_search_frame_22",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 848,
+                    "height": 848
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "b4b74934-f50d-47e5-8bee-d8f1ebff639d",
+                    "label": "aimer_search_frame_21",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 1088,
+                    "height": 1088
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "38286152-d42e-44b6-9a65-c35c58b1715f",
+                    "label": "aimer_search_frame_20",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 1328,
+                    "height": 1328
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "cc86fa7b-9068-4693-93d8-4e2b578ab582",
+                    "label": "aimer_search_frame_19",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 1568,
+                    "height": 1568
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "954e242c-cd80-4912-8007-f631fc8908f4",
+                    "label": "aimer_search_frame_18",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 1808,
+                    "height": 1808
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "e267d62d-83d3-4df5-b64d-8770efac9f90",
+                    "label": "aimer_search_frame_17",
+                    "scope": "CLASS",
+                    "y": -18.122699096495197,
+                    "visible": false,
+                    "strokeColor": "#ffffff",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 2048,
+                    "height": 2048
+                },
+                {
+                    "type": "Sprite",
+                    "id": "18cdd5eb-52b4-4cba-87a5-75f2fcbf49c9",
+                    "label": "aimer_search",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "aimersearchmc/aimer_mc0002"
+                    },
+                    "y": -18.122699096495197
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "f5d84622-1b21-4b15-a252-f5b5c48b75d4",
+            "label": "fg_cntr",
+            "x": 760,
+            "y": 960,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "e01632ed-5e15-4ae9-a697-e4b1efc452aa",
+                    "label": "camhudscanlines",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "camhudscanlines"
+                    },
+                    "y": -480
+                },
+                {
+                    "type": "Image",
+                    "id": "5d777064-0bc0-47cf-b7d7-bac8db997fdd",
+                    "label": "camhudtextbox",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "camhudtextbox"
+                    },
+                    "y": -480
+                },
+                {
+                    "type": "Image",
+                    "id": "c22e9c78-3caa-432c-bfc4-55090671cbf0",
+                    "label": "camhudborder",
+                    "texture": {
+                        "key": "agentlobbymulti",
+                        "frame": "camhudborder"
+                    },
+                    "y": -480
+                },
+                {
+                    "type": "Text",
+                    "id": "a123e0db-aa3d-47ef-8b10-19caaac5efd8",
+                    "label": "status_text",
+                    "scope": "CLASS",
+                    "x": 353,
+                    "y": -830,
+                    "originY": 0.5,
+                    "fixedWidth": 350,
+                    "fontFamily": "CPLCD",
+                    "fontSize": "28px"
+                },
+                {
+                    "type": "Text",
+                    "id": "e18f3331-cb62-4186-8e0e-d2ee77465115",
+                    "label": "username_text",
+                    "scope": "CLASS",
+                    "x": 342,
+                    "y": -865,
+                    "originY": 0.5,
+                    "fixedWidth": 350,
+                    "fontFamily": "CPLCD",
+                    "fontSize": "28px"
+                },
+                {
+                    "type": "Text",
+                    "id": "1705d9ab-4e11-4160-8ec8-57c3c6b77060",
+                    "label": "camera_text",
+                    "scope": "CLASS",
+                    "x": 308,
+                    "y": -912,
+                    "originY": 0.5,
+                    "text": "CAMERA 1",
+                    "fixedWidth": 400,
+                    "fontFamily": "CPLCD",
+                    "fontSize": "48px"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "7d2f7139-8f3b-4f5f-87f6-a056acf334f7",
+            "label": "sort",
+            "objectIds": [
+                "2711563b-b55a-41bd-b5b9-ff6029ae9f47",
+                "18485bb4-1b4d-4160-a7ae-00abd275acd9",
+                "f5d84622-1b21-4b15-a252-f5b5c48b75d4"
+            ]
+        }
+    ]
+}
