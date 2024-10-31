@@ -353,6 +353,12 @@ export default class AgentLobbyMulti extends RoomScene {
                 this[`aimer_search_frame_${i}`].visible = false
             }
             switch (frame) {
+                case 67:
+                    this.soundManager.play('camera_deinit')
+                    break
+                case 26:
+                    this.soundManager.play('camera_found')
+                    break
                 case 25:
                     this.aimer_search_frame_25.visible = true
                     break
@@ -379,6 +385,7 @@ export default class AgentLobbyMulti extends RoomScene {
                     break
                 case 17:
                     this.aimer_search_frame_17.visible = true
+                    this.soundManager.play('camera_init')
                     break
             }
             this.aimer_search_cntr.x = this.client.penguin.x
