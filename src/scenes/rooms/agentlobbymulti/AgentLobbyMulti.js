@@ -58,6 +58,8 @@ export default class AgentLobbyMulti extends RoomScene {
         this.aimer_search;
         /** @type {Phaser.GameObjects.Container} */
         this.aimer_search_cntr;
+        /** @type {Phaser.GameObjects.Rectangle} */
+        this.verticalscanline;
         /** @type {Phaser.GameObjects.Text} */
         this.status_text;
         /** @type {Phaser.GameObjects.Text} */
@@ -69,6 +71,9 @@ export default class AgentLobbyMulti extends RoomScene {
 
 
         /* START-USER-CTR-CODE */
+        this.roomTriggers = {
+            'village': () => this.triggerRoom(200, 1128, 600)
+        }
         /* END-USER-CTR-CODE */
     }
 
@@ -273,6 +278,12 @@ export default class AgentLobbyMulti extends RoomScene {
         const camhudscanlines = this.add.image(0, -480, "agentlobbymulti", "camhudscanlines");
         fg_cntr.add(camhudscanlines);
 
+        // verticalscanline
+        const verticalscanline = this.add.rectangle(0, -960, 1520, 5);
+        verticalscanline.alpha = 0.2;
+        verticalscanline.isFilled = true;
+        fg_cntr.add(verticalscanline);
+
         // camhudtextbox
         const camhudtextbox = this.add.image(0, -480, "agentlobbymulti", "camhudtextbox");
         fg_cntr.add(camhudtextbox);
@@ -329,6 +340,7 @@ export default class AgentLobbyMulti extends RoomScene {
         this.aimer_search_frame_17 = aimer_search_frame_17;
         this.aimer_search = aimer_search;
         this.aimer_search_cntr = aimer_search_cntr;
+        this.verticalscanline = verticalscanline;
         this.status_text = status_text;
         this.username_text = username_text;
         this.camera_text = camera_text;
@@ -347,6 +359,7 @@ export default class AgentLobbyMulti extends RoomScene {
         this.cameraTextInit = false
 
         this.aimer_search.play('agentlobbymulti-aimersearchmc/aimer_mc')
+        this.soundManager.play('camera_start')
         this.aimer_search.on('animationupdate', () => {
             let frame = parseInt(this.aimer_search.frame.name.slice(-4))
             for (let i = 17; i < 26; i++) {
@@ -394,6 +407,12 @@ export default class AgentLobbyMulti extends RoomScene {
                 this.initCameraText()
             }
         })
+        this.time.addEvent({
+            delay: 15,
+            callback: this.stepScanLine,
+            callbackScope: this,
+            loop: true
+        })
     }
 
     initCameraText() {
@@ -416,6 +435,34 @@ export default class AgentLobbyMulti extends RoomScene {
                     this.status_text.text += statusText[i]
                 }
             })
+        }
+
+        this.soundManager.play('camera_text_write')
+    }
+
+    update() {
+        let step = Math.floor((this.client.penguin.x - 112) / 108) 
+        this.showCameraFrame(step)
+    }
+
+    stepScanLine() {
+        this.verticalscanline.y++
+        if (this.verticalscanline.y > 0) {
+            this.verticalscanline.y = -960
+        }
+    }
+
+    showCameraFrame(step) {
+        if (step < 1) {
+            step = 1
+        }
+        if (step > 12) {
+            step = 12
+        }
+        let frameNum = 50*step
+        let frame = `background_mc/camera/trackingpositions${frameNum.toString().padStart(4, '0')}`
+        if (this.camera.frame.name !== frame) {
+            this.camera.setFrame(frame)
         }
     }
 

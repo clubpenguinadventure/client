@@ -44,69 +44,36 @@
                     },
                     "y": -40,
                     "width": 708,
-                    "height": 584,
+                    "height": 500,
                     "leftWidth": 50,
                     "rightWidth": 50,
                     "topHeight": 50,
                     "bottomHeight": 50
-                },
-                {
-                    "type": "NineSlice",
-                    "id": "1496d353-12ee-467f-b7b6-63f2c6e336f0",
-                    "label": "button",
-                    "scope": "CLASS",
-                    "components": [
-                        "Button"
-                    ],
-                    "Button.callback": "() => this.onClick()",
-                    "texture": {
-                        "key": "prompt",
-                        "frame": "window-button"
-                    },
-                    "y": 127,
-                    "width": 558,
-                    "height": 105,
-                    "leftWidth": 50,
-                    "rightWidth": 50,
-                    "topHeight": 50,
-                    "bottomHeight": 50
-                },
-                {
-                    "type": "Text",
-                    "id": "71bfc37a-0736-47e9-95b1-471b649b7138",
-                    "label": "buttonText",
-                    "scope": "CLASS",
-                    "y": 127,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "Become a Secret Agent",
-                    "fontFamily": "Proxima Nova",
-                    "fontSize": "40px",
-                    "fontStyle": "bold"
                 },
                 {
                     "type": "Text",
                     "id": "5e32e41d-5889-463a-8973-e1c667b663ce",
                     "label": "text",
                     "x": -2,
-                    "y": -13,
+                    "y": -66,
                     "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "Please click a player to Ignore or\nReport the player to a moderator.",
-                    "fixedWidth": 400,
-                    "fixedHeight": 80,
+                    "text": "If someone is breaking the rules, click on their penguin then click   M   to report them to a moderator. You can also click on   M   to ignore them.",
+                    "fixedWidth": 600,
+                    "lineSpacing": 20,
                     "align": "center",
-                    "fontFamily": "Proxima Nova",
+                    "fontFamily": "Burbank Small",
                     "fontSize": "32px",
-                    "color": "#000"
+                    "fontStyle": "bold",
+                    "color": "#ffffffff",
+                    "wordWrapWidth": 600
                 },
                 {
                     "type": "Text",
                     "id": "96b0d404-05b7-4afa-8248-0f4e7aa1b18c",
                     "label": "title",
-                    "y": -147,
+                    "y": -145,
                     "originX": 0.5,
-                    "text": "MODERATOR ONLINE",
+                    "text": "Help keep the island safe!",
                     "fixedWidth": 600,
                     "align": "center",
                     "fontFamily": "CCFaceFront",
@@ -127,7 +94,7 @@
                         "frame": "mod_smaller"
                     },
                     "x": -1,
-                    "y": -237,
+                    "y": -210,
                     "originX": 0.504950495049505,
                     "originY": 0.504950495049505
                 },
@@ -143,8 +110,8 @@
                         "key": "main",
                         "frame": "blue-button"
                     },
-                    "x": 295,
-                    "y": -273
+                    "x": 296,
+                    "y": -241
                 },
                 {
                     "type": "Image",
@@ -154,8 +121,59 @@
                         "key": "main",
                         "frame": "blue-x"
                     },
-                    "x": 295,
-                    "y": -275
+                    "x": 296,
+                    "y": -243
+                },
+                {
+                    "type": "Image",
+                    "id": "f83ef658-e81f-4a8e-92f6-c8584c912814",
+                    "label": "blueButton_1",
+                    "components": [
+                        "Button"
+                    ],
+                    "texture": {
+                        "key": "main",
+                        "frame": "blue-button"
+                    },
+                    "x": 178,
+                    "y": 13
+                },
+                {
+                    "type": "Image",
+                    "id": "c72be65e-fd20-4bcc-95e3-a9165f2acda6",
+                    "label": "blueButton_2",
+                    "components": [
+                        "Button"
+                    ],
+                    "texture": {
+                        "key": "main",
+                        "frame": "blue-button"
+                    },
+                    "x": -25,
+                    "y": 133
+                },
+                {
+                    "type": "Image",
+                    "id": "dcfb7464-7853-4c76-9415-eb2f857176c3",
+                    "label": "mod_icon",
+                    "texture": {
+                        "key": "main",
+                        "frame": "mod-icon"
+                    },
+                    "x": 178,
+                    "y": 13,
+                    "originY": 0.5161290322580645
+                },
+                {
+                    "type": "Image",
+                    "id": "61391c32-f022-40bb-8406-edd6581bdbbf",
+                    "label": "ignore_icon",
+                    "texture": {
+                        "key": "main",
+                        "frame": "ignore-icon"
+                    },
+                    "x": -25,
+                    "y": 132
                 }
             ]
         }

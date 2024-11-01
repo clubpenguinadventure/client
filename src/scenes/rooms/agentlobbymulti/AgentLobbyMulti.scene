@@ -158,7 +158,8 @@
                     },
                     "x": 281.8470153808594,
                     "y": 44,
-                    "originY": 0.5051546391752577
+                    "originY": 0.5051546391752577,
+                    "animationKey": "agentlobbymulti-background_mc/camera/trackingpositions"
                 },
                 {
                     "type": "Image",
@@ -467,6 +468,17 @@
                         "frame": "camhudscanlines"
                     },
                     "y": -480
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "c6f6fac3-856b-4aa0-8a90-033a3012fa4a",
+                    "label": "verticalscanline",
+                    "scope": "CLASS",
+                    "y": -960,
+                    "alpha": 0.2,
+                    "isFilled": true,
+                    "width": 1520,
+                    "height": 5
                 },
                 {
                     "type": "Image",
