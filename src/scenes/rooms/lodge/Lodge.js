@@ -41,6 +41,8 @@ export default class Lodge extends RoomScene {
             'table207': () => this.triggerTable('four', 207)
         }
 
+        this.music = 672
+
         this.tables = {}
 
         /* END-USER-CTR-CODE */
@@ -129,8 +131,12 @@ export default class Lodge extends RoomScene {
         zone.isFilled = true;
         zone.fillColor = 65280;
 
+        // catalog
+        const catalog = this.add.image(1439, 1009.7904756520305, "lodge", "catalog");
+        catalog.setOrigin(0.504, 1.596172669645145);
+
         // lists
-        const sort = [door, table206, footrest, chair, table207, table205];
+        const sort = [door, table206, footrest, chair, table207, table205, catalog];
 
         // door (components)
         const doorButton = new Button(door);
@@ -167,6 +173,7 @@ export default class Lodge extends RoomScene {
         catalog_smallAnimation.autoPlay = false;
         catalog_smallAnimation.onHover = true;
         const catalog_smallSimpleButton = new SimpleButton(catalog_small);
+        catalog_smallSimpleButton.callback = () => this.interface.loadWidget('LodgeGameUpgrades');
         catalog_smallSimpleButton.pixelPerfect = true;
 
         // candle (components)
@@ -199,6 +206,10 @@ export default class Lodge extends RoomScene {
         // zone (components)
         const zoneZone = new Zone(zone);
         zoneZone.callback = () => this.onZoneClick();
+
+        // catalog (components)
+        const catalogButton = new Button(catalog);
+        catalogButton.callback = () => this.interface.loadWidget('LodgeGameUpgrades');
 
         this.table207 = table207;
         this.table206 = table206;

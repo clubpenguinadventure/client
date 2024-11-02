@@ -17,7 +17,6 @@
             "type": "Container",
             "id": "0d9820be-13e5-422f-b4ae-b613533a5a10",
             "label": "container_1",
-            "components": [],
             "x": 760,
             "y": 480,
             "visible": false,
@@ -36,59 +35,140 @@
                     "height": 960
                 },
                 {
-                    "type": "Rectangle",
+                    "type": "NineSlice",
                     "id": "971c3533-6dd3-4192-b514-1708f07cffa7",
                     "label": "bg",
                     "scope": "CLASS",
-                    "components": [
-                        "NineSlice"
-                    ],
-                    "NineSlice.corner": 50,
-                    "y": -40,
-                    "isFilled": true,
-                    "fillColor": "#0280CD",
-                    "width": 708,
-                    "height": 584
-                },
-                {
-                    "type": "Text",
-                    "id": "46a1e105-67ac-4b73-9948-ae9dfb2797ee",
-                    "label": "text",
-                    "scope": "CLASS",
-                    "components": [],
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "You have found a party hat.\nWould you like to pick it up?",
-                    "fixedWidth": 628,
-                    "fixedHeight": 136,
-                    "align": "center",
-                    "fontFamily": "Proxima Nova",
-                    "fontSize": "32px",
-                    "color": "#000000"
-                },
-                {
-                    "prefabId": "48dfbf63-271b-4c3d-9fcc-6406eb7a0754",
-                    "id": "d9e3a815-d0a8-47a6-a528-6e4ab184f1e7",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "singleButton",
-                    "components": [],
-                    "x": 0,
-                    "y": 130,
-                    "nestedPrefabs": []
-                },
-                {
-                    "type": "Image",
-                    "id": "ab64c519-909b-4d35-8b48-b0a1ad26bc10",
-                    "label": "prompt_coin",
-                    "components": [],
                     "texture": {
-                        "key": "main",
-                        "frame": "prompt_coin"
+                        "key": "prompt",
+                        "frame": "window"
                     },
-                    "y": -182
+                    "y": -40,
+                    "width": 550,
+                    "height": 584,
+                    "leftWidth": 50,
+                    "rightWidth": 50,
+                    "topHeight": 50,
+                    "bottomHeight": 50
+                },
+                {
+                    "type": "Container",
+                    "id": "7bf93ef3-e143-4b7f-894a-4d2d5d28e7b9",
+                    "label": "nostamps_cntr",
+                    "scope": "CLASS",
+                    "x": -194,
+                    "y": -261,
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "46a1e105-67ac-4b73-9948-ae9dfb2797ee",
+                            "label": "game_name",
+                            "scope": "CLASS",
+                            "x": 194,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Pizzatron 3000",
+                            "fixedWidth": 628,
+                            "align": "center",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "32px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "shadow.offsetX": 2,
+                            "shadow.offsetY": 2,
+                            "shadow.fill": true,
+                            "shadow.color": "#084074ff"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "ab64c519-909b-4d35-8b48-b0a1ad26bc10",
+                            "label": "prompt_coin",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "main",
+                                "frame": "prompt_coin"
+                            },
+                            "x": 6,
+                            "y": 113
+                        },
+                        {
+                            "type": "Text",
+                            "id": "6006ac65-46f5-4492-abcc-27f513ccc056",
+                            "label": "youve_earned_txt",
+                            "scope": "CLASS",
+                            "x": 194,
+                            "y": 33,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "You've earned:",
+                            "fixedWidth": 628,
+                            "align": "center",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "22px",
+                            "color": "#ffffffff",
+                            "shadow.color": "#fff"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ddfa0d0b-6976-4bd7-b7de-6ff820ee257b",
+                            "label": "coins_earned_txt",
+                            "scope": "CLASS",
+                            "x": 54,
+                            "y": 99,
+                            "originY": 0.5,
+                            "text": "9999 coins",
+                            "fixedWidth": 628,
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "32px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "shadow.offsetX": 3,
+                            "shadow.offsetY": 3,
+                            "shadow.fill": true,
+                            "shadow.color": "#084074ff"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "94f027b0-1713-41bf-ab89-89ae3b71dfd5",
+                            "label": "your_total_coins_txt",
+                            "scope": "CLASS",
+                            "x": 56,
+                            "y": 130,
+                            "originY": 0.5,
+                            "text": "Your total coins: 10000",
+                            "fixedWidth": 628,
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "22px",
+                            "color": "#ffffffff",
+                            "shadow.color": "#fff"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "8809e89a-80ca-4b14-a510-83a9670ca0c8",
+                            "label": "blue_button",
+                            "components": [
+                                "Button"
+                            ],
+                            "Button.callback": "() => this.callback()",
+                            "texture": {
+                                "key": "main",
+                                "frame": "blue-button"
+                            },
+                            "x": 414,
+                            "y": -19
+                        },
+                        {
+                            "type": "Image",
+                            "id": "accef17e-fa56-4b33-ad21-04d7e1c8e821",
+                            "label": "blue_x",
+                            "texture": {
+                                "key": "main",
+                                "frame": "blue-x"
+                            },
+                            "x": 414,
+                            "y": -21
+                        }
+                    ]
                 }
             ]
         }
@@ -98,6 +178,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

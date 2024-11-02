@@ -20,6 +20,8 @@ export default class Forest extends RoomScene {
             'cove': () => this.triggerRoom(810, 520, 416),
             'lake': null
         }
+		
+		this.music = 379
 
         /* END-USER-CTR-CODE */
     }

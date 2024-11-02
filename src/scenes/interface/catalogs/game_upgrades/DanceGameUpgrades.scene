@@ -1,0 +1,189 @@
+{
+    "id": "8a3ef5e4-c711-4cc4-b6d6-04a9a8e7e567",
+    "sceneType": "PREFAB",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "BookContainer",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "4a078889-818c-42ce-b860-51d21c7b4986",
+            "label": "container_1",
+            "x": 760,
+            "y": 108,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "158bdd22-a235-4ad1-888c-b6139182e09a",
+                    "label": "bg",
+                    "components": [
+                        "Interactive"
+                    ],
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "bg"
+                    },
+                    "y": 372
+                },
+                {
+                    "type": "Image",
+                    "id": "1169c1cd-f0bc-4ac2-bfbd-f2d7878eaa35",
+                    "label": "closebtn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.close()",
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "closebtn"
+                    },
+                    "x": 281,
+                    "y": -14
+                },
+                {
+                    "type": "Image",
+                    "id": "484697d1-0841-47d3-8c2e-ad696a95768a",
+                    "label": "blue",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5038)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "blue"
+                    },
+                    "x": -26,
+                    "y": 330
+                },
+                {
+                    "type": "Image",
+                    "id": "ab51863f-8b4b-45b7-8f15-a3e594442167",
+                    "label": "green",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5039)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "green"
+                    },
+                    "x": -180,
+                    "y": 325,
+                    "originX": 0.5023474178403756,
+                    "originY": 0.5045045045045045
+                },
+                {
+                    "type": "Image",
+                    "id": "b7771e19-68e4-4d07-a4b1-579f416d2f71",
+                    "label": "orange",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5070)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "orange"
+                    },
+                    "x": 251,
+                    "y": 340,
+                    "originX": 0.502283105022831,
+                    "originY": 0.5027624309392266
+                },
+                {
+                    "type": "Image",
+                    "id": "26907266-476c-40f3-b27d-5d9f00a246ef",
+                    "label": "pink",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5072)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "pink"
+                    },
+                    "x": 122,
+                    "y": 330,
+                    "originY": 0.5039370078740157
+                },
+                {
+                    "type": "Image",
+                    "id": "2d63b95a-526c-4ad7-8dc9-da73750e9844",
+                    "label": "purple",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5037)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "purple"
+                    },
+                    "x": -123,
+                    "y": 186,
+                    "originX": 0.5031446540880503,
+                    "originY": 0.5039370078740157
+                },
+                {
+                    "type": "Image",
+                    "id": "52f3ee92-639d-4afc-8fbb-381db9ef662b",
+                    "label": "red",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5121)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "red"
+                    },
+                    "x": 140,
+                    "y": 463
+                },
+                {
+                    "type": "Image",
+                    "id": "ca232e77-1ecf-46df-9c04-cc633c0a228f",
+                    "label": "yellow",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5071)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dance-gameupgrades",
+                        "frame": "yellow"
+                    },
+                    "x": -7,
+                    "y": 455
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "aa15e9ec-b751-4905-a246-6e8a2122aae3",
+            "label": "pages",
+            "objectIds": [
+                "158bdd22-a235-4ad1-888c-b6139182e09a"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "id": "0a652a92-8f24-4ebf-af8d-61cb4462aa70",
+    "sceneType": "PREFAB",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "BookContainer",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "4a078889-818c-42ce-b860-51d21c7b4986",
+            "label": "container_1",
+            "x": 760,
+            "y": 108,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "158bdd22-a235-4ad1-888c-b6139182e09a",
+                    "label": "bg",
+                    "components": [
+                        "Interactive"
+                    ],
+                    "texture": {
+                        "key": "mtn-gameupgrades",
+                        "frame": "bg"
+                    },
+                    "y": 372
+                },
+                {
+                    "type": "Image",
+                    "id": "1169c1cd-f0bc-4ac2-bfbd-f2d7878eaa35",
+                    "label": "closebtn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.close()",
+                    "texture": {
+                        "key": "mtn-gameupgrades",
+                        "frame": "closebtn"
+                    },
+                    "x": 281,
+                    "y": -14
+                },
+                {
+                    "type": "Image",
+                    "id": "da3db0ee-e137-4e0e-aca0-f00f929635dc",
+                    "label": "green",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5046)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "mtn-gameupgrades",
+                        "frame": "greenbtn"
+                    },
+                    "x": -134,
+                    "y": 644
+                },
+                {
+                    "type": "Image",
+                    "id": "662810fc-90b9-43be-8964-2bc5e654a77f",
+                    "label": "pink",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5047)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "mtn-gameupgrades",
+                        "frame": "pinkbtn"
+                    },
+                    "x": 123,
+                    "y": 526
+                },
+                {
+                    "type": "Image",
+                    "id": "265e8501-e22a-4e3c-827b-224df0fe75fc",
+                    "label": "toboggan",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(5021)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "mtn-gameupgrades",
+                        "frame": "tobogganbtn"
+                    },
+                    "x": -93,
+                    "y": 350
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "aa15e9ec-b751-4905-a246-6e8a2122aae3",
+            "label": "pages",
+            "objectIds": [
+                "158bdd22-a235-4ad1-888c-b6139182e09a"
+            ]
+        }
+    ]
+}

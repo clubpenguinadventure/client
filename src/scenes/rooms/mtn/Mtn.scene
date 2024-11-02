@@ -91,6 +91,10 @@
             "type": "Image",
             "id": "cd1933ae-fcd6-41e3-96e7-4b9b0636560b",
             "label": "catalogSmall",
+            "components": [
+                "Button"
+            ],
+            "Button.callback": "() => this.interface.loadWidget('MtnGameUpgrades')",
             "texture": {
                 "key": "mtn",
                 "frame": "catalog_small"
@@ -173,6 +177,23 @@
             "scope": "CLASS",
             "x": 259,
             "y": 510
+        },
+        {
+            "type": "Image",
+            "id": "63114f82-95dc-4b30-8f2a-56b584f1d3eb",
+            "label": "catalog",
+            "components": [
+                "Button"
+            ],
+            "Button.callback": "() => this.interface.loadWidget('MtnGameUpgrades')",
+            "texture": {
+                "key": "mtn",
+                "frame": "catalog"
+            },
+            "x": 1388,
+            "y": 953,
+            "originX": 0,
+            "originY": 1
         }
     ],
     "plainObjects": [],
@@ -180,7 +201,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 4
+        "version": 5
     },
     "lists": [
         {

@@ -16,10 +16,10 @@ export default class MiniGame extends Plugin {
             return
         }
 
-        // Difference in coins = coins earned
-        this.interface.prompt.showCoin(args.coins - this.world.client.coins)
+        this.world.client.coins+=args.coins
 
-        this.world.client.coins = args.coins
+        // Difference in coins = coins earned
+        this.interface.prompt.showCoin(args.coins, args.game, args.stampCategory, args.earnedStamps)
 
         this.interface.refreshPlayerCard()
         this.interface.updateCatalogCoins(args.coins)

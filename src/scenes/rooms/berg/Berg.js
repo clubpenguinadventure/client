@@ -15,6 +15,7 @@ export default class Berg extends RoomScene {
 
 
         /* START-USER-CTR-CODE */
+		this.music = 380
         /* END-USER-CTR-CODE */
     }
 

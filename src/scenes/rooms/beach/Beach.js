@@ -24,6 +24,8 @@ export default class Beach extends RoomScene {
             'lighthouse': null,
             'ship': null
         }
+		
+		this.music = 380
 
         /* END-USER-CTR-CODE */
     }

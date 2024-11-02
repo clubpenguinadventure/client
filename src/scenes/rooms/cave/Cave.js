@@ -21,6 +21,8 @@ export default class Cave extends RoomScene {
             'plaza': () => this.triggerRoom(300, 582, 588),
             'mine': null
         }
+		
+		this.music = 532
 
         /* END-USER-CTR-CODE */
     }

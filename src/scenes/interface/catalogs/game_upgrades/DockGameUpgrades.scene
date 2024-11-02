@@ -1,0 +1,102 @@
+{
+    "id": "2be321e8-6f35-461a-b061-259e4deca4c8",
+    "sceneType": "PREFAB",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "BookContainer",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "4a078889-818c-42ce-b860-51d21c7b4986",
+            "label": "container_1",
+            "x": 760,
+            "y": 108,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "158bdd22-a235-4ad1-888c-b6139182e09a",
+                    "label": "bg",
+                    "components": [
+                        "Interactive"
+                    ],
+                    "texture": {
+                        "key": "dock-gameupgrades",
+                        "frame": "bg"
+                    },
+                    "y": 372
+                },
+                {
+                    "type": "Image",
+                    "id": "1169c1cd-f0bc-4ac2-bfbd-f2d7878eaa35",
+                    "label": "closebtn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.close()",
+                    "texture": {
+                        "key": "dock-gameupgrades",
+                        "frame": "closebtn"
+                    },
+                    "x": 281,
+                    "y": -14
+                },
+                {
+                    "type": "Image",
+                    "id": "da3db0ee-e137-4e0e-aca0-f00f929635dc",
+                    "label": "yellowbtn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(711)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dock-gameupgrades",
+                        "frame": "yellowbtn"
+                    },
+                    "x": -207,
+                    "y": 315
+                },
+                {
+                    "type": "Image",
+                    "id": "662810fc-90b9-43be-8964-2bc5e654a77f",
+                    "label": "pinkbtn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.prompt.showItem(712)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "dock-gameupgrades",
+                        "frame": "pinkbtn"
+                    },
+                    "x": -68,
+                    "y": 383
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "aa15e9ec-b751-4905-a246-6e8a2122aae3",
+            "label": "pages",
+            "objectIds": [
+                "158bdd22-a235-4ad1-888c-b6139182e09a"
+            ]
+        }
+    ]
+}

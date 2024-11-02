@@ -49,8 +49,8 @@ export default class PromptController {
         return prompt
     }
 
-    showCoin(coins = 0) {
-        this.coin.show(coins)
+    showCoin(coins = 0, game = "Coins Earned", stampCategory = 0, earnedStamps = []) {
+        this.coin.show(coins, game, stampCategory, earnedStamps)
     }
 
     showError(text, buttonText = 'Okay', callback = () => this.error.close()) {

@@ -32,6 +32,8 @@ export default class Village extends RoomScene {
             'mtn': () => this.triggerRoom(230, 840, 320),
             'sport': () => this.triggerRoom(212, 1000, 560)
         }
+		
+		this.music = 381
 
         /* END-USER-CTR-CODE */
     }

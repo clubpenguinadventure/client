@@ -55,7 +55,7 @@ export default class RoomScene extends BaseScene {
         this.load.on('progress', this.onProgress, this)
 
         this.load.on('filecomplete', (key, type, data) =>{
-            this.world.loadedAssets.push({id: key, type})
+            this.world.loadedAssets.push({ id: key, type })
         })
 
         this.events.once('create', () => this.isReady = true)

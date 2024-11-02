@@ -27,6 +27,8 @@ export default class Dock extends RoomScene {
             'hydro': () => this.triggerGame(903)
         }
 
+        this.music = 380
+
         /* END-USER-CTR-CODE */
     }
 
@@ -99,8 +101,16 @@ export default class Dock extends RoomScene {
         zone.isFilled = true;
         zone.fillColor = 65280;
 
+        // catalog_small
+        const catalog_small = this.add.image(738.8649291992188, 746.48741397617, "dock", "catalog_small");
+        catalog_small.setOrigin(0.9149934848123014, 1.0336495706463993);
+
+        // catalog
+        const catalog = this.add.image(64, 49, "dock", "catalog");
+        catalog.setOrigin(0, 0);
+
         // lists
-        const sort = [post_3, post_4, post_1, post_2, rings, bollard_2, bollard_1, dock, box, boards];
+        const sort = [post_3, post_4, post_1, post_2, rings, bollard_2, bollard_1, dock, box, boards, catalog_small];
 
         // boat (components)
         const boatButton = new Button(boat);
@@ -121,6 +131,16 @@ export default class Dock extends RoomScene {
         // zone (components)
         const zoneZone = new Zone(zone);
         zoneZone.hoverCallback = () => this.onRingsOver();
+
+        // catalog_small (components)
+        const catalog_smallButton = new Button(catalog_small);
+        catalog_smallButton.callback = () => this.interface.loadWidget('DockGameUpgrades');
+        catalog_smallButton.pixelPerfect = true;
+
+        // catalog (components)
+        const catalogButton = new Button(catalog);
+        catalogButton.callback = () => this.interface.loadWidget('DockGameUpgrades');
+        catalogButton.pixelPerfect = true;
 
         this.boat = boat;
         this.rings = rings;

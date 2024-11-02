@@ -10,7 +10,7 @@ export default class Cove extends RoomScene {
     constructor() {
         super("Cove");
 
-        /** @type {Array<Phaser.GameObjects.Image|Phaser.GameObjects.Sprite>} */
+        /** @type {Array<Phaser.GameObjects.Image|Phaser.GameObjects.Sprite|Phaser.GameObjects.Container>} */
         this.sort;
 
 
@@ -20,6 +20,8 @@ export default class Cove extends RoomScene {
             'forest': () => this.triggerRoom(809, 1190, 750),
             'waves': () => this.triggerGame(912)
         }
+
+        this.music = 380
 
         /* END-USER-CTR-CODE */
     }
@@ -109,9 +111,18 @@ export default class Cove extends RoomScene {
         const hut_wall = this.add.image(1440, 545, "cove", "hut_wall");
         hut_wall.setOrigin(0.5210526315789473, 0.8577777777777778);
 
+        // container_1
+        const container_1 = this.add.container(1101, 485);
+
         // boards
-        const boards = this.add.image(1101, 485, "cove", "boards");
+        const boards = this.add.image(0, 0, "cove", "boards");
         boards.setOrigin(0.502262443438914, 0.8586956521739131);
+        container_1.add(boards);
+
+        // catalog_1
+        const catalog_1 = this.add.image(-86, -105, "cove", "catalog_small");
+        catalog_1.setOrigin(0, 0);
+        container_1.add(catalog_1);
 
         // rock_1
         const rock_1 = this.add.image(461, 884, "cove", "rock_1");
@@ -157,8 +168,12 @@ export default class Cove extends RoomScene {
         const hut_stool = this.add.image(1310, 493, "cove", "hut_stool");
         hut_stool.setOrigin(0.5, 0.5185185185185185);
 
+        // catalog
+        const catalog = this.add.image(1438, 979, "cove", "catalog");
+        catalog.setOrigin(0.48646301433008193, 1.3631395382056397);
+
         // lists
-        const sort = [water_water_15, water_water_1, water_water_2, water_water_3, water_water_4, water_water_5, water_water_6, water_water_7, water_water_8, water_water_9, water_water_10, water_water_11, water_water_12, water_water_13, water_water_14, hut_wall, boards, rock_1, fire, chair_arm, binoculars, silver_board, rock_3, rock_2, rock_4, fg];
+        const sort = [water_water_15, water_water_1, water_water_2, water_water_3, water_water_4, water_water_5, water_water_6, water_water_7, water_water_8, water_water_9, water_water_10, water_water_11, water_water_12, water_water_13, water_water_14, hut_wall, rock_1, fire, chair_arm, binoculars, silver_board, rock_3, rock_2, rock_4, fg, container_1, catalog];
 
         // hut (components)
         const hutButton = new Button(hut);
@@ -169,10 +184,18 @@ export default class Cove extends RoomScene {
         const hutShowHint = new ShowHint(hut);
         hutShowHint.text = "waves_hint";
 
+        // catalog_1 (components)
+        const catalog_1Button = new Button(catalog_1);
+        catalog_1Button.callback = () => this.interface.loadWidget('CoveGameUpgrades');
+
         // fire (components)
         const fireAnimation = new Animation(fire);
         fireAnimation.key = "fire";
         fireAnimation.end = 10;
+
+        // catalog (components)
+        const catalogButton = new Button(catalog);
+        catalogButton.callback = () => this.interface.loadWidget('CoveGameUpgrades');
 
         this.sort = sort;
 

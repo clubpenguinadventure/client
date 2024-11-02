@@ -21,6 +21,8 @@ export default class DojoExt extends RoomScene {
             'dojo': () => this.triggerRoom(320, 400, 660),
             'dojohide': null
         }
+		
+		this.music = 404
 
         /* END-USER-CTR-CODE */
     }

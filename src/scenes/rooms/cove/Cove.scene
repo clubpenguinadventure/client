@@ -238,7 +238,6 @@
                 "MoveTo",
                 "ShowHint"
             ],
-            "Button.spriteName": "hut",
             "Button.activeFrame": false,
             "MoveTo.x": 1250,
             "MoveTo.y": 500,
@@ -266,17 +265,41 @@
             "originY": 0.8577777777777778
         },
         {
-            "type": "Image",
-            "id": "79a1dfec-395e-4a21-a9f8-b09aeaabf9d6",
-            "label": "boards",
-            "texture": {
-                "key": "cove",
-                "frame": "boards"
-            },
+            "type": "Container",
+            "id": "17ba1274-c2d1-4d7a-b124-bcd90f2bf351",
+            "label": "container_1",
             "x": 1101,
             "y": 485,
-            "originX": 0.502262443438914,
-            "originY": 0.8586956521739131
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "79a1dfec-395e-4a21-a9f8-b09aeaabf9d6",
+                    "label": "boards",
+                    "texture": {
+                        "key": "cove",
+                        "frame": "boards"
+                    },
+                    "originX": 0.502262443438914,
+                    "originY": 0.8586956521739131
+                },
+                {
+                    "type": "Image",
+                    "id": "a02b03af-201d-4480-963a-46757695323b",
+                    "label": "catalog_1",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.interface.loadWidget('CoveGameUpgrades')",
+                    "texture": {
+                        "key": "cove",
+                        "frame": "catalog_small"
+                    },
+                    "x": -86,
+                    "y": -105,
+                    "originX": 0,
+                    "originY": 0
+                }
+            ]
         },
         {
             "type": "Image",
@@ -424,6 +447,23 @@
             "x": 1310,
             "y": 493,
             "originY": 0.5185185185185185
+        },
+        {
+            "type": "Image",
+            "id": "22c246bf-797f-4ef8-828c-211f846d17c9",
+            "label": "catalog",
+            "components": [
+                "Button"
+            ],
+            "Button.callback": "() => this.interface.loadWidget('CoveGameUpgrades')",
+            "texture": {
+                "key": "cove",
+                "frame": "catalog"
+            },
+            "x": 1438,
+            "y": 979,
+            "originX": 0.48646301433008193,
+            "originY": 1.3631395382056397
         }
     ],
     "plainObjects": [],
@@ -431,7 +471,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 4
+        "version": 5
     },
     "lists": [
         {
@@ -454,7 +494,6 @@
                 "250fc985-8606-4e36-8f66-8a468cad2dd2",
                 "d5f4964a-e666-4927-a80f-6baea0dd2580",
                 "bdcc462a-0951-487e-add4-61d60a995f24",
-                "79a1dfec-395e-4a21-a9f8-b09aeaabf9d6",
                 "7ab9af43-7533-4338-839a-67a25516cd87",
                 "0cb1447f-047f-4855-9a43-c5d4a3bbf32c",
                 "a8383932-be18-46d1-b4bf-19b662689e4a",
@@ -463,7 +502,9 @@
                 "1ec55d4a-8027-4492-8317-2ce1faa6c920",
                 "35270094-7aa8-4910-ade0-99f373a64195",
                 "b64c5402-0391-4e1d-812c-01a3d4f5c353",
-                "0a1bb735-7c0b-4413-ade9-13179d4f0837"
+                "0a1bb735-7c0b-4413-ade9-13179d4f0837",
+                "17ba1274-c2d1-4d7a-b124-bcd90f2bf351",
+                "22c246bf-797f-4ef8-828c-211f846d17c9"
             ]
         }
     ]

@@ -26,6 +26,7 @@ export default class Plaza extends RoomScene {
             'forest': () => this.triggerRoom(809, 270, 430)
         }
 
+		this.music = 677
         /* END-USER-CTR-CODE */
     }
 

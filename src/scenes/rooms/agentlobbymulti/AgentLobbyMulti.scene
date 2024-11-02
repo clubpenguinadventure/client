@@ -7,6 +7,7 @@
         "exportClass": true,
         "autoImport": true,
         "superClassName": "RoomScene",
+        "preloadMethodName": "_preload",
         "preloadPackFiles": [
             "yukon/assets/media/rooms/agentlobbymulti/agentlobbymulti-pack.json"
         ],

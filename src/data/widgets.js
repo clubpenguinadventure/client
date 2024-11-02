@@ -5,6 +5,11 @@ const widgets = {
     'GiveTour': require('@scenes/interface/books/give_tour/GiveTour'),
     'IglooCatalog': require('@scenes/interface/catalogs/igloo/IglooCatalog'),
     'PetsCatalog': require('@scenes/interface/catalogs/pets/PetsCatalog'),
+    'CoveGameUpgrades': require('@scenes/interface/catalogs/game_upgrades/CoveGameUpgrades'),
+    'DanceGameUpgrades': require('@scenes/interface/catalogs/game_upgrades/DanceGameUpgrades'),
+    'DockGameUpgrades': require('@scenes/interface/catalogs/game_upgrades/DockGameUpgrades'),
+    'LodgeGameUpgrades': require('@scenes/interface/catalogs/game_upgrades/LodgeGameUpgrades'),
+    'MtnGameUpgrades': require('@scenes/interface/catalogs/game_upgrades/MtnGameUpgrades'),
 
     'AgentQuiz': require('@scenes/interface/quiz/agent/AgentQuiz'),
     'ClockTower': require('@scenes/interface/game/clock_tower/ClockTower'),

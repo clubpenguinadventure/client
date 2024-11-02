@@ -39,6 +39,8 @@ export default class Attic extends RoomScene {
             'table203': () => this.triggerTable('four', 203),
             'table204': () => this.triggerTable('four', 204)
         }
+		
+		this.music = 589
 
         /* END-USER-CTR-CODE */
     }
@@ -47,6 +49,7 @@ export default class Attic extends RoomScene {
     _preload() {
 
         this.load.pack("attic-pack", "assets/media/rooms/attic/attic-pack.json");
+        this.load.pack("lodge-pack", "assets/media/rooms/lodge/lodge-pack.json");
     }
 
     /** @returns {void} */

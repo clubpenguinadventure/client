@@ -2,6 +2,7 @@
 
 import RoomScene from "../RoomScene";
 import Animation from "../../components/Animation";
+import Button from "../../components/Button";
 import Waddle103 from "./waddle/Waddle103";
 import Waddle102 from "./waddle/Waddle102";
 import Waddle101 from "./waddle/Waddle101";
@@ -40,6 +41,8 @@ export default class Mtn extends RoomScene {
 
         // Don't show waddle seat for sled hand items
         this.sleds = [5021, 5046, 5047]
+
+        this.music = 381
 
         /* END-USER-CTR-CODE */
     }
@@ -101,6 +104,10 @@ export default class Mtn extends RoomScene {
         const waddle100 = new Waddle100(this, 259, 510);
         this.add.existing(waddle100);
 
+        // catalog
+        const catalog = this.add.image(1388, 953, "mtn", "catalog");
+        catalog.setOrigin(0, 1);
+
         // lists
         const sort = [penguinRun, express, pole, waddle100, waddle101, waddle102, waddle103];
 
@@ -108,6 +115,14 @@ export default class Mtn extends RoomScene {
         const chairAnimation = new Animation(chair);
         chairAnimation.key = "chair/chair";
         chairAnimation.end = 87;
+
+        // catalogSmall (components)
+        const catalogSmallButton = new Button(catalogSmall);
+        catalogSmallButton.callback = () => this.interface.loadWidget('MtnGameUpgrades');
+
+        // catalog (components)
+        const catalogButton = new Button(catalog);
+        catalogButton.callback = () => this.interface.loadWidget('MtnGameUpgrades');
 
         this.waddle103 = waddle103;
         this.waddle102 = waddle102;

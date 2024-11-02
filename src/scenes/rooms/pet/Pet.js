@@ -45,6 +45,8 @@ export default class Pet extends RoomScene {
             'adopt': () => this.onAdoptCatalogClick(),
             'roundup': () => this.triggerGame(902),
         }
+		
+		this.music = 261
 
         /* END-USER-CTR-CODE */
     }

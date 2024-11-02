@@ -21,6 +21,8 @@ export default class Shack extends RoomScene {
             'eco': null,
             'mine': null
         }
+		
+		this.music = 437
 
         /* END-USER-CTR-CODE */
     }
