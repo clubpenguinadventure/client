@@ -105,8 +105,8 @@ export default class Mtn extends RoomScene {
         this.add.existing(waddle100);
 
         // catalog
-        const catalog = this.add.image(1388, 953, "mtn", "catalog");
-        catalog.setOrigin(0, 1);
+        const catalog = this.add.image(1430, 1021.9262088252943, "mtn", "catalog");
+        catalog.setOrigin(0.5, 1.7678352669008734);
 
         // lists
         const sort = [penguinRun, express, pole, waddle100, waddle101, waddle102, waddle103];

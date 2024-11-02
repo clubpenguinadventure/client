@@ -644,15 +644,14 @@
                                 "Button",
                                 "ShowHint"
                             ],
-                            "Button.callback": "() => this.goToRoomWithArrow(room, arrows)",
+                            "Button.callback": "() => this.goToRoomWithArrow(220, {\"x\":1435, \"y\":800})",
                             "ShowHint.text": "Game Upgrades",
                             "texture": {
                                 "key": "map",
                                 "frame": "shops/fishing_upgrades"
                             },
                             "x": -373,
-                            "y": -40,
-                            "visible": false
+                            "y": -40
                         },
                         {
                             "type": "Image",
@@ -662,15 +661,14 @@
                                 "Button",
                                 "ShowHint"
                             ],
-                            "Button.callback": "() => this.goToRoomWithArrow(room, arrows)",
+                            "Button.callback": "() => this.goToRoomWithArrow(800, {\"x\":1435, \"y\":800})",
                             "ShowHint.text": "Game Upgrades",
                             "texture": {
                                 "key": "map",
                                 "frame": "shops/hydro_upgrades"
                             },
                             "x": -425,
-                            "y": 250,
-                            "visible": false
+                            "y": 250
                         },
                         {
                             "type": "Image",
@@ -732,15 +730,14 @@
                                 "Button",
                                 "ShowHint"
                             ],
-                            "Button.callback": "() => this.goToRoomWithArrow(room, arrows)",
+                            "Button.callback": "() => this.goToRoomWithArrow(230, {\"x\":1435, \"y\":800})",
                             "ShowHint.text": "Game Upgrades",
                             "texture": {
                                 "key": "map",
                                 "frame": "shops/sled_upgrades"
                             },
                             "x": -427,
-                            "y": -175,
-                            "visible": false
+                            "y": -175
                         },
                         {
                             "type": "Image",
@@ -768,15 +765,14 @@
                                 "Button",
                                 "ShowHint"
                             ],
-                            "Button.callback": "() => this.goToRoomWithArrow(room, arrows)",
+                            "Button.callback": "() => this.goToRoomWithArrow(810, {\"x\":1435, \"y\":800})",
                             "ShowHint.text": "Game Upgrades",
                             "texture": {
                                 "key": "map",
                                 "frame": "shops/waves_upgrades"
                             },
                             "x": 598,
-                            "y": 151,
-                            "visible": false
+                            "y": 151
                         }
                     ]
                 },

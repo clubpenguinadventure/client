@@ -132,8 +132,8 @@ export default class Lodge extends RoomScene {
         zone.fillColor = 65280;
 
         // catalog
-        const catalog = this.add.image(1439, 1009.7904756520305, "lodge", "catalog");
-        catalog.setOrigin(0.504, 1.596172669645145);
+        const catalog = this.add.image(1430, 1047.9135037180536, "lodge", "catalog");
+        catalog.setOrigin(0.5, 2.0225561095145195);
 
         // lists
         const sort = [door, table206, footrest, chair, table207, table205, catalog];

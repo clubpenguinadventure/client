@@ -255,10 +255,10 @@
                 "key": "dock",
                 "frame": "catalog"
             },
-            "x": 64,
-            "y": 49,
-            "originX": 0,
-            "originY": 0
+            "x": 1430,
+            "y": 1024.6652629297864,
+            "originX": 0.9583124710087153,
+            "originY": 1.0944159962553928
         }
     ],
     "plainObjects": [],

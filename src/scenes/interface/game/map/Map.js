@@ -7,7 +7,7 @@ import IglooMap from './igloo_map/IglooMap'
 
 export const preload = {
     key: 'map-pack',
-    url: `assets/media/interface/game/map/@${localStorage.getItem('scale')}x/map-pack.json`,
+    url: `assets/media/interface/game/map/map-pack.json`,
     loadString: ['loading', 'map'],
     unload: false
 }
@@ -203,12 +203,10 @@ export default class Map extends BaseContainer {
 
         // shops_fishing_upgrades
         const shops_fishing_upgrades = scene.add.image(-373, -40, "map", "shops/fishing_upgrades");
-        shops_fishing_upgrades.visible = false;
         shops.add(shops_fishing_upgrades);
 
         // shops_hydro_upgrades
         const shops_hydro_upgrades = scene.add.image(-425, 250, "map", "shops/hydro_upgrades");
-        shops_hydro_upgrades.visible = false;
         shops.add(shops_hydro_upgrades);
 
         // shops_music_catalogs
@@ -226,7 +224,6 @@ export default class Map extends BaseContainer {
 
         // shops_sled_upgrades
         const shops_sled_upgrades = scene.add.image(-427, -175, "map", "shops/sled_upgrades");
-        shops_sled_upgrades.visible = false;
         shops.add(shops_sled_upgrades);
 
         // shops_snowandsports
@@ -236,7 +233,6 @@ export default class Map extends BaseContainer {
 
         // shops_waves_upgrades
         const shops_waves_upgrades = scene.add.image(598, 151, "map", "shops/waves_upgrades");
-        shops_waves_upgrades.visible = false;
         shops.add(shops_waves_upgrades);
 
         // games
@@ -568,13 +564,13 @@ export default class Map extends BaseContainer {
 
         // shops_fishing_upgrades (components)
         const shops_fishing_upgradesButton = new Button(shops_fishing_upgrades);
-        shops_fishing_upgradesButton.callback = () => this.goToRoomWithArrow(room, arrows);
+        shops_fishing_upgradesButton.callback = () => this.goToRoomWithArrow(220, {"x":1435, "y":800});
         const shops_fishing_upgradesShowHint = new ShowHint(shops_fishing_upgrades);
         shops_fishing_upgradesShowHint.text = "Game Upgrades";
 
         // shops_hydro_upgrades (components)
         const shops_hydro_upgradesButton = new Button(shops_hydro_upgrades);
-        shops_hydro_upgradesButton.callback = () => this.goToRoomWithArrow(room, arrows);
+        shops_hydro_upgradesButton.callback = () => this.goToRoomWithArrow(800, {"x":1435, "y":800});
         const shops_hydro_upgradesShowHint = new ShowHint(shops_hydro_upgrades);
         shops_hydro_upgradesShowHint.text = "Game Upgrades";
 
@@ -598,7 +594,7 @@ export default class Map extends BaseContainer {
 
         // shops_sled_upgrades (components)
         const shops_sled_upgradesButton = new Button(shops_sled_upgrades);
-        shops_sled_upgradesButton.callback = () => this.goToRoomWithArrow(room, arrows);
+        shops_sled_upgradesButton.callback = () => this.goToRoomWithArrow(230, {"x":1435, "y":800});
         const shops_sled_upgradesShowHint = new ShowHint(shops_sled_upgrades);
         shops_sled_upgradesShowHint.text = "Game Upgrades";
 
@@ -610,7 +606,7 @@ export default class Map extends BaseContainer {
 
         // shops_waves_upgrades (components)
         const shops_waves_upgradesButton = new Button(shops_waves_upgrades);
-        shops_waves_upgradesButton.callback = () => this.goToRoomWithArrow(room, arrows);
+        shops_waves_upgradesButton.callback = () => this.goToRoomWithArrow(810, {"x":1435, "y":800});
         const shops_waves_upgradesShowHint = new ShowHint(shops_waves_upgrades);
         shops_waves_upgradesShowHint.text = "Game Upgrades";
 
@@ -807,7 +803,7 @@ export default class Map extends BaseContainer {
         }
     }
 
-    
+
 
     /* END-USER-CODE */
 }

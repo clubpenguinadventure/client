@@ -169,8 +169,8 @@ export default class Cove extends RoomScene {
         hut_stool.setOrigin(0.5, 0.5185185185185185);
 
         // catalog
-        const catalog = this.add.image(1438, 979, "cove", "catalog");
-        catalog.setOrigin(0.48646301433008193, 1.3631395382056397);
+        const catalog = this.add.image(1430, 1014.740276486354, "cove", "catalog");
+        catalog.setOrigin(0.5, 1.7012988563551295);
 
         // lists
         const sort = [water_water_15, water_water_1, water_water_2, water_water_3, water_water_4, water_water_5, water_water_6, water_water_7, water_water_8, water_water_9, water_water_10, water_water_11, water_water_12, water_water_13, water_water_14, hut_wall, rock_1, fire, chair_arm, binoculars, silver_board, rock_3, rock_2, rock_4, fg, container_1, catalog];

@@ -106,8 +106,8 @@ export default class Dock extends RoomScene {
         catalog_small.setOrigin(0.9149934848123014, 1.0336495706463993);
 
         // catalog
-        const catalog = this.add.image(64, 49, "dock", "catalog");
-        catalog.setOrigin(0, 0);
+        const catalog = this.add.image(1430, 1024.6652629297864, "dock", "catalog");
+        catalog.setOrigin(0.9583124710087153, 1.0944159962553928);
 
         // lists
         const sort = [post_3, post_4, post_1, post_2, rings, bollard_2, bollard_1, dock, box, boards, catalog_small];
