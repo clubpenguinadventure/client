@@ -61,6 +61,12 @@ export default class Zone extends SimpleButton {
         zone.on('pointerup', (pointer) => this.onUp(pointer))
 
         this.gameObject.zone = zone
+
+        const setSize = this.gameObject.setSize.bind(this.gameObject)
+        this.gameObject.setSize = (width, height) => {
+            setSize(width, height)
+            zone.setSize(width, height)
+        }
     }
 
     /* END-USER-CODE */

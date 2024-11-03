@@ -177,6 +177,7 @@ export default class InputText extends EventComponent {
     /**
      * The global y position of the input field in the whole game.
      * Probably a way to get this from the game engine but I couldn't find one?
+     * getWorldTransformMatrix might work
      * @returns {number}
      */
     get trueY() {

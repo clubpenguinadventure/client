@@ -1,0 +1,757 @@
+{
+    "id": "da37d782-5781-4d2e-8b1f-0ada0c5292d4",
+    "sceneType": "PREFAB",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "BaseContainer",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "ecb0d09e-ea62-4155-8262-4c26669929b8",
+            "label": "container_1",
+            "x": 760,
+            "y": 480,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "f91cb3d0-5b68-49de-8857-2a2858665f53",
+                    "label": "edit_btn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.editStampbook()",
+                    "texture": {
+                        "key": "stampbook",
+                        "frame": "edit-btn"
+                    },
+                    "x": 701,
+                    "y": 419
+                },
+                {
+                    "type": "Image",
+                    "id": "71474c8d-67a2-43fc-8a7b-d039f15f1156",
+                    "label": "editor_bg",
+                    "scope": "CLASS",
+                    "components": [
+                        "Interactive"
+                    ],
+                    "texture": {
+                        "key": "stampbook",
+                        "frame": "editor-bg"
+                    },
+                    "x": 0.015380859375,
+                    "y": -0.0111083984375,
+                    "visible": false
+                },
+                {
+                    "type": "Container",
+                    "id": "65958c50-39b7-4735-8271-c06a8b64d95f",
+                    "label": "front_cover",
+                    "x": 15,
+                    "y": 10,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "6a8b305c-d4c5-40cc-9043-40f09a90f5c3",
+                            "label": "front_cover_background",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "stampbook-assets",
+                                "frame": "color_patterns/1_1"
+                            }
+                        },
+                        {
+                            "type": "Image",
+                            "id": "8c2a7921-1c99-4094-a98d-fb77345a9b25",
+                            "label": "front_cover_clasp",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "stampbook-assets",
+                                "frame": "highlight/1"
+                            },
+                            "x": 581,
+                            "y": 21
+                        },
+                        {
+                            "type": "Image",
+                            "id": "9c9778ba-5fa6-4304-ac5d-3dfd983d951f",
+                            "label": "front_cover_icon",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "stampbook-assets",
+                                "frame": "clasp/1"
+                            },
+                            "x": 561,
+                            "y": 13,
+                            "originY": 0.5039370078740157
+                        },
+                        {
+                            "type": "Image",
+                            "id": "884636b0-5a80-4ae2-b693-46d3cbc6d664",
+                            "label": "closebtn",
+                            "components": [
+                                "Button"
+                            ],
+                            "Button.callback": "() => this.close()",
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "closebtn"
+                            },
+                            "x": 576,
+                            "y": -317
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "e0c1c218-fe54-44f5-aa02-0632e8d0d0c7",
+                    "label": "editor",
+                    "scope": "CLASS",
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "89782bcf-073e-4dab-b4d2-a7b3bd63edee",
+                            "label": "coverlist",
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "coverlist"
+                            },
+                            "x": 50,
+                            "y": -439,
+                            "originX": 0.5003933910306845
+                        },
+                        {
+                            "type": "Image",
+                            "id": "300f1b9a-aef9-4747-b9c6-d7c2bb437380",
+                            "label": "remove_hint",
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "remove-hint"
+                            },
+                            "x": 81,
+                            "y": -421,
+                            "originX": 0.5003679175864606,
+                            "originY": 0.5042735042735043,
+                            "visible": false
+                        },
+                        {
+                            "type": "Container",
+                            "id": "8964e3d0-6f63-4e41-98eb-b090fd8530a1",
+                            "label": "leftbar",
+                            "scope": "CLASS",
+                            "x": -695,
+                            "y": -280,
+                            "list": [
+                                {
+                                    "type": "Image",
+                                    "id": "ea937034-ba96-4214-9800-94f8d8271ab4",
+                                    "label": "leftbar_img",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "leftbar"
+                                    },
+                                    "y": 84,
+                                    "originY": 0.5007407407407407
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "62821ffa-8619-42f0-8d26-81871ff9c29b",
+                                    "label": "editor_selectors_icon",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "y": 352,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "a0a3a14f-cffd-417e-924e-710d7f2f7c7d",
+                                    "label": "editor_selectors_pattern",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "y": 234,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "58d559cb-49fa-4ca2-9923-d9fda79c9835",
+                                    "label": "editor_selectors_highlight",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "y": 116,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "114ef2ec-5dff-4d40-ac4d-c55291abb4f8",
+                                    "label": "editor_selectors_color",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "prefabId": "2dabc377-4f2e-4fcb-9bec-1444078eaa6a",
+                                    "id": "3cf1600a-e995-4985-83fb-7e1c341034ee",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "icon",
+                                    "x": 21,
+                                    "y": 352
+                                },
+                                {
+                                    "prefabId": "95820f69-e7f6-4621-8b59-0dada96ea5db",
+                                    "id": "7bc6cd76-2e20-4b99-8597-5c849ca687ea",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "pattern",
+                                    "x": 21,
+                                    "y": 233
+                                },
+                                {
+                                    "prefabId": "b3848616-2240-46ac-9aca-4c0b3dc598f9",
+                                    "id": "3159d1a5-6940-4528-9066-c818d2bbcae0",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "highlight",
+                                    "x": 21,
+                                    "y": 116
+                                },
+                                {
+                                    "prefabId": "a1798d3c-b603-46a1-94da-1110b6f06b3a",
+                                    "id": "51a88e53-bb01-40a5-86ca-4a2e7c90800a",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "color",
+                                    "x": 21,
+                                    "y": -1
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "13fb1f44-620a-4daa-8c93-405c817c40c1",
+                                    "label": "blue_stampcat_bg",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "blue-stampcat-bg"
+                                    },
+                                    "x": -1,
+                                    "y": -163,
+                                    "originX": 0.5022222222222222
+                                },
+                                {
+                                    "type": "Triangle",
+                                    "id": "56900fa9-d9fe-48b0-b1ba-0accff570383",
+                                    "label": "stampcat_arrow",
+                                    "x": 96,
+                                    "y": -144.5,
+                                    "isFilled": true,
+                                    "fillColor": "#262626",
+                                    "y1": 0,
+                                    "x2": 10,
+                                    "y2": 7.5,
+                                    "x3": 0,
+                                    "y3": 15
+                                },
+                                {
+                                    "prefabId": "4c9c204f-e25d-4632-8413-df4e0c0f105f",
+                                    "id": "2c9ff5a5-2f65-4880-88ca-43a8f6bdd83d",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "visible",
+                                        "selectorType"
+                                    ],
+                                    "label": "icon_selector",
+                                    "scope": "CLASS",
+                                    "selectorType": "Icons",
+                                    "x": 256,
+                                    "y": 352,
+                                    "visible": false
+                                },
+                                {
+                                    "prefabId": "4c9c204f-e25d-4632-8413-df4e0c0f105f",
+                                    "id": "f1277879-6232-405b-9e9f-656eb178b211",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "visible",
+                                        "selectorType"
+                                    ],
+                                    "label": "pattern_selector",
+                                    "scope": "CLASS",
+                                    "selectorType": "Patterns",
+                                    "x": 256,
+                                    "y": 233,
+                                    "visible": false
+                                },
+                                {
+                                    "prefabId": "4c9c204f-e25d-4632-8413-df4e0c0f105f",
+                                    "id": "a0f66ccf-98e8-4746-b22e-3238a059e76d",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "visible",
+                                        "selectorType"
+                                    ],
+                                    "label": "highlight_selector",
+                                    "scope": "CLASS",
+                                    "selectorType": "Highlights",
+                                    "x": 256,
+                                    "y": 116,
+                                    "visible": false
+                                },
+                                {
+                                    "prefabId": "4c9c204f-e25d-4632-8413-df4e0c0f105f",
+                                    "id": "5c0c7ea7-4715-4bda-ba1f-d83ebbe6ed5b",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "visible"
+                                    ],
+                                    "label": "colors_selector",
+                                    "scope": "CLASS",
+                                    "x": 256,
+                                    "y": -1,
+                                    "visible": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "id": "a97e12b5-5493-4a96-a451-397f15fbefe3",
+                            "label": "save_btn",
+                            "components": [
+                                "Button"
+                            ],
+                            "Button.callback": "() => this.saveStampbook()",
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "save-btn"
+                            },
+                            "x": 699,
+                            "y": 420,
+                            "originX": 0.5070422535211268
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "a3add8d0-34cf-4082-a3a6-ca22bedc4d86",
+                    "label": "book",
+                    "x": -672,
+                    "y": -377,
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "1c86c52e-4e07-44e1-8660-17f77121c320",
+                            "label": "stampbook_page_background",
+                            "scope": "CLASS",
+                            "texture": {},
+                            "x": 672,
+                            "y": 377
+                        },
+                        {
+                            "type": "Image",
+                            "id": "8ac8b2fe-f17e-492d-a484-991db84e904f",
+                            "label": "stampbook_bg",
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "stampbook-bg"
+                            },
+                            "x": 672,
+                            "y": 377
+                        },
+                        {
+                            "type": "Container",
+                            "id": "2d21e5d9-75b0-41bc-97ed-e79a8de7b974",
+                            "label": "insidepage_bg_cntr",
+                            "scope": "CLASS",
+                            "x": 672,
+                            "y": 377
+                        },
+                        {
+                            "type": "Image",
+                            "id": "e5af675e-f518-4e97-9128-9d2452e0b456",
+                            "label": "pageturn_right",
+                            "components": [
+                                "Button"
+                            ],
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "pageturn-right"
+                            },
+                            "x": 1284,
+                            "y": 657,
+                            "originY": 0.502283105022831
+                        },
+                        {
+                            "type": "Image",
+                            "id": "57ba9917-5001-4b79-80b6-c96e2be6e540",
+                            "label": "pageturn_left",
+                            "components": [
+                                "Button"
+                            ],
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "pageturn-left"
+                            },
+                            "y": 681
+                        },
+                        {
+                            "type": "Image",
+                            "id": "40e6a45d-652b-4c07-83e7-7100b10e88e0",
+                            "label": "stampbook_closebtn",
+                            "components": [
+                                "Button"
+                            ],
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "stampbook-closebtn"
+                            },
+                            "x": 1295,
+                            "y": 52,
+                            "originY": 0.5023255813953489
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f096ae82-ebd1-4293-bdfb-2906034c8d13",
+                            "label": "header_txt",
+                            "x": 111,
+                            "y": 31,
+                            "originY": 0.5,
+                            "text": "Contents",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "64px",
+                            "fontStyle": "bold",
+                            "color": "#666666"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3e53745f-743f-4911-909c-ceef59250dc6",
+                            "label": "totalstamps_txt",
+                            "x": 1064,
+                            "originX": 1,
+                            "originY": 0.5,
+                            "text": "Total Stamps:",
+                            "align": "right",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "36px",
+                            "color": "#666666"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4bb03bca-2501-4801-b7d3-e083857ad592",
+                            "label": "totalstamps_num",
+                            "x": 1064,
+                            "y": 42,
+                            "originX": 1,
+                            "originY": 0.5,
+                            "text": "888/888",
+                            "align": "right",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "36px",
+                            "fontStyle": "bold",
+                            "color": "#666666"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0acc7e04-2d2e-49b6-a493-893118e6ddf6",
+                            "label": "page_num",
+                            "x": 1112,
+                            "y": 20,
+                            "originY": 0.5,
+                            "text": "Page\n99 of 99",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "28px",
+                            "color": "#666666"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "4419fd06-e7d5-4eab-a89e-0ff4a677681d",
+                            "label": "guide",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "stampbook",
+                                "frame": "guide"
+                            },
+                            "x": 1106,
+                            "y": 330,
+                            "visible": false
+                        },
+                        {
+                            "type": "Container",
+                            "id": "2f574cdf-3c5b-4f35-aff1-84d1c71b2482",
+                            "label": "polaroids_cntr",
+                            "scope": "CLASS",
+                            "x": 885,
+                            "y": 114,
+                            "list": [
+                                {
+                                    "type": "Image",
+                                    "id": "242e02b0-ee43-4731-99ba-f852d10c6377",
+                                    "label": "polaroid_bg",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "polaroid-bg"
+                                    },
+                                    "x": 160,
+                                    "y": 307,
+                                    "originY": 0.5008025682182986
+                                },
+                                {
+                                    "type": "Text",
+                                    "id": "40d90179-0d32-4dc4-95e9-86e86d2e5d77",
+                                    "label": "polaroid_3_stampcount",
+                                    "scope": "CLASS",
+                                    "x": 246,
+                                    "y": 467,
+                                    "angle": 10,
+                                    "originX": 1,
+                                    "originY": 0.5,
+                                    "text": "88",
+                                    "align": "right",
+                                    "fontFamily": "Burbank Small",
+                                    "fontSize": "28px",
+                                    "color": "#666666"
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "7fe11b72-ba2c-4710-97dd-45feea863623",
+                                    "label": "polaroid_3_stamp",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "polaroid-3-stamp"
+                                    },
+                                    "x": 262,
+                                    "y": 470,
+                                    "originY": 0.5161290322580645
+                                },
+                                {
+                                    "type": "Text",
+                                    "id": "948eaae9-04f8-4271-947c-3174be34de75",
+                                    "label": "polaroid_2_stampcount",
+                                    "scope": "CLASS",
+                                    "x": 78,
+                                    "y": 268,
+                                    "angle": -20,
+                                    "originX": 1,
+                                    "originY": 0.5,
+                                    "text": "88",
+                                    "align": "right",
+                                    "fontFamily": "Burbank Small",
+                                    "fontSize": "28px",
+                                    "color": "#666666"
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "6ba53fc3-2b20-48e5-bb30-d42ec6397aed",
+                                    "label": "polaroid_2_stamp",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "polaroid-2-stamp"
+                                    },
+                                    "x": 98,
+                                    "y": 262,
+                                    "originX": 0.5151515151515151,
+                                    "originY": 0.5151515151515151
+                                },
+                                {
+                                    "type": "Text",
+                                    "id": "97dec94c-b341-49c5-880d-c59a9c7b22e0",
+                                    "label": "polaroid_1_stampcount",
+                                    "scope": "CLASS",
+                                    "x": 256,
+                                    "y": 93,
+                                    "angle": 10,
+                                    "originX": 1,
+                                    "originY": 0.5,
+                                    "text": "88",
+                                    "align": "right",
+                                    "fontFamily": "Burbank Small",
+                                    "fontSize": "28px",
+                                    "color": "#666666"
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "f518f933-be00-4533-b240-23ce367fb216",
+                                    "label": "polaroid_1_stamp",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "polaroid-1-stamp"
+                                    },
+                                    "x": 274,
+                                    "y": 97,
+                                    "originY": 0.5161290322580645
+                                },
+                                {
+                                    "type": "Container",
+                                    "id": "3f8128f2-1ca1-4d0a-b165-a6d010aa0287",
+                                    "label": "polaroid_3_cntr",
+                                    "x": 228,
+                                    "y": 366,
+                                    "visible": false,
+                                    "list": [
+                                        {
+                                            "prefabId": "d5b93dc9-f29c-45d3-bd74-c7a5f3716588",
+                                            "id": "63f05aa0-6ff6-45d4-a51f-2bd8254a5f57",
+                                            "unlock": [
+                                                "x",
+                                                "y"
+                                            ],
+                                            "label": "polaroid_3_sprite",
+                                            "scope": "CLASS",
+                                            "x": 4,
+                                            "y": 97
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "id": "8258956a-c35e-4e95-a687-10ecd6a94ea8",
+                                            "label": "polaroid_3",
+                                            "texture": {
+                                                "key": "stampbook",
+                                                "frame": "polaroid-3"
+                                            },
+                                            "y": 113
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "id": "e24a0495-f5a8-48ad-841f-f92b3736c649",
+                                            "label": "polaroid_3_tape",
+                                            "texture": {
+                                                "key": "stampbook",
+                                                "frame": "polaroid-3-tape"
+                                            },
+                                            "x": 39,
+                                            "y": 3,
+                                            "originY": 0.5161290322580645
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Container",
+                                    "id": "e83958bb-932c-4915-815a-628f68a48144",
+                                    "label": "polaroid_2_cntr",
+                                    "y": 192,
+                                    "visible": false,
+                                    "list": [
+                                        {
+                                            "prefabId": "d5b93dc9-f29c-45d3-bd74-c7a5f3716588",
+                                            "id": "0cdf5a8b-14aa-4811-8a6b-a42fbef31cc1",
+                                            "unlock": [
+                                                "x",
+                                                "y"
+                                            ],
+                                            "label": "polaroid_2_sprite",
+                                            "scope": "CLASS",
+                                            "x": 62,
+                                            "y": 80
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "id": "f2833f4d-7cff-402f-82e2-21d883e1e90e",
+                                            "label": "polaroid_2",
+                                            "texture": {
+                                                "key": "stampbook",
+                                                "frame": "polaroid-2"
+                                            },
+                                            "x": 67,
+                                            "y": 94
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "id": "9dd1c37f-a6a2-44b5-990e-cb65b36c310d",
+                                            "label": "polaroid_2_tape",
+                                            "texture": {
+                                                "key": "stampbook",
+                                                "frame": "polaroid-2-tape"
+                                            },
+                                            "x": -1,
+                                            "y": 1,
+                                            "originX": 0.5074626865671642
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Container",
+                                    "id": "464922d5-ca37-4dd9-9a73-29f39da0a026",
+                                    "label": "polaroid_1_cntr",
+                                    "x": 241,
+                                    "visible": false,
+                                    "list": [
+                                        {
+                                            "prefabId": "d5b93dc9-f29c-45d3-bd74-c7a5f3716588",
+                                            "id": "a533e6ad-024b-435b-bb1c-e218aa5338cc",
+                                            "unlock": [
+                                                "x",
+                                                "y"
+                                            ],
+                                            "label": "polaroid_1_sprite",
+                                            "scope": "CLASS",
+                                            "x": 3,
+                                            "y": 93
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "id": "062a9318-6f6e-4f35-b3ce-c95548b2cbe1",
+                                            "label": "polaroid_1",
+                                            "texture": {
+                                                "key": "stampbook",
+                                                "frame": "polaroid-1"
+                                            },
+                                            "y": 107
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "id": "455d3f37-956f-4dda-9cda-db897141381c",
+                                            "label": "polaroid_1_tape",
+                                            "texture": {
+                                                "key": "stampbook",
+                                                "frame": "polaroid-1-tape"
+                                            },
+                                            "x": 30
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

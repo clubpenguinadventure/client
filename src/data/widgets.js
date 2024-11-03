@@ -11,6 +11,8 @@ const widgets = {
     'LodgeGameUpgrades': require('@scenes/interface/catalogs/game_upgrades/LodgeGameUpgrades'),
     'MtnGameUpgrades': require('@scenes/interface/catalogs/game_upgrades/MtnGameUpgrades'),
 
+    'Stampbook': require('@scenes/interface/game/stampbook/Stampbook'),
+
     'AgentQuiz': require('@scenes/interface/quiz/agent/AgentQuiz'),
     'ClockTower': require('@scenes/interface/game/clock_tower/ClockTower'),
     'FindFour': require('@scenes/games/four/FindFour'),
