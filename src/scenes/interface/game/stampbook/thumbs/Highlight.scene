@@ -49,6 +49,7 @@
                     ],
                     "Zone.hoverCallback": "() => this.parentContainer.onZoneOver(this.id, \"highlight\")",
                     "Zone.hoverOutCallback": "() => this.parentContainer.onZoneOut(this.id, \"highlight\")",
+                    "Zone.callback": "() => { if (!this.rootModule) this.interface.stampbook.updateHighlight(this.id) };",
                     "isFilled": true,
                     "fillColor": "#12d7ee",
                     "fillAlpha": 0.3,
@@ -64,5 +65,17 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "prefabProperties": [
+        {
+            "name": "rootModule",
+            "label": "Root Module",
+            "tooltip": "",
+            "defValue": false,
+            "customDefinition": false,
+            "type": {
+                "id": "boolean"
+            }
+        }
+    ]
 }

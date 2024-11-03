@@ -8,13 +8,13 @@ export const preload = {
 /* START OF COMPILED CODE */
 
 import BaseContainer from "../../../base/BaseContainer";
-import Button from "../../../components/Button";
 import Interactive from "../../../components/Interactive";
+import Button from "../../../components/Button";
+import Selectors from "./Selectors";
 import Icon from "./thumbs/Icon";
 import Pattern from "./thumbs/Pattern";
 import Highlight from "./thumbs/Highlight";
 import Color from "./thumbs/Color";
-import Selectors from "./Selectors";
 import Polaroid from "./Polaroid";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
@@ -23,6 +23,13 @@ export default class Stampbook extends BaseContainer {
 
     constructor(scene, x, y) {
         super(scene, x ?? 760, y ?? 480);
+
+        // editor_bg_1
+        const editor_bg_1 = scene.add.rectangle(0, 0, 1520, 960);
+        editor_bg_1.isFilled = true;
+        editor_bg_1.fillColor = 0;
+        editor_bg_1.fillAlpha = 0.2;
+        this.add(editor_bg_1);
 
         // edit_btn
         const edit_btn = scene.add.image(701, 419, "stampbook", "edit-btn");
@@ -79,42 +86,6 @@ export default class Stampbook extends BaseContainer {
         leftbar_img.setOrigin(0.5, 0.5007407407407407);
         leftbar.add(leftbar_img);
 
-        // editor_selectors_icon
-        const editor_selectors_icon = scene.add.image(20, 352, "stampbook", "editor-selectors");
-        editor_selectors_icon.setOrigin(0.5038759689922481, 0.5);
-        leftbar.add(editor_selectors_icon);
-
-        // editor_selectors_pattern
-        const editor_selectors_pattern = scene.add.image(20, 234, "stampbook", "editor-selectors");
-        editor_selectors_pattern.setOrigin(0.5038759689922481, 0.5);
-        leftbar.add(editor_selectors_pattern);
-
-        // editor_selectors_highlight
-        const editor_selectors_highlight = scene.add.image(20, 116, "stampbook", "editor-selectors");
-        editor_selectors_highlight.setOrigin(0.5038759689922481, 0.5);
-        leftbar.add(editor_selectors_highlight);
-
-        // editor_selectors_color
-        const editor_selectors_color = scene.add.image(20, 0, "stampbook", "editor-selectors");
-        editor_selectors_color.setOrigin(0.5038759689922481, 0.5);
-        leftbar.add(editor_selectors_color);
-
-        // icon
-        const icon = new Icon(scene, 21, 352);
-        leftbar.add(icon);
-
-        // pattern
-        const pattern = new Pattern(scene, 21, 233);
-        leftbar.add(pattern);
-
-        // highlight
-        const highlight = new Highlight(scene, 21, 116);
-        leftbar.add(highlight);
-
-        // color
-        const color = new Color(scene, 21, -1);
-        leftbar.add(color);
-
         // blue_stampcat_bg
         const blue_stampcat_bg = scene.add.image(-1, -163, "stampbook", "blue-stampcat-bg");
         blue_stampcat_bg.setOrigin(0.5022222222222222, 0.5);
@@ -127,24 +98,60 @@ export default class Stampbook extends BaseContainer {
         leftbar.add(stampcat_arrow);
 
         // icon_selector
-        const icon_selector = new Selectors(scene, 256, 352);
+        const icon_selector = new Selectors(scene, 256, 345);
         icon_selector.visible = false;
         leftbar.add(icon_selector);
 
         // pattern_selector
-        const pattern_selector = new Selectors(scene, 256, 233);
+        const pattern_selector = new Selectors(scene, 256, 230);
         pattern_selector.visible = false;
         leftbar.add(pattern_selector);
 
         // highlight_selector
-        const highlight_selector = new Selectors(scene, 256, 116);
+        const highlight_selector = new Selectors(scene, 256, 115);
         highlight_selector.visible = false;
         leftbar.add(highlight_selector);
 
         // colors_selector
-        const colors_selector = new Selectors(scene, 256, -1);
+        const colors_selector = new Selectors(scene, 256, 0);
         colors_selector.visible = false;
         leftbar.add(colors_selector);
+
+        // editor_selectors_icon
+        const editor_selectors_icon = scene.add.image(20, 345, "stampbook", "editor-selectors");
+        editor_selectors_icon.setOrigin(0.5038759689922481, 0.5);
+        leftbar.add(editor_selectors_icon);
+
+        // editor_selectors_pattern
+        const editor_selectors_pattern = scene.add.image(20, 230, "stampbook", "editor-selectors");
+        editor_selectors_pattern.setOrigin(0.5038759689922481, 0.5);
+        leftbar.add(editor_selectors_pattern);
+
+        // editor_selectors_highlight
+        const editor_selectors_highlight = scene.add.image(20, 115, "stampbook", "editor-selectors");
+        editor_selectors_highlight.setOrigin(0.5038759689922481, 0.5);
+        leftbar.add(editor_selectors_highlight);
+
+        // editor_selectors_color
+        const editor_selectors_color = scene.add.image(20, 0, "stampbook", "editor-selectors");
+        editor_selectors_color.setOrigin(0.5038759689922481, 0.5);
+        leftbar.add(editor_selectors_color);
+
+        // icon_prefab
+        const icon_prefab = new Icon(scene, 21, 345);
+        leftbar.add(icon_prefab);
+
+        // pattern_prefab
+        const pattern_prefab = new Pattern(scene, 21, 230);
+        leftbar.add(pattern_prefab);
+
+        // highlight_prefab
+        const highlight_prefab = new Highlight(scene, 21, 115);
+        leftbar.add(highlight_prefab);
+
+        // color_prefab
+        const color_prefab = new Color(scene, 21, 0);
+        leftbar.add(color_prefab);
 
         // save_btn
         const save_btn = scene.add.image(699, 420, "stampbook", "save-btn");
@@ -316,6 +323,9 @@ export default class Stampbook extends BaseContainer {
         const polaroid_1_tape = scene.add.image(30, 0, "stampbook", "polaroid-1-tape");
         polaroid_1_cntr.add(polaroid_1_tape);
 
+        // editor_bg_1 (components)
+        new Interactive(editor_bg_1);
+
         // edit_btn (components)
         const edit_btnButton = new Button(edit_btn);
         edit_btnButton.callback = () => this.editStampbook();
@@ -336,6 +346,18 @@ export default class Stampbook extends BaseContainer {
         // highlight_selector (prefab fields)
         highlight_selector.selectorType = "Highlights";
 
+        // icon_prefab (prefab fields)
+        icon_prefab.rootModule = true;
+
+        // pattern_prefab (prefab fields)
+        pattern_prefab.rootModule = true;
+
+        // highlight_prefab (prefab fields)
+        highlight_prefab.rootModule = true;
+
+        // color_prefab (prefab fields)
+        color_prefab.rootModule = true;
+
         // save_btn (components)
         const save_btnButton = new Button(save_btn);
         save_btnButton.callback = () => this.saveStampbook();
@@ -349,6 +371,7 @@ export default class Stampbook extends BaseContainer {
         // stampbook_closebtn (components)
         new Button(stampbook_closebtn);
 
+        this.editor_bg_1 = editor_bg_1;
         this.editor_bg = editor_bg;
         this.front_cover_background = front_cover_background;
         this.front_cover_clasp = front_cover_clasp;
@@ -357,6 +380,10 @@ export default class Stampbook extends BaseContainer {
         this.pattern_selector = pattern_selector;
         this.highlight_selector = highlight_selector;
         this.colors_selector = colors_selector;
+        this.icon_prefab = icon_prefab;
+        this.pattern_prefab = pattern_prefab;
+        this.highlight_prefab = highlight_prefab;
+        this.color_prefab = color_prefab;
         this.leftbar = leftbar;
         this.editor = editor;
         this.stampbook_page_background = stampbook_page_background;
@@ -371,10 +398,10 @@ export default class Stampbook extends BaseContainer {
         this.polaroids_cntr = polaroids_cntr;
 
         /* START-USER-CTR-CODE */
-        this.world.stampbook = this;
+        this.interface.stampbook = this;
         this.playerdata = {
             "color": 1,
-            "pattern": 1,
+            "pattern": 0,
             "highlight": 1,
             "clasp": 1,
         }
@@ -427,9 +454,16 @@ export default class Stampbook extends BaseContainer {
             selector.unpreventClose(this);
         }
 
+        this.updateColor(this.playerdata.color);
+        this.updatePattern(this.playerdata.pattern);
+        this.updateHighlight(this.playerdata.highlight);
+        this.updateIcon(this.playerdata.clasp);
+
         /* END-USER-CTR-CODE */
     }
 
+    /** @type {Phaser.GameObjects.Rectangle} */
+    editor_bg_1;
     /** @type {Phaser.GameObjects.Image} */
     editor_bg;
     /** @type {Phaser.GameObjects.Image} */
@@ -446,6 +480,14 @@ export default class Stampbook extends BaseContainer {
     highlight_selector;
     /** @type {Selectors} */
     colors_selector;
+    /** @type {Icon} */
+    icon_prefab;
+    /** @type {Pattern} */
+    pattern_prefab;
+    /** @type {Highlight} */
+    highlight_prefab;
+    /** @type {Color} */
+    color_prefab;
     /** @type {Phaser.GameObjects.Container} */
     leftbar;
     /** @type {Phaser.GameObjects.Container} */
@@ -483,8 +525,44 @@ export default class Stampbook extends BaseContainer {
         this.editor.visible = false;
     }
 
-    close(){
+    close() {
+        for (let event of ["Color", "Pattern", "Highlight", "Icon"]) {
+            this.interface.events.off(`updateStampbook${event}`);
+        }
         this.interface.destroyWidget(this)
+    }
+
+    updateColor(id) {
+        if (id == this.color_prefab.id) return;
+        this.playerdata.color = id;
+        this.front_cover_background.setTexture(`stampbook-assets`, `color_patterns/${id}_${this.playerdata.pattern}`);
+        this.interface.events.emit("updateStampbookColor", id);
+        this.color_prefab.setId(id);
+        if (!this.crumbs.cover.color_highlight[id].includes(this.playerdata.highlight)) this.updateHighlight(this.crumbs.cover.color_highlight[id][0]);
+    }
+
+    updatePattern(id) {
+        if (id == this.pattern_prefab.id) id = 0;
+        this.playerdata.pattern = id;
+        this.front_cover_background.setTexture(`stampbook-assets`, `color_patterns/${this.playerdata.color}_${id}`);
+        this.interface.events.emit("updateStampbookPattern", id);
+        this.pattern_prefab.setId(id);
+    }
+
+    updateHighlight(id) {
+        if (id == this.highlight_prefab.id) return
+        this.playerdata.highlight = id;
+        this.front_cover_clasp.setTexture(`stampbook-assets`, `highlight/${id}`);
+        this.interface.events.emit("updateStampbookHighlight", id);
+        this.highlight_prefab.setId(id);
+    }
+
+    updateIcon(id) {
+        if (id == this.icon_prefab.id) return;
+        this.playerdata.clasp = id;
+        this.front_cover_icon.setTexture(`stampbook-assets`, `clasp/${id}`);
+        this.interface.events.emit("updateStampbookIcon", id);
+        this.icon_prefab.setId(id);
     }
     /* END-USER-CODE */
 }

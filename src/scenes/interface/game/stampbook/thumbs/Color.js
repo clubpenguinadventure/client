@@ -28,6 +28,7 @@ export default class Color extends BaseContainer {
         const zoneZone = new Zone(zone);
         zoneZone.hoverCallback = () => this.parentContainer.onZoneOver(this.id, "color");
         zoneZone.hoverOutCallback = () => this.parentContainer.onZoneOut(this.id, "color");
+        zoneZone.callback = () => { if (!this.rootModule) this.interface.stampbook.updateColor(this.id) };;
 
         this.background = background;
 
@@ -38,6 +39,8 @@ export default class Color extends BaseContainer {
 
     /** @type {Phaser.GameObjects.Image} */
     background;
+    /** @type {boolean} */
+    rootModule = false;
 
     /* START-USER-CODE */
 

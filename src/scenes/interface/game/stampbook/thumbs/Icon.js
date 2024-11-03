@@ -29,12 +29,12 @@ export default class Icon extends BaseContainer {
         const zoneZone = new Zone(zone);
         zoneZone.hoverCallback = () => this.parentContainer.onZoneOver(this.id, "icon");
         zoneZone.hoverOutCallback = () => this.parentContainer.onZoneOut(this.id, "icon");
+        zoneZone.callback = () => { if (!this.rootModule) this.interface.stampbook.updateIcon(this.id) };;
 
         this.background = background;
         this.foreground = foreground;
 
         /* START-USER-CTR-CODE */
-        // Write your code here.
         /* END-USER-CTR-CODE */
     }
 
@@ -42,13 +42,24 @@ export default class Icon extends BaseContainer {
     background;
     /** @type {Phaser.GameObjects.Image} */
     foreground;
+    /** @type {boolean} */
+    rootModule = false;
 
     /* START-USER-CODE */
 
     setId(id) {
+        if (!this.hasListeners) {
+            this.interface.events.on("updateStampbookColor", (color) => {
+                this.background.setTexture(`stampbook-assets`, `color_thumb/${color}`);
+            });
+            this.interface.events.on("updateStampbookHighlight", (highlight) => {
+                this.foreground.setTexture(`stampbook-assets`, `clasp_thumb/${this.id}_${highlight}`);
+            });
+            this.hasListeners = true;
+        }
         this.id = id;
-        this.background.setTexture(`stampbook-assets`, `color_thumb/${this.world.stampbook.playerdata.color}`);
-        this.foreground.setTexture(`stampbook-assets`, `clasp_thumb/${id}_${this.world.stampbook.playerdata.highlight}`);
+        this.background.setTexture(`stampbook-assets`, `color_thumb/${this.interface.stampbook.playerdata.color}`);
+        this.foreground.setTexture(`stampbook-assets`, `clasp_thumb/${id}_${this.interface.stampbook.playerdata.highlight}`);
     }
 
     /* END-USER-CODE */

@@ -32,12 +32,13 @@ export default class Highlight extends BaseContainer {
         const zoneZone = new Zone(zone);
         zoneZone.hoverCallback = () => this.parentContainer.onZoneOver(this.id, "highlight");
         zoneZone.hoverOutCallback = () => this.parentContainer.onZoneOut(this.id, "highlight");
+        zoneZone.callback = () => { if (!this.rootModule) this.interface.stampbook.updateHighlight(this.id) };;
 
         this.background = background;
         this.foreground = foreground;
 
         /* START-USER-CTR-CODE */
-        // Write your code here.
+        this.hasListeners = false;
         /* END-USER-CTR-CODE */
     }
 
@@ -45,12 +46,20 @@ export default class Highlight extends BaseContainer {
     background;
     /** @type {Phaser.GameObjects.Image} */
     foreground;
+    /** @type {boolean} */
+    rootModule = false;
 
     /* START-USER-CODE */
 
     setId(id) {
+        if (!this.hasListeners) {
+            this.interface.events.on("updateStampbookColor", (color) => {
+                this.background.setTexture(`stampbook-assets`, `color_thumb/${color}`);
+            }, this);
+            this.hasListeners = true;
+        }
         this.id = id;
-        this.background.setTexture(`stampbook-assets`, `color_thumb/${this.world.stampbook.playerdata.color}`);
+        this.background.setTexture(`stampbook-assets`, `color_thumb/${this.interface.stampbook.playerdata.color}`);
         this.foreground.setTexture(`stampbook-assets`, `highlight_thumb/${id}`);
     }
 

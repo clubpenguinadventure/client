@@ -21,6 +21,20 @@
             "y": 480,
             "list": [
                 {
+                    "type": "Rectangle",
+                    "id": "d26c3ad8-52c4-40e1-8c6e-6a78d625af4d",
+                    "label": "editor_bg_1",
+                    "scope": "CLASS",
+                    "components": [
+                        "Interactive"
+                    ],
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "fillAlpha": 0.2,
+                    "width": 1520,
+                    "height": 960
+                },
+                {
                     "type": "Image",
                     "id": "f91cb3d0-5b68-49de-8857-2a2858665f53",
                     "label": "edit_btn",
@@ -164,97 +178,6 @@
                                 },
                                 {
                                     "type": "Image",
-                                    "id": "62821ffa-8619-42f0-8d26-81871ff9c29b",
-                                    "label": "editor_selectors_icon",
-                                    "texture": {
-                                        "key": "stampbook",
-                                        "frame": "editor-selectors"
-                                    },
-                                    "x": 20,
-                                    "y": 352,
-                                    "originX": 0.5038759689922481
-                                },
-                                {
-                                    "type": "Image",
-                                    "id": "a0a3a14f-cffd-417e-924e-710d7f2f7c7d",
-                                    "label": "editor_selectors_pattern",
-                                    "texture": {
-                                        "key": "stampbook",
-                                        "frame": "editor-selectors"
-                                    },
-                                    "x": 20,
-                                    "y": 234,
-                                    "originX": 0.5038759689922481
-                                },
-                                {
-                                    "type": "Image",
-                                    "id": "58d559cb-49fa-4ca2-9923-d9fda79c9835",
-                                    "label": "editor_selectors_highlight",
-                                    "texture": {
-                                        "key": "stampbook",
-                                        "frame": "editor-selectors"
-                                    },
-                                    "x": 20,
-                                    "y": 116,
-                                    "originX": 0.5038759689922481
-                                },
-                                {
-                                    "type": "Image",
-                                    "id": "114ef2ec-5dff-4d40-ac4d-c55291abb4f8",
-                                    "label": "editor_selectors_color",
-                                    "texture": {
-                                        "key": "stampbook",
-                                        "frame": "editor-selectors"
-                                    },
-                                    "x": 20,
-                                    "originX": 0.5038759689922481
-                                },
-                                {
-                                    "prefabId": "2dabc377-4f2e-4fcb-9bec-1444078eaa6a",
-                                    "id": "3cf1600a-e995-4985-83fb-7e1c341034ee",
-                                    "unlock": [
-                                        "x",
-                                        "y"
-                                    ],
-                                    "label": "icon",
-                                    "x": 21,
-                                    "y": 352
-                                },
-                                {
-                                    "prefabId": "95820f69-e7f6-4621-8b59-0dada96ea5db",
-                                    "id": "7bc6cd76-2e20-4b99-8597-5c849ca687ea",
-                                    "unlock": [
-                                        "x",
-                                        "y"
-                                    ],
-                                    "label": "pattern",
-                                    "x": 21,
-                                    "y": 233
-                                },
-                                {
-                                    "prefabId": "b3848616-2240-46ac-9aca-4c0b3dc598f9",
-                                    "id": "3159d1a5-6940-4528-9066-c818d2bbcae0",
-                                    "unlock": [
-                                        "x",
-                                        "y"
-                                    ],
-                                    "label": "highlight",
-                                    "x": 21,
-                                    "y": 116
-                                },
-                                {
-                                    "prefabId": "a1798d3c-b603-46a1-94da-1110b6f06b3a",
-                                    "id": "51a88e53-bb01-40a5-86ca-4a2e7c90800a",
-                                    "unlock": [
-                                        "x",
-                                        "y"
-                                    ],
-                                    "label": "color",
-                                    "x": 21,
-                                    "y": -1
-                                },
-                                {
-                                    "type": "Image",
                                     "id": "13fb1f44-620a-4daa-8c93-405c817c40c1",
                                     "label": "blue_stampcat_bg",
                                     "texture": {
@@ -292,7 +215,7 @@
                                     "scope": "CLASS",
                                     "selectorType": "Icons",
                                     "x": 256,
-                                    "y": 352,
+                                    "y": 345,
                                     "visible": false
                                 },
                                 {
@@ -308,7 +231,7 @@
                                     "scope": "CLASS",
                                     "selectorType": "Patterns",
                                     "x": 256,
-                                    "y": 233,
+                                    "y": 230,
                                     "visible": false
                                 },
                                 {
@@ -324,7 +247,7 @@
                                     "scope": "CLASS",
                                     "selectorType": "Highlights",
                                     "x": 256,
-                                    "y": 116,
+                                    "y": 115,
                                     "visible": false
                                 },
                                 {
@@ -338,8 +261,111 @@
                                     "label": "colors_selector",
                                     "scope": "CLASS",
                                     "x": 256,
-                                    "y": -1,
+                                    "y": 0,
                                     "visible": false
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "62821ffa-8619-42f0-8d26-81871ff9c29b",
+                                    "label": "editor_selectors_icon",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "y": 345,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "a0a3a14f-cffd-417e-924e-710d7f2f7c7d",
+                                    "label": "editor_selectors_pattern",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "y": 230,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "58d559cb-49fa-4ca2-9923-d9fda79c9835",
+                                    "label": "editor_selectors_highlight",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "y": 115,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "type": "Image",
+                                    "id": "114ef2ec-5dff-4d40-ac4d-c55291abb4f8",
+                                    "label": "editor_selectors_color",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "editor-selectors"
+                                    },
+                                    "x": 20,
+                                    "originX": 0.5038759689922481
+                                },
+                                {
+                                    "prefabId": "2dabc377-4f2e-4fcb-9bec-1444078eaa6a",
+                                    "id": "3cf1600a-e995-4985-83fb-7e1c341034ee",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "rootModule"
+                                    ],
+                                    "label": "icon_prefab",
+                                    "scope": "CLASS",
+                                    "rootModule": true,
+                                    "x": 21,
+                                    "y": 345
+                                },
+                                {
+                                    "prefabId": "95820f69-e7f6-4621-8b59-0dada96ea5db",
+                                    "id": "7bc6cd76-2e20-4b99-8597-5c849ca687ea",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "rootModule"
+                                    ],
+                                    "label": "pattern_prefab",
+                                    "scope": "CLASS",
+                                    "rootModule": true,
+                                    "x": 21,
+                                    "y": 230
+                                },
+                                {
+                                    "prefabId": "b3848616-2240-46ac-9aca-4c0b3dc598f9",
+                                    "id": "3159d1a5-6940-4528-9066-c818d2bbcae0",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "rootModule"
+                                    ],
+                                    "label": "highlight_prefab",
+                                    "scope": "CLASS",
+                                    "rootModule": true,
+                                    "x": 21,
+                                    "y": 115
+                                },
+                                {
+                                    "prefabId": "a1798d3c-b603-46a1-94da-1110b6f06b3a",
+                                    "id": "51a88e53-bb01-40a5-86ca-4a2e7c90800a",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "rootModule"
+                                    ],
+                                    "label": "color_prefab",
+                                    "scope": "CLASS",
+                                    "rootModule": true,
+                                    "x": 21,
+                                    "y": 0
                                 }
                             ]
                         },

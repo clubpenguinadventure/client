@@ -73,7 +73,7 @@ export default class Selectors extends BaseContainer {
                 this.spriteType = Pattern;
                 break;
             case "Highlights":
-                this.config = this.crumbs.cover.color_highlight[this.world.stampbook.playerdata.color];
+                this.config = this.crumbs.cover.color_highlight[this.interface.stampbook.playerdata.color];
                 this.spriteType = Highlight;
                 break;
             case "Icons":
@@ -81,6 +81,7 @@ export default class Selectors extends BaseContainer {
                 this.spriteType = Icon;
                 break;
         }
+        this.config = [ ...this.config ].reverse();
         this.masks = {};
         this.sprites = [];
 

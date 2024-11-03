@@ -32,6 +32,16 @@
                 },
                 {
                     "type": "Rectangle",
+                    "id": "28692be9-8603-4ffc-a9c0-c440ff5328e5",
+                    "label": "remove_pattern",
+                    "scope": "CLASS",
+                    "angle": 34,
+                    "isFilled": true,
+                    "width": 145,
+                    "height": 5
+                },
+                {
+                    "type": "Rectangle",
                     "id": "d0dc7b4b-7b2a-4100-ab18-1d9ffef72236",
                     "label": "zone",
                     "components": [
@@ -39,6 +49,7 @@
                     ],
                     "Zone.hoverCallback": "() => this.parentContainer.onZoneOver(this.id, \"pattern\")",
                     "Zone.hoverOutCallback": "() => this.parentContainer.onZoneOut(this.id, \"pattern\")",
+                    "Zone.callback": "() => { if (!this.rootModule) this.interface.stampbook.updatePattern(this.id) };",
                     "isFilled": true,
                     "fillColor": "#12d7ee",
                     "fillAlpha": 0.3,
@@ -54,5 +65,17 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "prefabProperties": [
+        {
+            "name": "rootModule",
+            "label": "Root Module",
+            "tooltip": "",
+            "defValue": false,
+            "customDefinition": false,
+            "type": {
+                "id": "boolean"
+            }
+        }
+    ]
 }
