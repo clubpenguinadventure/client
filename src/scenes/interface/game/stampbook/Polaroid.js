@@ -37,10 +37,27 @@ export default class Polaroid extends BaseContainer {
         foreground.visible = false;
         this.add(foreground);
 
+        this.background = background;
+        this.body = body;
+        this.bodyBG = bodyBG;
+        this.bodyFG = bodyFG;
+        this.foreground = foreground;
+
         /* START-USER-CTR-CODE */
         // Write your code here.
         /* END-USER-CTR-CODE */
     }
+
+    /** @type {Phaser.GameObjects.Image} */
+    background;
+    /** @type {Phaser.GameObjects.Image} */
+    body;
+    /** @type {Phaser.GameObjects.Image} */
+    bodyBG;
+    /** @type {Phaser.GameObjects.Image} */
+    bodyFG;
+    /** @type {Phaser.GameObjects.Image} */
+    foreground;
 
     /* START-USER-CODE */
 

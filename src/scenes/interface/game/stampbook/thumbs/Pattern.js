@@ -14,7 +14,8 @@ export default class Pattern extends BaseContainer {
         super(scene, x ?? 0, y ?? 0);
 
         // background
-        const background = scene.add.image(10, 8, "stampbook-assets", "pattern_thumbs/1_1");
+        const background = scene.add.image(10, 8, "_MISSING");
+        background.visible = false;
         this.add(background);
 
         // remove_pattern
@@ -54,8 +55,12 @@ export default class Pattern extends BaseContainer {
 
     setId(id) {
         if (!this.hasListeners) {
+            this.background.visible = false;
             this.interface.events.on("updateStampbookColor", (color) => {
-                this.background.setTexture(`stampbook-assets`, `pattern_thumbs/${color}_${this.id}`);
+                this.interface.stampbook.loader.loadPatternThumb(`${color}_${this.id}`, () => {
+                    this.background.setTexture(`stampbook-assets/pattern-thumb/${color}_${this.id}`);
+                    this.background.visible = true;
+                });
             });
             this.interface.events.on("updateStampbookPattern", (pattern) => {
                 this.remove_pattern.visible = pattern == id && !this.rootModule;
@@ -63,7 +68,11 @@ export default class Pattern extends BaseContainer {
             this.hasListeners = true;
         }
         this.id = id;
-        this.background.setTexture(`stampbook-assets`, `pattern_thumbs/${this.interface.stampbook.playerdata.color}_${id}`);
+        this.background.visible = false;
+        this.interface.stampbook.loader.loadPatternThumb(`${this.interface.stampbook.playerdata.color}_${id}`, () => {
+            this.background.setTexture(`stampbook-assets/pattern-thumb/${this.interface.stampbook.playerdata.color}_${id}`);
+            this.background.visible = true;
+        });
         this.remove_pattern.visible = this.interface.stampbook.playerdata.pattern == id && !this.rootModule;
     }
 

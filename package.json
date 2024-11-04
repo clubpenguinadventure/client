@@ -37,5 +37,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.2",
     "webpack-obfuscator": "^3.5.1"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
   }
 }

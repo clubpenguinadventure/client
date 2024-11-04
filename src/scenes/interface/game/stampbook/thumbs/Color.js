@@ -14,7 +14,8 @@ export default class Color extends BaseContainer {
         super(scene, x ?? 0, y ?? 0);
 
         // background
-        const background = scene.add.image(10, 8, "stampbook-assets", "color_thumb/1");
+        const background = scene.add.image(10, 8, "_MISSING");
+        background.visible = false;
         this.add(background);
 
         // zone
@@ -46,7 +47,11 @@ export default class Color extends BaseContainer {
 
     setId(id) {
         this.id = id;
-        this.background.setTexture(`stampbook-assets`, `color_thumb/${id}`);
+        this.background.visible = false;
+        this.interface.stampbook.loader.loadColorThumb(id, () => {
+            this.background.setTexture(`stampbook-assets/color-thumb/${id}`);
+            this.background.visible = true;
+        });
     }
 
     /* END-USER-CODE */

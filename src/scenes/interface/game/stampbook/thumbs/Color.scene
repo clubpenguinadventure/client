@@ -23,12 +23,10 @@
                     "id": "818a3f86-6893-45f3-8935-47f718c1434a",
                     "label": "background",
                     "scope": "CLASS",
-                    "texture": {
-                        "key": "stampbook-assets",
-                        "frame": "color_thumb/1"
-                    },
+                    "texture": {},
                     "x": 10,
-                    "y": 8
+                    "y": 8,
+                    "visible": false
                 },
                 {
                     "type": "Rectangle",

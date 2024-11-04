@@ -11,11 +11,13 @@ export default class Icon extends BaseContainer {
         super(scene, x ?? 0, y ?? 0);
 
         // background
-        const background = scene.add.image(10, 8, "stampbook-assets", "color_thumb/1");
+        const background = scene.add.image(10, 8, "_MISSING");
+        background.visible = false;
         this.add(background);
 
         // foreground
-        const foreground = scene.add.image(0, 0, "stampbook-assets", "clasp_thumb/1_1");
+        const foreground = scene.add.image(0, 0, "_MISSING");
+        foreground.visible = false;
         this.add(foreground);
 
         // zone
@@ -49,17 +51,33 @@ export default class Icon extends BaseContainer {
 
     setId(id) {
         if (!this.hasListeners) {
+            this.background.visible = false;
             this.interface.events.on("updateStampbookColor", (color) => {
-                this.background.setTexture(`stampbook-assets`, `color_thumb/${color}`);
+                this.interface.stampbook.loader.loadColorThumb(color, () => {
+                    this.background.setTexture(`stampbook-assets/color-thumb/${color}`);
+                    this.background.visible = true;
+                });
             });
+            this.foreground.visible = false;
             this.interface.events.on("updateStampbookHighlight", (highlight) => {
-                this.foreground.setTexture(`stampbook-assets`, `clasp_thumb/${this.id}_${highlight}`);
+                this.interface.stampbook.loader.loadClaspThumb(`${this.id}_${highlight}`, () => {
+                    this.foreground.setTexture(`stampbook-assets/clasp-thumb/${this.id}_${highlight}`);
+                    this.foreground.visible = true;
+                });
             });
             this.hasListeners = true;
         }
         this.id = id;
-        this.background.setTexture(`stampbook-assets`, `color_thumb/${this.interface.stampbook.playerdata.color}`);
-        this.foreground.setTexture(`stampbook-assets`, `clasp_thumb/${id}_${this.interface.stampbook.playerdata.highlight}`);
+        this.background.visible = false;
+        this.interface.stampbook.loader.loadColorThumb(this.interface.stampbook.playerdata.color, () => {
+            this.background.setTexture(`stampbook-assets/color-thumb/${this.interface.stampbook.playerdata.color}`);
+            this.background.visible = true;
+        });
+        this.foreground.visible = false;
+        this.interface.stampbook.loader.loadClaspThumb(`${id}_${this.interface.stampbook.playerdata.highlight}`, () => {
+            this.foreground.setTexture(`stampbook-assets/clasp-thumb/${id}_${this.interface.stampbook.playerdata.highlight}`);
+            this.foreground.visible = true;
+        });
     }
 
     /* END-USER-CODE */

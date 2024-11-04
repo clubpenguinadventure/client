@@ -12,7 +12,10 @@ const fonts = [
     // {name: 'CCComiccrazy', style: 'italic', url: '/assets/fonts/CCComiccrazy_Italic.woff2'},
     {name: 'CCFaceFront', url: '/assets/fonts/CCFaceFront.woff2'},
     {name: 'CCFaceFront', weight: 'bold', style: 'italic', url: '/assets/fonts/CCFaceFront Bold Italic.woff2'},
-    {name: 'CPLCD', url: '/assets/fonts/CPLCD.woff2'}
+    {name: 'CPLCD', url: '/assets/fonts/CPLCD.woff2'},
+    { name: 'Burbank Big Wide', url: '/assets/fonts/Burbank Big Wide Medium.ttf' },
+    { name: 'Burbank Big Wide', weight: 'bold', url: '/assets/fonts/Burbank Big Wide Bold.ttf' },
+    
 ];
 
 export default fonts;

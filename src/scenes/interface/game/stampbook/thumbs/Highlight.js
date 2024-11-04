@@ -14,11 +14,11 @@ export default class Highlight extends BaseContainer {
         super(scene, x ?? 0, y ?? 0);
 
         // background
-        const background = scene.add.image(10, 8, "stampbook-assets", "color_thumb/1");
+        const background = scene.add.image(10, 8, "_MISSING");
         this.add(background);
 
         // foreground
-        const foreground = scene.add.image(0, 0, "stampbook-assets", "highlight_thumb/1");
+        const foreground = scene.add.image(0, 0, "_MISSING");
         this.add(foreground);
 
         // zone
@@ -53,14 +53,26 @@ export default class Highlight extends BaseContainer {
 
     setId(id) {
         if (!this.hasListeners) {
+            this.background.visible = false;
             this.interface.events.on("updateStampbookColor", (color) => {
-                this.background.setTexture(`stampbook-assets`, `color_thumb/${color}`);
+                this.interface.stampbook.loader.loadColorThumb(color, () => {
+                    this.background.setTexture(`stampbook-assets/color-thumb/${color}`);
+                    this.background.visible = true;
+                });
             }, this);
             this.hasListeners = true;
         }
         this.id = id;
-        this.background.setTexture(`stampbook-assets`, `color_thumb/${this.interface.stampbook.playerdata.color}`);
-        this.foreground.setTexture(`stampbook-assets`, `highlight_thumb/${id}`);
+        this.background.visible = false;
+        this.interface.stampbook.loader.loadColorThumb(this.interface.stampbook.playerdata.color, () => {
+            this.background.setTexture(`stampbook-assets/color-thumb/${this.interface.stampbook.playerdata.color}`);
+            this.background.visible = true;
+        });
+        this.foreground.visible = false;
+        this.interface.stampbook.loader.loadHighlightThumb(id, () => {
+            this.foreground.setTexture(`stampbook-assets/highlight-thumb/${id}`);
+            this.foreground.visible = true;
+        });
     }
 
     /* END-USER-CODE */

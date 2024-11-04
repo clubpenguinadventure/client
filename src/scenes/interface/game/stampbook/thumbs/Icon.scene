@@ -23,22 +23,18 @@
                     "id": "82707b09-58f5-41bc-afb1-650283dd8fd1",
                     "label": "background",
                     "scope": "CLASS",
-                    "texture": {
-                        "key": "stampbook-assets",
-                        "frame": "color_thumb/1"
-                    },
+                    "texture": {},
                     "x": 10,
-                    "y": 8
+                    "y": 8,
+                    "visible": false
                 },
                 {
                     "type": "Image",
                     "id": "c3d025b9-6a11-46da-83eb-781bb19b8e04",
                     "label": "foreground",
                     "scope": "CLASS",
-                    "texture": {
-                        "key": "stampbook-assets",
-                        "frame": "clasp_thumb/1_1"
-                    }
+                    "texture": {},
+                    "visible": false
                 },
                 {
                     "type": "Rectangle",
