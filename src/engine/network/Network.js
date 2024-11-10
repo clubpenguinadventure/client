@@ -1,7 +1,6 @@
 import DataHandler from './DataHandler'
 
 import io from 'socket.io-client'
-const HUB_URL = 'http://localhost:3000'
 
 export default class Network {
 
@@ -29,7 +28,7 @@ export default class Network {
         this.username = username
         this.password = password
 
-        const response = await fetch(HUB_URL + '/login', {
+        const response = await fetch(window.HUB_URL + '/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,7 +44,7 @@ export default class Network {
     }
 
     async loginWith2FA(code) {
-        const response = await fetch(HUB_URL + '/login', {
+        const response = await fetch(window.HUB_URL + '/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -67,7 +66,7 @@ export default class Network {
         this.username = username
         this.token = token
 
-        const response = await fetch(HUB_URL + '/token_login', {
+        const response = await fetch(window.HUB_URL + '/token_login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +82,7 @@ export default class Network {
     }
 
     async tokenLoginWith2FA(code) {
-        const response = await fetch(HUB_URL + '/token_login', {
+        const response = await fetch(window.HUB_URL + '/token_login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -125,7 +124,7 @@ export default class Network {
     connect(world, onConnect, onDisconnect) {
         this.disconnect()
 
-        let config = this.game.crumbs.worlds[world]
+        let config = this.game.getCrumb('worlds', world)
 
         this.client = io.connect(config.host, { path: config.path })
 

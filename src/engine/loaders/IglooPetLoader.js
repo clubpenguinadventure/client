@@ -11,9 +11,9 @@ export default class IglooPetLoader extends BaseLoader {
     }
 
     loadPet(typeId, callback) {
-        if (!(typeId in this.crumbs.pets)) return
+        if (!(this.crumbs.pets.some((pet)=>pet.id == typeId))) return
 
-        const name = this.crumbs.pets[typeId].name.toLowerCase()
+        const name = this.getCrumb('pets', typeId).name.toLowerCase()
         const key = this.getKey(name)
 
         if (this.checkComplete('json', key, () => {

@@ -70,7 +70,8 @@ export default class PromptController {
             return this.showError('You already have this igloo.')
         }
 
-        let text = `Would you like to buy ${this.crumbs.igloos[igloo].name} for ${this.crumbs.igloos[igloo].cost} coins. You currently have ${this.world.client.coins} coins.`
+        let crumb = this.getCrumb('igloos', igloo)
+        let text = `Would you like to buy ${crumb.name} for ${crumb.cost} coins. You currently have ${this.world.client.coins} coins.`
 
         this.showWindow(text, 'dual', () => {
             this.network.send('add_igloo', { igloo: igloo })
@@ -83,7 +84,8 @@ export default class PromptController {
             return this.showError('You already have this flooring.')
         }
 
-        let text = `Would you like to buy ${this.crumbs.flooring[floor].name} for ${this.crumbs.flooring[floor].cost} coins. You currently have ${this.world.client.coins} coins.`
+        let crumb = this.getCrumb('flooring', floor)
+        let text = `Would you like to buy ${crumb.name} for ${crumb.cost} coins. You currently have ${this.world.client.coins} coins.`
 
         this.showWindow(text, 'dual', () => {
             this.network.send('update_flooring', { flooring: floor })

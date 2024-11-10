@@ -134,7 +134,7 @@ export default class InterfaceController extends BaseScene {
         }
 
         const roomName = this.crumbs.scenes.rooms[roomId].key.toLowerCase()
-        const message = this.crumbs.tour_messages[roomName]
+        const message = this.getCrumb('tour_messages', roomName).message
 
         if (message) {
             this.showTextBalloon(id, message, false)

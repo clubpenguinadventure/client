@@ -78,7 +78,7 @@ export default class Buddy extends Plugin {
         }
 
         if (args.game) {
-            return this.crumbs.games[args.find].key
+            return this.getCrumb('games', args.game).key
         }
 
         let iglooUserId = args.find - this.crumbs.iglooIdOffset

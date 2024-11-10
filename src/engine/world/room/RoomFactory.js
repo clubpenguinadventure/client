@@ -7,7 +7,7 @@ export default class RoomFactory {
 
         this.rooms = world.crumbs.scenes.rooms
         this.igloos = world.crumbs.scenes.igloos
-        this.games = world.crumbs.games
+        this.getCrumb = world.getCrumb
     }
 
     create(args) {
@@ -54,7 +54,7 @@ export default class RoomFactory {
     }
 
     createGame(args) {
-        let config = this.games[args.game]
+        let config = this.getCrumb('games', args.game)
 
         if (!config.flash) {
             return this.createRoom({ room: args.game })

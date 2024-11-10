@@ -24,6 +24,10 @@ export default class BaseLoader extends Phaser.Loader.LoaderPlugin {
         return this.scene.world
     }
 
+    getCrumb(collection, id) {
+        return this.crumbs[collection].filter(c => c.id == id)[0]
+    }
+
     getKey(...args) {
         let key = args.join('')
         let prefix = this.keyPrefix || ''

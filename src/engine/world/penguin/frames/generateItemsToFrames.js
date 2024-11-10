@@ -4,10 +4,9 @@ import adjustRedemptionItem from './adjustRedemptionItem'
 export default function(secretFrames) {
     let itemsToFrames = {}
 
-    for (let frame in secretFrames) {
+    for (let frame of secretFrames) {
 
-        for (let secret in secretFrames[frame]) {
-            secret = secretFrames[frame][secret]
+        for (let secret of frame.combinations) {
 
             for (let slot in secret) {
                 if (slot == 'secret_frame' || !secret[slot]) {

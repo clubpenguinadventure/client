@@ -33,12 +33,16 @@ export default class BaseScene extends Phaser.Scene {
         return this.scene.get('RuffleController')
     }
 
+    getCrumb(collection, id) {
+        return this.crumbs[collection].filter(c => c.id == id)[0]
+    }
+
     getString(...args) {
-        return args.map(id => this.crumbs.strings[id.toLowerCase()] || id).join(' ')
+        return args.map(id => this.getCrumb('strings', [id.toLowerCase()])?.string || id).join(' ')
     }
 
     getFormatString(id, ...args) {
-        return Phaser.Utils.String.Format(this.crumbs.strings[id.toLowerCase()], args)
+        return Phaser.Utils.String.Format(this.getCrumb('strings', [id.toLowerCase()])?.string, args)
     }
 
     setMusic() {

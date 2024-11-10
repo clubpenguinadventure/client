@@ -130,7 +130,7 @@ export default class InputPrompt extends BaseContainer {
     }
 
     showAdoptName(id) {
-        const data = this.crumbs.pets[id]
+        const data = this.getCrumb('pets', id)
         if (!data) return
 
         const name = data.name.toLowerCase()

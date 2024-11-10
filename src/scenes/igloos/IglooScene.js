@@ -235,7 +235,7 @@ export default class IglooScene extends RoomScene {
     }
 
     loadFurniture(item) {
-        let crate = (this.crumbs.furniture[item].type == 2)
+        let crate = (this.getCrumb('furniture', item).type == 2)
                         ? this.wallCrate
                         : this.roomCrate
 

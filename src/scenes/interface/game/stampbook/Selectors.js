@@ -65,19 +65,19 @@ export default class Selectors extends BaseContainer {
         this.spriteType;
         switch (this.selectorType) {
             case "Colors":
-                this.config = this.crumbs.cover.color;
+                this.config = this.getCrumb('cover', color);
                 this.spriteType = Color;
                 break;
             case "Patterns":
-                this.config = this.crumbs.cover.pattern;
+                this.config = this.getCrumb('cover', pattern);
                 this.spriteType = Pattern;
                 break;
             case "Highlights":
-                this.config = this.crumbs.cover.color_highlight[this.interface.stampbook.playerdata.color];
+                this.config = this.getCrumb('cover', color_highlight[this.interface.stampbook.playerdata.color]);
                 this.spriteType = Highlight;
                 break;
             case "Icons":
-                this.config = this.crumbs.cover.clasp;
+                this.config = this.getCrumb('cover', clasp);
                 this.spriteType = Icon;
                 break;
         }
@@ -141,7 +141,7 @@ export default class Selectors extends BaseContainer {
         for (let i = 0; i < this.config.length; i++) {
             const matrix = this.sprites[i].getWorldTransformMatrix();
             const graphics = this.scene.make.graphics();
-            graphics.fillStyle(this.crumbs.cover.highlight[this.config[i]], 1);
+            graphics.fillStyle(this.getCrumb('cover', highlight)[this.config[i]], 1);
             graphics.fillRect(matrix.getX(0, 0) - 70, matrix.getY(0, 0) - 50, 140, 100);
             this.masks[this.config[i]] = graphics.createGeometryMask();
         }

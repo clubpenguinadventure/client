@@ -27,7 +27,7 @@ export default class PaperDoll extends BaseContainer {
 
         // Tinted body
         this.body = new TintedImage(scene, 0, 0, 'main', 'paperdoll/body')
-        this.body.tint = this.crumbs.colors[0]
+        this.body.tint = this.getCrumb('colors', 1).hex
 
         scene.add.existing(this.body)
         this.addAt(this.body, 0)

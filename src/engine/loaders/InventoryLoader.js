@@ -118,6 +118,6 @@ export default class InventoryLoader extends BaseLoader {
 
         icon.id = item
         slot.item = icon
-        slot.__ShowHint.text = this.crumbs.items[item].name
+        slot.__ShowHint.text = this.getCrumb('items', item).name
     }
 }

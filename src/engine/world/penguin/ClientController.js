@@ -10,15 +10,16 @@ export default class ClientController {
         this.network = world.network
         this.crumbs = world.crumbs
 
+        this.getCrumb = world.getCrumb
         this.getString = world.getString
 
         // Assign user attributes
         let { user, ...attributes } = args
         Object.assign(this, attributes)
-        const furniture = Object.entries(this.furniture).filter(furn => furn[0] in this.crumbs.furniture)
+        const furniture = Object.entries(this.furniture).filter(furn => this.crumbs.furniture.some(crumbsFurn => crumbsFurn.id == furn[0]))
         this.furniture = Object.fromEntries(furniture)
-        this.inventory = this.inventory.filter(item => item in this.crumbs.items)
-        this.igloos = this.igloos.filter(igloo => igloo in this.crumbs.igloos)
+        this.inventory = this.inventory.filter(item => this.crumbs.items.some(crumbsItem => crumbsItem.id == item))
+        this.igloos = this.igloos.filter(igloo => this.crumbs.igloos.some(crumbsIgloo => crumbsIgloo.id == igloo))
 
         this.id = user.id
         this.joinTime = user.joinTime
@@ -43,10 +44,6 @@ export default class ClientController {
 
         this.lastBalloon = Date.now()
         this.throttleDelay = 100
-
-        // Input
-        this.keys = this.crumbs.quick_keys.keys
-        this.emotes = this.crumbs.quick_keys.emotes
 
         this.keyActions = {
             'send_frame': (id) => this.sendFrame(id),
@@ -129,11 +126,7 @@ export default class ClientController {
         for (let item of this.inventory) {
             item = parseInt(item)
 
-            if (!(item in this.crumbs.items)) {
-                continue
-            }
-
-            let type = this.crumbs.items[item].type
+            let type = this.getCrumb('items', item).type
             let slot = this.slots[type - 1]
 
             inventory[slot].push(item)
@@ -180,16 +173,16 @@ export default class ClientController {
     processEmote(key) {
         this.emoteKeyPressed = false
 
-        if (key in this.emotes) {
-            this.sendEmote(this.emotes[key])
+        let crumb = this.crumbs.emote_keys.find(ek => ek.key == key)
+        if (crumb) {
+            this.sendEmote(crumb.emote)
         }
     }
 
     processKey(key) {
-        if (key in this.keys) {
-            let k = this.keys[key]
-
-            this.keyActions[k.action](k.value || null)
+        let crumb = this.crumbs.quick_keys.find(qk => qk.key == key)
+        if (crumb) {
+            this.keyActions[crumb.action](crumb.value || null)
         }
     }
 
@@ -254,9 +247,10 @@ export default class ClientController {
     }
 
     sendJoke() {
-        const randomJokeId = Phaser.Math.Between(0, this.crumbs.jokes.length - 1)
+        const randomJokeId = Phaser.Math.Between(1, this.crumbs.jokes.length)
+        const joke = this.getCrumb('jokes', randomJokeId)
 
-        this.interface.showTextBalloon(this.id, this.crumbs.jokes[randomJokeId], false)
+        this.interface.showTextBalloon(this.id, `${joke.joke}|${joke.punchline}`, false)
         this.network.send('send_joke', { joke: randomJokeId })
     }
 
@@ -268,7 +262,7 @@ export default class ClientController {
 
         const roomName = this.world.room.key.toLowerCase()
 
-        if (roomName in this.crumbs.tour_messages) {
+        if (this.getCrumb('tour_messages', roomName)) {
             const roomId = this.world.room.id
 
             this.interface.showTourMessage(this.id, roomId)

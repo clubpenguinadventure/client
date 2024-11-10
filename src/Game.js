@@ -49,6 +49,10 @@ export default class Game extends Phaser.Game {
         console.info(`Version ${VERSION}`)
     }
 
+    getCrumb(collection, id) {
+        return this.crumbs[collection].filter(c => c.id == id)[0]
+    }
+
 }
 
 window.onload = () => {

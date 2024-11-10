@@ -55,7 +55,7 @@ export default class PaperDollLoader extends BaseLoader {
         }
 
         
-        if (!this.crumbs.items[item]) {
+        if (!this.getCrumb('items', item)) {
             return
         }
 
@@ -66,7 +66,7 @@ export default class PaperDollLoader extends BaseLoader {
 
         this.paperDoll.items[slot].id = item
 
-        if (this.crumbs.items[item].back) {
+        if (this.getCrumb('items', item).back) {
             this.loadBack(item, slot)
         }
 

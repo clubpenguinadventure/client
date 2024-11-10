@@ -84,9 +84,7 @@ export default class MissionInfo extends BaseContainer {
         this.soundManager.play('switch')
 
         const missionKey = `mission${this.missionId}`
-        const games = Object.entries(this.crumbs.games)
-
-        const result = games.find(([, value]) => value.key === missionKey)
+        const result = this.crumbs.games.filter(game => game.key === missionKey)[0]
 
         if (result) {
             const id = parseInt(result[0])

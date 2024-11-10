@@ -94,7 +94,7 @@ export default class ItemPrompt extends BaseContainer {
             return this.interface.prompt.showError('You already have this item.')
         }
 
-        const data = this.crumbs.items[id]
+        const data = this.getCrumb('items', id)
         if (!data) return
 
         const loadConfig = {
@@ -106,7 +106,7 @@ export default class ItemPrompt extends BaseContainer {
     }
 
     showFurniture(id) {
-        const data = this.crumbs.furniture[id]
+        const data = this.getCrumb('furniture', id)
         if (!data) return
 
         const loadConfig = {
@@ -119,7 +119,7 @@ export default class ItemPrompt extends BaseContainer {
     }
 
     showAdopt(id) {
-        const data = this.crumbs.pets[id]
+        const data = this.getCrumb('pets', id)
         if (!data) return
 
         const name = data.name.toLowerCase()

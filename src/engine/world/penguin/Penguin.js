@@ -200,7 +200,7 @@ export default class Penguin extends BaseContainer {
             return
         }
 
-        let animation = this.crumbs.penguin[frame]
+        let animation = this.getCrumb('penguin', frame)
 
         if (checkItem && animation.items) {
             animation = this.checkAnimItems(animation, textureKey)
@@ -327,7 +327,7 @@ export default class Penguin extends BaseContainer {
             return this.secretFramesCache[frameString]
         }
 
-        for (let secret of this.crumbs.secret_frames[frame]) {
+        for (let secret of this.crumbs.secret_frames[frame-25].combinations) {
             if (this.checkSecretFrames(equipped, secret)) {
 
                 this.secretFramesCache[frameString] = secret.secret_frame
@@ -349,7 +349,7 @@ export default class Penguin extends BaseContainer {
             }
         }
 
-        return secret.secret_frame in this.crumbs.penguin
+        return this.crumbs.penguin.some(penguin => penguin.id == secret.secret_frame)
             && this.checkSecretFrameTextures(secret.secret_frame)
     }
 

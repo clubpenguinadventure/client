@@ -37,9 +37,9 @@ export default class Chat extends Plugin {
 
     sendJoke(args) {
         if (this.world.room.isReady) {
-            const message = this.crumbs.jokes[args.joke]
+            const joke = this.getCrumb('jokes', args.joke)
 
-            this.interface.showTextBalloon(args.id, message, false)
+            this.interface.showTextBalloon(args.id, `${joke.joke}|${joke.punchline}`, false)
         }
     }
 

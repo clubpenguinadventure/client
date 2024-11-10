@@ -743,7 +743,7 @@ export default class Stampbook extends BaseContainer {
         });
         this.interface.events.emit("updateStampbookColor", id);
         this.color_prefab.setId(id);
-        if (!this.crumbs.cover.color_highlight[id].includes(this.playerdata.highlight)) this.updateHighlight(this.crumbs.cover.color_highlight[id][0]);
+        if (!this.getCrumb('cover', color_highlight)[id].includes(this.playerdata.highlight)) this.updateHighlight(this.getCrumb('cover', color_highlight)[id][0]);
     }
 
     updatePattern(id) {
@@ -768,8 +768,8 @@ export default class Stampbook extends BaseContainer {
         });
         this.interface.events.emit("updateStampbookHighlight", id);
         this.highlight_prefab.setId(id);
-        this.usernameItems.forEach(item => item.setColor(this.crumbs.cover.highlight[id]));
-        this.stampsTotalItems.forEach(item => item.setColor(this.crumbs.cover.highlight[id]));
+        this.usernameItems.forEach(item => item.setColor(this.getCrumb('cover', highlight)[id]));
+        this.stampsTotalItems.forEach(item => item.setColor(this.getCrumb('cover', highlight)[id]));
     }
 
     updateIcon(id) {
@@ -863,7 +863,7 @@ export default class Stampbook extends BaseContainer {
             this.stampbook_page_background.visible = true;
         });
 
-        if (this.crumbs.polaroids[data.group_id]) {
+        if (this.getCrumb('polaroids', data.group_id)) {
             this.showPolaroids(data.group_id);
         } else {
             this.polaroids_cntr.visible = false;
@@ -883,7 +883,7 @@ export default class Stampbook extends BaseContainer {
     }
 
     showPolaroids(group_id) {
-        const polaroids = this.crumbs.polaroids[group_id].polaroids;
+        const polaroids = this.getCrumb('polaroids', group_id).polaroids;
         const stamps = this.getOwnedStampsByGroupId(group_id).length;
         this.polaroids_cntr.visible = true;
         this.polaroidItemsList.forEach(item => item.visible = false);

@@ -29,9 +29,17 @@ export default class Preload extends BaseScene {
         this.scene.add('IglooEdit', IglooEdit)
     }
 
-    _create() {
+    async _create() {
         // Set crumbs
-        let crumbs = this.cache.json.get('crumbs')
+        let crumbs = await fetch(window.HUB_URL + '/crumbs',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+        )
+        crumbs = await crumbs.json()
 
         this.game.crumbs = {
             ...this.game.crumbs,

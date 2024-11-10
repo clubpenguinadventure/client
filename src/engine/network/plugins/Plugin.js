@@ -18,6 +18,10 @@ export default class Plugin {
         return this.scene.getScene('WorldController')
     }
 
+    getCrumb(...args) {
+        return this.world.getCrumb(...args)
+    }
+
     getString(...args) {
         return this.world.getString(...args)
     }

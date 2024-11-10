@@ -3,8 +3,7 @@
   "version": "1.10.0-beta",
   "scripts": {
     "dev": "webpack serve --host 0.0.0.0",
-    "build": "webpack --mode production --env obfuscate=false",
-    "build-crumbs": "node ./utils/build-crumbs.js",
+    "build": "webpack --mode production --env obfuscate=true",
     "editor": "phasereditor2d-launcher -project .",
     "minify": "node utils/minify-json.js"
   },

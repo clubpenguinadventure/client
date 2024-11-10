@@ -38,7 +38,7 @@ export default class Join extends Plugin {
     }
 
     joinGameRoom(args) {
-        this.interface.showLoading(this.getString('loading', this.crumbs.games[args.game].key))
+        this.interface.showLoading(this.getString('loading', this.getCrumb('games', args.game).key))
         this.world.joinRoom(args)
     }
 

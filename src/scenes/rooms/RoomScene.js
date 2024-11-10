@@ -250,7 +250,7 @@ export default class RoomScene extends BaseScene {
     }
 
     triggerGame(id) {
-        let text = this.getString(`${this.crumbs.games[id].key}_prompt`)
+        let text = this.getString(`${this.getCrumb('games', id).key}_prompt`)
 
         this.interface.prompt.showWindow(text, 'dual', () => {
             this.world.client.sendJoinRoom(id, '')

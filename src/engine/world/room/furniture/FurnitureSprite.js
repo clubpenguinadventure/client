@@ -6,7 +6,7 @@ export default class FurnitureSprite extends Phaser.GameObjects.Sprite {
         this.id = id
         this.frames = this.texture.getFrameNames()
         this.visible = !crate
-        this.crumb = scene.crumbs.furniture[id]
+        this.crumb = scene.getCrumbs('furniture', id)
         this.isWall = this.crumb.type == 2
         this.trashIcon
 

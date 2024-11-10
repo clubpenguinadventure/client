@@ -60,7 +60,7 @@ export default class Item extends Plugin {
         this.interface.updateCatalogCoins(args.coins)
 
         // Check no purchase popup
-        const data = this.crumbs.items[item]
+        const data = this.getCrumb('items', item)
         if ('no_purchase_popup' in data && data.no_purchase_popup === 1) {
             return
         }

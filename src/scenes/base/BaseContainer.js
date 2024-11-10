@@ -28,6 +28,10 @@ export default class BaseContainer extends Phaser.GameObjects.Container {
         return this.scene.getString(...args)
     }
 
+    getCrumb(...args) {
+        return this.scene.getCrumb(...args)
+    }
+
     getFormatString(id, ...args) {
         return this.scene.getFormatString(id, ...args)
     }
