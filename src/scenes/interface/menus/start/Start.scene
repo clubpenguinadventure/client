@@ -69,7 +69,7 @@
                 "frame": "create-button"
             },
             "x": 464,
-            "y": 833,
+            "y": 821,
             "originX": 0.5008849557522124
         },
         {
@@ -78,10 +78,10 @@
             "label": "logo",
             "texture": {
                 "key": "start",
-                "frame": "logo-placeholder"
+                "frame": "logo"
             },
             "x": 760,
-            "y": 675
+            "y": 664
         },
         {
             "type": "Image",
@@ -98,7 +98,7 @@
                 "frame": "button"
             },
             "x": 535,
-            "y": 846,
+            "y": 834,
             "originX": 0.5014164305949008
         },
         {
@@ -116,7 +116,7 @@
                 "frame": "button"
             },
             "x": 985,
-            "y": 846,
+            "y": 834,
             "originX": 0.5014164305949008
         },
         {
@@ -129,14 +129,14 @@
                 "frame": "login-penguin"
             },
             "x": 1208,
-            "y": 827
+            "y": 815
         },
         {
             "type": "Text",
             "id": "2df98ee3-7018-4827-b83f-e2a540c2aeb5",
             "label": "loginText",
             "x": 984,
-            "y": 853,
+            "y": 841,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Login",
@@ -158,7 +158,7 @@
             "id": "73a56171-8ed8-45d0-90e5-43539b6ecec5",
             "label": "createText",
             "x": 535,
-            "y": 853,
+            "y": 841,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Create a Penguin",

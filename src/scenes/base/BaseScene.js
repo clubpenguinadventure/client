@@ -34,7 +34,7 @@ export default class BaseScene extends Phaser.Scene {
     }
 
     getCrumb(collection, id) {
-        return this.crumbs[collection].filter(c => c.id == id)[0]
+        return this.world.crumbs[collection].filter(c => c.id == id)[0]
     }
 
     getString(...args) {

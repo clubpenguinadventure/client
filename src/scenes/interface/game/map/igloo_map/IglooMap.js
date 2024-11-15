@@ -287,12 +287,12 @@ export default class IglooMap extends BaseContainer {
         this.add(igloo_note);
 
         // grey_button
-        const grey_button = scene.add.image(476, -286, "main", "grey-button");
+        const grey_button = scene.add.image(487, -362, "main", "grey-button");
         grey_button.angle = 6;
         this.add(grey_button);
 
         // grey_x
-        const grey_x = scene.add.image(476, -288, "main", "grey-x");
+        const grey_x = scene.add.image(487, -364, "main", "grey-x");
         grey_x.angle = 6;
         this.add(grey_x);
 

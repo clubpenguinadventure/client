@@ -19,7 +19,6 @@
             "type": "Container",
             "id": "e1cfcd6e-44aa-4018-8bcb-60881317fada",
             "label": "container",
-            "components": [],
             "x": 760,
             "y": 480,
             "list": [
@@ -40,7 +39,6 @@
                     "type": "Image",
                     "id": "8cee385b-9867-477b-a47c-4807e40b7441",
                     "label": "igloo_bg",
-                    "components": [],
                     "texture": {
                         "key": "map",
                         "frame": "igloo/bg"
@@ -60,7 +58,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_27",
-                    "components": [],
                     "x": -336,
                     "y": -50,
                     "scaleX": 0.9,
@@ -80,7 +77,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_22",
-                    "components": [],
                     "x": -277,
                     "y": -30,
                     "scaleX": 0.9,
@@ -100,7 +96,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_21",
-                    "components": [],
                     "x": -216,
                     "y": -10,
                     "scaleX": 0.9,
@@ -120,7 +115,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_9",
-                    "components": [],
                     "x": -156,
                     "y": 9,
                     "scaleX": 0.9,
@@ -140,7 +134,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_5",
-                    "components": [],
                     "x": -107,
                     "y": 61,
                     "scaleX": 1,
@@ -160,7 +153,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_16",
-                    "components": [],
                     "x": -224,
                     "y": 88,
                     "scaleX": 1,
@@ -180,7 +172,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_20",
-                    "components": [],
                     "x": -150,
                     "y": 119,
                     "scaleX": 1,
@@ -200,7 +191,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_19",
-                    "components": [],
                     "x": -89,
                     "y": 140,
                     "scaleX": 1,
@@ -220,7 +210,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_29",
-                    "components": [],
                     "x": -439,
                     "y": -16,
                     "scaleX": 0.9,
@@ -240,7 +229,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_28",
-                    "components": [],
                     "x": -382,
                     "y": 36,
                     "scaleX": 1,
@@ -260,7 +248,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_18",
-                    "components": [],
                     "x": -323,
                     "y": 57,
                     "scaleX": 1,
@@ -280,7 +267,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_17",
-                    "components": [],
                     "x": -286,
                     "y": 116,
                     "scaleX": 1,
@@ -300,7 +286,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_10",
-                    "components": [],
                     "x": 108,
                     "y": 67,
                     "scaleX": 1,
@@ -320,7 +305,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_6",
-                    "components": [],
                     "x": 81,
                     "y": 117,
                     "scaleX": 1,
@@ -340,7 +324,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_8",
-                    "components": [],
                     "x": 188,
                     "y": 101,
                     "scaleX": 1,
@@ -360,7 +343,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_13",
-                    "components": [],
                     "x": -121,
                     "y": -144,
                     "scaleX": 0.8,
@@ -380,7 +362,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_12",
-                    "components": [],
                     "x": -76,
                     "y": -108,
                     "scaleX": 0.8,
@@ -400,7 +381,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_25",
-                    "components": [],
                     "x": -35,
                     "y": -67,
                     "scaleX": 0.8,
@@ -420,7 +400,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_2",
-                    "components": [],
                     "x": -46,
                     "y": -7,
                     "scaleX": 0.9,
@@ -440,7 +419,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_14",
-                    "components": [],
                     "x": 135,
                     "y": -49,
                     "scaleX": 0.9,
@@ -460,7 +438,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_3",
-                    "components": [],
                     "x": 95,
                     "y": -28,
                     "scaleX": 0.9,
@@ -480,7 +457,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_1",
-                    "components": [],
                     "x": 44,
                     "y": 6,
                     "scaleX": 0.9,
@@ -500,7 +476,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_0",
-                    "components": [],
                     "x": -5,
                     "y": 40,
                     "scaleX": 0.9,
@@ -520,7 +495,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_15",
-                    "components": [],
                     "x": 191,
                     "y": -14,
                     "scaleX": 0.9,
@@ -540,7 +514,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_23",
-                    "components": [],
                     "x": -136,
                     "y": -73,
                     "scaleX": 0.8,
@@ -560,7 +533,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_24",
-                    "components": [],
                     "x": -189,
                     "y": -75,
                     "scaleX": 0.8,
@@ -580,7 +552,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_26",
-                    "components": [],
                     "x": -31,
                     "y": -180,
                     "scaleX": 0.8,
@@ -600,7 +571,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_7",
-                    "components": [],
                     "x": 10,
                     "y": -156,
                     "scaleX": 0.8,
@@ -620,7 +590,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_11",
-                    "components": [],
                     "x": 71,
                     "y": -140,
                     "scaleX": 0.8,
@@ -640,7 +609,6 @@
                         "flipY"
                     ],
                     "label": "igloo_igloo_4",
-                    "components": [],
                     "x": 37,
                     "y": -107,
                     "scaleX": 0.8,
@@ -652,7 +620,6 @@
                     "type": "Image",
                     "id": "d53efe40-376e-4cc6-a15b-dfb0ed159bc7",
                     "label": "igloo_note",
-                    "components": [],
                     "texture": {
                         "key": "map",
                         "frame": "igloo/note"
@@ -667,27 +634,25 @@
                     "components": [
                         "Button"
                     ],
-                    "Button.spriteName": "grey-button",
                     "Button.callback": "() => this.visible = false",
                     "texture": {
                         "key": "main",
                         "frame": "grey-button"
                     },
-                    "x": 476,
-                    "y": -286,
+                    "x": 487,
+                    "y": -362,
                     "angle": 6
                 },
                 {
                     "type": "Image",
                     "id": "7b6b5267-1b9a-4fb1-95b0-6b3f0f0fb333",
                     "label": "grey_x",
-                    "components": [],
                     "texture": {
                         "key": "main",
                         "frame": "grey-x"
                     },
-                    "x": 476,
-                    "y": -288,
+                    "x": 487,
+                    "y": -364,
                     "angle": 6
                 },
                 {
@@ -695,7 +660,6 @@
                     "id": "d0e542f4-15de-4092-bd3a-a31a1e0bbec6",
                     "label": "spinner",
                     "scope": "CLASS",
-                    "components": [],
                     "texture": {
                         "key": "map",
                         "frame": "igloo/spinner"
@@ -709,7 +673,6 @@
                     "id": "45cbd5aa-ebf1-43ce-9f40-73d7d11a58ff",
                     "label": "panel",
                     "scope": "CLASS",
-                    "components": [],
                     "x": 268,
                     "y": -238,
                     "list": [
@@ -717,7 +680,6 @@
                             "type": "Image",
                             "id": "0d9804c6-6a48-4ba9-af80-89679f23a786",
                             "label": "igloo_card",
-                            "components": [],
                             "texture": {
                                 "key": "map",
                                 "frame": "igloo/card"
@@ -729,7 +691,6 @@
                             "type": "Image",
                             "id": "7192d193-b7ad-47b0-86b4-a2796f557856",
                             "label": "igloo_tape",
-                            "components": [],
                             "texture": {
                                 "key": "map",
                                 "frame": "igloo/tape"
@@ -744,7 +705,6 @@
                             "components": [
                                 "Button"
                             ],
-                            "Button.spriteName": "igloo/item_large",
                             "Button.callback": "() => this.onIglooClick()",
                             "Button.activeFrame": false,
                             "texture": {
@@ -758,7 +718,6 @@
                             "type": "Image",
                             "id": "86fc79de-83a1-4397-b1b0-bd45a9bd9e1a",
                             "label": "igloo_icon_player",
-                            "components": [],
                             "texture": {
                                 "key": "map",
                                 "frame": "igloo/icon_player"
@@ -772,7 +731,6 @@
                             "type": "Text",
                             "id": "8f18b6fc-d6a7-40da-8487-0c5d8675270d",
                             "label": "username",
-                            "components": [],
                             "x": 180,
                             "y": 72,
                             "originX": 0.5,
@@ -790,10 +748,8 @@
                                 "y"
                             ],
                             "label": "iglooItem_7",
-                            "components": [],
                             "x": 155,
-                            "y": 549,
-                            "nestedPrefabs": []
+                            "y": 549
                         },
                         {
                             "prefabId": "1cc2585a-e5f3-48aa-ba82-cf1dc70a902c",
@@ -803,10 +759,8 @@
                                 "y"
                             ],
                             "label": "iglooItem_6",
-                            "components": [],
                             "x": 155,
-                            "y": 497,
-                            "nestedPrefabs": []
+                            "y": 497
                         },
                         {
                             "prefabId": "1cc2585a-e5f3-48aa-ba82-cf1dc70a902c",
@@ -816,10 +770,8 @@
                                 "y"
                             ],
                             "label": "iglooItem_5",
-                            "components": [],
                             "x": 155,
-                            "y": 445,
-                            "nestedPrefabs": []
+                            "y": 445
                         },
                         {
                             "prefabId": "1cc2585a-e5f3-48aa-ba82-cf1dc70a902c",
@@ -829,10 +781,8 @@
                                 "y"
                             ],
                             "label": "iglooItem_4",
-                            "components": [],
                             "x": 155,
-                            "y": 393,
-                            "nestedPrefabs": []
+                            "y": 393
                         },
                         {
                             "prefabId": "1cc2585a-e5f3-48aa-ba82-cf1dc70a902c",
@@ -842,10 +792,8 @@
                                 "y"
                             ],
                             "label": "iglooItem_3",
-                            "components": [],
                             "x": 155,
-                            "y": 341,
-                            "nestedPrefabs": []
+                            "y": 341
                         },
                         {
                             "prefabId": "1cc2585a-e5f3-48aa-ba82-cf1dc70a902c",
@@ -855,10 +803,8 @@
                                 "y"
                             ],
                             "label": "iglooItem_2",
-                            "components": [],
                             "x": 155,
-                            "y": 289,
-                            "nestedPrefabs": []
+                            "y": 289
                         },
                         {
                             "prefabId": "1cc2585a-e5f3-48aa-ba82-cf1dc70a902c",
@@ -868,10 +814,8 @@
                                 "y"
                             ],
                             "label": "iglooItem_1",
-                            "components": [],
                             "x": 155,
-                            "y": 237,
-                            "nestedPrefabs": []
+                            "y": 237
                         },
                         {
                             "prefabId": "1cc2585a-e5f3-48aa-ba82-cf1dc70a902c",
@@ -881,16 +825,13 @@
                                 "y"
                             ],
                             "label": "iglooItem",
-                            "components": [],
                             "x": 155,
-                            "y": 185,
-                            "nestedPrefabs": []
+                            "y": 185
                         },
                         {
                             "type": "Text",
                             "id": "c2811f19-01cb-4c16-881e-5d242be4e96a",
                             "label": "open",
-                            "components": [],
                             "y": 126,
                             "text": "Open Igloos",
                             "fontFamily": "Burbank Small",
@@ -903,7 +844,6 @@
                             "id": "e1f5687b-5fa9-4500-80e3-7ee473c70128",
                             "label": "down",
                             "scope": "CLASS",
-                            "components": [],
                             "x": 358,
                             "y": 549,
                             "list": [
@@ -915,7 +855,6 @@
                                     "components": [
                                         "Button"
                                     ],
-                                    "Button.spriteName": "grey-button",
                                     "Button.callback": "() => this.nextPage()",
                                     "texture": {
                                         "key": "main",
@@ -927,7 +866,6 @@
                                     "type": "Image",
                                     "id": "e8a64295-995f-4067-875d-286ce73f0f51",
                                     "label": "downArrow",
-                                    "components": [],
                                     "texture": {
                                         "key": "main",
                                         "frame": "grey-arrow"
@@ -941,7 +879,6 @@
                             "id": "7d998331-bb1f-4151-ade2-cc27e0e56973",
                             "label": "up",
                             "scope": "CLASS",
-                            "components": [],
                             "x": 358,
                             "y": 180,
                             "list": [
@@ -953,7 +890,6 @@
                                     "components": [
                                         "Button"
                                     ],
-                                    "Button.spriteName": "grey-button",
                                     "Button.callback": "() => this.prevPage()",
                                     "texture": {
                                         "key": "main",
@@ -965,7 +901,6 @@
                                     "type": "Image",
                                     "id": "fdb66dac-1879-4780-be1c-d0f874dc7ab1",
                                     "label": "upArrow",
-                                    "components": [],
                                     "texture": {
                                         "key": "main",
                                         "frame": "grey-arrow"
@@ -983,7 +918,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "lists": [
         {

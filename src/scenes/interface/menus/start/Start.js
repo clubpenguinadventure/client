@@ -40,32 +40,32 @@ export default class Start extends BaseScene {
         this.add.image(760, 766, "start", "bottom");
 
         // create_penguin
-        const create_penguin = this.add.image(464, 833, "start", "create-button");
+        const create_penguin = this.add.image(464, 821, "start", "create-button");
         create_penguin.setOrigin(0.5008849557522124, 0.5);
 
         // logo
-        this.add.image(760, 675, "start", "logo-placeholder");
+        this.add.image(760, 664, "start", "logo");
 
         // create_button
-        const create_button = this.add.image(535, 846, "start", "button");
+        const create_button = this.add.image(535, 834, "start", "button");
         create_button.setOrigin(0.5014164305949008, 0.5);
 
         // login_button
-        const login_button = this.add.image(985, 846, "start", "button");
+        const login_button = this.add.image(985, 834, "start", "button");
         login_button.setOrigin(0.5014164305949008, 0.5);
 
         // login_penguin
-        const login_penguin = this.add.image(1208, 827, "start", "login-penguin");
+        const login_penguin = this.add.image(1208, 815, "start", "login-penguin");
 
         // loginText
-        const loginText = this.add.text(984, 853, "", {});
+        const loginText = this.add.text(984, 841, "", {});
         loginText.setOrigin(0.5, 0.5);
         loginText.text = "Login";
         loginText.setStyle({ "align": "center", "color": "#ffffffff", "fixedWidth":400,"fixedHeight":50,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold", "shadow.offsetX":2,"shadow.offsetY":2,"shadow.blur":3,"shadow.fill":true});
         loginText.setLineSpacing(25);
 
         // createText
-        const createText = this.add.text(535, 853, "", {});
+        const createText = this.add.text(535, 841, "", {});
         createText.setOrigin(0.5, 0.5);
         createText.text = "Create a Penguin";
         createText.setStyle({ "align": "center", "color": "#ffffffff", "fixedWidth":400,"fixedHeight":50,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold", "shadow.offsetX":2,"shadow.offsetY":2,"shadow.blur":3,"shadow.fill":true});

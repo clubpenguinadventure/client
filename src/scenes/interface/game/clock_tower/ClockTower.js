@@ -33,7 +33,7 @@ export default class ClockTower extends BaseContainer {
         const text = scene.add.text(0, -5, "", {});
         text.setOrigin(0.5, 0.5);
         text.text = "The time showing on this clock may not match\nthe time on your computer. This snowball-\npowered clock, like all other clocks in Club\nPenguin, is in PST (Penguin Standard Time).\n\nThis means that penguins from all over the world\nwill see this clock as the exact same time, even if\nthe penguins are in different time zones.\nBecause of this, you can use this clock to plan\nparties and fun events with friends.";
-        text.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "32px" });
+        text.setStyle({ "align": "center", "color": "#000000ff", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "28px" });
         text.setLineSpacing(1);
         this.add(text);
 
