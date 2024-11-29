@@ -29,9 +29,10 @@ jobs:
         run: npm run build
 
       - name: Push static content to CDN
-        uses: nebula-dev/spaces-sync-action@master
+        uses: clubpenguinplus/spaces-sync-action@literal
         env:
           SOURCE_DIR: "./assets/"
+          FILE_PATH: "assets"
           SPACE_REGION: "nyc3"
           SPACE_NAME: ${{ secrets.SPACE_NAME }}
           SPACE_ACCESS_KEY: ${{ secrets.SPACE_ACCESS_KEY }}
