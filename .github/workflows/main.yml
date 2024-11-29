@@ -1,0 +1,38 @@
+name: Update Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update-production:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MEDIA_KEY }}
+          submodules: recursive
+
+      - name: Installing
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Push static content to CDN
+        uses: nebula-dev/spaces-sync-action@master
+        env:
+          SOURCE_DIR: "./assets/"
+          SPACE_REGION: "nyc3"
+          SPACE_NAME: ${{ secrets.SPACE_NAME }}
+          SPACE_ACCESS_KEY: ${{ secrets.SPACE_ACCESS_KEY }}
+          SPACE_SECRET_KEY: ${{ secrets.SPACE_SECRET_KEY }}
