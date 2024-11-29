@@ -6,7 +6,7 @@ export default class IglooPetLoader extends BaseLoader {
     constructor(scene) {
         super(scene)
 
-        this.baseURL = '/assets/media/pet/sprites/'
+        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/pet/sprites/'
         this.keyPrefix = 'pet/sprites/'
     }
 

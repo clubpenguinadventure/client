@@ -12,7 +12,7 @@ export default class PaperDollLoader extends BaseLoader {
         this.flagY = -120
         this.flagScale = 0.66
 
-        this.baseURL = '/assets/media/clothing/'
+        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/clothing/'
         this.keyPrefix = 'clothing/'
     }
 

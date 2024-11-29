@@ -15,7 +15,7 @@ export default class ClothingLoader extends BaseLoader {
 
         this.equipped = this.penguin.equipped
 
-        this.baseURL = '/assets/media/clothing/sprites/'
+        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/clothing/sprites/'
         this.keyPrefix = 'clothing/sprites/'
 
         this.framesLoader = new SecretFramesLoader(penguin.room)

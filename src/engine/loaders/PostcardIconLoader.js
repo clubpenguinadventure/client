@@ -8,7 +8,7 @@ export default class PostcardIconLoader extends BaseLoader {
 
         this.mailbook = mailbook
 
-        this.baseURL = '/assets/media/postcards/icon/'
+        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/postcards/icon/'
         this.keyPrefix = 'postcards/icon/'
 
         this.postcardItems = mailbook.postcardItems

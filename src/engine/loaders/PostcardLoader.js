@@ -6,7 +6,7 @@ export default class PostcardLoader extends BaseLoader  {
     constructor(scene) {
         super(scene)
 
-        this.baseURL = '/assets/media/postcards/sprites/'
+        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/postcards/sprites/'
         this.keyPrefix = 'postcards/sprites/'
     }
 

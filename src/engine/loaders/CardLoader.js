@@ -6,7 +6,7 @@ export default class CardLoader extends BaseLoader {
     constructor(scene) {
         super(scene)
 
-        this.baseURL = '/assets/media/games/card/icons/'
+        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/games/card/icons/'
         this.keyPrefix = 'card/icons/'
     }
 

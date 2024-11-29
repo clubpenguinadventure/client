@@ -35,6 +35,10 @@ const game = {
         zoom: scale / 2,
     },
 
+    loader: {
+        baseURL: window.ASSETS_BASE_URL,
+    },
+
     dom: {
         createContainer: true
     },

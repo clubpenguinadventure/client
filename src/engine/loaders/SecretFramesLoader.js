@@ -6,7 +6,7 @@ export default class SecretFramesLoader extends BaseLoader {
     constructor(scene) {
         super(scene)
 
-        this.baseURL = '/assets/media/penguin/actions/'
+        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/penguin/actions/'
         this.keyPrefix = 'secret_frames/'
 
         // Track current items loading
