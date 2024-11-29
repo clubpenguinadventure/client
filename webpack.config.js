@@ -102,14 +102,6 @@ module.exports = (env, argv) => {
     ]
 
     config.plugins.push(
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            inject: false,
-            template: 'index.ejs',
-            templateParameters: {
-                timestamp: timestamp
-            }
-        }),
         // MIT License do not remove
         new BannerPlugin({
             banner: fs.readFileSync('./LICENSE', 'utf-8')

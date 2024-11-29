@@ -31,7 +31,7 @@ export default class Preload extends BaseScene {
 
     async _create() {
         // Set crumbs
-        let crumbs = await fetch(window.HUB_URL + '/crumbs',
+        let crumbs = await fetch(window.HUB_URL + 'crumbs',
             {
                 method: 'POST',
                 headers: {
