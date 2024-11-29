@@ -31,18 +31,91 @@
             "y": 916
         },
         {
-            "type": "Image",
-            "id": "2351bf55-0c93-41dd-b444-f89ba39d6a6c",
-            "label": "chat_box",
-            "components": [
-                "Interactive"
-            ],
-            "texture": {
-                "key": "main",
-                "frame": "chat-box"
-            },
+            "type": "Container",
+            "id": "7abddc01-add3-45d5-bdb3-64395892617c",
+            "label": "chatbox_container",
+            "scope": "CLASS",
             "x": 748,
-            "y": 923
+            "y": 921,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "2351bf55-0c93-41dd-b444-f89ba39d6a6c",
+                    "label": "chat_box",
+                    "scope": "CLASS",
+                    "components": [
+                        "Interactive"
+                    ],
+                    "texture": {
+                        "key": "main",
+                        "frame": "chat-box"
+                    },
+                    "y": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "bb79f35a-9956-4446-b8b8-027e4cc26b04",
+                    "label": "chat_send_button",
+                    "components": [
+                        "Button",
+                        "ShowHint"
+                    ],
+                    "Button.callback": "() => this.onChatSend()",
+                    "ShowHint.text": "send_hint",
+                    "texture": {
+                        "key": "main",
+                        "frame": "blue-button"
+                    },
+                    "x": 278,
+                    "y": 2
+                },
+                {
+                    "type": "Image",
+                    "id": "9891188b-feea-49f2-8a70-4d5e85546a7c",
+                    "label": "chat_send_icon",
+                    "texture": {
+                        "key": "main",
+                        "frame": "chat-icon"
+                    },
+                    "x": 278
+                },
+                {
+                    "type": "Text",
+                    "id": "e6cfe75b-84e2-44fa-9ec0-70488cf675c7",
+                    "label": "chatInput",
+                    "scope": "CLASS",
+                    "components": [
+                        "InputText"
+                    ],
+                    "InputText.inputfilter": "/[a-zA-Z0-9 ]+/",
+                    "InputText.entercallback": "() => this.onChatSend()",
+                    "x": -253,
+                    "y": 2,
+                    "originY": 0.5,
+                    "fixedWidth": 500,
+                    "fontFamily": "Proxima Nova",
+                    "fontSize": "24px",
+                    "color": "#ffffffff"
+                }
+            ]
+        },
+        {
+            "type": "Text",
+            "id": "4bb0b4cd-836e-4fc5-ba1e-66800a54bbdd",
+            "label": "chat_overlay_text",
+            "scope": "CLASS",
+            "x": 755,
+            "y": 923,
+            "originX": 0.5,
+            "originY": 0.5,
+            "fixedWidth": 600,
+            "align": "center",
+            "fontFamily": "Proxima Nova",
+            "fontSize": "32px",
+            "fontStyle": "bold",
+            "color": "#175d9dff",
+            "stroke": "#ffffffff",
+            "shadow.color": "#fff"
         },
         {
             "type": "Image",
@@ -155,34 +228,6 @@
             },
             "x": 426,
             "y": 922
-        },
-        {
-            "type": "Image",
-            "id": "bb79f35a-9956-4446-b8b8-027e4cc26b04",
-            "label": "chat_send_button",
-            "components": [
-                "Button",
-                "ShowHint"
-            ],
-            "Button.callback": "() => this.onChatSend()",
-            "ShowHint.text": "send_hint",
-            "texture": {
-                "key": "main",
-                "frame": "blue-button"
-            },
-            "x": 1026,
-            "y": 923
-        },
-        {
-            "type": "Image",
-            "id": "9891188b-feea-49f2-8a70-4d5e85546a7c",
-            "label": "chat_send_icon",
-            "texture": {
-                "key": "main",
-                "frame": "chat-icon"
-            },
-            "x": 1026,
-            "y": 921
         },
         {
             "type": "Image",
@@ -635,24 +680,6 @@
             "label": "mailbook",
             "scope": "CLASS",
             "visible": false
-        },
-        {
-            "type": "Text",
-            "id": "e6cfe75b-84e2-44fa-9ec0-70488cf675c7",
-            "label": "chatInput",
-            "scope": "CLASS",
-            "components": [
-                "InputText"
-            ],
-            "InputText.inputfilter": "/[a-zA-Z0-9 ]+/",
-            "InputText.entercallback": "() => this.onChatSend()",
-            "x": 495,
-            "y": 923,
-            "originY": 0.5,
-            "fixedWidth": 500,
-            "fontFamily": "Proxima Nova",
-            "fontSize": "24px",
-            "color": "#ffffffff"
         }
     ],
     "plainObjects": [],

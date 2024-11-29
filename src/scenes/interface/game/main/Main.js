@@ -4,6 +4,7 @@ import BaseScene from "../../../base/BaseScene";
 import Interactive from "../../../components/Interactive";
 import Button from "../../../components/Button";
 import ShowHint from "../../../components/ShowHint";
+import InputText from "../../../components/InputText";
 import ChatLog from "../chatlog/ChatLog";
 import SimpleButton from "../../../components/SimpleButton";
 import MailButton from "./buttons/mail/MailButton";
@@ -19,7 +20,6 @@ import Moderator from "../moderator/Moderator";
 import Settings from "../settings/Settings";
 import Mail from "../mail/Mail";
 import Mailbook from "../mailbook/Mailbook";
-import InputText from "../../../components/InputText";
 /* START-USER-IMPORTS */
 
 import BalloonFactory from '@engine/interface/balloons/BalloonFactory'
@@ -32,6 +32,14 @@ export default class Main extends BaseScene {
     constructor() {
         super("Main");
 
+        /** @type {Phaser.GameObjects.Image} */
+        this.chat_box;
+        /** @type {Phaser.GameObjects.Text} */
+        this.chatInput;
+        /** @type {Phaser.GameObjects.Container} */
+        this.chatbox_container;
+        /** @type {Phaser.GameObjects.Text} */
+        this.chat_overlay_text;
         /** @type {Phaser.GameObjects.Image} */
         this.popup;
         /** @type {Phaser.GameObjects.Text} */
@@ -76,8 +84,6 @@ export default class Main extends BaseScene {
         this.mail;
         /** @type {Mailbook} */
         this.mailbook;
-        /** @type {Phaser.GameObjects.Text} */
-        this.chatInput;
         /** @type {Array<Settings|Moderator|PlayerCard|PetCard|Buddy|Waddle|Phone>} */
         this.hideOnSleep;
 
@@ -92,8 +98,31 @@ export default class Main extends BaseScene {
         // dock
         const dock = this.add.image(760, 916, "main", "dock");
 
+        // chatbox_container
+        const chatbox_container = this.add.container(748, 921);
+
         // chat_box
-        const chat_box = this.add.image(748, 923, "main", "chat-box");
+        const chat_box = this.add.image(0, 2, "main", "chat-box");
+        chatbox_container.add(chat_box);
+
+        // chat_send_button
+        const chat_send_button = this.add.image(278, 2, "main", "blue-button");
+        chatbox_container.add(chat_send_button);
+
+        // chat_send_icon
+        const chat_send_icon = this.add.image(278, 0, "main", "chat-icon");
+        chatbox_container.add(chat_send_icon);
+
+        // chatInput
+        const chatInput = this.add.text(-253, 2, "", {});
+        chatInput.setOrigin(0, 0.5);
+        chatInput.setStyle({ "color": "#ffffffff", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "24px" });
+        chatbox_container.add(chatInput);
+
+        // chat_overlay_text
+        const chat_overlay_text = this.add.text(755, 923, "", {});
+        chat_overlay_text.setOrigin(0.5, 0.5);
+        chat_overlay_text.setStyle({ "align": "center", "color": "#175d9dff", "fixedWidth":600,"fontFamily": "Proxima Nova", "fontSize": "32px", "fontStyle": "bold", "stroke": "#ffffffff", "shadow.color": "#fff" });
 
         // chat_button
         const chat_button = this.add.image(246, 923, "main", "blue-button");
@@ -118,12 +147,6 @@ export default class Main extends BaseScene {
 
         // snowball_icon
         this.add.image(426, 922, "main", "snowball-icon");
-
-        // chat_send_button
-        const chat_send_button = this.add.image(1026, 923, "main", "blue-button");
-
-        // chat_send_icon
-        this.add.image(1026, 921, "main", "chat-icon");
 
         // player_button
         const player_button = this.add.image(1086, 923, "main", "blue-button");
@@ -258,11 +281,6 @@ export default class Main extends BaseScene {
         this.add.existing(mailbook);
         mailbook.visible = false;
 
-        // chatInput
-        const chatInput = this.add.text(495, 923, "", {});
-        chatInput.setOrigin(0, 0.5);
-        chatInput.setStyle({ "color": "#ffffffff", "fixedWidth":500,"fontFamily": "Proxima Nova", "fontSize": "24px" });
-
         // lists
         const hideOnSleep = [settings, moderator, playerCard, petCard, buddy, waddle, phone];
 
@@ -271,6 +289,17 @@ export default class Main extends BaseScene {
 
         // chat_box (components)
         new Interactive(chat_box);
+
+        // chat_send_button (components)
+        const chat_send_buttonButton = new Button(chat_send_button);
+        chat_send_buttonButton.callback = () => this.onChatSend();
+        const chat_send_buttonShowHint = new ShowHint(chat_send_button);
+        chat_send_buttonShowHint.text = "send_hint";
+
+        // chatInput (components)
+        const chatInputInputText = new InputText(chatInput);
+        chatInputInputText.inputfilter = /[a-zA-Z0-9 ]+/;
+        chatInputInputText.entercallback = () => this.onChatSend();
 
         // chat_button (components)
         const chat_buttonButton = new Button(chat_button);
@@ -295,12 +324,6 @@ export default class Main extends BaseScene {
         snowball_buttonButton.callback = () => this.onSnowballClick();
         const snowball_buttonShowHint = new ShowHint(snowball_button);
         snowball_buttonShowHint.text = "throw_hint";
-
-        // chat_send_button (components)
-        const chat_send_buttonButton = new Button(chat_send_button);
-        chat_send_buttonButton.callback = () => this.onChatSend();
-        const chat_send_buttonShowHint = new ShowHint(chat_send_button);
-        chat_send_buttonShowHint.text = "send_hint";
 
         // player_button (components)
         const player_buttonButton = new Button(player_button);
@@ -355,11 +378,10 @@ export default class Main extends BaseScene {
         mod_buttonSimpleButton.hoverOutCallback = () => this.onModOut();
         mod_buttonSimpleButton.callback = () => this.onModClick();
 
-        // chatInput (components)
-        const chatInputInputText = new InputText(chatInput);
-        chatInputInputText.inputfilter = /[a-zA-Z0-9 ]+/;
-        chatInputInputText.entercallback = () => this.onChatSend();
-
+        this.chat_box = chat_box;
+        this.chatInput = chatInput;
+        this.chatbox_container = chatbox_container;
+        this.chat_overlay_text = chat_overlay_text;
         this.popup = popup;
         this.popupText = popupText;
         this.onlinePopup = onlinePopup;
@@ -382,7 +404,6 @@ export default class Main extends BaseScene {
         this.settings = settings;
         this.mail = mail;
         this.mailbook = mailbook;
-        this.chatInput = chatInput;
         this.hideOnSleep = hideOnSleep;
 
         this.events.emit("scene-awake");
@@ -425,10 +446,21 @@ export default class Main extends BaseScene {
         // Arrow pointer
         this.arrowPointers = []
 
+        this.setMuted()
+
         // Input
 
         this.input.keyboard.on('keydown-TAB', (event) => this.onChatKeyDown(event))
         this.input.keyboard.on('keydown-ENTER', (event) => this.onChatKeyDown(event))
+    }
+
+    setMuted() {
+        let muted = this.world.client?.muted
+        if (muted) {
+            this.interface.main.chatbox_container.visible = false
+            this.interface.main.chat_overlay_text.setText(muted)
+            return
+        }
     }
 
     onSleep(sys, data) {
