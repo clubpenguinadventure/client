@@ -38,19 +38,11 @@ let config = {
             writeToDisk: true
         },
         proxy: {
-            '/world/login': {
-                target: 'http://localhost:6111',
-                pathRewrite: { '^/world/login': '' },
-                ws: true
-            },
-
             '/world/blizzard': {
                 target: 'http://localhost:6112',
                 pathRewrite: { '^/world/blizzard': '' },
                 ws: true
-            },
-
-            '/create/scripts/php': 'http://localhost:80'
+            }
         },
         host: 'localhost',
         port: 8080,
@@ -96,9 +88,9 @@ module.exports = (env, argv) => {
     }
 
     config.output = {
-        filename: 'assets/scripts/client/[name].bundle.min.js',
-        chunkFilename: 'assets/scripts/client/[id].bundle.min.js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].bundle.min.js',
+        chunkFilename: '[id].bundle.min.js',
+        path: path.resolve(__dirname, 'assets/scripts/client'),
         clean: true,
     }
 
