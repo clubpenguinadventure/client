@@ -13,9 +13,9 @@ export default class GridViewLoader extends BaseLoader {
     }
 
     get baseURL() {
-        return (this.filter == 'igloo')
-            ? '/assets/media/igloos/buildings/icon/'
-            : '/assets/media/furniture/icon/'
+        return window.ASSETS_BASE_URL + (this.filter == 'igloo')
+            ? 'assets/media/igloos/buildings/icon/'
+            : 'assets/media/furniture/icon/'
     }
 
     get keyPrefix() {

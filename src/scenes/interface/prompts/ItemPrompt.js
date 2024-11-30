@@ -99,7 +99,7 @@ export default class ItemPrompt extends BaseContainer {
 
         const loadConfig = {
             key: `clothing/icon/240/${id}`,
-            url: `/assets/media/clothing/icon/240/${id}.png`
+            url: `assets/media/clothing/icon/240/${id}.png`
         }
 
         this.show(this.getBuyText(data.name, data.cost), loadConfig, () => this.sendAddItem(id))
@@ -111,7 +111,7 @@ export default class ItemPrompt extends BaseContainer {
 
         const loadConfig = {
             key: `furniture/icon/@5x/${id}`,
-            url: `/assets/media/furniture/icon/@5x/${id}.png`,
+            url: `assets/media/furniture/icon/@5x/${id}.png`,
             scale: 0.65
         }
 
@@ -146,7 +146,7 @@ export default class ItemPrompt extends BaseContainer {
     showPet(name, text, callback) {
         const loadConfig = {
             key: `pet/icon/${name}`,
-            url: `/assets/media/pet/icons/${name}.png`
+            url: `${window.ASSETS_BASE_URL}assets/media/pet/icons/${name}.png`
         }
 
         // Add current coins string

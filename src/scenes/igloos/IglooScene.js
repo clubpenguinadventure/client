@@ -52,7 +52,7 @@ export default class IglooScene extends RoomScene {
     preload() {
         super.preload()
 
-        this.load.image(`locations/${this.args.location}`, `/assets/media/igloos/locations/${this.args.location}.png`)
+        this.load.image(`locations/${this.args.location}`, `${window.ASSETS_BASE_URL}assets/media/igloos/locations/${this.args.location}.png`)
 
         if (this.args.flooring) this.loadFlooring(this.args.flooring)
     }
@@ -168,7 +168,7 @@ export default class IglooScene extends RoomScene {
 
     loadFlooring(flooring) {
         if (this.textures.exists(`flooring/${flooring}`)) return
-        let path = '/assets/media/igloos/flooring'
+        let path = window.ASSETS_BASE_URL + 'assets/media/igloos/flooring'
 
         this.load.multiatlas({
             key: `flooring/${flooring}`,

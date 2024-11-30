@@ -136,7 +136,7 @@ export default class InputPrompt extends BaseContainer {
         const name = data.name.toLowerCase()
         const loadConfig = {
             key: `pet/icon/${name}`,
-            url: `/assets/media/pet/icons/${name}.png`
+            url: `${window.ASSETS_BASE_URL}assets/media/pet/icons/${name}.png`
         }
 
         const callback = (text) => this.send('adopt_pet', { typeId: id, name: text })
