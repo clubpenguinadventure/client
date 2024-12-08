@@ -25,6 +25,10 @@ export default class WorldController extends BaseScene {
         if (window.location.hostname === 'localhost') window.world = this
     }
 
+    get totalStampsAvailable() {
+        return this.crumbs.stamps.reduce((acc, category) => acc + category.stamps.length, 0);
+    }
+
     create() {
         this.penguinFactory = new PenguinFactory(this)
         this.roomFactory = new RoomFactory(this)

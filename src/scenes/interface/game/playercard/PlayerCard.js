@@ -23,6 +23,8 @@ export default class PlayerCard extends BaseContainer {
         this.buttons;
         /** @type {Phaser.GameObjects.Text} */
         this.coins;
+        /** @type {Phaser.GameObjects.Text} */
+        this.stamps;
         /** @type {Phaser.GameObjects.Container} */
         this.stats;
         /** @type {Phaser.GameObjects.Text} */
@@ -64,15 +66,30 @@ export default class PlayerCard extends BaseContainer {
         this.add(stats);
 
         // card_coin
-        const card_coin = scene.add.image(177, 0, "main", "card-coin");
+        const card_coin = scene.add.image(-160, -30, "main", "card-coin");
         stats.add(card_coin);
 
         // coins
-        const coins = scene.add.text(0, 0, "", {});
-        coins.setOrigin(0.5, 0.5);
+        const coins = scene.add.text(-126, -25, "", {});
+        coins.setOrigin(0, 0.5);
         coins.text = "Your Coins: 000000";
-        coins.setStyle({ "align": "right", "color": "#000000ff", "fixedWidth":300,"fontFamily": "Proxima Nova", "fontSize": "24px" });
+        coins.setStyle({ "color": "#000000ff", "fixedWidth":300,"fontFamily": "Proxima Nova", "fontSize": "24px" });
         stats.add(coins);
+
+        // stamps
+        const stamps = scene.add.text(-126, 23, "", {});
+        stamps.setOrigin(0, 0.5);
+        stamps.text = "Your Stamps: 88/888";
+        stamps.setStyle({ "color": "#000000ff", "fixedWidth":300,"fontFamily": "Proxima Nova", "fontSize": "24px" });
+        stats.add(stamps);
+
+        // stamp_button
+        const stamp_button = scene.add.image(-160, 22, "main", "blue-button");
+        stats.add(stamp_button);
+
+        // stamp_icon
+        const stamp_icon = scene.add.image(-160, 20, "main", "stamps-icon");
+        stats.add(stamp_icon);
 
         // username
         const username = scene.add.text(0, -238, "", {});
@@ -132,6 +149,10 @@ export default class PlayerCard extends BaseContainer {
         // card_photo (components)
         new Interactive(card_photo);
 
+        // stamp_button (components)
+        const stamp_buttonButton = new Button(stamp_button);
+        stamp_buttonButton.callback = () => this.world.interface.loadWidget("Stampbook");
+
         // x_button (components)
         const x_buttonButton = new Button(x_button);
         x_buttonButton.callback = () => { this.visible = false };
@@ -145,6 +166,7 @@ export default class PlayerCard extends BaseContainer {
         this.paperDoll = paperDoll;
         this.buttons = buttons;
         this.coins = coins;
+        this.stamps = stamps;
         this.stats = stats;
         this.username = username;
         this.inventorySort = inventorySort;
@@ -205,6 +227,7 @@ export default class PlayerCard extends BaseContainer {
         // Visible elements
         if (penguin.isClient) {
             this.coins.text = `Your Coins: ${this.world.client.coins}`
+			this.stamps.text = `Your Stamps: ${this.world.client.stamps.length}/${this.world.totalStampsAvailable}`
             this.stats.visible = true
             this.buttons.visible = false
             this.inventory.visible = true

@@ -696,10 +696,6 @@ export default class Stampbook extends BaseContainer {
 
     /* START-USER-CODE */
 
-    get totalStampsAvailable() {
-        return this.crumbs.stamps.reduce((acc, category) => acc + category.stamps.length, 0);
-    }
-
     get totalPages() {
         return this.crumbs.stamps.length + 1;
     };
@@ -711,7 +707,7 @@ export default class Stampbook extends BaseContainer {
         this.updateHighlight(this.playerdata.highlight);
         this.updateIcon(this.playerdata.clasp);
         this.usernameItems.forEach(item => item.text = this.playerdata.nickname);
-        this.stampsTotalItems.forEach(item => item.text = `Total Stamps ${this.playerdata.stamps.length}/${this.totalStampsAvailable}`);
+        this.stampsTotalItems.forEach(item => item.text = `Total Stamps ${this.playerdata.stamps.length}/${this.world.totalStampsAvailable}`);
     }
 
     editStampbook() {
@@ -733,6 +729,10 @@ export default class Stampbook extends BaseContainer {
         this.interface.destroyWidget(this)
     }
 
+    getCoverCrumb(type) {
+        return this.crumbs.cover.find(crumb => crumb.type == type).values;
+    }
+
     updateColor(id) {
         if (id == this.color_prefab.id) return;
         this.playerdata.color = id;
@@ -743,7 +743,10 @@ export default class Stampbook extends BaseContainer {
         });
         this.interface.events.emit("updateStampbookColor", id);
         this.color_prefab.setId(id);
-        if (!this.getCrumb('cover', color_highlight)[id].includes(this.playerdata.highlight)) this.updateHighlight(this.getCrumb('cover', color_highlight)[id][0]);
+        if (!this.getCoverCrumb('color_highlight')[id].includes(this.playerdata.highlight)) {
+            this.updateHighlight(this.getCoverCrumb('color_highlight')[id][0]);
+            this.highlight_selector.init();
+        }
     }
 
     updatePattern(id) {
@@ -768,8 +771,8 @@ export default class Stampbook extends BaseContainer {
         });
         this.interface.events.emit("updateStampbookHighlight", id);
         this.highlight_prefab.setId(id);
-        this.usernameItems.forEach(item => item.setColor(this.getCrumb('cover', highlight)[id]));
-        this.stampsTotalItems.forEach(item => item.setColor(this.getCrumb('cover', highlight)[id]));
+        this.usernameItems.forEach(item => item.setColor(this.getCoverCrumb('highlight')[id]));
+        this.stampsTotalItems.forEach(item => item.setColor(this.getCoverCrumb('highlight')[id]));
     }
 
     updateIcon(id) {
@@ -808,6 +811,9 @@ export default class Stampbook extends BaseContainer {
 
     showPage(page) {
         if (page < 0 || page > this.totalPages) return;
+        if (page == this.current_page) return;
+        this.current_page = page;
+
         if (page == 0) {
             this.book.visible = false;
             this.front_cover.visible = true;
@@ -815,7 +821,6 @@ export default class Stampbook extends BaseContainer {
             return;
         }
 
-        if (page == this.current_page) return;
 
         if (page == this.totalPages) {
             this.stampbook_page_background.visible = false;
@@ -874,8 +879,6 @@ export default class Stampbook extends BaseContainer {
         } else {
             this.showCategories(data.group_id);
         }
-
-        this.current_page = page;
     }
 
     turnPage(direction) {

@@ -1,0 +1,106 @@
+:root{ 
+    --base-url: url('https://media.cpadventure.net/assets/fonts/');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('https://media.cpadventure.net/assets/fonts/cpProximaNovaReg.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('https://media.cpadventure.net/assets/fonts/cpProximaNovaSmBold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('https://media.cpadventure.net/assets/fonts/Arial Narrow.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('https://media.cpadventure.net/assets/fonts/Arial Narrow Bold.woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Asterisk';
+    src: url('https://media.cpadventure.net/assets/fonts/Asterisk.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Burbank Big Regular';
+    src: url('https://media.cpadventure.net/assets/fonts/Burbank Big Regular Bold.woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Burbank Small';
+    src: url('https://media.cpadventure.net/assets/fonts/Burbank Small Medium.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Burbank Small';
+    src: url('https://media.cpadventure.net/assets/fonts/Burbank Small Bold.woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'CCComiccrazy';
+    src: url('https://media.cpadventure.net/assets/fonts/CCComiccrazy-Roman.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'CCComiccrazy Bold';
+    src: url('https://media.cpadventure.net/assets/fonts/CCComiccrazy_Bold.woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'CCComiccrazy';
+    src: url('https://media.cpadventure.net/assets/fonts/CCComiccrazy_Italic.woff2');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CCFaceFront';
+    src: url('https://media.cpadventure.net/assets/fonts/CCFaceFront.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'CCFaceFront';
+    src: url('https://media.cpadventure.net/assets/fonts/CCFaceFront Italic.woff2');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CCFaceFront';
+    src: url('https://media.cpadventure.net/assets/fonts/CCFaceFront Bold Italic.woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CPLCD';
+    src: url('https://media.cpadventure.net/assets/fonts/CPLCD.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Burbank Big Wide';
+    src: url('https://media.cpadventure.net/assets/fonts/Burbank Big Wide Medium.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Burbank Big Wide';
+    src: url('https://media.cpadventure.net/assets/fonts/Burbank Big Wide Bold.ttf');
+    font-weight: bold;
+}

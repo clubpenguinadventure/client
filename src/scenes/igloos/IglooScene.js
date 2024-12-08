@@ -52,7 +52,7 @@ export default class IglooScene extends RoomScene {
     preload() {
         super.preload()
 
-        this.load.image(`locations/${this.args.location}`, `${window.ASSETS_BASE_URL}assets/media/igloos/locations/${this.args.location}.png`)
+        this.load.image(`locations/${this.args.location}`, `assets/media/igloos/locations/${this.args.location}.png`)
 
         if (this.args.flooring) this.loadFlooring(this.args.flooring)
     }

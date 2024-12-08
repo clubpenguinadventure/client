@@ -14,7 +14,8 @@ const keys = [
     'isMyPlayerMember',
     'sendGameOver',
     'sendJoinLastRoom',
-    'buyInventory'
+    'buyInventory',
+    'stampEarned',
 ]
 
 export default class RuffleController extends BaseScene {
@@ -127,6 +128,10 @@ export default class RuffleController extends BaseScene {
                 this.load.once(`filecomplete-audio-${music}`, () => {
                     this.playMusic(music)
                 })
+            },
+
+            stampEarned: ([id]) => {
+                this.network.send('stamp_earned', { id })
             }
         }
     }

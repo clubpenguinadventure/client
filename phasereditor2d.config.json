@@ -2,7 +2,8 @@
     "flags": ["-max-number-files", "5000"],
     "playUrl": "http://localhost:8080",
     "plugins": [
-        "editor/plugins/tweaks"
+        "editor/plugins/tweaks",
+        "editor/plugins/fonts"
     ],
     "skip": [
         "assets/media/clothing",

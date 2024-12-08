@@ -113,7 +113,7 @@ export default class IglooMusic extends BaseContainer {
         // musicItem_1 (prefab fields)
         musicItem_1.name = "Beware the Dragon";
         musicItem_1.musicId = 286;
-        musicItem_1.bold = true;
+        musicItem_1.bold = false;
 
         // musicItem_2 (prefab fields)
         musicItem_2.name = "Planet Y";
@@ -128,7 +128,7 @@ export default class IglooMusic extends BaseContainer {
         // musicItem_4 (prefab fields)
         musicItem_4.name = "The Royal Court";
         musicItem_4.musicId = 233;
-        musicItem_4.bold = true;
+        musicItem_4.bold = false;
 
         // musicItem_5 (prefab fields)
         musicItem_5.name = "Puffle Party";
@@ -148,7 +148,7 @@ export default class IglooMusic extends BaseContainer {
         // musicItem_8 (prefab fields)
         musicItem_8.name = "To Battle!";
         musicItem_8.musicId = 236;
-        musicItem_8.bold = true;
+        musicItem_8.bold = false;
 
         // musicItem_9 (prefab fields)
         musicItem_9.name = "Flipper Jig";
@@ -158,7 +158,7 @@ export default class IglooMusic extends BaseContainer {
         // musicItem_10 (prefab fields)
         musicItem_10.name = "Icy Serenade";
         musicItem_10.musicId = 256;
-        musicItem_10.bold = true;
+        musicItem_10.bold = false;
 
         // musicItem_11 (prefab fields)
         musicItem_11.name = "The Way of Sensei";
