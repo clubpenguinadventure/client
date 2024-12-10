@@ -122,11 +122,19 @@ export default class LoadingPrompt extends BaseContainer {
 
     show(text, key, url, callback) {
         this.text.text = text
+        this.bar.visible = true
         this.progress.scaleX = this.packFileLoader.progress
 
         super.show()
 
         this.packFileLoader.loadPack(key, url, callback)
+    }
+
+    showWithoutProgress(text) {
+        this.text.text = text
+        this.bar.visible = false
+
+        super.show()
     }
 
     /* END-USER-CODE */

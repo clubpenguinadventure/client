@@ -17,6 +17,7 @@ import Pattern from "./thumbs/Pattern";
 import Highlight from "./thumbs/Highlight";
 import Color from "./thumbs/Color";
 import Polaroid from "./Polaroid";
+import LoadingPrompt from "../../prompts/LoadingPrompt";
 /* START-USER-IMPORTS */
 import CategoryItem from "./CategoryItem";
 import StampbookAssetLoader from "@engine/loaders/StampbookAssetLoader";
@@ -36,6 +37,7 @@ export default class Stampbook extends BaseContainer {
 
         // edit_btn
         const edit_btn = scene.add.image(701, 419, "stampbook", "edit-btn");
+        edit_btn.visible = false;
         this.add(edit_btn);
 
         // editor_bg
@@ -45,6 +47,7 @@ export default class Stampbook extends BaseContainer {
 
         // front_cover
         const front_cover = scene.add.container(15, 10);
+        front_cover.visible = false;
         this.add(front_cover);
 
         // front_cover_background
@@ -427,6 +430,11 @@ export default class Stampbook extends BaseContainer {
         const divider = scene.add.image(779, 137, "stampbook", "divider");
         upper_page_cntr.add(divider);
 
+        // loading
+        const loading = new LoadingPrompt(scene, 0, 0);
+        loading.visible = true;
+        this.add(loading);
+
         // lists
         const usernameItems = [username_text, username_text_highlight_1, username_text_highlight_2];
         const stampsTotalItems = [stampstotal_text, stampstotal_text_highlight];
@@ -536,6 +544,7 @@ export default class Stampbook extends BaseContainer {
         this.stamppage_btns = stamppage_btns;
         this.upper_page_cntr = upper_page_cntr;
         this.book = book;
+        this.loading = loading;
         this.usernameItems = usernameItems;
         this.stampsTotalItems = stampsTotalItems;
         this.polaroidItemsList = polaroidItemsList;
@@ -543,14 +552,6 @@ export default class Stampbook extends BaseContainer {
         /* START-USER-CTR-CODE */
         this.loader = new StampbookAssetLoader(this.scene);
         this.interface.stampbook = this;
-        const playerdata = {
-            "color": 1,
-            "pattern": 0,
-            "highlight": 1,
-            "clasp": 1,
-            "nickname": this.world.client.penguin.username,
-            "stamps": []
-        }
 
         this.leftbar.onZoneOver = (id, caller) => {
             [this.icon_selector, this.pattern_selector, this.highlight_selector, this.colors_selector].forEach(selector => {
@@ -600,8 +601,13 @@ export default class Stampbook extends BaseContainer {
             selector.unpreventClose(this);
         }
 
-        this.init(playerdata);
+        this.loading.close = () => this.close();
 
+        this.loading.showWithoutProgress("Loading Stampbook")
+        this.network.events.once("get_stampbook_data", (data) => this.init(data));
+
+        this.network.send("get_stampbook_data", { id: this.interface.stampbookId });
+        
         /* END-USER-CTR-CODE */
     }
 
@@ -687,6 +693,8 @@ export default class Stampbook extends BaseContainer {
     upper_page_cntr;
     /** @type {Phaser.GameObjects.Container} */
     book;
+    /** @type {LoadingPrompt} */
+    loading;
     /** @type {Phaser.GameObjects.Text[]} */
     usernameItems;
     /** @type {Phaser.GameObjects.Text[]} */
@@ -708,6 +716,10 @@ export default class Stampbook extends BaseContainer {
         this.updateIcon(this.playerdata.clasp);
         this.usernameItems.forEach(item => item.text = this.playerdata.nickname);
         this.stampsTotalItems.forEach(item => item.text = `Total Stamps ${this.playerdata.stamps.length}/${this.world.totalStampsAvailable}`);
+
+        this.front_cover.visible = true;
+        this.edit_btn.visible = this.interface.stampbookId == this.world.client.id;
+        this.loading.visible = false;
     }
 
     editStampbook() {
@@ -734,6 +746,7 @@ export default class Stampbook extends BaseContainer {
     }
 
     updateColor(id) {
+        id = parseInt(id);
         if (id == this.color_prefab.id) return;
         this.playerdata.color = id;
         this.front_cover_background.visible = false;
@@ -747,9 +760,14 @@ export default class Stampbook extends BaseContainer {
             this.updateHighlight(this.getCoverCrumb('color_highlight')[id][0]);
             this.highlight_selector.init();
         }
+
+        if (this.interface.stampbookId == this.world.client.id) {
+            this.network.send("update_stampbook", { color: id });
+        }
     }
 
     updatePattern(id) {
+        id = parseInt(id);
         if (id == this.pattern_prefab.id) id = 0;
         this.playerdata.pattern = id;
         this.front_cover_background.visible = false;
@@ -759,9 +777,14 @@ export default class Stampbook extends BaseContainer {
         });
         this.interface.events.emit("updateStampbookPattern", id);
         this.pattern_prefab.setId(id);
+
+        if (this.interface.stampbookId == this.world.client.id) {
+            this.network.send("update_stampbook", { pattern: id });
+        }
     }
 
     updateHighlight(id) {
+        id = parseInt(id);
         if (id == this.highlight_prefab.id) return
         this.playerdata.highlight = id;
         this.front_cover_clasp.visible = false;
@@ -773,9 +796,14 @@ export default class Stampbook extends BaseContainer {
         this.highlight_prefab.setId(id);
         this.usernameItems.forEach(item => item.setColor(this.getCoverCrumb('highlight')[id]));
         this.stampsTotalItems.forEach(item => item.setColor(this.getCoverCrumb('highlight')[id]));
+
+        if (this.interface.stampbookId == this.world.client.id) {
+            this.network.send("update_stampbook", { highlight: id });
+        }
     }
 
     updateIcon(id) {
+        id = parseInt(id);
         if (id == this.icon_prefab.id) return;
         this.playerdata.clasp = id;
         this.front_cover_icon.visible = false;
@@ -785,6 +813,10 @@ export default class Stampbook extends BaseContainer {
         });
         this.interface.events.emit("updateStampbookIcon", id);
         this.icon_prefab.setId(id);
+
+        if (this.interface.stampbookId == this.world.client.id) {
+            this.network.send("update_stampbook", { clasp: id });
+        }
     }
 
     getPageData(page) {
@@ -817,7 +849,7 @@ export default class Stampbook extends BaseContainer {
         if (page == 0) {
             this.book.visible = false;
             this.front_cover.visible = true;
-            this.edit_btn.visible = true;
+            this.edit_btn.visible = this.interface.stampbookId == this.world.client.id;;
             return;
         }
 

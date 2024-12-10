@@ -48,7 +48,8 @@
                         "frame": "edit-btn"
                     },
                     "x": 701,
-                    "y": 419
+                    "y": 419,
+                    "visible": false
                 },
                 {
                     "type": "Image",
@@ -73,6 +74,7 @@
                     "scope": "CLASS",
                     "x": 15,
                     "y": 10,
+                    "visible": false,
                     "list": [
                         {
                             "type": "Image",
@@ -980,6 +982,20 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "prefabId": "318eb8e3-18fa-4013-801d-af1500acd1aa",
+                    "id": "33622b96-a5ac-4b60-8f7f-06b02d872c50",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "loading",
+                    "scope": "CLASS",
+                    "x": 0,
+                    "y": 0,
+                    "visible": true
                 }
             ]
         }

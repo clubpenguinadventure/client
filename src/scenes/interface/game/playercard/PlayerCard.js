@@ -151,7 +151,7 @@ export default class PlayerCard extends BaseContainer {
 
         // stamp_button (components)
         const stamp_buttonButton = new Button(stamp_button);
-        stamp_buttonButton.callback = () => this.world.interface.loadWidget("Stampbook");
+        stamp_buttonButton.callback = () => this.loadStampbook(this.world.client.id);
 
         // x_button (components)
         const x_buttonButton = new Button(x_button);
@@ -227,7 +227,7 @@ export default class PlayerCard extends BaseContainer {
         // Visible elements
         if (penguin.isClient) {
             this.coins.text = `Your Coins: ${this.world.client.coins}`
-			this.stamps.text = `Your Stamps: ${this.world.client.stamps.length}/${this.world.totalStampsAvailable}`
+            this.stamps.text = `Your Stamps: ${this.world.client.stamps.length}/${this.world.totalStampsAvailable}`
             this.stats.visible = true
             this.buttons.visible = false
             this.inventory.visible = true
@@ -284,6 +284,11 @@ export default class PlayerCard extends BaseContainer {
         }
 
         this.stripes.setFrame(`badge/stripes/${frame}`)
+    }
+
+    loadStampbook(id) {
+        this.interface.stampbookId = id
+        this.interface.loadWidget("Stampbook")
     }
 
     /* END-USER-CODE */
