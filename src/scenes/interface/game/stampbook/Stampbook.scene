@@ -918,6 +918,17 @@
                                     ]
                                 },
                                 {
+                                    "type": "Image",
+                                    "id": "d6d4377c-5375-4336-9472-24da0dff7256",
+                                    "label": "divider",
+                                    "texture": {
+                                        "key": "stampbook",
+                                        "frame": "divider"
+                                    },
+                                    "x": 779,
+                                    "y": 137
+                                },
+                                {
                                     "type": "Container",
                                     "id": "a572b33c-7b2a-44dd-af3d-7d7a45da23da",
                                     "label": "stamps_cntr",
@@ -967,17 +978,6 @@
                                             "originY": 0.509090909090909
                                         }
                                     ]
-                                },
-                                {
-                                    "type": "Image",
-                                    "id": "d6d4377c-5375-4336-9472-24da0dff7256",
-                                    "label": "divider",
-                                    "texture": {
-                                        "key": "stampbook",
-                                        "frame": "divider"
-                                    },
-                                    "x": 779,
-                                    "y": 137
                                 }
                             ]
                         }

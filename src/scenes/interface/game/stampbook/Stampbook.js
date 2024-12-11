@@ -21,6 +21,7 @@ import LoadingPrompt from "../../prompts/LoadingPrompt";
 /* START-USER-IMPORTS */
 import CategoryItem from "./CategoryItem";
 import StampbookAssetLoader from "@engine/loaders/StampbookAssetLoader";
+import Stamp from "./Stamp";
 /* END-USER-IMPORTS */
 
 export default class Stampbook extends BaseContainer {
@@ -407,6 +408,10 @@ export default class Stampbook extends BaseContainer {
         const polaroid_1_tape = scene.add.image(30, 0, "stampbook", "polaroid-1-tape");
         polaroid_1_cntr.add(polaroid_1_tape);
 
+        // divider
+        const divider = scene.add.image(779, 137, "stampbook", "divider");
+        upper_page_cntr.add(divider);
+
         // stamps_cntr
         const stamps_cntr = scene.add.container(0, 0);
         upper_page_cntr.add(stamps_cntr);
@@ -425,10 +430,6 @@ export default class Stampbook extends BaseContainer {
         const down_arrow = scene.add.image(0, 386, "stampbook", "down-arrow");
         down_arrow.setOrigin(0.509090909090909, 0.509090909090909);
         stamppage_btns.add(down_arrow);
-
-        // divider
-        const divider = scene.add.image(779, 137, "stampbook", "divider");
-        upper_page_cntr.add(divider);
 
         // loading
         const loading = new LoadingPrompt(scene, 0, 0);
@@ -607,7 +608,7 @@ export default class Stampbook extends BaseContainer {
         this.network.events.once("get_stampbook_data", (data) => this.init(data));
 
         this.network.send("get_stampbook_data", { id: this.interface.stampbookId });
-        
+
         /* END-USER-CTR-CODE */
     }
 
@@ -945,9 +946,24 @@ export default class Stampbook extends BaseContainer {
         this.stamps_cntr.removeAll(true);
         this.stamps_cntr.pages = [];
         this.stamps_cntr.currentPage = -1;
-
+        stamps = stamps.sort((a, b) => a.rank - b.rank);
+        stamps.forEach((stamp, i) => {
+            const pageWidth = 4
+            const page = Math.floor(i / (4 * pageWidth));
+            const stampItem = new Stamp(this.scene, 175 * (i % pageWidth) + 250, 260 + Math.floor(i % (4 * pageWidth) / pageWidth) * 165);
+            stampItem.setStamp(stamp);
+            this.stamps_cntr.add(stampItem);
+            if (!this.stamps_cntr.pages[page]) this.stamps_cntr.pages[page] = [];
+            this.stamps_cntr.pages[page].push(stampItem);
+        });
+        this.showNextStampPage();
 
         this.stamppage_btns.visible = this.stamps_cntr.pages.length > 1;
+
+        this.down_arrow.x = -350;
+        this.up_arrow.x = -350;
+        this.down_arrow.y = 510;
+        this.up_arrow.y = 0;
     }
 
     showCategories(group_id) {
@@ -980,6 +996,9 @@ export default class Stampbook extends BaseContainer {
         this.stamps_cntr.currentPage++;
         if (this.stamps_cntr.currentPage >= this.stamps_cntr.pages.length) this.stamps_cntr.currentPage--;
         this.stamps_cntr.pages[this.stamps_cntr.currentPage].forEach(item => item.visible = true);
+
+        this.down_arrow.visible = this.stamps_cntr.currentPage < this.stamps_cntr.pages.length - 1;
+        this.up_arrow.visible = this.stamps_cntr.currentPage > 0;
     }
 
     showPreviousStampPage() {
@@ -989,6 +1008,9 @@ export default class Stampbook extends BaseContainer {
         this.stamps_cntr.currentPage--;
         if (this.stamps_cntr.currentPage < 0) this.stamps_cntr.currentPage = 0;
         this.stamps_cntr.pages[this.stamps_cntr.currentPage].forEach(item => item.visible = true);
+
+        this.down_arrow.visible = this.stamps_cntr.currentPage < this.stamps_cntr.pages.length - 1;
+        this.up_arrow.visible = this.stamps_cntr.currentPage > 0;
     }
     /* END-USER-CODE */
 }

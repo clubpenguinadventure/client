@@ -145,13 +145,13 @@ export default class StampbookAssetLoader extends BaseLoader {
     }
 
     loadStamp(id, callback) {
-        const key = this.getKey(`stamp/${id}`)
+        const key = this.getKey(`stamps/${id}`)
 
         this.checkComplete('image', key, () => {
             callback()
         })
 
-        this.image(key, `stamp/${id}.webp`)
+        this.image(key, `stamps/${id}.webp`)
 
         this.start()
     }
