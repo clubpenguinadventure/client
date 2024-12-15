@@ -1,0 +1,264 @@
+{
+    "id": "09434cdd-8577-40b8-bc59-0379cb8c64aa",
+    "sceneType": "SCENE",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "javaScriptInitFieldsInConstructor": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "RoomScene",
+        "preloadMethodName": "_preload",
+        "preloadPackFiles": [
+            "yukon/assets/media/rooms/mine/mine-pack.json"
+        ],
+        "createMethodName": "_create",
+        "sceneKey": "Mine",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "570c6892-3493-4257-bfde-cf2779c6d166",
+            "label": "bg",
+            "texture": {
+                "key": "mine",
+                "frame": "bg"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "0ea5d0cd-a5c0-47db-a3e6-891b3ab74471",
+            "label": "pinboard_btn",
+            "texture": {
+                "key": "mine",
+                "frame": "pinboard_btn"
+            },
+            "x": 555,
+            "y": 184,
+            "originY": 0.5015974440894568
+        },
+        {
+            "type": "Image",
+            "id": "dd5c27f3-620c-42b9-854c-0031dff7a26b",
+            "label": "bg_upper",
+            "texture": {
+                "key": "mine",
+                "frame": "bg-upper"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "66bff67b-1a65-450f-b607-286915b3e7ce",
+            "label": "cavestuff_rear",
+            "texture": {
+                "key": "mine",
+                "frame": "cavestuff-rear"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "4f12b924-86e7-4906-9928-372fd6a18004",
+            "label": "cavestuff",
+            "texture": {
+                "key": "mine",
+                "frame": "cavestuff"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "6f73dcd1-0f65-4db3-bc9c-0fd41590907b",
+            "label": "support",
+            "texture": {
+                "key": "mine",
+                "frame": "support"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Sprite",
+            "id": "99d21865-99b5-41a0-9d00-f6ce73b9b2a0",
+            "label": "cartback",
+            "scope": "CLASS",
+            "texture": {
+                "key": "mine",
+                "frame": "cartback0001"
+            },
+            "x": 1326,
+            "y": 343,
+            "originX": 0.501432664756447,
+            "originY": 0.5027322404371585,
+            "visible": false
+        },
+        {
+            "type": "Rectangle",
+            "id": "ffafa075-11f5-4009-a066-9f9179370195",
+            "label": "cartback_zone",
+            "scope": "CLASS",
+            "components": [
+                "SimpleButton",
+                "MoveTo"
+            ],
+            "SimpleButton.hoverCallback": "() => this.cartback.play(\"mine-cartback\")",
+            "SimpleButton.hoverOutCallback": "() => {this.cartback.visible = false}",
+            "x": 1308,
+            "y": 319,
+            "originX": 0.501432664756447,
+            "originY": 0.5027322404371585,
+            "width": 300,
+            "height": 200
+        },
+        {
+            "type": "Image",
+            "id": "466b949a-f72a-4cea-bea7-a9ba785988c6",
+            "label": "surfermine",
+            "texture": {
+                "key": "mine",
+                "frame": "surfermine"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "8bd38fcd-8755-4ce2-ba96-4fd87e445537",
+            "label": "shovel",
+            "texture": {
+                "key": "mine",
+                "frame": "shovel"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "99855f81-2394-4e17-a48e-e578f561211e",
+            "label": "cartmid_",
+            "texture": {
+                "key": "mine",
+                "frame": "cartmid#"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "93d84ff6-7559-46ba-8e19-7b5242c4f52c",
+            "label": "cartfront",
+            "texture": {
+                "key": "mine",
+                "frame": "cartfront"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "3e12f9d6-f16e-40ba-8f16-0a9aee8e0c02",
+            "label": "chairback",
+            "texture": {
+                "key": "mine",
+                "frame": "chairback"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "642db954-5674-4592-997e-857851038aff",
+            "label": "boulders",
+            "texture": {
+                "key": "mine",
+                "frame": "boulders"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Image",
+            "id": "9451eae7-fa5e-4182-852c-ef429eed2ecb",
+            "label": "table",
+            "texture": {
+                "key": "mine",
+                "frame": "table"
+            },
+            "x": 568,
+            "y": 364,
+            "originX": 0.5023041474654378
+        },
+        {
+            "type": "Sprite",
+            "id": "339e616d-8bbe-4e10-9182-0676429a9db9",
+            "label": "puffle",
+            "scope": "CLASS",
+            "components": [
+                "SimpleButton"
+            ],
+            "SimpleButton.hoverCallback": "() => this.onPuffleOver()",
+            "SimpleButton.hoverOutCallback": "() => this.onPuffleOut()",
+            "texture": {
+                "key": "mine",
+                "frame": "puffle0001"
+            },
+            "x": 628,
+            "y": 337,
+            "originX": 0.5111111111111111
+        },
+        {
+            "type": "Sprite",
+            "id": "e6beeecc-11a2-4876-8c26-aa227aa1ef06",
+            "label": "telephone",
+            "scope": "CLASS",
+            "components": [
+                "SimpleButton"
+            ],
+            "SimpleButton.hoverCallback": "() => this.onPhoneOver()",
+            "SimpleButton.hoverOutCallback": "() => this.onPhoneOver()",
+            "texture": {
+                "key": "mine",
+                "frame": "telephone0001"
+            },
+            "x": 525,
+            "y": 340,
+            "originX": 0.5102040816326531,
+            "originY": 0.5102040816326531
+        },
+        {
+            "type": "Image",
+            "id": "e1c8e27b-46c6-4e6f-8c9b-54c12e2fd94b",
+            "label": "fg",
+            "texture": {
+                "key": "mine",
+                "frame": "fg"
+            },
+            "x": 760,
+            "y": 480
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "528d71e2-a474-4325-aa76-2ccaa2e1016f",
+            "label": "sort",
+            "objectIds": [
+                "e8099f35-1e7b-451e-a295-ad3348c46dd4",
+                "d85852e5-bd94-4d34-830b-9eedf0cb995b"
+            ]
+        }
+    ]
+}

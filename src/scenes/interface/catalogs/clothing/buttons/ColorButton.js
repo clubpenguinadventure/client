@@ -22,6 +22,11 @@ export default class ColorButton extends TintedImage {
         thisButton.activeFrame = false;
 
         /* START-USER-CTR-CODE */
+        setTimeout(() => {
+            this.tintFill = true;
+            console.log(this.crumbs.colors, this.item, this);
+            this.tint = this.crumbs.colors.find(color => color.id === this.item).hex;
+        }, 5);
         /* END-USER-CTR-CODE */
     }
 

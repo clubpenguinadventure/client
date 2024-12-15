@@ -5,7 +5,8 @@
         "compilerInsertSpaces": true,
         "javaScriptInitFieldsInConstructor": true,
         "exportClass": true,
-        "superClassName": "BaseImage",
+        "autoImport": true,
+        "superClassName": "BaseContainer",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -14,20 +15,104 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "48bf79a4-8ba3-4df2-94b5-e3a9562214e1",
-            "label": "buy2",
-            "components": [
-                "Button"
-            ],
-            "Button.spriteName": "buy2",
-            "Button.callback": "() => this.interface.prompt.showItem(this.item)",
-            "texture": {
-                "key": "clothingcatalog",
-                "frame": "buy2"
-            },
-            "originX": 0,
-            "originY": 0
+            "type": "Container",
+            "id": "b05476b8-aeda-4ac0-b813-dac309cd26e9",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "48bf79a4-8ba3-4df2-94b5-e3a9562214e1",
+                    "label": "buy2",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.hoverCallback": "() => { this.hover_cntr.visible = true }",
+                    "Button.hoverOutCallback": "() => { this.hover_cntr.visible = false }",
+                    "Button.callback": "() => this.interface.prompt.showItem(this.item)",
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "buy2"
+                    },
+                    "originX": 0,
+                    "originY": 0
+                },
+                {
+                    "type": "Container",
+                    "id": "0cf77bbb-0845-4e0d-a278-400b1d8570c9",
+                    "label": "hover-cntr",
+                    "scope": "CLASS",
+                    "x": 238,
+                    "y": 34,
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "0ff049a0-2fa4-42bc-a2f6-23f4d6de1b24",
+                            "label": "rectangle_1",
+                            "y": 24,
+                            "isFilled": true,
+                            "width": 200,
+                            "height": 100
+                        },
+                        {
+                            "type": "Rectangle",
+                            "id": "2be2a3b7-cf43-4410-bec5-4d9d0cc5c83b",
+                            "label": "rectangle",
+                            "y": 24,
+                            "isFilled": true,
+                            "fillAlpha": 0.5,
+                            "width": 210,
+                            "height": 110
+                        },
+                        {
+                            "type": "Text",
+                            "id": "9a939bed-a461-46d2-85de-3d3d78e3eff6",
+                            "label": "name",
+                            "scope": "CLASS",
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Item Name",
+                            "fixedWidth": 200,
+                            "align": "center",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "22px",
+                            "fontStyle": "bold",
+                            "color": "#000000ff",
+                            "maxLines": 2,
+                            "wordWrapWidth": 200
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3e210e17-7c6a-475e-b3d9-63b6c6561a3b",
+                            "label": "price",
+                            "scope": "CLASS",
+                            "y": 46,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "8888",
+                            "paddingRight": 35,
+                            "align": "center",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "30px",
+                            "fontStyle": "bold",
+                            "color": "#000000ff"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "b2414c55-6275-42bc-ac1b-a759af6f7555",
+                            "label": "coin",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "main",
+                                "frame": "card-coin"
+                            },
+                            "x": 53,
+                            "y": 46,
+                            "originX": 1
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -35,7 +120,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "prefabProperties": [
         {

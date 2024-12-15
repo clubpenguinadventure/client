@@ -1,0 +1,267 @@
+{
+    "id": "0195f4ad-e2bc-4f9f-bb77-3ec89f7eeded",
+    "sceneType": "PREFAB",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "BaseContainer",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "1e0df905-0de2-41f5-98de-04f92349e142",
+            "label": "container_1",
+            "x": 760,
+            "y": 480,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "b66941ff-0e9f-4615-a2e6-17a983c05d4c",
+                    "label": "page_colors",
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/colors"
+                    }
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "78ef755a-20fd-44c4-9105-dd2a73643b5c",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton",
+                    "item": 1,
+                    "x": 35,
+                    "y": -175,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "d4fc1555-710c-4d1f-8cb0-98d614a2349a",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_1",
+                    "item": 6,
+                    "x": 35,
+                    "y": -76,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "8570263d-3b92-460c-8b2f-fc887bc61499",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_2",
+                    "item": 11,
+                    "x": 35,
+                    "y": 24,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "0722cdc0-0bfb-4970-8af5-9576b5638912",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_3",
+                    "item": 2,
+                    "x": 140,
+                    "y": -175,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "d4f8b4db-552d-41db-8084-feba4807142f",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_4",
+                    "item": 12,
+                    "x": 140,
+                    "y": 24,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "0d0d16e3-c7f3-4646-8aff-787ac074b178",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_5",
+                    "item": 7,
+                    "x": 140,
+                    "y": -76,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "c0a6866a-73c3-46b6-b63a-039fd6a1f166",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_6",
+                    "item": 3,
+                    "x": 245,
+                    "y": -175,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "5907269e-0533-48e8-8b76-66d6df15da13",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_7",
+                    "item": 13,
+                    "x": 245,
+                    "y": 24,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "a750bd58-46c5-4c8d-aaf9-8accb768eb09",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_8",
+                    "item": 8,
+                    "x": 245,
+                    "y": -76,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "9e08310c-90a7-4787-aad7-0392554a1b05",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_9",
+                    "item": 4,
+                    "x": 350,
+                    "y": -175,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "61c9d54b-59ce-45e9-9f46-8bbeae115c2b",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_10",
+                    "item": 5,
+                    "x": 455,
+                    "y": -175,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "e1606c4c-3da3-42ce-9cec-6b77c1dd90ff",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_11",
+                    "item": 9,
+                    "x": 350,
+                    "y": -76,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "09b52036-4089-45e3-9aaa-40a3b97c8383",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_12",
+                    "item": 10,
+                    "x": 455,
+                    "y": -76,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "95e8625e-2445-4db7-8436-10c89d5dfdd3",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_13",
+                    "item": 16,
+                    "x": 455,
+                    "y": 24,
+                    "visible": true
+                },
+                {
+                    "prefabId": "47156044-4e99-49f8-a229-f7d46dbd9624",
+                    "id": "345bfeb5-ef4c-490d-b42a-b67da9a66fef",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "item"
+                    ],
+                    "label": "colorButton_14",
+                    "item": 15,
+                    "x": 350,
+                    "y": 24,
+                    "visible": true
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}
