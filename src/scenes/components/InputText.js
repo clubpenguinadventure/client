@@ -242,6 +242,7 @@ export default class InputText extends EventComponent {
      * @returns {void}
      */
     processClick(pointer) {
+        if (!this.gameObject || !this.gameObject.scene || !this.gameObject.scene.scene.isActive() || !this.gameObject.visible) return;
         let offset = 0;
         let curObject = this.gameObject;
         while (curObject.parentContainer) {
