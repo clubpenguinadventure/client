@@ -18,6 +18,7 @@
             "type": "Container",
             "id": "b05476b8-aeda-4ac0-b813-dac309cd26e9",
             "label": "container_1",
+            "alpha": 0.6,
             "list": [
                 {
                     "type": "Image",
@@ -33,6 +34,8 @@
                         "key": "clothingcatalog",
                         "frame": "buy2"
                     },
+                    "x": -93,
+                    "y": -26,
                     "originX": 0,
                     "originY": 0
                 },
@@ -41,15 +44,16 @@
                     "id": "0cf77bbb-0845-4e0d-a278-400b1d8570c9",
                     "label": "hover-cntr",
                     "scope": "CLASS",
-                    "x": 238,
-                    "y": 34,
+                    "x": -0.014069804748811254,
+                    "y": -0.012751264656197803,
                     "visible": false,
                     "list": [
                         {
                             "type": "Rectangle",
                             "id": "0ff049a0-2fa4-42bc-a2f6-23f4d6de1b24",
                             "label": "rectangle_1",
-                            "y": 24,
+                            "x": 145.0140697908624,
+                            "y": 32.01275126554041,
                             "isFilled": true,
                             "width": 200,
                             "height": 100
@@ -58,7 +62,8 @@
                             "type": "Rectangle",
                             "id": "2be2a3b7-cf43-4410-bec5-4d9d0cc5c83b",
                             "label": "rectangle",
-                            "y": 24,
+                            "x": 145.0140697908624,
+                            "y": 32.01275126554041,
                             "isFilled": true,
                             "fillAlpha": 0.5,
                             "width": 210,
@@ -69,6 +74,8 @@
                             "id": "9a939bed-a461-46d2-85de-3d3d78e3eff6",
                             "label": "name",
                             "scope": "CLASS",
+                            "x": 145.0140697908624,
+                            "y": 8.012751265540414,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "Item Name",
@@ -86,7 +93,8 @@
                             "id": "3e210e17-7c6a-475e-b3d9-63b6c6561a3b",
                             "label": "price",
                             "scope": "CLASS",
-                            "y": 46,
+                            "x": 145.0140697908624,
+                            "y": 54.01275126554041,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "8888",
@@ -106,8 +114,8 @@
                                 "key": "main",
                                 "frame": "card-coin"
                             },
-                            "x": 53,
-                            "y": 46,
+                            "x": 198.0140697908624,
+                            "y": 54.01275126554041,
                             "originX": 1
                         }
                     ]
