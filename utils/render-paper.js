@@ -8,7 +8,7 @@ const MAX_CONCURRENT = 10;
 const execAsync = util.promisify(exec);
 
 // Paths
-const ffdecPath = `"C:/Program Files (x86)/FFDec/ffdec.bat"`;
+const ffdecPath = `"utils/bin/FFDec/ffdec.bat"`
 const dirPath = process.argv[2];
 const scale = process.argv[3] || 2;
 
