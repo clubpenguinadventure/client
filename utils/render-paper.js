@@ -29,20 +29,20 @@ async function runCommand(command) {
 // Main process for a single SWF file
 async function processSwfFile(swf) {
     try {
-        if (!await fs.stat(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}`).catch(() => false)) {
-            await fs.mkdir(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}`);
+        if (!await fs.stat(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}`).catch(() => false)) {
+            await fs.mkdir(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}`);
         }
 
         console.log(`Processing file: ${swf}`);
 
         // Export SWF to XML
         console.log('Exporting SWF to XML...');
-        await runCommand(`${ffdecPath} -swf2xml "${swf}" tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/temp.xml`);
+        await runCommand(`${ffdecPath} -swf2xml "${swf}" tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/temp.xml`);
         console.log('SWF exported to XML');
 
         // Read and modify XML
         console.log('Reading and modifying XML...');
-        const data = await fs.readFile(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/temp.xml`, 'utf8');
+        const data = await fs.readFile(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/temp.xml`, 'utf8');
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(data, 'text/xml');
 
@@ -59,47 +59,48 @@ async function processSwfFile(swf) {
                 const translateX = matrix.getAttribute('translateX');
                 const translateY = matrix.getAttribute('translateY');
 
-                // Increment translateX and translateY by 30
+                // Increment translateX and translateY by 150
 
-                matrix.setAttribute('translateX', parseInt(translateX) + 30 * 20);
-                matrix.setAttribute('translateY', parseInt(translateY) + 30 * 20);
+                matrix.setAttribute('translateX', parseInt(translateX) + 150 * 20);
+                matrix.setAttribute('translateY', parseInt(translateY) + 150 * 20);
             }
         }
+
 
         // Resize stage to correct size
         const stage = Array.from(xmlDoc.getElementsByTagName('displayRect')).filter(item => item.parentNode.tagName === 'swf')[0];
         const xMin = stage.getAttribute('Xmin');
         const yMin = stage.getAttribute('Ymin');
 
-        stage.setAttribute('Xmax', parseInt(xMin) + 60 * 20);
-        stage.setAttribute('Ymax', parseInt(yMin) + 60 * 20);
+        stage.setAttribute('Xmax', parseInt(xMin) + 300 * 20);
+        stage.setAttribute('Ymax', parseInt(yMin) + 300 * 20);
 
         // Save modified XML
         const serializer = new XMLSerializer();
         const modifiedXml = serializer.serializeToString(xmlDoc);
-        await fs.writeFile(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.xml`, modifiedXml, 'utf8');
+        await fs.writeFile(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.xml`, modifiedXml, 'utf8');
         console.log('Modified XML saved as modified.xml');
 
         // Convert modified XML back to SWF
         console.log('Exporting XML to SWF...');
-        await runCommand(`${ffdecPath} -xml2swf tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.xml tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf`);
+        await runCommand(`${ffdecPath} -xml2swf tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.xml tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf`);
         console.log('XML exported to SWF');
 
         // Export frames
         console.log('Exporting frames...');
-        await runCommand(`${ffdecPath} -ignorebackground -zoom ${scale} -export frame tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")} tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf`);
+        await runCommand(`${ffdecPath} -ignorebackground -zoom ${scale} -export frame tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")} tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf`);
         console.log('Frames exported');
 
-        if (!await fs.stat(`exported/icon_@${scale}x`).catch(() => false)) {
-            await fs.mkdir(`exported/icon_@${scale}x`);
+        if (!await fs.stat(`exported/paper_@${scale}x`).catch(() => false)) {
+            await fs.mkdir(`exported/paper_@${scale}x`);
         }
 
         // Move the image to the correct location
-        await fs.rename(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/1.png`, `exported/icon_@${scale}x/${swf.split("/").pop().replace(".swf", "")}.png`);        
+        await fs.rename(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/1.png`, `exported/paper_@${scale}x/${swf.split("/").pop().replace(".swf", "")}.png`);
 
         // Clean up temporary files
         console.log('Deleting temporary files...');
-        await fs.rm(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/`, { recursive: true, force: true });
+        await fs.rm(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/`, { recursive: true, force: true });
         console.log('Temporary files deleted');
 
     } catch (error) {
