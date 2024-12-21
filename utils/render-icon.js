@@ -9,6 +9,7 @@ const execAsync = util.promisify(exec);
 
 // Paths
 const ffdecPath = `"utils/bin/FFDec/ffdec.bat"`;
+const ruffleExporterPath = `"utils/bin/release/exporter.exe"`;
 const dirPath = process.argv[2];
 const scale = process.argv[3] || 2;
 
@@ -85,17 +86,15 @@ async function processSwfFile(swf) {
         await runCommand(`${ffdecPath} -xml2swf tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.xml tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf`);
         console.log('XML exported to SWF');
 
-        // Export frames
-        console.log('Exporting frames...');
-        await runCommand(`${ffdecPath} -ignorebackground -zoom ${scale} -export frame tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")} tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf`);
-        console.log('Frames exported');
-
         if (!await fs.stat(`exported/icon_@${scale}x`).catch(() => false)) {
             await fs.mkdir(`exported/icon_@${scale}x`);
         }
 
-        // Move the image to the correct location
-        await fs.rename(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/1.png`, `exported/icon_@${scale}x/${swf.split("/").pop().replace(".swf", "")}.png`);        
+        // Export frames
+        console.log('Exporting frames...');
+        await runCommand(`${ruffleExporterPath} --scale ${scale} -- tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf exported/icon_@${scale}x/${swf.split("/").pop().replace(".swf", "")}.png`);
+        console.log('Frames exported');
+
 
         // Clean up temporary files
         console.log('Deleting temporary files...');

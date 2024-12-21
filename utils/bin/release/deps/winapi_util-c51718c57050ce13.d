@@ -1,0 +1,11 @@
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libwinapi_util-c51718c57050ce13.rmeta: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\console.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\file.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\sysinfo.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\win.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libwinapi_util-c51718c57050ce13.rlib: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\console.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\file.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\sysinfo.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\win.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\winapi_util-c51718c57050ce13.d: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\console.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\file.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\sysinfo.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\win.rs
+
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src/lib.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\console.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\file.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\sysinfo.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\winapi-util-0.1.9\src\win.rs:

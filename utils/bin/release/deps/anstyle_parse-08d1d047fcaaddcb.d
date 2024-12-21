@@ -1,0 +1,11 @@
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libanstyle_parse-08d1d047fcaaddcb.rmeta: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\params.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\mod.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\definitions.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\table.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libanstyle_parse-08d1d047fcaaddcb.rlib: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\params.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\mod.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\definitions.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\table.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\anstyle_parse-08d1d047fcaaddcb.d: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\params.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\mod.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\definitions.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\table.rs
+
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src/lib.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\params.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\mod.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\definitions.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-parse-0.2.6\src\state\table.rs:

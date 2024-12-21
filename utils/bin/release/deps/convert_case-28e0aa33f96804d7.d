@@ -1,0 +1,11 @@
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libconvert_case-28e0aa33f96804d7.rmeta: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libconvert_case-28e0aa33f96804d7.rlib: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\convert_case-28e0aa33f96804d7.d: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs
+
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\lib.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\case.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\converter.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\pattern.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\convert_case-0.6.0\src\segmentation.rs:

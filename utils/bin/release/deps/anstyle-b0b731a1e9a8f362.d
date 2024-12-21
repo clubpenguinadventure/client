@@ -1,0 +1,12 @@
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libanstyle-b0b731a1e9a8f362.rmeta: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\macros.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\color.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\effect.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\reset.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\style.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\libanstyle-b0b731a1e9a8f362.rlib: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\macros.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\color.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\effect.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\reset.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\style.rs
+
+C:\Users\sky\yukon-stuff\ruffle\target\release\deps\anstyle-b0b731a1e9a8f362.d: C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src/lib.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\macros.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\color.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\effect.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\reset.rs C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\style.rs
+
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src/lib.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\macros.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\color.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\effect.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\reset.rs:
+C:\Users\sky\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-1.0.10\src\style.rs:
