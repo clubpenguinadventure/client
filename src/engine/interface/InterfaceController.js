@@ -291,7 +291,7 @@ export default class InterfaceController extends BaseScene {
         this.borderColor = rgbToHex(window.getComputedStyle(document.body).backgroundColor)
 
         graphics.lineStyle(16, this.borderColor, 1)
-        graphics.strokeRoundedRect(0, 0, 760*this.scaleMultiplier, 480*this.scaleMultiplier, 15*this.scaleMultiplier)
+        graphics.strokeRoundedRect(0, 0, 760*this.scaleMultiplier, 480*this.scaleMultiplier, 7.5*this.scaleMultiplier)
         graphics.depth = 100
 
         return graphics

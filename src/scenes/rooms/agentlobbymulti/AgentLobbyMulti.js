@@ -80,7 +80,7 @@ export default class AgentLobbyMulti extends RoomScene {
     /** @returns {void} */
     _preload() {
 
-        this.load.pack("agentlobbymulti-pack", "assets/media/rooms/agentlobbymulti/agentlobbymulti-pack.json");
+        this.load.pack("agentlobbymulti-pack", `assets/media/rooms/agentlobbymulti/@${this.scaleMultiplier}x/agentlobbymulti-pack.json`);
     }
 
     /** @returns {void} */

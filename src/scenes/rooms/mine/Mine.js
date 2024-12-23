@@ -41,7 +41,7 @@ export default class Mine extends RoomScene {
     /** @returns {void} */
     _preload() {
 
-        this.load.pack("mine-pack", "assets/media/rooms/mine/mine-pack.json");
+        this.load.pack("mine-pack", `assets/media/rooms/mine/@${this.scaleMultiplier}x/mine-pack.json`);
     }
 
     /** @returns {void} */

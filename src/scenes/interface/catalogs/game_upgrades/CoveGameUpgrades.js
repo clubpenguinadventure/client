@@ -1,6 +1,6 @@
 export const preload = {
     key: 'igloocatalog-pack',
-    url: 'assets/media/interface/catalogs/cove/cove-gameupgrades-pack.json',
+    url: `assets/media/interface/catalogs/cove/@${localStorage.getItem('scale')}x/cove-gameupgrades-pack.json`,
     loadString: ['loading', 'gameupgrades']
 }
 
