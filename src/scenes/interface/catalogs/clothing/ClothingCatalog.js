@@ -1,6 +1,6 @@
 export const preload = {
     key: 'clothingcatalog-pack',
-    url: 'assets/media/interface/catalogs/clothing/clothingcatalog-pack.json',
+    url: `assets/media/interface/catalogs/clothing/@${localStorage.getItem('scale')}x/clothingcatalog-pack.json`,
     loadString: ['loading', 'clothingcatalog']
 }
 
