@@ -24,6 +24,10 @@ export default class BaseContainer extends Phaser.GameObjects.Container {
         return this.scene.ruffle
     }
 
+    get scaleMultiplier() {
+        return localStorage.getItem('scale') || 2
+    }
+
     getString(...args) {
         return this.scene.getString(...args)
     }

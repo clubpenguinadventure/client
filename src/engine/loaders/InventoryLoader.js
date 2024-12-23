@@ -12,8 +12,8 @@ export default class InventoryLoader extends BaseLoader {
         this.page
         this.validSlots = ['large-box', 'large-box-worn', 'large-box-empty', 'large-box-hover']
 
-        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/clothing/icon/120/'
-        this.keyPrefix = 'clothing/icon/120/'
+        this.baseURL = `${window.ASSETS_BASE_URL}assets/media/clothing/icon/@${this.scaleMultiplier}x/`
+        this.keyPrefix = 'clothing/icon/'
     }
 
     loadPage(page) {

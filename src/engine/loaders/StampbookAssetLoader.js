@@ -5,7 +5,7 @@ export default class StampbookAssetLoader extends BaseLoader {
     constructor(scene) {
         super(scene)
     
-        this.baseURL = window.ASSETS_BASE_URL + 'assets/media/interface/game/stampbook/@2x/'
+        this.baseURL = `${window.ASSETS_BASE_URL}assets/media/interface/game/stampbook/@${this.scaleMultiplier}x/`
         this.keyPrefix = 'stampbook-assets/'
     }
     

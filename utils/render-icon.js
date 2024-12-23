@@ -2,6 +2,7 @@ const fs = require('fs').promises;
 const { DOMParser, XMLSerializer } = require('xmldom');
 const { exec } = require('child_process');
 const util = require('util');
+const sharp = require('sharp');
 
 const MAX_CONCURRENT = 10;
 
@@ -9,7 +10,7 @@ const execAsync = util.promisify(exec);
 
 // Paths
 const ffdecPath = `"utils/bin/FFDec/ffdec.bat"`;
-const ruffleExporterPath = `"utils/bin/release/exporter.exe"`;
+const ruffleExporterPath = `"utils/bin/Ruffle/exporter.exe"`;
 const dirPath = process.argv[2];
 const scale = process.argv[3] || 2;
 
@@ -87,13 +88,19 @@ async function processSwfFile(swf) {
         console.log('XML exported to SWF');
 
         if (!await fs.stat(`exported/icon_@${scale}x`).catch(() => false)) {
-            await fs.mkdir(`exported/icon_@${scale}x`);
+            await fs.mkdir(`exported/icon_@${scale}x`, { recursive: true });
         }
 
-        // Export frames
+        // Export frames (Super sampling by 2x)
         console.log('Exporting frames...');
-        await runCommand(`${ruffleExporterPath} --scale ${scale} -- tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf exported/icon_@${scale}x/${swf.split("/").pop().replace(".swf", "")}.png`);
+        await runCommand(`${ruffleExporterPath} --scale ${scale * 2} -- tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/modified.swf tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/img.png`);
         console.log('Frames exported');
+
+        // Rescale to correct size
+        console.log('Rescaling frames...');
+        await sharp(`tmp_icon_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/img.png`)
+            .resize(60*scale, 60*scale, { kernel: sharp.kernel.lanczos2 })
+            .toFile(`exported/icon_@${scale}x/${swf.split("/").pop().replace(".swf", "")}.png`);
 
 
         // Clean up temporary files

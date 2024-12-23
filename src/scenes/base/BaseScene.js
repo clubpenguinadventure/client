@@ -33,6 +33,10 @@ export default class BaseScene extends Phaser.Scene {
         return this.scene.get('RuffleController')
     }
 
+    get scaleMultiplier() {
+        return localStorage.getItem('scale') || 2
+    }
+
     getCrumb(collection, id) {
         return this.world.crumbs[collection].filter(c => c.id == id)[0]
     }

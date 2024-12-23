@@ -24,6 +24,10 @@ export default class BaseLoader extends Phaser.Loader.LoaderPlugin {
         return this.scene.world
     }
 
+    get scaleMultiplier() {
+        return localStorage.getItem('scale') || 2
+    }
+
     getCrumb(collection, id) {
         return this.crumbs[collection].filter(c => c.id == id)[0]
     }

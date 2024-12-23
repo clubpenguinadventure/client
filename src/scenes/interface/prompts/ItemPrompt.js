@@ -98,8 +98,8 @@ export default class ItemPrompt extends BaseContainer {
         if (!data) return
 
         const loadConfig = {
-            key: `clothing/icon/240/${id}`,
-            url: `assets/media/clothing/icon/240/${id}.png`
+            key: `clothing/icon/large/${id}`,
+            url: `assets/media/clothing/icon/@${this.scaleMultiplier*2}x/${id}.png`
         }
 
         this.show(this.getBuyText(data.name, data.cost), loadConfig, () => this.sendAddItem(id))
