@@ -101,7 +101,7 @@ async function processSwfFile(swf) {
         console.log('Rescaling frames...');
         await sharp(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}/img.png`)
             .resize(300*scale, 300*scale, { kernel: sharp.kernel.lanczos2 })
-            .toFile(`exported/paper_@${scale}x/${swf.split("/").pop().replaceAll(".", "_")}.png`);
+            .toFile(`exported/paper_@${scale}x/${swf.split("/").pop().replace(".swf", "")}.png`);
 
         // Clean up temporary files
         console.log('Deleting temporary files...');
