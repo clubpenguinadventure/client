@@ -36,81 +36,6 @@
                 },
                 {
                     "type": "Container",
-                    "id": "d670a77a-cf9b-4b34-9c16-df6fa6339052",
-                    "label": "page17",
-                    "visible": false,
-                    "list": [
-                        {
-                            "type": "Image",
-                            "id": "b5d0d4f0-dd43-46b4-a8b4-2397ff212943",
-                            "label": "p17",
-                            "texture": {
-                                "key": "clothingcatalog",
-                                "frame": "page/back"
-                            },
-                            "x": 760,
-                            "y": 480
-                        },
-                        {
-                            "type": "Image",
-                            "id": "1c79ea2c-74b1-441e-b11b-435c7c87c1db",
-                            "label": "pageLeft_1",
-                            "components": [
-                                "Button"
-                            ],
-                            "Button.callback": "() => this.prevPage()",
-                            "Button.activeFrame": false,
-                            "Button.pixelPerfect": true,
-                            "texture": {
-                                "key": "clothingcatalog",
-                                "frame": "page_left"
-                            },
-                            "x": 491,
-                            "y": 589,
-                            "originX": 0,
-                            "originY": 0
-                        },
-                        {
-                            "type": "Image",
-                            "id": "97974e4e-6d89-4026-b07e-65a007d43f98",
-                            "label": "closeLeft",
-                            "components": [
-                                "Button"
-                            ],
-                            "Button.callback": "() => this.close()",
-                            "Button.pixelPerfect": true,
-                            "texture": {
-                                "key": "clothingcatalog",
-                                "frame": "close_left"
-                            },
-                            "x": 491,
-                            "y": 39,
-                            "originX": 0,
-                            "originY": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "Container",
-                    "id": "1332dbc6-774a-4e6f-bbae-6aa7d0d88b39",
-                    "label": "page16",
-                    "visible": false,
-                    "list": [
-                        {
-                            "prefabId": "89cc1b88-44d6-44fb-b88d-887756d2fc03",
-                            "id": "358adb3e-f35d-4577-894a-120f0c4b1e30",
-                            "unlock": [
-                                "x",
-                                "y"
-                            ],
-                            "label": "p_1",
-                            "x": 760,
-                            "y": 480
-                        }
-                    ]
-                },
-                {
-                    "type": "Container",
                     "id": "855f6e53-2e98-401b-bc37-b3808fbb81e0",
                     "label": "page15",
                     "visible": false,
@@ -1818,9 +1743,7 @@
                 "db8cb463-31ea-4424-804d-9fed02a67419",
                 "1d7ac0c5-a7c2-4883-869e-b6baadb4d663",
                 "b8e38f6d-1821-40af-b0b3-92e54e2f27cc",
-                "855f6e53-2e98-401b-bc37-b3808fbb81e0",
-                "1332dbc6-774a-4e6f-bbae-6aa7d0d88b39",
-                "d670a77a-cf9b-4b34-9c16-df6fa6339052"
+                "855f6e53-2e98-401b-bc37-b3808fbb81e0"
             ]
         }
     ]

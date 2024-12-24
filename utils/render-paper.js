@@ -30,6 +30,11 @@ async function runCommand(command) {
 
 // Main process for a single SWF file
 async function processSwfFile(swf) {
+    if (!await fs.stat(swf).catch(() => false)) {
+        console.error(`File not found: ${swf}`);
+        return;
+    }
+
     try {
         if (!await fs.stat(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}`).catch(() => false)) {
             await fs.mkdir(`tmp_paper_@${scale}x_${swf.split("/").pop().replaceAll(".", "_")}`);

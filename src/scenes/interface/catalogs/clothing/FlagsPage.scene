@@ -28,6 +28,358 @@
                         "key": "clothingcatalog",
                         "frame": "page/flags"
                     }
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "1e1e197f-3af4-40a9-98cb-8d129fe447dc",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton",
+                    "x": -497,
+                    "y": -280
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "3650b4d9-2361-44b6-9eeb-26487c6dca3c",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_1",
+                    "x": -357,
+                    "y": -280
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "c366867c-7693-4246-a784-3426fd8904a5",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_3",
+                    "x": -217,
+                    "y": -280
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "283003f3-7c50-44fb-8d3a-c5dc4cff40dd",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_4",
+                    "x": -77,
+                    "y": -280
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "87cdeaf5-39c3-4603-a116-3b0b5b918c37",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_2",
+                    "x": -77,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "7f36d49a-a1eb-40cd-b4e4-c8fafb1205c0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_5",
+                    "x": -217,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "f9356625-e160-4316-a725-8cb601834bd5",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_6",
+                    "x": -357,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "f028e212-cd6f-4650-978c-29c16d75c7a9",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_7",
+                    "x": -497,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "15b8e2b0-5cf4-4463-9227-49969381feea",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_8",
+                    "x": -77,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "f18e3082-5ca0-4576-a210-8c38f4658864",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_9",
+                    "x": -217,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "90d5bfc5-a931-4460-a029-b77df0f87de7",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_10",
+                    "x": -357,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "5bcf97ec-882d-46b9-ae3f-1a06b43a49e4",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_11",
+                    "x": -497,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "487f2871-9e70-4ed1-9465-a53e7b108f46",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_12",
+                    "x": -77,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "ac7ca835-7873-47f4-ab46-11afb015130b",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_13",
+                    "x": -217,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "3f51e742-d5fc-4ef7-abef-5bc7446eefa4",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_14",
+                    "x": -357,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "807b470e-7c4c-4d06-bd74-0c76ef0ddc4e",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_15",
+                    "x": -497,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "e8b2dbba-69d6-4df2-af7c-a31c4b224a8e",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_16",
+                    "x": 81,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "273e84fd-0f2e-483f-a9e1-75bfe4112985",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_17",
+                    "x": 221,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "1473ac37-fe25-4b19-837c-e4d143d0639e",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_18",
+                    "x": 361,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "7078606d-b9e1-4d06-a5af-99ab7e1e41c5",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_19",
+                    "x": 501,
+                    "y": 209
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "4cbfd1b2-ed22-4871-bd1e-5cc8b783b2be",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_20",
+                    "x": 81,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "eda0b2f4-3a85-4a33-a22b-4d998e3cb5b0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_21",
+                    "x": 221,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "a6c6fe15-acc1-46dc-994e-588d7a3af0e3",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_22",
+                    "x": 361,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "d7be76b2-0a1e-4f46-86ca-0a34e38889e0",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_23",
+                    "x": 501,
+                    "y": 46
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "cfbd46d0-8719-4a24-bd3b-1a6e41cf6a29",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_24",
+                    "x": 81,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "6372e5cf-dd28-4ac2-8577-537a295328c1",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_25",
+                    "x": 221,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "fe076e81-7680-4ad5-88cb-6c0d886b4e5a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_26",
+                    "x": 361,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "de74b3ca-2007-4c93-ab85-09c327d3c216",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_27",
+                    "x": 501,
+                    "y": -117
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "c1fa8862-8bf1-40c8-8200-72dd2ca0804f",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_28",
+                    "x": 501,
+                    "y": -280
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "f75cdfac-e636-4d34-8f4e-ba73bc79d03d",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_29",
+                    "x": 361,
+                    "y": -280
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "7fecc18b-0f6d-4bb2-ba90-a38827fc10f3",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_30",
+                    "x": 221,
+                    "y": -280
+                },
+                {
+                    "prefabId": "c0258f97-d78b-4395-bd8f-031992f11244",
+                    "id": "824dc0f5-e305-4ff7-8c59-8fdbb8ed3be7",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "flagButton_31",
+                    "x": 81,
+                    "y": -280
                 }
             ]
         }
@@ -38,5 +390,45 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "lists": [
+        {
+            "id": "5fe69127-54f6-48f8-9ceb-f14e3f180113",
+            "label": "flagButtons",
+            "objectIds": [
+                "1e1e197f-3af4-40a9-98cb-8d129fe447dc",
+                "3650b4d9-2361-44b6-9eeb-26487c6dca3c",
+                "c366867c-7693-4246-a784-3426fd8904a5",
+                "283003f3-7c50-44fb-8d3a-c5dc4cff40dd",
+                "f028e212-cd6f-4650-978c-29c16d75c7a9",
+                "f9356625-e160-4316-a725-8cb601834bd5",
+                "7f36d49a-a1eb-40cd-b4e4-c8fafb1205c0",
+                "87cdeaf5-39c3-4603-a116-3b0b5b918c37",
+                "5bcf97ec-882d-46b9-ae3f-1a06b43a49e4",
+                "90d5bfc5-a931-4460-a029-b77df0f87de7",
+                "f18e3082-5ca0-4576-a210-8c38f4658864",
+                "15b8e2b0-5cf4-4463-9227-49969381feea",
+                "807b470e-7c4c-4d06-bd74-0c76ef0ddc4e",
+                "3f51e742-d5fc-4ef7-abef-5bc7446eefa4",
+                "ac7ca835-7873-47f4-ab46-11afb015130b",
+                "487f2871-9e70-4ed1-9465-a53e7b108f46",
+                "824dc0f5-e305-4ff7-8c59-8fdbb8ed3be7",
+                "7fecc18b-0f6d-4bb2-ba90-a38827fc10f3",
+                "f75cdfac-e636-4d34-8f4e-ba73bc79d03d",
+                "c1fa8862-8bf1-40c8-8200-72dd2ca0804f",
+                "cfbd46d0-8719-4a24-bd3b-1a6e41cf6a29",
+                "6372e5cf-dd28-4ac2-8577-537a295328c1",
+                "fe076e81-7680-4ad5-88cb-6c0d886b4e5a",
+                "de74b3ca-2007-4c93-ab85-09c327d3c216",
+                "4cbfd1b2-ed22-4871-bd1e-5cc8b783b2be",
+                "eda0b2f4-3a85-4a33-a22b-4d998e3cb5b0",
+                "a6c6fe15-acc1-46dc-994e-588d7a3af0e3",
+                "d7be76b2-0a1e-4f46-86ca-0a34e38889e0",
+                "e8b2dbba-69d6-4df2-af7c-a31c4b224a8e",
+                "273e84fd-0f2e-483f-a9e1-75bfe4112985",
+                "1473ac37-fe25-4b19-837c-e4d143d0639e",
+                "7078606d-b9e1-4d06-a5af-99ab7e1e41c5"
+            ]
+        }
+    ]
 }

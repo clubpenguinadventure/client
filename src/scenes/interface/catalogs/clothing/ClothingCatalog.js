@@ -11,13 +11,14 @@ const EXPIRATION_DATE = '2025-03-06'
 
 import BookContainer from "../../books/BookContainer";
 import Interactive from "../../../components/Interactive";
-import Button from "../../../components/Button";
-import FlagsPage from "./FlagsPage";
 import BackgroundsPage from "./BackgroundsPage";
 import Tag2 from "./buttons/Tag2";
 import Tag1 from "./buttons/Tag1";
 import ColorsPage from "./ColorsPage";
+import Button from "../../../components/Button";
 /* START-USER-IMPORTS */
+import FlagsPage from "./FlagsPage";
+import IconLoader from "@engine/loaders/IconLoader";
 /* END-USER-IMPORTS */
 
 export default class ClothingCatalog extends BookContainer {
@@ -39,34 +40,6 @@ export default class ClothingCatalog extends BookContainer {
         block.fillColor = 0;
         block.fillAlpha = 0.2;
         this.add(block);
-
-        // page17
-        const page17 = scene.add.container(0, 0);
-        page17.visible = false;
-        this.add(page17);
-
-        // p17
-        const p17 = scene.add.image(760, 480, "clothingcatalog", "page/back");
-        page17.add(p17);
-
-        // pageLeft_1
-        const pageLeft_1 = scene.add.image(491, 589, "clothingcatalog", "page_left");
-        pageLeft_1.setOrigin(0, 0);
-        page17.add(pageLeft_1);
-
-        // closeLeft
-        const closeLeft = scene.add.image(491, 39, "clothingcatalog", "close_left");
-        closeLeft.setOrigin(0, 0);
-        page17.add(closeLeft);
-
-        // page16
-        const page16 = scene.add.container(0, 0);
-        page16.visible = false;
-        this.add(page16);
-
-        // p_1
-        const p_1 = new FlagsPage(scene, 760, 480);
-        page16.add(p_1);
 
         // page15
         const page15 = scene.add.container(0, 0);
@@ -692,21 +665,10 @@ export default class ClothingCatalog extends BookContainer {
         buttons.add(coins);
 
         // lists
-        const pages = [page1, page2, page3, page4, page5, page6, page7, page8, page9, page10, page11, page12, page13, page14, page15, page16, page17];
+        const pages = [page1, page2, page3, page4, page5, page6, page7, page8, page9, page10, page11, page12, page13, page14, page15];
 
         // block (components)
         new Interactive(block);
-
-        // pageLeft_1 (components)
-        const pageLeft_1Button = new Button(pageLeft_1);
-        pageLeft_1Button.callback = () => this.prevPage();
-        pageLeft_1Button.activeFrame = false;
-        pageLeft_1Button.pixelPerfect = true;
-
-        // closeLeft (components)
-        const closeLeftButton = new Button(closeLeft);
-        closeLeftButton.callback = () => this.close();
-        closeLeftButton.pixelPerfect = true;
 
         // tag_71 (prefab fields)
         tag_71.item = 262;
@@ -965,6 +927,14 @@ export default class ClothingCatalog extends BookContainer {
         this.pages = pages;
 
         /* START-USER-CTR-CODE */
+        this.iconLoader = new IconLoader(this.scene);
+
+        this.addFlagPages();
+        
+        this.addBackPage();
+
+        this.bringToTop(buttons);
+
         this.pages.forEach((page) => {
             page.visible = false;
         });
@@ -975,6 +945,47 @@ export default class ClothingCatalog extends BookContainer {
 
 
     /* START-USER-CODE */
+
+    addBackPage() {
+        const backpage_cntr = this.scene.add.container(0, 0);
+        backpage_cntr.visible = false;
+        this.add(backpage_cntr);
+
+        const backpage = this.scene.add.image(760, 480, "clothingcatalog", "page/back");
+        backpage_cntr.add(backpage);
+
+        const pageLeft_1 = this.scene.add.image(491, 589, "clothingcatalog", "page_left");
+        pageLeft_1.setOrigin(0, 0);
+        backpage_cntr.add(pageLeft_1);
+
+        const pageLeft_button = new Button(pageLeft_1);
+        pageLeft_button.callback = () => this.prevPage();
+        pageLeft_button.pixelPerfect = true;
+
+        const closeLeft = this.scene.add.image(491, 39, "clothingcatalog", "close_left");
+        closeLeft.setOrigin(0, 0);
+        backpage_cntr.add(closeLeft);
+
+        const closeLeft_button = new Button(closeLeft);
+        closeLeft_button.callback = () => this.close();
+        closeLeft_button.pixelPerfect = true;
+
+        this.pages.push(backpage_cntr);
+    }
+
+    addFlagPages() {
+        const flags = this.crumbs.items.filter((item) => parseInt(item.id) >= 70000 && parseInt(item.id) < 71000);
+        let page;
+        for (let i = 0; i < flags.length; i++) {
+            if (i % 32 === 0) {
+                page = new FlagsPage(this.scene, 760, 480);
+                this.pages.push(page);
+                this.add(page);
+            }
+            page.flagButtons[i % 32].setItem(flags[i], this.iconLoader);
+        }
+    }
+
     generateReleaseDates() {
         let list = [];
         this.pages.forEach((page, index) => {

@@ -430,8 +430,6 @@ export default class ClientController {
         if (Date.now() - this.lastActivity > 1000 * 60 * 10) {
             this.network.disconnect()
             this.interface.prompt.showError('You have been disconnected for being idle for over 10 minutes', 'Reload', () => window.location.reload())
-        } else {
-            console.log('Idle for ' + (Date.now() - this.lastActivity) / 1000 + ' seconds')
         }
     }
 

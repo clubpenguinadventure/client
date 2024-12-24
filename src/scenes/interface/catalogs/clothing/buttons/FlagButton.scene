@@ -5,7 +5,7 @@
         "compilerInsertSpaces": true,
         "javaScriptInitFieldsInConstructor": true,
         "exportClass": true,
-        "superClassName": "BaseImage",
+        "superClassName": "BaseContainer",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -14,19 +14,56 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "94c767a4-d43a-480a-b7f6-485e10e81c5e",
-            "label": "flag",
-            "components": [
-                "Button"
-            ],
-            "Button.spriteName": "flag",
-            "Button.callback": "() => this.interface.prompt.showItem(this.item)",
-            "Button.activeFrame": false,
-            "texture": {
-                "key": "clothingcatalog",
-                "frame": "flag"
-            }
+            "type": "Container",
+            "id": "e63b2a54-6c9c-4ce2-8e24-192bd55ce4c9",
+            "label": "container_1",
+            "y": -0.04325452273196699,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "94c767a4-d43a-480a-b7f6-485e10e81c5e",
+                    "label": "flag",
+                    "scope": "CLASS",
+                    "components": [
+                        "SimpleButton"
+                    ],
+                    "SimpleButton.hoverCallback": "() => {this.flag_hover.visible = true}",
+                    "SimpleButton.hoverOutCallback": "() => {this.flag_hover.visible = false}",
+                    "SimpleButton.callback": "() => this.interface.prompt.showItem(this.item.id)",
+                    "texture": {},
+                    "y": 0.04325452273196699
+                },
+                {
+                    "type": "Image",
+                    "id": "196b69d8-5f17-4615-bc2d-1582d2d2cce5",
+                    "label": "flag_hover",
+                    "scope": "CLASS",
+                    "texture": {},
+                    "visible": false,
+                    "alpha": 0.3,
+                    "alphaTopLeft": 0.3,
+                    "alphaTopRight": 0.3,
+                    "alphaBottomLeft": 0.3,
+                    "alphaBottomRight": 0.3,
+                    "tintFill": true
+                },
+                {
+                    "type": "Text",
+                    "id": "1a0e9b03-ac38-453a-865e-440171cd6269",
+                    "label": "name",
+                    "scope": "CLASS",
+                    "y": 60,
+                    "originX": 0.5,
+                    "text": "Country",
+                    "fixedWidth": 120,
+                    "align": "center",
+                    "fontFamily": "Burbank Small",
+                    "fontSize": "16.5px",
+                    "stroke": "#000",
+                    "maxLines": 2,
+                    "wordWrapWidth": 120
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -34,7 +71,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "prefabProperties": [
         {
