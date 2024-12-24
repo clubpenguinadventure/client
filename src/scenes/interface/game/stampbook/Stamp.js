@@ -114,6 +114,15 @@ export default class Stamp extends BaseContainer {
         });
         this.stampHover.setStamp(stamp);
     }
+
+    setAward(stamp) {
+        this.id = stamp.stamp_id;
+        this.spinner.visible = true;
+        this.interface.stampbook.loader.loadAward(this.id, () => {
+            this.onLoad(this.id);
+        });
+        this.stampHover.setStamp(stamp);
+    }
     /* END-USER-CODE */
 }
 

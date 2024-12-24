@@ -1,5 +1,30 @@
 import BaseLoader from './BaseLoader'
 
+const AWARD_IDS = {
+    159: 801,
+    160: 802,
+    161: 803,
+    162: 804,
+    163: 805,
+    164: 806,
+    165: 808,
+    166: 809,
+    167: 810,
+    168: 811,
+    169: 813,
+    170: 814,
+    171: 815,
+    172: 816,
+    173: 817,
+    174: 818,
+    175: 819,
+    176: 820,
+    177: 822,
+    178: 823,
+    179: 8007,
+    180: 8008,
+}
+
 export default class StampbookAssetLoader extends BaseLoader {
     
     constructor(scene) {
@@ -152,6 +177,18 @@ export default class StampbookAssetLoader extends BaseLoader {
         })
 
         this.image(key, `stamps/${id}.webp`)
+
+        this.start()
+    }
+
+    loadAward(id, callback) {
+        const key = this.getKey(`stamps/${id}`)
+
+        this.checkComplete('image', key, () => {
+            callback()
+        })
+
+        this.image(key, `${window.ASSETS_BASE_URL}assets/media/clothing/icon/@2x/${AWARD_IDS[id]}.png`)
 
         this.start()
     }

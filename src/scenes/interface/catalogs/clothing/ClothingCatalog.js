@@ -4,6 +4,9 @@ export const preload = {
     loadString: ['loading', 'clothingcatalog']
 }
 
+const RELEASE_DATE = '2025-02-01'
+const EXPIRATION_DATE = '2025-03-06'
+
 /* START OF COMPILED CODE */
 
 import BookContainer from "../../books/BookContainer";
@@ -965,11 +968,30 @@ export default class ClothingCatalog extends BookContainer {
         this.pages.forEach((page) => {
             page.visible = false;
         });
+
+        window.generateReleaseDates = this.generateReleaseDates.bind(this);
         /* END-USER-CTR-CODE */
     }
 
 
     /* START-USER-CODE */
+    generateReleaseDates() {
+        let list = [];
+        this.pages.forEach((page, index) => {
+            page.list.forEach((child) => {
+                if (child instanceof Tag1 || child instanceof Tag2) {
+                    list.push({
+                        id: child.item,
+                        released: RELEASE_DATE,
+                        expired: EXPIRATION_DATE,
+                        location: "Penguin Style",
+                        page: index + 1
+                    });
+                }
+            });
+        });
+        console.log(list);
+    }
     /* END-USER-CODE */
 }
 

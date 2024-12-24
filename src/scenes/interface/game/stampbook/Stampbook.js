@@ -1,6 +1,6 @@
 export const preload = {
     key: 'stampbook-pack',
-    url: 'assets/media/interface/game/stampbook/stampbook-pack.json',
+    url: `assets/media/interface/game/stampbook/@${localStorage.getItem('scale')}x/stampbook-pack.json`,
     loadString: ['loading', 'Stampbook']
 }
 // You can write more code here
@@ -946,12 +946,21 @@ export default class Stampbook extends BaseContainer {
         this.stamps_cntr.removeAll(true);
         this.stamps_cntr.pages = [];
         this.stamps_cntr.currentPage = -1;
-        stamps = stamps.sort((a, b) => a.rank - b.rank);
+        stamps = stamps.sort((a, b) => {
+            if (a.rank === b.rank) {
+                return a.stamp_id - b.stamp_id;
+            }
+            return a.rank - b.rank;
+        });
         stamps.forEach((stamp, i) => {
             const pageWidth = 4
             const page = Math.floor(i / (4 * pageWidth));
             const stampItem = new Stamp(this.scene, 175 * (i % pageWidth) + 250, 260 + Math.floor(i % (4 * pageWidth) / pageWidth) * 165);
-            stampItem.setStamp(stamp);
+            if (this.getPageData(this.current_page).group_id == 22) {
+                stampItem.setAward(stamp);
+            } else {
+                stampItem.setStamp(stamp);
+            }
             this.stamps_cntr.add(stampItem);
             if (!this.stamps_cntr.pages[page]) this.stamps_cntr.pages[page] = [];
             this.stamps_cntr.pages[page].push(stampItem);
