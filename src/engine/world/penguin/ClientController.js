@@ -64,6 +64,9 @@ export default class ClientController {
         this.input.on('pointermove', (pointer) => this.onPointerMove(pointer))
 
         this.input.keyboard.on('keydown', (event) => this.onKeyDown(event))
+        
+        document.addEventListener('mousemove', () => this.lastActivity = Date.now())
+        setInterval(() => this.afkKick(), 1000)
     }
 
     get isTweening() {
@@ -416,6 +419,20 @@ export default class ClientController {
 
     startWalkingPet(petId) {
         this.network.send('pet_start_walk', { id: petId })
+    }
+    
+    afkKick() {
+        if (!this.lastActivity) {
+            this.lastActivity = Date.now()
+            return
+        }
+
+        if (Date.now() - this.lastActivity > 1000 * 60 * 10) {
+            this.network.disconnect()
+            this.interface.prompt.showError('You have been disconnected for being idle for over 10 minutes', 'Reload', () => window.location.reload())
+        } else {
+            console.log('Idle for ' + (Date.now() - this.lastActivity) / 1000 + ' seconds')
+        }
     }
 
 }
