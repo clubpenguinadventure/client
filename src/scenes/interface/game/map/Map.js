@@ -258,7 +258,6 @@ export default class Map extends BaseContainer {
 
         // games_cartsurfer
         const games_cartsurfer = scene.add.image(447, -96, "map", "games/cartsurfer");
-        games_cartsurfer.visible = false;
         games.add(games_cartsurfer);
 
         // games_catchinwaves
@@ -299,7 +298,6 @@ export default class Map extends BaseContainer {
 
         // games_pufflerescue
         const games_pufflerescue = scene.add.image(289, -89, "map", "games/pufflerescue");
-        games_pufflerescue.visible = false;
         games.add(games_pufflerescue);
 
         // games_roundup
@@ -636,7 +634,7 @@ export default class Map extends BaseContainer {
 
         // games_cartsurfer (components)
         const games_cartsurferButton = new Button(games_cartsurfer);
-        games_cartsurferButton.callback = () => this.goToRoomWithArrow(room, arrows);
+        games_cartsurferButton.callback = () => this.goToRoomWithArrow(808,  {"x": 1315, "y": 330 });
         const games_cartsurferShowHint = new ShowHint(games_cartsurfer);
         games_cartsurferShowHint.text = "Cart Surfer";
 
@@ -690,7 +688,7 @@ export default class Map extends BaseContainer {
 
         // games_pufflerescue (components)
         const games_pufflerescueButton = new Button(games_pufflerescue);
-        games_pufflerescueButton.callback = () => this.goToRoomWithArrow(room, arrows);
+        games_pufflerescueButton.callback = () => this.goToRoomWithArrow(808,  {"x": 560, "y": 200 });
         const games_pufflerescueShowHint = new ShowHint(games_pufflerescue);
         games_pufflerescueShowHint.text = "Puffle Rescue";
 

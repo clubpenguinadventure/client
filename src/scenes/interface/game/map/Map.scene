@@ -859,15 +859,14 @@
                                 "Button",
                                 "ShowHint"
                             ],
-                            "Button.callback": "() => this.goToRoomWithArrow(room, arrows)",
+                            "Button.callback": "() => this.goToRoomWithArrow(808,  {\"x\": 1315, \"y\": 330 })",
                             "ShowHint.text": "Cart Surfer",
                             "texture": {
                                 "key": "map",
                                 "frame": "games/cartsurfer"
                             },
                             "x": 447,
-                            "y": -96,
-                            "visible": false
+                            "y": -96
                         },
                         {
                             "type": "Image",
@@ -1017,15 +1016,14 @@
                                 "Button",
                                 "ShowHint"
                             ],
-                            "Button.callback": "() => this.goToRoomWithArrow(room, arrows)",
+                            "Button.callback": "() => this.goToRoomWithArrow(808,  {\"x\": 560, \"y\": 200 })",
                             "ShowHint.text": "Puffle Rescue",
                             "texture": {
                                 "key": "map",
                                 "frame": "games/pufflerescue"
                             },
                             "x": 289,
-                            "y": -89,
-                            "visible": false
+                            "y": -89
                         },
                         {
                             "type": "Image",
