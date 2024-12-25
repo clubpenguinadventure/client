@@ -27,7 +27,7 @@
                     "components": [
                         "Button"
                     ],
-                    "Button.hoverCallback": "() => { this.hover_cntr.visible = true }",
+                    "Button.hoverCallback": "() => { this.hover_cntr.visible = true; this.parentContainer.bringToTop(this); }",
                     "Button.hoverOutCallback": "() => { this.hover_cntr.visible = false }",
                     "Button.callback": "() => this.interface.prompt.showItem(this.item)",
                     "texture": {

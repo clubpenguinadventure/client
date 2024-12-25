@@ -63,7 +63,6 @@ export default class FlagButton extends BaseContainer {
         this.name.text = item.name;
 
         iconLoader.loadIcon(item.id, () => {
-            console.log('loaded icon', item.id);
             this.flag.setTexture(`clothing/icon/${item.id}`);
             this.flag_hover.setTexture(`clothing/icon/${item.id}`);
         });

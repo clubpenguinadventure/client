@@ -68,7 +68,7 @@ export default class Tag1 extends BaseContainer {
 
         // buy1 (components)
         const buy1Button = new Button(buy1);
-        buy1Button.hoverCallback = () => { this.hover_cntr.visible = true };
+        buy1Button.hoverCallback = () => { this.hover_cntr.visible = true; this.parentContainer.bringToTop(this); };
         buy1Button.hoverOutCallback = () => { this.hover_cntr.visible = false };
         buy1Button.callback = () => this.interface.prompt.showItem(this.item);
 
