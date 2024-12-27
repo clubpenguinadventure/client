@@ -1,7 +1,7 @@
-# Yukon
+# Club Penguin Adventure Client 
 
+This webclient is built with Yukon. 
 Visit the Discord server for more support.
-
 [![Yukon Discord members](https://badgen.net/discord/members/NtYtpzyxBu)](https://discord.gg/NtYtpzyxBu)
 
 ## Built With
@@ -24,10 +24,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
-1. Clone this repository.
+1. Clone this repository. Use --recurse-submodules flag to include assets. 
 
 ```console
-git clone https://github.com/wizguin/yukon
+git clone git clone --recurse-submodules https://github.com/clubpenguinadventure/client
 ```
 
 2. Install node dependencies.
