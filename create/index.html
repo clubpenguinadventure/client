@@ -7,7 +7,7 @@
 
         <title>Create Account</title>
 
-        <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css">
+        <link rel="stylesheet" href="create.css" type="text/css">
 
         <!-- Scripts -->
         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
@@ -17,42 +17,43 @@
     <body>
         <section class="modal-container">
             <div id="modal" class="modal fade">
-                <h1 id="modal-title">Create an Account</h1>
+                <h1 id="modal-title" class="title">Create an Account</h1>
 
                 <div id="modal-content">
                     <form id="modal-form">
 
-                        <div class="form-group" id="username-group">
-                            <input type="text" name="username" placeholder="Username" maxlength="12" required autofocus>
+                        <div class="form-group" id="username-group" >
+                            <input type="text" name="username" placeholder="Username" maxlength="12" required autofocus class="entry-field">
                             <div class="feedback"></div>
                         </div>
 
                         <div class="form-group" id="email-group">
-                            <input type="email" name="email" placeholder="Email Address" maxlength="254" required>
+                            <input type="email" name="email" placeholder="Email Address" maxlength="254" required class="entry-field">
                             <div class="feedback"></div>
                         </div>
 
                         <div class="form-group" id="password-group">
-                            <input type="password" name="password" placeholder="Password" autocomplete="new-password" maxlength="60" required>
+                            <input type="password" name="password" placeholder="Password" autocomplete="new-password" maxlength="60" required class="entry-field">
                             <div class="feedback"></div>
                         </div>
 
                         <div class="form-group" id="password-repeat-group">
-                            <input type="password" name="password-repeat" placeholder="Repeat Password" autocomplete="new-password" maxlength="60" required>
+                            <input type="password" name="password-repeat" placeholder="Repeat Password" autocomplete="new-password" maxlength="60" required class="entry-field">
                             <div class="feedback"></div>
                         </div>
 
                         <div class="form-group" id="h-captcha-response-group">
-                            <div class="h-captcha" data-sitekey="f598054c-4814-4acc-898a-bd16704444ae"></div>
+                            <div class="captcha-container">
+                                <div class="h-captcha" data-sitekey="f598054c-4814-4acc-898a-bd16704444ae"></div>
+                            </div>
                             <div class="feedback"></div>
                         </div>
 
                     </form>
                 </div>
 
-                <button id="modal-button" class="button" type="submit" form="modal-form" onclick="submitCreateForm()">Create</button>
-
-                <a href="/" class="modal-close">×</a>
+                <button id="modal-button" class="create-button" type="submit" form="modal-form" onclick="submitCreateForm()">Create</button>
+                <div class="return"><a href="/">Click here to return main page</a></div>
             </div>
         </section>
     </body>

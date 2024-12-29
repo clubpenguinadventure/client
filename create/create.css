@@ -1,0 +1,58 @@
+
+
+@font-face {
+	font-family: Burbank Small;
+	src: url(https://media.cpadventure.net/assets/fonts/BurbankSmall.woff2);
+}
+
+body {
+	margin-top:100px;
+	font-family: Burbank Small, sans-serif;
+	font-size: xx-large;
+	text-align: center;
+	background-color: #00A2E8;
+	min-height: 100vh;
+	color: white;
+}
+
+.create-button a {
+	color: #6E4E00;
+	cursor: pointer;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.create-button {
+	background-color: #FFE065;
+	border: 2px solid #FEB53F;
+	padding: 10px 20px;
+	border-radius: 10px;
+	width: 20%;
+
+}
+
+.create-button:hover {
+	background-color: #ffe98f;
+}
+
+.entry-field{
+    height: 5%;
+    border-radius: 8px;
+    font-family: Burbank Small;
+    color: #0655bd;
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid #0655bd !important;
+    caret-color: #0655bd;
+    width: 25%;
+	margin:5px;
+}
+.return{
+	font-size: 15px;
+	margin: 20px;
+}
+
+.captcha-container{
+	margin: 20px;
+}
