@@ -1,0 +1,1011 @@
+{
+    "id": "7dfc48f9-8304-4d4b-ba56-1856950713ac",
+    "sceneType": "SCENE",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "snapWidth": 266,
+        "snapHeight": 106,
+        "javaScriptInitFieldsInConstructor": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "GameScene",
+        "preloadPackFiles": [
+            "yukon/assets/media/games/hydro/@2x/hydro-pack.json"
+        ],
+        "createMethodName": "_create",
+        "sceneKey": "HydroHopper",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "7d03bb3d-ec0c-473d-9d2b-e5a960ecab0a",
+            "label": "bg",
+            "texture": {
+                "key": "hydro",
+                "frame": "bg"
+            },
+            "x": 760,
+            "y": 480
+        },
+        {
+            "type": "Container",
+            "id": "6b15006b-ed2e-4cb3-b5f3-81e7cea5ccca",
+            "label": "game_cntr",
+            "scope": "CLASS",
+            "x": 760,
+            "y": 200,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "90681407-ef1d-4d69-bda0-c99eeca66b6b",
+                    "label": "boat_highlight",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "boat-highlight"
+                    },
+                    "y": 20,
+                    "originY": 0.5032679738562091
+                },
+                {
+                    "type": "Sprite",
+                    "id": "086977eb-9718-424e-b26f-6926b85ad719",
+                    "label": "boat",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "boat"
+                    },
+                    "originY": 0.5028571428571429
+                },
+                {
+                    "type": "Container",
+                    "id": "4221376a-0aad-439e-8404-ff83cd3411e0",
+                    "label": "wake",
+                    "y": 129.80765298381442,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "73cc93fd-80fd-4194-852b-deb273827217",
+                            "label": "wake30",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 623.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "703e98a4-5589-4550-a04c-537d90e40536",
+                            "label": "wake29",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 613.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "06a57543-82fb-4b11-a03e-3ade0af56240",
+                            "label": "wake28",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 603.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "0e23b370-7137-4cd4-adb9-9ad20ed4218b",
+                            "label": "wake27",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 593.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "f1856a2b-2270-4f4f-9797-0c14257e57e3",
+                            "label": "wake26",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 583.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "f3a8d6e2-7d40-4466-b749-b7ec292626cb",
+                            "label": "wake25",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 573.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "7d566758-6df1-4197-ae54-c6f1723f6f99",
+                            "label": "wake24",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 563.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "f59da24e-b9aa-4b49-ba23-8d36ac43e0da",
+                            "label": "wake23",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 553.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "7fa7e7ea-41c9-42bf-9fd1-084e444d9a99",
+                            "label": "wake22",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 543.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "5ac86834-218e-4582-a5c5-e32a85e18e3d",
+                            "label": "wake21",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 533.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "dd663239-b02c-4f33-96b8-36b05e082855",
+                            "label": "wake20",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 523.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "8382f2c5-1401-438c-a419-002336b0b1a3",
+                            "label": "wake19",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 513.1923694707066,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "d02d076c-1894-4ba3-bf2a-d2ab2cd751bd",
+                            "label": "wake18",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 503.19236947070664,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "d2e2c37f-9178-4b90-86b4-c035e80afc49",
+                            "label": "wake17",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 493.19236947070664,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "b6be5791-c795-480f-b25e-1583e161e9fe",
+                            "label": "wake16",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 483.19236947070664,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "a94e8c3c-74ac-44ad-ae61-440a489f4aa9",
+                            "label": "wake15",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 473.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "5d72d815-7617-4b01-82c1-7913732c4eb8",
+                            "label": "wake14",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 463.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "2ebb102c-5dbe-48b4-8291-48d5abd2709c",
+                            "label": "wake13",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 453.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "67cacb29-2f57-426d-8699-a5dd64ce1072",
+                            "label": "wake12",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 443.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "f5326c68-71b3-44ef-b1d1-147b21caf5cf",
+                            "label": "wake11",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 433.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "9401b27f-6721-4a1a-8837-32878251c23d",
+                            "label": "wake10",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 423.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "491feb33-1187-4d1f-88fe-dc64ae467eb5",
+                            "label": "wake9",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 413.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "eaa3e65a-3060-49cd-8fe5-e9e63bfce56a",
+                            "label": "wake8",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 403.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "03ea1d73-0bc0-43de-b256-987c5d36bfe8",
+                            "label": "wake7",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 393.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "8e6175d1-7ae5-4aa7-a574-05fadef73536",
+                            "label": "wake6",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 383.19236947070686,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "1295eae5-1e9e-4f24-92e2-9fe1d5a65e98",
+                            "label": "wake5",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 373.19236947070675,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "26f148df-4a5c-436a-8c2c-ac8688daf4a3",
+                            "label": "wake4",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 363.19236947070675,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "769afd75-9bbb-4715-a93d-1f68350915e0",
+                            "label": "wake3",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 353.19236947070675,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "7f5418fe-27bd-4145-bb76-4058a5858eda",
+                            "label": "wake2",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 343.19236947070675,
+                            "originX": 0.503448275862069
+                        },
+                        {
+                            "type": "Image",
+                            "id": "75a04887-53b0-4743-af6b-6838827926b6",
+                            "label": "wake1",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "hydro",
+                                "frame": "trail"
+                            },
+                            "y": 333.19236947070675,
+                            "originX": 0.503448275862069
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "685e85e7-43f0-461e-baea-78b42c6edc30",
+                    "label": "penguin_cntr",
+                    "scope": "CLASS",
+                    "y": 377,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "d953aeae-ddfe-46f7-9c78-c11f7e7fbc2b",
+                            "label": "tube",
+                            "scope": "CLASS",
+                            "y": 5,
+                            "visible": false,
+                            "list": [
+                                {
+                                    "type": "Sprite",
+                                    "id": "d2060912-9af6-41cf-a4de-cb8598c19426",
+                                    "label": "penguin_tube",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/tube"
+                                    },
+                                    "y": 34,
+                                    "originX": 0.5029585798816568
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "af6cc63b-0602-4712-8f93-aca0b832dd1b",
+                                    "label": "penguin_tube_body",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/tube-body"
+                                    },
+                                    "x": 1,
+                                    "originX": 0.5040650406504065,
+                                    "tintTopLeft": "#003399",
+                                    "tintTopRight": "#003399",
+                                    "tintBottomLeft": "#003399",
+                                    "tintBottomRight": "#003399"
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "a2b7b31b-0b2f-43e2-a556-529012c53463",
+                                    "label": "penguin_tube_penguin",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/tube-penguin"
+                                    },
+                                    "y": 10,
+                                    "originY": 0.5042016806722689
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "1aa50789-906b-4bed-960b-c24585fcb146",
+                                    "label": "penguin_tube_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/tube_jump0001"
+                                    },
+                                    "x": -1,
+                                    "y": -55,
+                                    "originX": 0.5029585798816568,
+                                    "visible": false
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "8b5a6e5e-a5ea-4055-9622-2b979489a9d9",
+                                    "label": "penguin_tube_body_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/tube_jump-body0001"
+                                    },
+                                    "y": -58,
+                                    "originX": 0.5040650406504065,
+                                    "visible": false,
+                                    "tintTopLeft": "#003399",
+                                    "tintTopRight": "#003399",
+                                    "tintBottomLeft": "#003399",
+                                    "tintBottomRight": "#003399"
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "ae0b57f4-190f-4c29-906f-00064cb7d715",
+                                    "label": "penguin_tube_penguin_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/tube_jump-penguin0001"
+                                    },
+                                    "x": -1,
+                                    "y": -43,
+                                    "originY": 0.5042016806722689,
+                                    "visible": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "id": "86ab3d28-329e-4fac-b5ed-6fa9ff91383d",
+                            "label": "wakeboard",
+                            "scope": "CLASS",
+                            "x": 4,
+                            "visible": false,
+                            "list": [
+                                {
+                                    "type": "Sprite",
+                                    "id": "c4074dd6-6339-40c0-b314-3acaca876fcf",
+                                    "label": "penguin_wakeboard",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard"
+                                    },
+                                    "x": 2,
+                                    "y": 52,
+                                    "originX": 0.5039370078740157
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "1a472933-b46a-468a-b3bc-a7930a5e2130",
+                                    "label": "penguin_wakeboard_body",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard-body"
+                                    },
+                                    "originX": 0.5038167938931297,
+                                    "originY": 0.5028248587570622
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "8e561957-66ed-48bb-bead-385243eb0d99",
+                                    "label": "penguin_wakeboard_penguin",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard-penguin"
+                                    },
+                                    "y": 6,
+                                    "originX": 0.5038167938931297
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "f4afa7e6-7c46-4b80-8fed-ce86ad2bf60d",
+                                    "label": "penguin_wakeboard_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard_jump0001"
+                                    },
+                                    "y": -18,
+                                    "originX": 0.5039370078740157,
+                                    "visible": false
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "400aaee2-ea06-4e1b-8114-3a5be6d7af82",
+                                    "label": "penguin_wakeboard_body_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard-body"
+                                    },
+                                    "y": -1,
+                                    "originX": 0.5038167938931297,
+                                    "originY": 0.5028248587570622,
+                                    "visible": false
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "79805499-c075-4a8d-8fae-62261a99ab78",
+                                    "label": "penguin_wakeboard_penguin_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard_jump-penguin0001"
+                                    },
+                                    "x": -2,
+                                    "y": -61,
+                                    "originX": 0.5038167938931297,
+                                    "visible": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "id": "bf8cb414-b647-4ea3-aeab-7475ceba4a41",
+                            "label": "wakeboard2",
+                            "scope": "CLASS",
+                            "x": 4,
+                            "visible": false,
+                            "list": [
+                                {
+                                    "type": "Sprite",
+                                    "id": "793839a3-3d7d-4da0-9776-e62c8173c3c1",
+                                    "label": "penguin_wakeboard2",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard2"
+                                    },
+                                    "x": 2,
+                                    "y": 52,
+                                    "originX": 0.5039370078740157
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "5de5d873-be24-454b-8334-aada2c6b6a12",
+                                    "label": "penguin_wakeboard2_body",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard2-body"
+                                    },
+                                    "originX": 0.5038167938931297,
+                                    "originY": 0.5028248587570622
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "17ff4266-8db5-4b1a-9783-050edfe7dc49",
+                                    "label": "penguin_wakeboard2_penguin",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard2-penguin"
+                                    },
+                                    "y": 6,
+                                    "originX": 0.5038167938931297
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "51e1ffe9-e913-4727-9590-5e7a148ecaf7",
+                                    "label": "penguin_wakeboard2_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard2_jump0001"
+                                    },
+                                    "y": -18,
+                                    "originX": 0.5039370078740157,
+                                    "visible": false
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "2f2764d1-e8f1-4e74-9775-79979ca3bebf",
+                                    "label": "penguin_wakeboard2_body_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard2_jump-body0001"
+                                    },
+                                    "x": -3,
+                                    "y": -64,
+                                    "originX": 0.5038167938931297,
+                                    "originY": 0.5028248587570622,
+                                    "visible": false
+                                },
+                                {
+                                    "type": "Sprite",
+                                    "id": "a2e89326-88c8-428e-8814-dc02a334d1a7",
+                                    "label": "penguin_wakeboard2_penguin_jump",
+                                    "scope": "CLASS",
+                                    "texture": {
+                                        "key": "hydro",
+                                        "frame": "penguin/wakeboard2_jump-penguin0001"
+                                    },
+                                    "x": -2,
+                                    "y": -61,
+                                    "originX": 0.5038167938931297,
+                                    "visible": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "6ced1b84-68b6-4501-b19e-4ba246b28b90",
+            "label": "instructions_cntr",
+            "scope": "CLASS",
+            "x": 760,
+            "y": 302,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "d6fd1c40-bddf-45a3-9132-0ed15dfd08ae",
+                    "label": "mouse_anim",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "mouse-anim0001"
+                    },
+                    "x": 38,
+                    "originX": 0.5006622516556292,
+                    "animationPlayMethod": 1,
+                    "animationKey": "hydro-mouse-anim"
+                },
+                {
+                    "type": "Image",
+                    "id": "66c687bd-1940-459b-a659-be30e8f2de44",
+                    "label": "ready_btn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.startGame()",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "ready-btn"
+                    },
+                    "y": 293
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "8187dce7-363d-488e-8bf4-369f0cc203d3",
+            "label": "start_cntr",
+            "scope": "CLASS",
+            "x": 760,
+            "y": 480,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "61249a3c-b06f-44da-b5e4-20e37932a86b",
+                    "label": "startscreen",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "startscreen"
+                    }
+                },
+                {
+                    "type": "Image",
+                    "id": "601a0175-b156-4c51-a24b-3829a81ea851",
+                    "label": "start_btn",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.showInstructions()",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "start-btn"
+                    },
+                    "y": 242
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "33bdcd3b-c0e9-48e2-a6dd-36e1ab26bc3c",
+            "label": "next_level_cntr",
+            "scope": "CLASS",
+            "x": 760,
+            "y": 328,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "e3ba2ca0-44c9-439c-a289-7323ffb0d2bb",
+                    "label": "next_level_btn",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "next-level-btn"
+                    },
+                    "y": 224
+                },
+                {
+                    "type": "Image",
+                    "id": "2dd84462-29df-43ed-93ff-9f7d880b67a4",
+                    "label": "next_level_text",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "next-level-text0001"
+                    },
+                    "x": 176
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "47183895-9f8e-4c5f-bb04-4321df6f1ee8",
+            "label": "score_cntr",
+            "scope": "CLASS",
+            "x": 953,
+            "y": 65,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "1be2181b-9ede-4592-9e35-0e2dc67f539b",
+                    "label": "level2",
+                    "scope": "CLASS",
+                    "x": 73,
+                    "originX": 1,
+                    "originY": 0.4,
+                    "text": "01",
+                    "align": "right",
+                    "fontFamily": "Burbank Small",
+                    "fontSize": "56px",
+                    "fontStyle": "bold",
+                    "color": "#33CCFF"
+                },
+                {
+                    "type": "Text",
+                    "id": "b7566032-0b88-46a9-8053-172b4ef79b5e",
+                    "label": "level1",
+                    "scope": "CLASS",
+                    "x": 73,
+                    "originX": 1,
+                    "originY": 0.4,
+                    "text": "1",
+                    "align": "right",
+                    "fontFamily": "Burbank Small",
+                    "fontSize": "56px",
+                    "fontStyle": "bold",
+                    "color": "#006699"
+                },
+                {
+                    "type": "Text",
+                    "id": "86482d07-990f-4bd8-80c7-d7384a37c063",
+                    "label": "level_header",
+                    "y": 10,
+                    "originX": 1,
+                    "originY": 0.4,
+                    "text": "LEVEL:",
+                    "align": "right",
+                    "fontFamily": "Burbank Small",
+                    "fontSize": "40px",
+                    "fontStyle": "bold",
+                    "color": "#33CCFF"
+                },
+                {
+                    "type": "Text",
+                    "id": "c271915f-29ce-467a-ad25-9b69dbeda1fd",
+                    "label": "score2",
+                    "scope": "CLASS",
+                    "x": 458,
+                    "originX": 1,
+                    "originY": 0.4,
+                    "text": "000000",
+                    "align": "right",
+                    "fontFamily": "Burbank Small",
+                    "fontSize": "56px",
+                    "fontStyle": "bold",
+                    "color": "#33CCFF"
+                },
+                {
+                    "type": "Text",
+                    "id": "c916093f-03de-444a-a1ac-9d8704e96294",
+                    "label": "score1",
+                    "scope": "CLASS",
+                    "x": 458,
+                    "originX": 1,
+                    "originY": 0.4,
+                    "text": "0",
+                    "align": "right",
+                    "fontFamily": "Burbank Small",
+                    "fontSize": "56px",
+                    "fontStyle": "bold",
+                    "color": "#006699"
+                },
+                {
+                    "type": "Text",
+                    "id": "7b4d86b2-cbb9-4260-abc7-dcdf32b7e557",
+                    "label": "score_header",
+                    "x": 230,
+                    "y": 10,
+                    "originX": 1,
+                    "originY": 0.4,
+                    "text": "SCORE:",
+                    "align": "right",
+                    "fontFamily": "Burbank Small",
+                    "fontSize": "40px",
+                    "fontStyle": "bold",
+                    "color": "#33CCFF"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "91283a21-5231-49f2-8218-33627a138b45",
+            "label": "lives_cntr",
+            "scope": "CLASS",
+            "x": 240,
+            "y": 97,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "76086593-bc8f-4462-b0a5-3c6ca2bec06a",
+                    "label": "life1",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "life"
+                    },
+                    "x": 70,
+                    "originY": 0.5053763440860215
+                },
+                {
+                    "type": "Image",
+                    "id": "9fef1cc1-6755-4f68-9e11-a72518e57eb1",
+                    "label": "life2",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "life"
+                    },
+                    "x": 35,
+                    "originY": 0.5053763440860215
+                },
+                {
+                    "type": "Image",
+                    "id": "38580121-0ca5-4734-99d4-8de405a26f72",
+                    "label": "life3",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "hydro",
+                        "frame": "life"
+                    },
+                    "originY": 0.5053763440860215
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "6499a7cd-82f7-4349-bbf1-998691dcc097",
+            "label": "close_btn",
+            "components": [
+                "Button"
+            ],
+            "Button.callback": "() => this.endGame()",
+            "texture": {
+                "key": "hydro",
+                "frame": "close-btn"
+            },
+            "x": 1471,
+            "y": 43
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "39a91fb1-a42c-440c-9089-f15782810a60",
+            "label": "penguinSprites",
+            "objectIds": [
+                "17ff4266-8db5-4b1a-9783-050edfe7dc49",
+                "5de5d873-be24-454b-8334-aada2c6b6a12",
+                "793839a3-3d7d-4da0-9776-e62c8173c3c1",
+                "8e561957-66ed-48bb-bead-385243eb0d99",
+                "1a472933-b46a-468a-b3bc-a7930a5e2130",
+                "c4074dd6-6339-40c0-b314-3acaca876fcf",
+                "a2b7b31b-0b2f-43e2-a556-529012c53463",
+                "af6cc63b-0602-4712-8f93-aca0b832dd1b",
+                "d2060912-9af6-41cf-a4de-cb8598c19426"
+            ]
+        },
+        {
+            "id": "bed8e067-4caf-4038-937e-420b2ef52d3a",
+            "label": "penguinAnimationSprites",
+            "objectIds": [
+                "1aa50789-906b-4bed-960b-c24585fcb146",
+                "ae0b57f4-190f-4c29-906f-00064cb7d715",
+                "8b5a6e5e-a5ea-4055-9622-2b979489a9d9"
+            ]
+        }
+    ]
+}

@@ -173,6 +173,10 @@ const rooms = {
         x: 840,
         y: 480
     },
+    903: {
+        key: 'HydroHopper',
+        scene: require('@rooms/../games/hydro/HydroHopper').default
+    },
     951: {
         key: 'Sensei',
         scene: require('@rooms/../games/sensei/Sensei').default
