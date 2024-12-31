@@ -57,6 +57,11 @@ export default class PromptController {
         this.error.show(text, buttonText, callback)
     }
 
+    showStrongError(text, buttonText = 'Okay', callback = () => this.error.close()) {
+        this.error.show(text, buttonText, callback)
+        this.error.doNotOverride = true
+    }
+
     showItem(item) {
         this.item.showItem(item)
     }

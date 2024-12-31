@@ -6,7 +6,9 @@ export default class Error extends Plugin {
     constructor(network) {
         super(network)
         this.events = {
-            'error': this.error
+            'error': this.error,
+            'close_with_error': this.closeWithError,
+            'mute': this.mute,
         }
 
         // Todo: use error ids instead
@@ -23,6 +25,18 @@ export default class Error extends Plugin {
         this.interface.prompt.showError(args.error)
     }
 
+    closeWithError(args) {
+        if (args.permitReload) {
+            this.interface.prompt.showStrongError(args.error, 'Reload', () => {
+                window.location.reload()
+            })
+        } else {
+            this.interface.prompt.showStrongError(args.error, 'Home', () => {
+                window.location.href = '/'
+            })
+        }
+    }
+
     fullRoom() {
         this.interface.prompt.showError('Sorry this room is currently full', 'Okay', () => {
             this.interface.showInterface()
@@ -30,6 +44,11 @@ export default class Error extends Plugin {
             this.interface.prompt.error.visible = false
             this.interface.loadWidget('Map')
         })
+    }
+
+    mute(args) {
+        this.world.client.muted = args.mute
+        this.interface.main.setMuted();
     }
 
 }

@@ -14,6 +14,10 @@ class ErrorPrompt extends Prompt {
     }
 
     show(text, buttonText, callback) {
+        if (this.doNotOverride) {
+            return
+        }
+
         this.text.text = text
         this.button.text.text = buttonText
         // Allows for modification of callback
