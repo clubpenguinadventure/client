@@ -114,6 +114,128 @@
                             "strokeThickness": 9
                         }
                     ]
+                },
+                {
+                    "type": "Container",
+                    "id": "1b8ca9d0-0c0c-41ad-97f1-bf7e688699a8",
+                    "label": "secret",
+                    "scope": "CLASS",
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "2ea666b8-b633-4832-a26e-9700911c087e",
+                            "label": "block2",
+                            "components": [
+                                "Interactive"
+                            ],
+                            "x": 760,
+                            "y": 480,
+                            "isFilled": true,
+                            "fillColor": "#000000",
+                            "fillAlpha": 0.2,
+                            "width": 1520,
+                            "height": 960
+                        },
+                        {
+                            "type": "Image",
+                            "id": "cce5a86d-b42c-4d18-a00b-8430d912d2e6",
+                            "label": "secret_bg",
+                            "texture": {
+                                "key": "clothingcatalog",
+                                "frame": "secret-bg"
+                            },
+                            "x": 770,
+                            "y": 480
+                        },
+                        {
+                            "type": "Image",
+                            "id": "7bdc27c5-1423-4868-a446-f66f09a2bb02",
+                            "label": "secret_buybtn",
+                            "components": [
+                                "Button"
+                            ],
+                            "Button.callback": "() => this.buySecret()",
+                            "texture": {
+                                "key": "clothingcatalog",
+                                "frame": "secret-buybtn"
+                            },
+                            "x": 760,
+                            "y": 636
+                        },
+                        {
+                            "type": "Image",
+                            "id": "f2a2adbc-8dd5-407d-9a7b-dbc6f5acb999",
+                            "label": "secret_close",
+                            "components": [
+                                "Button"
+                            ],
+                            "Button.callback": "() => { this.secret.visible = false }",
+                            "texture": {
+                                "key": "clothingcatalog",
+                                "frame": "secret-close"
+                            },
+                            "x": 1005,
+                            "y": 211,
+                            "originX": 0.4095556542217385,
+                            "originY": 0.42120231297228017
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b7321979-39ec-4754-907b-4864a120b232",
+                            "label": "secret_cost",
+                            "scope": "CLASS",
+                            "x": 760,
+                            "y": 637,
+                            "originX": 0.5,
+                            "originY": 0.53,
+                            "text": "8888",
+                            "align": "center",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "30px",
+                            "fontStyle": "bold",
+                            "color": "#5e4700ff",
+                            "stroke": "#000"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4f8ddbff-6a4f-4d03-9c71-cc02cb97333b",
+                            "label": "secret_name",
+                            "scope": "CLASS",
+                            "x": 760,
+                            "y": 588,
+                            "originX": 0.5,
+                            "originY": 0.53,
+                            "text": "Really Really Long Item Name",
+                            "align": "center",
+                            "fontFamily": "Burbank Small",
+                            "fontSize": "30px",
+                            "fontStyle": "bold",
+                            "color": "#5e4700ff",
+                            "stroke": "#000"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "4c23dfe7-cb78-498a-bdc7-50b487bbe677",
+                            "label": "secret_icon",
+                            "scope": "CLASS",
+                            "texture": {},
+                            "x": 760,
+                            "y": 464
+                        },
+                        {
+                            "type": "Image",
+                            "id": "0917ed46-33ee-4427-9119-d809228c008d",
+                            "label": "secret_spinner",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "load",
+                                "frame": "spinner"
+                            },
+                            "x": 760,
+                            "y": 464
+                        }
+                    ]
                 }
             ]
         }

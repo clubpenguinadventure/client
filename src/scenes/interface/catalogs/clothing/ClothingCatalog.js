@@ -16,6 +16,7 @@ import CatalogPagesLoader from "@engine/loaders/CatalogPagesLoader";
 import ColorsPage from "./ColorsPage";
 import Tag1 from "./buttons/Tag1";
 import Tag2 from "./buttons/Tag2";
+import Secret from "./buttons/Secret";
 import { _ } from "core-js";
 /* END-USER-IMPORTS */
 
@@ -28,6 +29,16 @@ export default class ClothingCatalog extends BookContainer {
         this.coins;
         /** @type {Phaser.GameObjects.Container} */
         this.buttons;
+        /** @type {Phaser.GameObjects.Text} */
+        this.secret_cost;
+        /** @type {Phaser.GameObjects.Text} */
+        this.secret_name;
+        /** @type {Phaser.GameObjects.Image} */
+        this.secret_icon;
+        /** @type {Phaser.GameObjects.Image} */
+        this.secret_spinner;
+        /** @type {Phaser.GameObjects.Container} */
+        this.secret;
         /** @type {Array<any>} */
         this.pages;
 
@@ -65,6 +76,53 @@ export default class ClothingCatalog extends BookContainer {
         coins.setStyle({ "align": "right", "fixedWidth":600,"fontFamily": "CCComiccrazy", "fontSize": "32px", "stroke": "#000", "strokeThickness":9});
         buttons.add(coins);
 
+        // secret
+        const secret = scene.add.container(0, 0);
+        secret.visible = false;
+        this.add(secret);
+
+        // block2
+        const block2 = scene.add.rectangle(760, 480, 1520, 960);
+        block2.isFilled = true;
+        block2.fillColor = 0;
+        block2.fillAlpha = 0.2;
+        secret.add(block2);
+
+        // secret_bg
+        const secret_bg = scene.add.image(770, 480, "clothingcatalog", "secret-bg");
+        secret.add(secret_bg);
+
+        // secret_buybtn
+        const secret_buybtn = scene.add.image(760, 636, "clothingcatalog", "secret-buybtn");
+        secret.add(secret_buybtn);
+
+        // secret_close
+        const secret_close = scene.add.image(1005, 211, "clothingcatalog", "secret-close");
+        secret_close.setOrigin(0.4095556542217385, 0.42120231297228017);
+        secret.add(secret_close);
+
+        // secret_cost
+        const secret_cost = scene.add.text(760, 637, "", {});
+        secret_cost.setOrigin(0.5, 0.53);
+        secret_cost.text = "8888";
+        secret_cost.setStyle({ "align": "center", "color": "#5e4700ff", "fontFamily": "Burbank Small", "fontSize": "30px", "fontStyle": "bold", "stroke": "#000" });
+        secret.add(secret_cost);
+
+        // secret_name
+        const secret_name = scene.add.text(760, 588, "", {});
+        secret_name.setOrigin(0.5, 0.53);
+        secret_name.text = "Really Really Long Item Name";
+        secret_name.setStyle({ "align": "center", "color": "#5e4700ff", "fontFamily": "Burbank Small", "fontSize": "30px", "fontStyle": "bold", "stroke": "#000" });
+        secret.add(secret_name);
+
+        // secret_icon
+        const secret_icon = scene.add.image(760, 464, "_MISSING");
+        secret.add(secret_icon);
+
+        // secret_spinner
+        const secret_spinner = scene.add.image(760, 464, "load", "spinner");
+        secret.add(secret_spinner);
+
         // lists
         const pages = [];
 
@@ -88,8 +146,24 @@ export default class ClothingCatalog extends BookContainer {
         pageLeftButton.activeFrame = false;
         pageLeftButton.pixelPerfect = true;
 
+        // block2 (components)
+        new Interactive(block2);
+
+        // secret_buybtn (components)
+        const secret_buybtnButton = new Button(secret_buybtn);
+        secret_buybtnButton.callback = () => this.buySecret();
+
+        // secret_close (components)
+        const secret_closeButton = new Button(secret_close);
+        secret_closeButton.callback = () => { this.secret.visible = false };
+
         this.coins = coins;
         this.buttons = buttons;
+        this.secret_cost = secret_cost;
+        this.secret_name = secret_name;
+        this.secret_icon = secret_icon;
+        this.secret_spinner = secret_spinner;
+        this.secret = secret;
         this.pages = pages;
 
         /* START-USER-CTR-CODE */
@@ -111,10 +185,19 @@ export default class ClothingCatalog extends BookContainer {
         this.addBackPage();
 
         this.bringToTop(buttons);
+        this.bringToTop(secret);
 
         this.pages.forEach((page) => {
             page.visible = false;
         });
+
+        this.tween = this.scene.tweens.add({
+            targets: this.secret_spinner,
+            angle: { from: 0, to: 180 },
+            duration: 900,
+            repeat: -1,
+            ease: 'Cubic'
+        })
 
         window.generateReleaseDates = this.generateReleaseDates.bind(this);
         /* END-USER-CTR-CODE */
@@ -175,51 +258,33 @@ export default class ClothingCatalog extends BookContainer {
     }
 
     addContentPages() {
-        this.catalogJson.new.forEach((content) => {
-            const page = this.scene.add.container(0, 0);
-            page.visible = false;
-            this.add(page);
-
-            const p1 = this.scene.add.image(760, 480, "_MISSING");
-            this.pagesLoader.loadClothingPage(content.img, () => {
-                p1.setTexture(`catalogs/pages/clothing/${content.img}`);
-            });
-            page.add(p1);
-
-            content.tags.forEach((tag) => {
-                let tagObj;
-                if (tag.type === "tag1") {
-                    tagObj = new Tag1(this.scene, tag.x, tag.y);
-                } else if (tag.type === "tag2") {
-                    tagObj = new Tag2(this.scene, tag.x, tag.y);
-                }
-                tagObj.angle = tag.angle;
-                tagObj.item = tag.item;
-                page.add(tagObj);
-            });
-
-            this.pages.push(page);
-        });
+        this.loadItems("new");
     }
 
     addClearancePages() {
-        this.catalogJson.clearance.forEach((content) => {
+        this.loadItems("clearance");
+    }
+
+    loadItems(type) {
+        this.catalogJson[type].forEach((p) => {
             const page = this.scene.add.container(0, 0);
             page.visible = false;
             this.add(page);
 
             const p1 = this.scene.add.image(760, 480, "_MISSING");
-            this.pagesLoader.loadClothingPage(content.img, () => {
-                p1.setTexture(`catalogs/pages/clothing/${content.img}`);
+            this.pagesLoader.loadClothingPage(p.img, () => {
+                p1.setTexture(`catalogs/pages/clothing/${p.img}`);
             });
             page.add(p1);
 
-            content.tags.forEach((tag) => {
+            p.tags.forEach((tag) => {
                 let tagObj;
                 if (tag.type === "tag1") {
                     tagObj = new Tag1(this.scene, tag.x, tag.y);
                 } else if (tag.type === "tag2") {
                     tagObj = new Tag2(this.scene, tag.x, tag.y);
+                } else if (tag.type === "secret") {
+                    tagObj = new Secret(this.scene, tag.x, tag.y);
                 }
                 tagObj.angle = tag.angle;
                 tagObj.item = tag.item;
@@ -287,6 +352,28 @@ export default class ClothingCatalog extends BookContainer {
             });
         });
         console.info(list);
+    }
+
+    showSecret(id) {
+        let item = this.getCrumb('items', id);
+        if (!item) return;
+        this.currentSecret = id;
+        this.secret_icon.visible = false;
+        this.secret_spinner.visible = true;
+        this.iconLoader.loadLargeIcon(item.id, () => {
+            this.secret_icon.setTexture(`clothing/icon/large/${item.id}`);
+            this.secret_icon.visible = true;
+            this.secret_spinner.visible = false;
+        });
+
+        this.secret_name.text = item.name;
+        this.secret_cost.text = item.cost;
+        this.secret.visible = true;
+    }
+
+    buySecret() {
+        this.secret.visible = false;
+        this.interface.prompt.showItem(this.currentSecret);
     }
     /* END-USER-CODE */
 }
