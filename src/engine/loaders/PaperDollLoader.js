@@ -19,7 +19,7 @@ export default class PaperDollLoader extends BaseLoader {
     getUrl(slot) {
         switch (slot) {
             case 'flag':
-                return `icon/@${this.scaleMultipler}x/`
+                return `icon/@${this.scaleMultiplier}x/`
 
             case 'photo':
                 return 'photos/'
