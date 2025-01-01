@@ -4,7 +4,7 @@
 /* START OF COMPILED CODE */
 
 import BaseSprite from "../../../../base/BaseSprite";
-import Button from "../../../../components/Button";
+import SimpleButton from "../../../../components/SimpleButton";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -16,10 +16,10 @@ export default class Secret extends BaseSprite {
         this.setOrigin(0.5060240963855421, 0.5060240963855421);
 
         // this (components)
-        const thisButton = new Button(this);
-        thisButton.hoverCallback = () => this.onOver();
-        thisButton.hoverOutCallback = () => this.onOut();
-        thisButton.callback = () => this.onClick();
+        const thisSimpleButton = new SimpleButton(this);
+        thisSimpleButton.hoverCallback = () => this.onOver();
+        thisSimpleButton.hoverOutCallback = () => this.onOut();
+        thisSimpleButton.callback = () => this.onClick();
 
         /* START-USER-CTR-CODE */
         // Write your code here.
@@ -27,9 +27,13 @@ export default class Secret extends BaseSprite {
     }
 
     /** @type {number} */
-    itemId = 0;
+    item = 0;
 
     /* START-USER-CODE */
+
+    get catalog() {
+        return this.interface.loadedWidgets.ClothingCatalog;
+    }
 
     onOver() {
         this.play('clothingcatalog-secret-hoveranim');
@@ -41,7 +45,7 @@ export default class Secret extends BaseSprite {
     }
 
     onClick() {
-        this.scene.showSecret(this.itemId);
+        this.catalog.showSecret(this.item);
         this.onOut();
     }
 

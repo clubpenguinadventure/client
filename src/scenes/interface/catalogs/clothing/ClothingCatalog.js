@@ -198,8 +198,6 @@ export default class ClothingCatalog extends BookContainer {
             repeat: -1,
             ease: 'Cubic'
         })
-
-        window.generateReleaseDates = this.generateReleaseDates.bind(this);
         /* END-USER-CTR-CODE */
     }
 
@@ -333,25 +331,6 @@ export default class ClothingCatalog extends BookContainer {
             }
             page.flagButtons[i % 32].setItem(flags[i], this.iconLoader);
         }
-    }
-
-    generateReleaseDates() {
-        let list = [];
-        this.pages.forEach((page, index) => {
-            page.list.forEach((child) => {
-                if (child instanceof Tag1 || child instanceof Tag2) {
-                    list.push({
-                        id: child.item,
-                        released: this.catalogJson.release_date,
-                        expired: this.catalogJson.expiration_date,
-                        location: "Penguin Style",
-                        page: index + 1,
-                        cost: child.price.text
-                    });
-                }
-            });
-        });
-        console.info(list);
     }
 
     showSecret(id) {
