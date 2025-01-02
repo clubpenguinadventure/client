@@ -61,6 +61,13 @@ export default class FlagButton extends BaseContainer {
     setItem(item, iconLoader) {
         this.item = item;
         this.name.text = item.name;
+        if (item.name.length > 30) {
+            this.name.setFontSize(14);
+            this.name.setFixedSize(150, 0);
+            this.name.setWordWrapWidth(150);
+        } else if (item.name.length <= 10) {
+            this.name.setFontSize(20);
+        }
 
         iconLoader.loadIcon(item.id, () => {
             this.flag.setTexture(`clothing/icon/${item.id}`);

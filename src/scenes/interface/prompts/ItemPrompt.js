@@ -90,7 +90,7 @@ export default class ItemPrompt extends BaseContainer {
     }
 
     showItem(id) {
-        if (this.inventoryIncludes(id)) {
+        if (this.inventoryIncludes(parseInt(id))) {
             return this.interface.prompt.showError('You already have this item.')
         }
 

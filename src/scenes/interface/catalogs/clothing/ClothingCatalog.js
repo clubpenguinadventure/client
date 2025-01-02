@@ -58,18 +58,24 @@ export default class ClothingCatalog extends BookContainer {
         this.add(buttons);
 
         // closeRight
-        const closeRight = scene.add.image(1012, 1, "clothingcatalog", "close_right");
-        closeRight.setOrigin(0, 0);
+        const closeRight = scene.add.image(1141, 1, "clothingcatalog", "close_right");
+        closeRight.scaleX = 0.5;
+        closeRight.scaleY = 0.5;
+        closeRight.setOrigin(1, 0);
         buttons.add(closeRight);
 
         // pageRight
-        const pageRight = scene.add.image(1012, 548, "clothingcatalog", "page_right");
-        pageRight.setOrigin(0, 0);
+        const pageRight = scene.add.image(1142, 766, "clothingcatalog", "page_right");
+        pageRight.scaleX = 0.5;
+        pageRight.scaleY = 0.5;
+        pageRight.setOrigin(1, 1);
         buttons.add(pageRight);
 
         // pageLeft
-        const pageLeft = scene.add.image(0, 548, "clothingcatalog", "page_left");
-        pageLeft.setOrigin(0, 0);
+        const pageLeft = scene.add.image(0, 766, "clothingcatalog", "page_left");
+        pageLeft.scaleX = 0.5;
+        pageLeft.scaleY = 0.5;
+        pageLeft.setOrigin(0, 1);
         buttons.add(pageLeft);
 
         // coins
