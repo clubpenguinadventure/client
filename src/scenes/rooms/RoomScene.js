@@ -22,6 +22,10 @@ export default class RoomScene extends BaseScene {
 
         this.tables
         this.waddles
+
+        window.room = {
+            wikiMode: () => this.wikiMode()
+        }
     }
 
     get client() {
@@ -271,6 +275,14 @@ export default class RoomScene extends BaseScene {
 
             this.interface.prompt.window.visible = false
         })
+    }
+
+    wikiMode() {
+        Object.values(this.penguins).forEach(penguin => { penguin.visible = false; penguin.nameTag.visible = false })
+        this.interface.main.children.list.forEach(child => child.visible = false)
+        this.interface.border.destroy();
+        this.network.disconnect();
+        this.interface.prompt.error.destroy();
     }
 
 }

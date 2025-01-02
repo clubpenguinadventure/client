@@ -57,8 +57,6 @@
                             },
                             "x": 1141,
                             "y": 1,
-                            "scaleX": 0.5,
-                            "scaleY": 0.5,
                             "originX": 1,
                             "originY": 0
                         },
@@ -76,12 +74,10 @@
                                 "key": "clothingcatalog",
                                 "frame": "page_right"
                             },
-                            "x": 1142,
-                            "y": 766,
-                            "scaleX": 0.5,
-                            "scaleY": 0.5,
-                            "originX": 1,
-                            "originY": 1
+                            "x": 1142.075209175545,
+                            "y": 770.0201416015625,
+                            "originX": 1.000578275387247,
+                            "originY": 1.0000905831948006
                         },
                         {
                             "type": "Image",
@@ -97,11 +93,9 @@
                                 "key": "clothingcatalog",
                                 "frame": "page_left"
                             },
-                            "y": 766,
-                            "scaleX": 0.5,
-                            "scaleY": 0.5,
+                            "y": 769.9889917793676,
                             "originX": 0,
-                            "originY": 1
+                            "originY": 0.9999504780778234
                         },
                         {
                             "type": "Text",

@@ -24,7 +24,8 @@ export default class CustomTShirtPage extends BaseContainer {
         this.add(shirt);
 
         // tag1
-        const tag1 = new Tag1(scene, 357, -217);
+        const tag1 = new Tag1(scene, 394, -181);
+        tag1.angle = -35.00000000000006;
         this.add(tag1);
 
         // page_customtshirt_buttonblack

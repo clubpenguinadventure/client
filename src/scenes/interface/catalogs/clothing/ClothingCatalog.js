@@ -59,23 +59,17 @@ export default class ClothingCatalog extends BookContainer {
 
         // closeRight
         const closeRight = scene.add.image(1141, 1, "clothingcatalog", "close_right");
-        closeRight.scaleX = 0.5;
-        closeRight.scaleY = 0.5;
         closeRight.setOrigin(1, 0);
         buttons.add(closeRight);
 
         // pageRight
-        const pageRight = scene.add.image(1142, 766, "clothingcatalog", "page_right");
-        pageRight.scaleX = 0.5;
-        pageRight.scaleY = 0.5;
-        pageRight.setOrigin(1, 1);
+        const pageRight = scene.add.image(1142.075209175545, 770.0201416015625, "clothingcatalog", "page_right");
+        pageRight.setOrigin(1.000578275387247, 1.0000905831948006);
         buttons.add(pageRight);
 
         // pageLeft
-        const pageLeft = scene.add.image(0, 766, "clothingcatalog", "page_left");
-        pageLeft.scaleX = 0.5;
-        pageLeft.scaleY = 0.5;
-        pageLeft.setOrigin(0, 1);
+        const pageLeft = scene.add.image(0, 769.9889917793676, "clothingcatalog", "page_left");
+        pageLeft.setOrigin(0, 0.9999504780778234);
         buttons.add(pageLeft);
 
         // coins
@@ -210,6 +204,10 @@ export default class ClothingCatalog extends BookContainer {
             repeat: -1,
             ease: 'Cubic'
         })
+
+        window.catalog = {
+            wikiMode: () => this.wikiMode()
+        }
         /* END-USER-CTR-CODE */
     }
 
@@ -380,6 +378,16 @@ export default class ClothingCatalog extends BookContainer {
     buySecret() {
         this.secret.visible = false;
         this.interface.prompt.showItem(this.currentSecret);
+    }
+
+    wikiMode() {
+        this.world.room.children.list.forEach(child => child.visible = false)
+        this.interface.main.children.list.forEach(child => child.visible = false)
+        this.interface.border.destroy();
+        this.list[0].visible = false;
+        this.coins.visible = false;
+        this.network.disconnect();
+        this.interface.prompt.error.destroy();
     }
     /* END-USER-CODE */
 }

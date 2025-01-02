@@ -48,13 +48,15 @@
                     "unlock": [
                         "x",
                         "y",
-                        "item"
+                        "item",
+                        "angle"
                     ],
                     "label": "tag1",
                     "scope": "CLASS",
                     "item": 4241,
-                    "x": 357,
-                    "y": -217
+                    "x": 394,
+                    "y": -181,
+                    "angle": -35.00000000000006
                 },
                 {
                     "type": "Image",
