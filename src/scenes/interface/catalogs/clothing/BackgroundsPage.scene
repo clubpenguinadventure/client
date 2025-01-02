@@ -28,6 +28,126 @@
                         "key": "clothingcatalog",
                         "frame": "page/backgrounds"
                     }
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "fcf4e533-06c4-470b-b29a-89cbdc535cec",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton",
+                    "x": -420,
+                    "y": -100,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "8af6d858-cd01-4f7b-b864-ef576d025d25",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton_1",
+                    "x": -150,
+                    "y": -100,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "a7d5fe7a-30f9-48a5-a329-2af3b9dda190",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton_2",
+                    "x": -420,
+                    "y": 170,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "a08ae122-6b9b-4247-a584-bbb00a568fe3",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton_3",
+                    "x": -150,
+                    "y": 170,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "92ac27b4-2390-4ba7-a791-5f0ec1fb0827",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton_4",
+                    "x": 155,
+                    "y": -100,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "03bdb3a9-7870-477e-b698-e3eea2cb28f2",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton_5",
+                    "x": 425,
+                    "y": -100,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "557c2fd9-734d-4167-af71-49a1792b89ae",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton_6",
+                    "x": 425,
+                    "y": 170,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "d9f4da97-c017-415a-aec7-cd283c0992b6",
+                    "id": "c5ec2113-a4d5-45fa-be7b-9e181953ec44",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "photoButton_7",
+                    "x": 155,
+                    "y": 170,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
                 }
             ]
         }
@@ -38,5 +158,21 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "lists": [
+        {
+            "id": "8f7b1ca1-ada0-404d-98ab-37fa111bfaf8",
+            "label": "backgrounds",
+            "objectIds": [
+                "fcf4e533-06c4-470b-b29a-89cbdc535cec",
+                "8af6d858-cd01-4f7b-b864-ef576d025d25",
+                "a7d5fe7a-30f9-48a5-a329-2af3b9dda190",
+                "a08ae122-6b9b-4247-a584-bbb00a568fe3",
+                "92ac27b4-2390-4ba7-a791-5f0ec1fb0827",
+                "03bdb3a9-7870-477e-b698-e3eea2cb28f2",
+                "c5ec2113-a4d5-45fa-be7b-9e181953ec44",
+                "557c2fd9-734d-4167-af71-49a1792b89ae"
+            ]
+        }
+    ]
 }

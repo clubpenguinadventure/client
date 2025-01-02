@@ -12,8 +12,11 @@ import Button from "../../../components/Button";
 /* START-USER-IMPORTS */
 import FlagsPage from "./FlagsPage";
 import IconLoader from "@engine/loaders/IconLoader";
+import PhotoLoader from "@engine/loaders/PhotoLoader";
 import CatalogPagesLoader from "@engine/loaders/CatalogPagesLoader";
 import ColorsPage from "./ColorsPage";
+import BackgroundsPage from "./BackgroundsPage";
+import CustomTShirtPage from "./CustomTShirtPage";
 import Tag1 from "./buttons/Tag1";
 import Tag2 from "./buttons/Tag2";
 import Secret from "./buttons/Secret";
@@ -169,16 +172,19 @@ export default class ClothingCatalog extends BookContainer {
         /* START-USER-CTR-CODE */
         this.iconLoader = new IconLoader(this.scene);
         this.pagesLoader = new CatalogPagesLoader(this.scene);
+        this.photoLoader = new PhotoLoader(this.scene);
 
         this.addFrontPage();
 
         this.addColorsPage();
 
+        this.addCustomTShirtPage();
+
         this.addContentPages();
 
-        // this.addCustomTShirtPage();
-
         this.addClearancePages();
+
+        this.addBackgroundsPage();
 
         this.addFlagPages();
 
@@ -255,6 +261,12 @@ export default class ClothingCatalog extends BookContainer {
         this.pages.push(page);
     }
 
+    addCustomTShirtPage() {
+        const page = new CustomTShirtPage(this.scene, 760, 480);
+        this.add(page);
+        this.pages.push(page);
+    }
+
     addContentPages() {
         this.loadItems("new");
     }
@@ -318,6 +330,15 @@ export default class ClothingCatalog extends BookContainer {
         closeLeft_button.pixelPerfect = true;
 
         this.pages.push(backpage_cntr);
+    }
+
+    addBackgroundsPage() {
+        let page = new BackgroundsPage(this.scene, 760, 480);
+        this.pages.push(page);
+        this.add(page);
+        this.catalogJson.backgrounds.forEach((bg, i) => {
+            page.backgrounds[i].setItem(bg, this.photoLoader);
+        });
     }
 
     addFlagPages() {

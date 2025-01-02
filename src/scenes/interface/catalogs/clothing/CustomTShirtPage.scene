@@ -1,0 +1,229 @@
+{
+    "id": "8c03ffc9-8348-49c5-9421-97dc37fa6be3",
+    "sceneType": "PREFAB",
+    "settings": {
+        "compilerInsertSpaces": true,
+        "exportClass": true,
+        "autoImport": true,
+        "superClassName": "BaseContainer",
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1520,
+        "borderHeight": 960
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "2520a3ed-2b49-43ed-967a-f011cb1e2f04",
+            "label": "container_1",
+            "x": 760,
+            "y": 480,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "92c430c2-7f0a-4687-bead-462fb8ba05ce",
+                    "label": "bg",
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/page"
+                    }
+                },
+                {
+                    "type": "Image",
+                    "id": "e63cc4b7-ba82-44ea-b4c3-aa92b3c3a5c6",
+                    "label": "shirt",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/shirts0001"
+                    },
+                    "x": 254,
+                    "y": -127,
+                    "originX": 0.5020746887966805
+                },
+                {
+                    "prefabId": "fdabdf4b-9d2e-4a40-a724-14fda606e501",
+                    "id": "3671a200-90b9-433d-9acd-432dae511b1f",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "item"
+                    ],
+                    "label": "tag1",
+                    "scope": "CLASS",
+                    "item": 4241,
+                    "x": 357,
+                    "y": -217
+                },
+                {
+                    "type": "Image",
+                    "id": "1aa7987f-f70a-44fb-8f7c-493449443fd2",
+                    "label": "page_customtshirt_buttonblack",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectColor(1)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/buttonblack"
+                    },
+                    "x": -463,
+                    "y": -75
+                },
+                {
+                    "type": "Image",
+                    "id": "57fbf8b5-a9ac-4292-992d-472028b9c0d6",
+                    "label": "page_customtshirt_buttonblue",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectColor(4)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/buttonblue"
+                    },
+                    "x": -193,
+                    "y": -60
+                },
+                {
+                    "type": "Image",
+                    "id": "44e54059-631e-49ac-a18c-2c9cd6326854",
+                    "label": "page_customtshirt_buttongreen",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectColor(2)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/buttongreen"
+                    },
+                    "x": -373,
+                    "y": -70
+                },
+                {
+                    "type": "Image",
+                    "id": "8dd971fa-5518-457f-85e8-1fd461e4cbc8",
+                    "label": "page_customtshirt_buttonorange",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectColor(5)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/buttonorange"
+                    },
+                    "x": -103,
+                    "y": -55
+                },
+                {
+                    "type": "Image",
+                    "id": "896fe103-39c4-4e37-9d07-062168ebf6fa",
+                    "label": "page_customtshirt_buttonpurple",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectColor(3)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/buttonpurple"
+                    },
+                    "x": -283,
+                    "y": -65
+                },
+                {
+                    "type": "Image",
+                    "id": "168feb3a-ef09-4e29-abed-36279b9577ad",
+                    "label": "page_customtshirt_buttonblack_1",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectPattern(1)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/pattern1_btn"
+                    },
+                    "x": -470,
+                    "y": 88
+                },
+                {
+                    "type": "Image",
+                    "id": "e05d032e-2678-4227-9cf1-16dac4ed9e75",
+                    "label": "page_customtshirt_buttongreen_1",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectPattern(2)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/pattern2_btn"
+                    },
+                    "x": -384,
+                    "y": 98
+                },
+                {
+                    "type": "Image",
+                    "id": "b405c123-b518-408f-812f-6b462652c1a9",
+                    "label": "page_customtshirt_buttonpurple_1",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectPattern(3)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/pattern3_btn"
+                    },
+                    "x": -293,
+                    "y": 91
+                },
+                {
+                    "type": "Image",
+                    "id": "fa24a0f9-2a14-4bb6-a33b-41fb640188cc",
+                    "label": "page_customtshirt_buttonblue_1",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectPattern(4)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/pattern4_btn"
+                    },
+                    "x": -208,
+                    "y": 114
+                },
+                {
+                    "type": "Image",
+                    "id": "933e7a7c-e31c-4825-b38a-8bc0aeaa1558",
+                    "label": "page_customtshirt_buttonorange_1",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.callback": "() => this.selectPattern(5)",
+                    "Button.pixelPerfect": true,
+                    "texture": {
+                        "key": "clothingcatalog",
+                        "frame": "page/customtshirt/pattern5_btn"
+                    },
+                    "x": -119,
+                    "y": 124
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

@@ -5,7 +5,8 @@
         "compilerInsertSpaces": true,
         "javaScriptInitFieldsInConstructor": true,
         "exportClass": true,
-        "superClassName": "BaseImage",
+        "autoImport": true,
+        "superClassName": "BaseContainer",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -14,19 +15,37 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "078cabc4-452c-47b0-8c01-d9296c7371b0",
-            "label": "photo_button",
-            "components": [
-                "Button"
-            ],
-            "Button.spriteName": "photo_button",
-            "Button.callback": "() => this.interface.prompt.showItem(this.item)",
-            "Button.activeFrame": false,
-            "texture": {
-                "key": "clothingcatalog",
-                "frame": "photo_button"
-            }
+            "type": "Container",
+            "id": "d8bef940-2e6f-4f22-8932-dc01eb464c30",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "6282c3c4-51a1-4fc4-98d3-1685f7f2219d",
+                    "label": "photo",
+                    "scope": "CLASS",
+                    "texture": {}
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "9fa72166-603a-4344-8870-b4a15955b330",
+                    "label": "hover",
+                    "scope": "CLASS",
+                    "components": [
+                        "SimpleButton"
+                    ],
+                    "SimpleButton.hoverCallback": "() => this.onOver()",
+                    "SimpleButton.hoverOutCallback": "() => this.onOut()",
+                    "SimpleButton.callback": "() => this.onClick()",
+                    "isFilled": true,
+                    "fillAlpha": 0,
+                    "strokeColor": "#02092a",
+                    "lineWidth": 5,
+                    "isStroked": true,
+                    "width": 420,
+                    "height": 420
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -34,7 +53,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "prefabProperties": [
         {
